@@ -5,15 +5,16 @@ from selenium import webdriver
 from webdriver_manager.firefox import GeckoDriverManager
 from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.common.by import By
-import slate3k as slate
+import json
+import xml.etree.ElementTree as ET
+
 
 class DateAttributeError(Exception):
     pass
 
-
 def extract_url_dl(no_browser=True, start_date=datetime(2016, 3, 30), end_date=datetime(2016, 4, 3)) -> {}:
     """
-    Extract the last time of the BRA's publication (needed to generate the download url)
+    Extract the last time of the BERA's publication (needed to generate the download url)
     ---
     Return
     [
@@ -50,28 +51,42 @@ def extract_url_dl(no_browser=True, start_date=datetime(2016, 3, 30), end_date=d
             option.click()
             datetime_publication = driver.find_elements(By.ID, 'select_heures')[-1].get_attribute('value')
             url_dls.append(f"{option.text}.{datetime_publication}")
+            # if option.text == "CHABLAIS":  # Stopping here. Other elements are unvalid options. How to better filter my list ?
             if option.text == "CAPCIR-PUYMORENS":  # Stopping here. Other elements are unvalid options. How to better filter my list ?
                 break
         i = i + timedelta(days=1)
 
     driver.close()
+    with open('urls_list', 'w') as f:
+        url_dls = map(lambda x:x+'\n', url_dls)
+        f.writelines(url_dls)
     return url_dls
 
-def download_extract_pdf(files):
-    for file in files:
-        range, datetime_ = file.split('.')
-        r = requests.get(f'https://donneespubliques.meteofrance.fr/donnees_libres/Pdf/BRA/BRA.{range}.{datetime_}.pdf', allow_redirects=True)
-        with open('/tmp/bra.pdf', 'wb') as f:
+
+class Bulletin():
+    "Défintion d'un bulletin risque avalanche"
+    def __init__(self, massif, jour):
+        self.massif = massif
+        self.jour = jour
+        self.url = "https://donneespubliques.meteofrance.fr/donnees_libres/Pdf/BRA/BRA"
+
+    def download(self):
+        r = requests.get(f'{self.url}.{self.massif}.{self.jour}.xml')
+        with open('bera.xml', 'wb') as f:
             f.write(r.content)
-        extract_pdf()
 
-
-def extract_pdf():
-    with open('/tmp/bra.pdf','rb') as f:
-        extracted_text = slate.PDF(f)
-    print(extracted_text)
-
+    def parse(self):
+        root = ET.parse('bera.xml').getroot()
+        cartouche_risque = root[0].find('CARTOUCHERISQUE')
+        risques = cartouche_risque[0].attrib
+        return risques
 
 if __name__ == '__main__':
-    pdfs = extract_url_dl(no_browser=True)
-    download_extract_pdf(pdfs)
+    pdfs = extract_url_dl(no_browser=False, start_date=datetime(2016, 4, 1), end_date=datetime(2016, 4, 1))
+    with open('urls_list','r') as f:
+        pdfs = f.read().splitlines()
+    for pdf in pdfs:
+        massif, jour = pdf.split('.')
+        bul = Bulletin(massif, jour)
+        bul.download()
+        bul.parse()
