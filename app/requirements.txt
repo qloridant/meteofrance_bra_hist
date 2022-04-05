@@ -1,4 +1,5 @@
 selenium
 requests
 webdriver_manager
-slate3k
+PyGithub
+pandas
