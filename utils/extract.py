@@ -54,11 +54,10 @@ def extract_url_dl(no_browser=True, start_date=datetime(2016, 3, 30), end_date=d
         i = i + timedelta(days=1)
 
     driver.close()
-    with open('data/urls_list.txt', 'w') as f:
-        url_dls = map(lambda x:x+'\n', url_dls)
-        f.writelines(url_dls)
-    return url_dls
-
+    # with open('data/urls_list.txt', 'w') as f:
+    #     url_dls = map(lambda x:x+'\n', url_dls)
+    #     f.writelines(url_dls)
+    return '\n'.join(map(lambda x:str(x), url_dls))
 
 
 
