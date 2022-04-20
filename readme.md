@@ -14,13 +14,7 @@ Le projet utilise les **Github Actions** et exécute tous les jours :
 3. Parsage des BERAS
 4. Ajout des informations principales de chaque fichier BERA dans le fichier app/data/hist_synthetise_bera.csv
 
-# Autres projets
-- [MetaSkiRando :](https://www.metaskirando.ovh/Nivo.php) Moteur de recherche du ski de rando (et [code source](https://github.com/c2corg/metaskirando))
-- [Data Avalanche :](http://www.data-avalanche.org) Recensemement des avalanches
-- [Synthesis :](http://www.data-avalanche.org/synthesis/) Centrale de données nivologiques
-- [Anena :](https://www.anena.org/)  Association Nationale pour l’Étude de la Neige et des Avalanches
-
-# Modèle de données
+## Modèle de données
 Clé Primaires :
 - date
 - massif
@@ -38,3 +32,10 @@ Clé Primaires :
 |loc2|Localisation 2|int|Localisation 2| - | Valeur optionnelle (sauf si le champ altitude n'est pas vide)|
 |risque_maxi|Risque Maximum|int|Risque estimé maximum pour le massif| 3 | Valeur optionnelle (sauf si le champ altitude n'est pas vide)|
 |commentaire|Commentaire|string|Commentaire fourni par météo france (déclanchements spontanés, déclanchements par skieur)| - | Valeur optionnelle|
+  
+
+## Autres projets
+- [MetaSkiRando :](https://www.metaskirando.ovh/Nivo.php) Moteur de recherche du ski de rando (et [code source](https://github.com/c2corg/metaskirando))
+- [Data Avalanche :](http://www.data-avalanche.org) Recensemement des avalanches
+- [Synthesis :](http://www.data-avalanche.org/synthesis/) Centrale de données nivologiques
+- [Anena :](https://www.anena.org/)  Association Nationale pour l’Étude de la Neige et des Avalanches
