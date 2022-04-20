@@ -6,6 +6,13 @@ Ces données sont déjà [disponibles](https://donneespubliques.meteofrance.fr/?
 Objectifs de réutilisations :
   - Evaluation du risque de la partie supérieure du manteua neigeux (préparation sorties)
   - Outil pédagogique afin d'étudier les accidents ayant eu lieu
+ 
+## Fonctionnement
+Le projet utilise les **Github Actions** et exécute tous les jours :
+1. Mise à jour du fichier app/data/urls_list.txt . Chaque ligne ajouté est au format <MASSIF>.<DATETIME_PUBLICATION>
+2. Téléchargement des fichiers BERAS de la journée en construisant les URL grâce au fichier app/data/urls_list.txt
+3. Parsage des BERAS
+4. Ajout des informations principales de chaque fichier BERA dans le fichier app/data/hist_synthetise_bera.csv
 
 # Autres projets
 - [MetaSkiRando :](https://www.metaskirando.ovh/Nivo.php) Moteur de recherche du ski de rando (et [code source](https://github.com/c2corg/metaskirando))
