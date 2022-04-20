@@ -1,3 +1,37 @@
 date, massif, risque1, evolurisque1, loc1, altitude, risque2, evolurisque2, loc2, risque_maxi, commentaire
-2022-03-12,CHABLAIS,1,,<2200,2200,2,,>2200,2,
-2022-03-12,ARAVIS,1,,<2000,2000,2,,>2000,2, 
+2022-04-18,HAUTE-ARIEGE,2,,,,,,,2,Risque limité.
+2022-04-18,COUSERANS,2,,,,,,,2,Risque limité.
+2022-04-18,LUCHONNAIS,1,2,,,,,,2,Risque faible évoluant en Risque limité.
+2022-04-18,AURE-LOURON,1,2,,,,,,2,Risque faible évoluant en Risque limité.
+2022-04-18,HAUTE-BIGORRE,1,2,,,,,,2,Risque faible évoluant en Risque limité.
+2022-04-18,ASPE-OSSAU,1,2,,,,,,2,Risque faible évoluant en Risque limité.
+2022-04-18,PAYS-BASQUE,1,2,,,,,,2,Risque faible évoluant en Risque limité.
+2022-04-18,CERDAGNE-CANIGOU,2,,,,,,,2,Risque limité.
+2022-04-18,CHABLAIS,1,2,,,,,,2,Risque faible évoluant en Risque limité.
+2022-04-18,MONT-BLANC,1,2,,,,,,2,Risque faible évoluant en Risque limité.
+2022-04-18,ARAVIS,1,2,,,,,,2,Risque faible évoluant en Risque limité.
+2022-04-18,CHARTREUSE,1,2,,,,,,2,Risque faible évoluant en Risque limité.
+2022-04-18,BELLEDONNE,1,2,,,,,,2,Risque faible évoluant en Risque limité.
+2022-04-18,GRANDES-ROUSSES,1,2,,,,,,2,Risque faible évoluant en Risque limité.
+2022-04-18,VERCORS,1,2,,,,,,2,Risque faible évoluant en Risque limité.
+2022-04-18,OISANS,1,2,,,,,,2,Risque faible évoluant en Risque limité.
+2022-04-18,HAUTE-TARENTAISE,1,2,,,,,,2,Risque faible évoluant en Risque limité.
+2022-04-18,BEAUFORTAIN,1,2,,,,,,2,Risque faible évoluant en Risque limité.
+2022-04-18,BAUGES,1,2,,,,,,2,Risque faible évoluant en Risque limité.
+2022-04-18,VANOISE,1,2,,,,,,2,Risque faible évoluant en Risque limité.
+2022-04-18,HAUTE-MAURIENNE,1,2,,,,,,2,Risque faible évoluant en Risque limité.
+2022-04-18,MAURIENNE,1,2,,,,,,2,Risque faible évoluant en Risque limité.
+2022-04-18,UBAYE,1,,<2800,2800,1,2,>2800,2,Au-dessus de 2800 m : Risque faible évoluant en Risque limité. En-dessous : Risque faible.
+2022-04-18,HAUT-VAR_HAUT-VERDON,1,,,,,,,1,Risque faible.
+2022-04-18,THABOR,1,,<2200,2200,1,2,>2200,2,Au-dessus de 2200 m : Risque faible évoluant en Risque limité. En-dessous : Risque faible.
+2022-04-18,PELVOUX,1,,<2200,2200,1,2,>2200,2,Au-dessus de 2200 m : Risque faible évoluant en Risque limité. En-dessous : Risque faible.
+2022-04-18,QUEYRAS,1,,<2800,2800,1,2,>2800,2,Au-dessus de 2800 m : Risque faible évoluant en Risque limité. En-dessous : Risque faible.
+2022-04-18,CHAMPSAUR,1,,<2200,2200,1,2,>2200,2,Au-dessus de 2200 m : Risque faible évoluant en Risque limité. En-dessous : Risque faible.
+2022-04-18,DEVOLUY,1,,,,,,,1,Risque faible.
+2022-04-18,EMBRUNAIS-PARPAILLON,1,,,,,,,1,Risque faible.
+2022-04-18,MERCANTOUR,1,,,,,,,1,Risque faible.
+2022-04-18,CINTO-ROTONDO,1,,,,,,,1,Risque faible.
+2022-04-18,RENOSO-INCUDINE,1,,,,,,,1,Risque faible.
+2022-04-18,ANDORRE,2,,,,,,,2,Risque limité.
+2022-04-18,ORLU__ST_BARTHELEMY,2,,,,,,,2,Risque limité.
+2022-04-18,CAPCIR-PUYMORENS,2,,,,,,,2,Risque limité.

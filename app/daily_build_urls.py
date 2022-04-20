@@ -8,7 +8,8 @@ from datetime import date, timedelta
 if __name__ == '__main__':
     logging.debug('Starting the extraction of urls...')
     new_urls = extract_url_dl(no_browser=True, start_date=date.today() + timedelta(days=-1), end_date=date.today() + timedelta(days=-1))
-
+    new_urls = new_urls.replace('/', '_')
+    
     file_path = 'app/data/urls_list.txt'
     branch = 'master'
 
