@@ -20,4 +20,4 @@ def push(repo, path, message, content, branch, update=False):
         contents = repo.get_contents(path, ref=branch)  # Retrieve old file to get its SHA and path
         repo.update_file(contents.path, message, content, contents.sha, branch=branch,)  # Add, commit and push branch
     else:  # If file doesn't exist, create it
-        repo.create_file(path, message, content, branch=branch, author=author)  # Add, commit and push branch
+        repo.create_file(path, message, content, branch=branch)  # Add, commit and push branch
