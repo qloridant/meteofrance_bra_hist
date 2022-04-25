@@ -39,10 +39,13 @@ def extract_url_dl(no_browser=True, start_date=datetime(2016, 3, 30), end_date=d
     datepicker = driver.find_element(By.ID, 'datepicker')
     i = start_date
     while i <= end_date:
+        print(i)
+        logging.info(i)
         from selenium.webdriver.common.keys import Keys
         datepicker.send_keys(Keys.CONTROL + "a")
         datepicker.send_keys(i.strftime("%Y%m%d"))
         driver.find_element(By.ID, 'select_massif').click()
+
         massifs = driver.find_element(By.ID, 'select_massif').find_elements(By.XPATH, '//option')
         for option in massifs:
             option.click()

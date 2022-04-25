@@ -3,6 +3,7 @@ from github import Github, NamedUser
 
 def init_repo():
     # TODO catch error if no data yet availble
+    print(os.getenv('TOKEN'))
     g = Github(os.getenv('TOKEN'))
     return g.get_user().get_repo('meteofrance_bra_hist')
 
