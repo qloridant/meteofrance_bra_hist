@@ -33,7 +33,6 @@ class Bulletin():
         with open("data/hist_synthetise_bera.csv") as f:
             primary_keys = [(row.split(',')[0], row.split(',')[1]) for row in f]
             f.close()
-        print(primary_keys)
         if (self.jour_key, self.massif) in primary_keys:
             print('error')
             return Exception('Violation of primary key')
