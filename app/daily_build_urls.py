@@ -9,8 +9,8 @@ MASSIFS = ['CHABLAIS', 'MONT-BLANC', 'ARAVIS', 'CHARTREUSE', 'BELLEDONNE', 'GRAN
 
 if __name__ == '__main__':
     logging.debug('Starting the extraction of urls...')
-    new_urls = extract_url_dl(no_browser=True, start_date=datetime(2018, 1, 1), end_date=datetime(2022, 4, 26))
-    # new_urls = extract_url_dl(no_browser=True, start_date=date.today() + timedelta(days=-1), end_date=date.today() + timedelta(days=-1))
+    # new_urls = extract_url_dl(no_browser=True, start_date=datetime(2018, 1, 1), end_date=datetime(2022, 4, 26))
+    new_urls = extract_url_dl(no_browser=True, start_date=date.today() + timedelta(days=-1), end_date=date.today() + timedelta(days=-1))
 
     file_path = 'app/data/urls_list.txt'
     branch = 'master'
