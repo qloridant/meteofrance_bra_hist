@@ -12,7 +12,6 @@ if __name__ == '__main__':
     # new_urls = extract_url_dl(no_browser=True, start_date=datetime(2018, 1, 1), end_date=datetime(2022, 4, 26))
     new_urls = extract_url_dl(no_browser=True, start_date=date.today() + timedelta(days=-1), end_date=date.today() + timedelta(days=-1))
 
-    file_path = 'app/data/urls_list.txt'
     branch = 'master'
     repo = init_repo()
 
