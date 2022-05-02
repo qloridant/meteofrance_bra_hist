@@ -30,19 +30,7 @@ class Bulletin():
         self.risques = self.cartouche_risque[0].attrib
 
     def append_csv(self):
-        # Testing that we do not violate primary key constraint error
-        with open(f"app/data/{self.massif}/hist.csv") as f:
-            primary_keys = [(row.split(',')[0], row.split(',')[1]) for row in f]
-            f.close()
-        if (self.jour_key, self.massif) in primary_keys:
-            return Exception('Violation of primary key')
-
-        # If no violation of the primary key unicity constraint, we add the line
-        with open(f"app/data/{self.massif}/hist.csv", 'a') as f:
-            writer_object = writer(f)
-            writer_object.writerow([self.jour_key, self.massif, *self.risques.values()])
-            f.close()
-
+        return [self.jour_key, self.massif, *self.risques.values()]
 
 
 if __name__ == '__main__':
