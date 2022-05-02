@@ -33,4 +33,4 @@ jobs:
         run: |
           pip install -r app/requirements.txt
           python app/daily_build_urls.py
-          app/daily_extract_all_beras.sh
+          python app/daily_extract_all_beras.py

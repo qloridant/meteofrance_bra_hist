@@ -20,7 +20,6 @@ class Bulletin():
 
     def download(self):
         r = requests.get(f'{self.url}.{self.massif}.{self.jour}.xml')
-        print(f'{self.url}.{self.massif}.{self.jour}.xml')
         with open('app/tmp/bera.xml', 'wb') as f:
             f.write(r.content)
 
@@ -40,6 +39,6 @@ if __name__ == '__main__':
         bul = Bulletin(massif, jour)
         bul.download()
         bul.parse()
-        bul.append_csv()
+        new_content = bul.append_csv()
     else:
         print("Please enter massif and datetime of publication")

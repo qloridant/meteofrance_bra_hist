@@ -22,5 +22,3 @@ for massif in MASSIFS:
     file_path = f'app/data/{massif}/hist.csv'
     logging.debug(f'Exporting the BERA to Github for massif : {massif}   ...')
     push(repo, file_path, "Daily automatic file update", new_data, branch, update=True, type_data='bera')
-
-    break
