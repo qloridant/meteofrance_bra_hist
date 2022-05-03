@@ -13,7 +13,7 @@ def merge_url_content(actual_content: str, new_content: []):
 
     return full_content
 
-def merge_bera_content(actual_content: str, new_content: []):
+def merge_bera_content(actual_content: str, new_content: [[]]):
     # Merge the text from the github file and the newly generated one
     # Convert to daatframe to sort and check unicity constraints
     actual_content = actual_content.replace('\r', '')
@@ -25,7 +25,11 @@ def merge_bera_content(actual_content: str, new_content: []):
 
     # Add new content
     df_length = len(df)
-    df.loc[df_length] = new_content
+    for i, line in enumerate(new_content):
+        df.loc[df_length + i] = line
+
+    df = df.sort_values('date')
+    df = df.drop_duplicates()
 
     # Export content
     df.to_csv('app/tmp/dataframe.csv', sep=',', index=False)

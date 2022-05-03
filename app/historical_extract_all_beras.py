@@ -9,16 +9,25 @@ branch = 'master'
 repo = init_repo()
 
 for massif in MASSIFS:
+    if massif == 'CHABLAIS':
+        continue
     # Lecture de la date de publication de notre fichier
     # Utilisation de bash... Efficace ou pythonesque ? Mon choix est fait
-    url = subprocess.run(["tail", "-n", "1", f"app/data/{massif}/urls_list.txt"], capture_output=True).stdout.decode('utf-8')
+    dates_ = subprocess.run(["cat", f"app/data/{massif}/urls_list.txt"], capture_output=True).stdout.decode('utf-8').split('\n')
 
-    # Traitement du fichier
-    bulletin = Bulletin(massif, url)
-    bulletin.download()
-    bulletin.parse()
-    new_data = bulletin.append_csv()
+    new_data = []
+    for date_ in dates_:
+        if int(date_) >= 20181217143136:
+            # Traitement du fichier
+            bulletin = Bulletin(massif, date_)
+            bulletin.download()
+            try:
+                bulletin.parse()
+                new_data.append(bulletin.append_csv())
+                print(date_)
+            except Exception as e:
+                pass
 
     file_path = f'app/data/{massif}/hist.csv'
     logging.debug(f'Exporting the BERA to Github for massif : {massif}   ...')
-    push(repo, file_path, "Daily automatic file update", [new_data], branch, update=True, type_data='bera')
+    push(repo, file_path, "Daily automatic file update", new_data, branch, update=True, type_data='bera')
