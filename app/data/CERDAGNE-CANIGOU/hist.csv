@@ -44,9 +44,9 @@ date, massif, risque1, evolurisque1, loc1, altitude, risque2, evolurisque2, loc2
 2019-01-29,CERDAGNE-CANIGOU,3,,,,,,,3,Risque marqué.
 2019-01-30,CERDAGNE-CANIGOU,4,,,,,,,4,Risque fort.
 2019-01-31,CERDAGNE-CANIGOU,3,,,,,,,3,Risque marqué.
-2019-02-01,CERDAGNE-CANIGOU,2,,E,,3,,W,3,"""""""""""""""Risque marqué à l'Ouest"""""""
-2019-02-02,CERDAGNE-CANIGOU,2,,E,,3,,W,3,"""""""""""""""Risque marqué à l'Ouest"""""""
-2019-02-03,CERDAGNE-CANIGOU,2,,E,,3,,W,3,"""""""""""""""Risque marqué à l'Ouest"""""""
+2019-02-01,CERDAGNE-CANIGOU,2,,E,,3,,W,3,"""""""""""""""""""""""""""""""Risque marqué à l'Ouest"""""""""""""""
+2019-02-02,CERDAGNE-CANIGOU,2,,E,,3,,W,3,"""""""""""""""""""""""""""""""Risque marqué à l'Ouest"""""""""""""""
+2019-02-03,CERDAGNE-CANIGOU,2,,E,,3,,W,3,"""""""""""""""""""""""""""""""Risque marqué à l'Ouest"""""""""""""""
 2019-02-04,CERDAGNE-CANIGOU,3,,,,,,,3,Risque marqué.
 2019-02-06,CERDAGNE-CANIGOU,2,,<2000,2000,3,,>2000,3,Au-dessus de 2000 m : Risque marqué. En-dessous : Risque limité.
 2019-02-07,CERDAGNE-CANIGOU,2,,,,,,,2,Risque limité.
@@ -244,8 +244,8 @@ date, massif, risque1, evolurisque1, loc1, altitude, risque2, evolurisque2, loc2
 2020-01-17,CERDAGNE-CANIGOU,1,,,,,,,1,Risque faible.
 2020-01-18,CERDAGNE-CANIGOU,1,,,,,,,1,Risque faible.
 2020-01-19,CERDAGNE-CANIGOU,2,,,,,,,2,Risque limité.
-2020-01-20,CERDAGNE-CANIGOU,4,,E,,3,,W,4,"""""""""""""""Risque marqué à l'Ouest"""""""
-2020-01-21,CERDAGNE-CANIGOU,4,,E,,2,,W,4,"""""""""""""""Risque limité à l'Ouest"""""""
+2020-01-20,CERDAGNE-CANIGOU,4,,E,,3,,W,4,"""""""""""""""""""""""""""""""Risque marqué à l'Ouest"""""""""""""""
+2020-01-21,CERDAGNE-CANIGOU,4,,E,,2,,W,4,"""""""""""""""""""""""""""""""Risque limité à l'Ouest"""""""""""""""
 2020-01-22,CERDAGNE-CANIGOU,4,,,,,,,4,Risque fort.
 2020-01-23,CERDAGNE-CANIGOU,4,,,,,,,4,Risque fort.
 2020-01-24,CERDAGNE-CANIGOU,3,,<2100,2100,4,,>2100,4,Au-dessus de 2100 m : Risque fort. En-dessous : Risque marqué.
@@ -423,7 +423,7 @@ date, massif, risque1, evolurisque1, loc1, altitude, risque2, evolurisque2, loc2
 2021-03-01,CERDAGNE-CANIGOU,1,,,,,,,1,Risque faible.
 2021-03-02,CERDAGNE-CANIGOU,1,,,,,,,1,Risque faible.
 2021-03-03,CERDAGNE-CANIGOU,1,,,,,,,1,Risque faible.
-2021-03-05,CERDAGNE-CANIGOU,2,,E,,1,,W,2,"""""""""""""""Risque faible à l'Ouest"""""""
+2021-03-05,CERDAGNE-CANIGOU,2,,E,,1,,W,2,"""""""""""""""""""""""""""""""Risque faible à l'Ouest"""""""""""""""
 2021-03-06,CERDAGNE-CANIGOU,1,,<2000,2000,2,,>2000,2,Au-dessus de 2000 m : Risque limité. En-dessous : Risque faible.
 2021-03-07,CERDAGNE-CANIGOU,1,,<2000,2000,2,,>2000,2,Au-dessus de 2000 m : Risque limité. En-dessous : Risque faible.
 2021-03-08,CERDAGNE-CANIGOU,1,,<2200,2200,2,,>2200,2,Au-dessus de 2200 m : Risque limité. En-dessous : Risque faible.
@@ -537,8 +537,8 @@ date, massif, risque1, evolurisque1, loc1, altitude, risque2, evolurisque2, loc2
 2021-12-02,CERDAGNE-CANIGOU,2,,,,,,,2,Risque limité.
 2021-12-03,CERDAGNE-CANIGOU,2,,,,,,,2,Risque limité.
 2021-12-04,CERDAGNE-CANIGOU,2,,,,,,,2,Risque limité.
-2021-12-05,CERDAGNE-CANIGOU,2,,E,,3,,W,3,"""""""""""""""Risque marqué à l'Ouest"""""""
-2021-12-06,CERDAGNE-CANIGOU,2,,S,,3,,N,3,"""""""""""""""Risque marqué au Nord"""""""
+2021-12-05,CERDAGNE-CANIGOU,2,,E,,3,,W,3,"""""""""""""""""""""""""""""""Risque marqué à l'Ouest"""""""""""""""
+2021-12-06,CERDAGNE-CANIGOU,2,,S,,3,,N,3,"""""""""""""""""""""""""""""""Risque marqué au Nord"""""""""""""""
 2021-12-07,CERDAGNE-CANIGOU,3,,,,,,,3,Risque marqué.
 2021-12-08,CERDAGNE-CANIGOU,3,,,,,,,3,Risque marqué.
 2021-12-09,CERDAGNE-CANIGOU,3,,,,,,,3,Risque marqué.
@@ -609,7 +609,7 @@ date, massif, risque1, evolurisque1, loc1, altitude, risque2, evolurisque2, loc2
 2022-02-12,CERDAGNE-CANIGOU,1,,,,,,,1,Risque faible.
 2022-02-13,CERDAGNE-CANIGOU,1,2,,,,,,2,Risque faible évoluant en Risque limité.
 2022-02-14,CERDAGNE-CANIGOU,2,,,,,,,2,Risque limité.
-2022-02-15,CERDAGNE-CANIGOU,3,,E,,2,,W,3,"""""""""""""""Risque limité à l'Ouest"""""""
+2022-02-15,CERDAGNE-CANIGOU,3,,E,,2,,W,3,"""""""""""""""""""""""""""""""Risque limité à l'Ouest"""""""""""""""
 2022-02-16,CERDAGNE-CANIGOU,2,,,,,,,2,Risque limité.
 2022-02-17,CERDAGNE-CANIGOU,2,,,,,,,2,Risque limité.
 2022-02-18,CERDAGNE-CANIGOU,2,,,,,,,2,Risque limité.
@@ -635,15 +635,15 @@ date, massif, risque1, evolurisque1, loc1, altitude, risque2, evolurisque2, loc2
 2022-03-10,CERDAGNE-CANIGOU,2,,,,,,,2,Risque limité.
 2022-03-11,CERDAGNE-CANIGOU,3,4,,,,,,4,Risque marqué évoluant en Risque fort.
 2022-03-12,CERDAGNE-CANIGOU,4,,,,,,,4,Risque fort.
-2022-03-13,CERDAGNE-CANIGOU,3,,E,,2,,W,3,"""""""""""""""Risque limité à l'Ouest"""""""
-2022-03-14,CERDAGNE-CANIGOU,3,,E,,4,,W,4,"""""""""""""""Risque fort à l'Ouest"""""""
+2022-03-13,CERDAGNE-CANIGOU,3,,E,,2,,W,3,"""""""""""""""""""""""""""""""Risque limité à l'Ouest"""""""""""""""
+2022-03-14,CERDAGNE-CANIGOU,3,,E,,4,,W,4,"""""""""""""""""""""""""""""""Risque fort à l'Ouest"""""""""""""""
 2022-03-15,CERDAGNE-CANIGOU,3,,,,,,,3,Risque marqué.
 2022-03-16,CERDAGNE-CANIGOU,3,,,,,,,3,Risque marqué.
 2022-03-18,CERDAGNE-CANIGOU,3,,,,,,,3,Risque marqué.
 2022-03-19,CERDAGNE-CANIGOU,3,,,,,,,3,Risque marqué.
 2022-03-20,CERDAGNE-CANIGOU,3,,,,,,,3,Risque marqué.
 2022-03-21,CERDAGNE-CANIGOU,3,,,,,,,3,Risque marqué.
-2022-03-22,CERDAGNE-CANIGOU,3,,E,,2,,W,3,"""""""""""""""Risque limité à l'Ouest"""""""
+2022-03-22,CERDAGNE-CANIGOU,3,,E,,2,,W,3,"""""""""""""""""""""""""""""""Risque limité à l'Ouest"""""""""""""""
 2022-03-23,CERDAGNE-CANIGOU,2,,,,,,,2,Risque limité.
 2022-03-24,CERDAGNE-CANIGOU,2,,,,,,,2,Risque limité.
 2022-03-25,CERDAGNE-CANIGOU,2,,,,,,,2,Risque limité.
@@ -653,11 +653,11 @@ date, massif, risque1, evolurisque1, loc1, altitude, risque2, evolurisque2, loc2
 2022-03-29,CERDAGNE-CANIGOU,2,,,,,,,2,Risque limité.
 2022-03-30,CERDAGNE-CANIGOU,2,,<2100,2100,3,,>2100,3,Au-dessus de 2100 m : Risque marqué. En-dessous : Risque limité.
 2022-03-31,CERDAGNE-CANIGOU,3,,,,,,,3,Risque marqué.
-2022-04-01,CERDAGNE-CANIGOU,2,,E,,3,,W,3,"""""""""""""""Risque marqué à l'Ouest"""""""
-2022-04-02,CERDAGNE-CANIGOU,2,,E,,3,,W,3,"""""""""""""""Risque marqué à l'Ouest"""""""
-2022-04-03,CERDAGNE-CANIGOU,2,,E,,3,,W,3,"""""""""""""""Risque marqué à l'Ouest"""""""
-2022-04-04,CERDAGNE-CANIGOU,2,,E,,3,,W,3,"""""""""""""""Risque marqué à l'Ouest"""""""
-2022-04-05,CERDAGNE-CANIGOU,2,,E,,3,,W,3,"""""""""""""""Risque marqué à l'Ouest"""""""
+2022-04-01,CERDAGNE-CANIGOU,2,,E,,3,,W,3,"""""""""""""""""""""""""""""""Risque marqué à l'Ouest"""""""""""""""
+2022-04-02,CERDAGNE-CANIGOU,2,,E,,3,,W,3,"""""""""""""""""""""""""""""""Risque marqué à l'Ouest"""""""""""""""
+2022-04-03,CERDAGNE-CANIGOU,2,,E,,3,,W,3,"""""""""""""""""""""""""""""""Risque marqué à l'Ouest"""""""""""""""
+2022-04-04,CERDAGNE-CANIGOU,2,,E,,3,,W,3,"""""""""""""""""""""""""""""""Risque marqué à l'Ouest"""""""""""""""
+2022-04-05,CERDAGNE-CANIGOU,2,,E,,3,,W,3,"""""""""""""""""""""""""""""""Risque marqué à l'Ouest"""""""""""""""
 2022-04-06,CERDAGNE-CANIGOU,2,3,,,,,,3,Risque limité évoluant en Risque marqué.
 2022-04-07,CERDAGNE-CANIGOU,2,3,,,,,,3,Risque limité évoluant en Risque marqué.
 2022-04-08,CERDAGNE-CANIGOU,2,,,,,,,2,Risque limité.
