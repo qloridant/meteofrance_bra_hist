@@ -36,8 +36,8 @@ date, massif, risque1, evolurisque1, loc1, altitude, risque2, evolurisque2, loc2
 2019-01-20,QUEYRAS,1,,,,,,,1,Risque faible.
 2019-01-21,QUEYRAS,1,,,,,,,1,Risque faible.
 2019-01-22,QUEYRAS,1,,,,,,,1,Risque faible.
-2019-01-23,QUEYRAS,2,,E,,1,,W,2,"""""""Risque faible à l'Ouest"""
-2019-01-24,QUEYRAS,2,,E,,1,,W,2,"""""""Risque faible à l'Ouest"""
+2019-01-23,QUEYRAS,2,,E,,1,,W,2,"""""""""""""""Risque faible à l'Ouest"""""""
+2019-01-24,QUEYRAS,2,,E,,1,,W,2,"""""""""""""""Risque faible à l'Ouest"""""""
 2019-01-25,QUEYRAS,1,,,,,,,1,Risque faible.
 2019-01-26,QUEYRAS,1,2,,,,,,2,Risque faible évoluant en Risque limité.
 2019-01-27,QUEYRAS,2,,,,,,,2,Risque limité.
@@ -89,8 +89,8 @@ date, massif, risque1, evolurisque1, loc1, altitude, risque2, evolurisque2, loc2
 2019-03-14,QUEYRAS,1,2,<2200,2200,2,,>2200,2,Au-dessus de 2200 m : Risque limité. En-dessous : Risque faible évoluant en Risque limité en tout début de journée.
 2019-03-15,QUEYRAS,2,,,,,,,2,Risque limité.
 2019-03-16,QUEYRAS,2,,,,,,,2,Risque limité.
-2019-03-17,QUEYRAS,1,,E,,2,,W,2,"""""""Risque limité à l'Ouest"""
-2019-03-18,QUEYRAS,1,,E,,2,,W,2,"""""""Risque limité à l'Ouest"""
+2019-03-17,QUEYRAS,1,,E,,2,,W,2,"""""""""""""""Risque limité à l'Ouest"""""""
+2019-03-18,QUEYRAS,1,,E,,2,,W,2,"""""""""""""""Risque limité à l'Ouest"""""""
 2019-03-20,QUEYRAS,1,,,,,,,1,Risque faible.
 2019-03-22,QUEYRAS,1,,,,,,,1,Risque faible.
 2019-03-23,QUEYRAS,1,,,,,,,1,Risque faible.
@@ -123,8 +123,8 @@ date, massif, risque1, evolurisque1, loc1, altitude, risque2, evolurisque2, loc2
 2019-04-19,QUEYRAS,1,,,,,,,1,Risque faible.
 2019-04-20,QUEYRAS,1,,,,,,,1,Risque faible.
 2019-04-21,QUEYRAS,1,2,,,,,,2,Risque faible évoluant vite en matinée en Risque limité.
-2019-04-22,QUEYRAS,3,,E,,2,,W,3,"""""""Risque limité à l'Ouest"""
-2019-04-23,QUEYRAS,3,,E,,2,,W,3,"""""""Risque limité à l'Ouest"""
+2019-04-22,QUEYRAS,3,,E,,2,,W,3,"""""""""""""""Risque limité à l'Ouest"""""""
+2019-04-23,QUEYRAS,3,,E,,2,,W,3,"""""""""""""""Risque limité à l'Ouest"""""""
 2019-04-24,QUEYRAS,2,,<2200,2200,3,,>2200,3,Au-dessus de 2200 m : Risque marqué. En-dessous : Risque limité.
 2019-04-25,QUEYRAS,2,,<2400,2400,3,,>2400,3,Au-dessus de 2400 m : Risque marqué. En-dessous : Risque limité.
 2019-04-26,QUEYRAS,2,,<2700,2700,3,,>2700,3,Au-dessus de 2700 m : Risque marqué. En-dessous : Risque limité.
@@ -405,9 +405,9 @@ date, massif, risque1, evolurisque1, loc1, altitude, risque2, evolurisque2, loc2
 2020-12-30,QUEYRAS,2,,<2000,2000,3,,>2000,3,Au-dessus de 2000 m : Risque marqué. En-dessous : Risque limité.
 2020-12-31,QUEYRAS,2,3,<2000,2000,3,,>2000,3,Au-dessus de 2000 m : Risque marqué. En-dessous : Risque limité évoluant en Risque marqué.
 2021-01-01,QUEYRAS,3,,,,,,,3,Risque marqué.
-2021-01-02,QUEYRAS,4,,E,,3,,W,4,"""""""Risque marqué à l'Ouest"""
-2021-01-03,QUEYRAS,4,,E,,3,,W,4,"""""""Risque marqué à l'Ouest"""
-2021-01-04,QUEYRAS,4,,E,,3,,W,4,"""""""Risque marqué à l'Ouest"""
+2021-01-02,QUEYRAS,4,,E,,3,,W,4,"""""""""""""""Risque marqué à l'Ouest"""""""
+2021-01-03,QUEYRAS,4,,E,,3,,W,4,"""""""""""""""Risque marqué à l'Ouest"""""""
+2021-01-04,QUEYRAS,4,,E,,3,,W,4,"""""""""""""""Risque marqué à l'Ouest"""""""
 2021-01-05,QUEYRAS,3,,,,,,,3,Risque marqué.
 2021-01-06,QUEYRAS,3,,,,,,,3,Risque marqué.
 2021-01-07,QUEYRAS,2,,<2000,2000,3,,>2000,3,Au-dessus de 2000 m : Risque marqué. En-dessous : Risque limité.
@@ -471,7 +471,7 @@ date, massif, risque1, evolurisque1, loc1, altitude, risque2, evolurisque2, loc2
 2021-03-09,QUEYRAS,1,,<2500,2500,2,,>2500,2,Au-dessus de 2500 m : Risque limité. En-dessous : Risque faible.
 2021-03-10,QUEYRAS,1,,<2500,2500,2,,>2500,2,Au-dessus de 2500 m : Risque limité. En-dessous : Risque faible.
 2021-03-16,QUEYRAS,1,,<2200,2200,2,,>2200,2,Au-dessus de 2200 m : Risque limité. En-dessous : Risque faible.
-2021-03-17,QUEYRAS,3,,E,,2,,W,3,"""""""Risque limité à l'Ouest"""
+2021-03-17,QUEYRAS,3,,E,,2,,W,3,"""""""""""""""Risque limité à l'Ouest"""""""
 2021-03-18,QUEYRAS,1,,<2200,2200,2,,>2200,2,Au-dessus de 2200 m : Risque limité. En-dessous : Risque faible.
 2021-03-19,QUEYRAS,2,,,,,,,2,Risque limité.
 2021-03-20,QUEYRAS,2,,<2000,2000,3,,>2000,3,Au-dessus de 2000 m : Risque marqué. En-dessous : Risque limité.
@@ -553,14 +553,14 @@ date, massif, risque1, evolurisque1, loc1, altitude, risque2, evolurisque2, loc2
 2021-11-05,QUEYRAS,1,,<2700,2700,2,,>2700,2,Au-dessus de 2700 m : Risque limité. En-dessous : Risque faible.
 2021-11-06,QUEYRAS,1,,<2800,2800,2,,>2800,2,Au-dessus de 2800 m : Risque limité. En-dessous : Risque faible.
 2021-11-07,QUEYRAS,1,,,,,,,1,Risque faible.
-2021-11-08,QUEYRAS,2,,E,,1,,W,2,"""""""Risque faible à l'Ouest"""
-2021-11-09,QUEYRAS,2,,E,,1,,W,2,"""""""Risque faible à l'Ouest"""
-2021-11-10,QUEYRAS,3,,E,,1,,W,3,"""""""Risque faible à l'Ouest"""
-2021-11-11,QUEYRAS,2,,E,,1,,W,2,"""""""Risque faible à l'Ouest"""
-2021-11-12,QUEYRAS,2,,E,,1,,W,2,"""""""Risque faible à l'Ouest"""
-2021-11-13,QUEYRAS,2,,E,,1,,W,2,"""""""Risque faible à l'Ouest"""
-2021-11-14,QUEYRAS,3,,E,,1,,W,3,"""""""Risque faible à l'Ouest"""
-2021-11-15,QUEYRAS,3,,E,,2,,W,3,"""""""Risque limité à l'Ouest"""
+2021-11-08,QUEYRAS,2,,E,,1,,W,2,"""""""""""""""Risque faible à l'Ouest"""""""
+2021-11-09,QUEYRAS,2,,E,,1,,W,2,"""""""""""""""Risque faible à l'Ouest"""""""
+2021-11-10,QUEYRAS,3,,E,,1,,W,3,"""""""""""""""Risque faible à l'Ouest"""""""
+2021-11-11,QUEYRAS,2,,E,,1,,W,2,"""""""""""""""Risque faible à l'Ouest"""""""
+2021-11-12,QUEYRAS,2,,E,,1,,W,2,"""""""""""""""Risque faible à l'Ouest"""""""
+2021-11-13,QUEYRAS,2,,E,,1,,W,2,"""""""""""""""Risque faible à l'Ouest"""""""
+2021-11-14,QUEYRAS,3,,E,,1,,W,3,"""""""""""""""Risque faible à l'Ouest"""""""
+2021-11-15,QUEYRAS,3,,E,,2,,W,3,"""""""""""""""Risque limité à l'Ouest"""""""
 2021-11-16,QUEYRAS,2,,<2500,2500,3,,>2500,3,Au-dessus de 2500 m : Risque marqué. En-dessous : Risque limité.
 2021-11-17,QUEYRAS,2,,<2500,2500,3,,>2500,3,Au-dessus de 2500 m : Risque marqué. En-dessous : Risque limité.
 2021-11-18,QUEYRAS,2,,<2700,2700,3,,>2700,3,Au-dessus de 2700 m : Risque marqué. En-dessous : Risque limité.
@@ -696,7 +696,7 @@ date, massif, risque1, evolurisque1, loc1, altitude, risque2, evolurisque2, loc2
 2022-03-29,QUEYRAS,1,,,,,,,1,Risque faible.
 2022-03-30,QUEYRAS,1,,,,,,,1,Risque faible.
 2022-03-31,QUEYRAS,1,2,,,,,,2,Risque faible évoluant en Risque limité.
-2022-04-01,QUEYRAS,3,,E,,2,,W,3,"""""""Risque limité à l'Ouest"""
+2022-04-01,QUEYRAS,3,,E,,2,,W,3,"""""""""""""""Risque limité à l'Ouest"""""""
 2022-04-02,QUEYRAS,3,,,,,,,3,Risque marqué.
 2022-04-03,QUEYRAS,2,,<2200,2200,3,,>2200,3,Au-dessus de 2200 m : Risque marqué. En-dessous : Risque limité.
 2022-04-04,QUEYRAS,1,,<2200,2200,2,,>2200,2,Au-dessus de 2200 m : Risque limité. En-dessous : Risque faible.
@@ -727,3 +727,4 @@ date, massif, risque1, evolurisque1, loc1, altitude, risque2, evolurisque2, loc2
 2022-04-29,QUEYRAS,1,,<2600,2600,2,,>2600,2,Au-dessus de 2600 m : Risque limité. En-dessous : Risque faible.
 2022-04-30,QUEYRAS,1,,,,,,,1,Risque faible.
 2022-05-01,QUEYRAS,1,,,,,,,1,Risque faible.
+2022-05-02,QUEYRAS,1,,,,,,,1,Risque faible.

@@ -1,3 +1,5 @@
 **/__pycache__
 *.log
 app/tmp/*
+tmp_bera.xml
+tmp_dataframe.csv

@@ -106,7 +106,7 @@ date, massif, risque1, evolurisque1, loc1, altitude, risque2, evolurisque2, loc2
 2019-04-01,MAURIENNE,1,2,,,,,,2,Risque faible évoluant en Risque limité.
 2019-04-02,MAURIENNE,2,,,,,,,2,Risque limité.
 2019-04-03,MAURIENNE,3,,,,,,,3,Risque marqué.
-2019-04-04,MAURIENNE,2,,E,,3,,W,3,"""""""Risque marqué à l'Ouest"""
+2019-04-04,MAURIENNE,2,,E,,3,,W,3,"""""""""""""""Risque marqué à l'Ouest"""""""
 2019-04-05,MAURIENNE,1,2,<2300,2300,2,,>2300,2,Au-dessus de 2300 m : Risque limité. En-dessous : Risque faible évoluant en Risque limité.
 2019-04-06,MAURIENNE,1,,<2300,2300,2,,>2300,2,Au-dessus de 2300 m : Risque limité. En-dessous : Risque faible.
 2019-04-07,MAURIENNE,2,,,,,,,2,Risque limité.
@@ -732,3 +732,4 @@ date, massif, risque1, evolurisque1, loc1, altitude, risque2, evolurisque2, loc2
 2022-04-29,MAURIENNE,2,,,,,,,2,Risque limité.
 2022-04-30,MAURIENNE,1,,,,,,,1,Risque faible.
 2022-05-01,MAURIENNE,1,,,,,,,1,Risque faible.
+2022-05-02,MAURIENNE,1,,,,,,,1,Risque faible.

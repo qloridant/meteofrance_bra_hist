@@ -21,11 +21,11 @@ class Bulletin():
     def download(self):
         r = requests.get(f'{self.url}.{self.massif}.{self.jour}.xml')
         # print(f'{self.url}.{self.massif}.{self.jour}.xml')
-        with open('app/tmp/bera.xml', 'bw+') as f:
+        with open('app/tmp_bera.xml', 'bw+') as f:
             f.write(r.content)
 
     def parse(self):
-        root = ET.parse('app/tmp/bera.xml').getroot()
+        root = ET.parse('app/tmp_bera.xml').getroot()
         self.cartouche_risque = root[0].find('CARTOUCHERISQUE')
         self.risques = self.cartouche_risque[0].attrib
 
