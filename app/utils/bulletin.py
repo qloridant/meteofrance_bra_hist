@@ -21,7 +21,7 @@ class Bulletin():
     def download(self):
         r = requests.get(f'{self.url}.{self.massif}.{self.jour}.xml')
         # print(f'{self.url}.{self.massif}.{self.jour}.xml')
-        with open('app/tmp/bera.xml', 'wb') as f:
+        with open('app/tmp/bera.xml', 'wb+') as f:
             f.write(r.content)
 
     def parse(self):
