@@ -15,7 +15,7 @@ def merge_url_content(actual_content: str, new_content: []):
 
 def merge_bera_content(actual_content: str, new_content: [[]]):
     # Merge the text from the github file and the newly generated one
-    # Convert to daatframe to sort and check unicity constraints
+    # Convert to dataframe to sort and check unicity constraints
     actual_content = actual_content.replace('\r', '')
     df = pd.DataFrame([x.split(',') for x in actual_content.split('\n')])
 

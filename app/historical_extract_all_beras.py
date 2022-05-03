@@ -9,8 +9,6 @@ branch = 'master'
 repo = init_repo()
 
 for massif in MASSIFS:
-    if massif == 'CHABLAIS':
-        continue
     # Lecture de la date de publication de notre fichier
     # Utilisation de bash... Efficace ou pythonesque ? Mon choix est fait
     dates_ = subprocess.run(["cat", f"app/data/{massif}/urls_list.txt"], capture_output=True).stdout.decode('utf-8').split('\n')

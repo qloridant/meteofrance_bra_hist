@@ -21,7 +21,7 @@ class Bulletin():
     def download(self):
         r = requests.get(f'{self.url}.{self.massif}.{self.jour}.xml')
         # print(f'{self.url}.{self.massif}.{self.jour}.xml')
-        with open('app/tmp/bera.xml', 'wb+') as f:
+        with open('app/tmp/bera.xml', 'bw+') as f:
             f.write(r.content)
 
     def parse(self):
@@ -30,7 +30,9 @@ class Bulletin():
         self.risques = self.cartouche_risque[0].attrib
 
     def append_csv(self):
-        return [self.jour_key, self.massif, *self.risques.values()]
+        # Removing comma as we will save the file as a csv
+        risques = list(map(lambda x: x.replace(',', '-'), self.risques.values()))
+        return [self.jour_key, self.massif, *risques]
 
 
 if __name__ == '__main__':
