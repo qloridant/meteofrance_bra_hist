@@ -4,7 +4,7 @@ Ce projet a pour but d'ouvrir les données de météo france sur les Bulletins E
 Ces données sont déjà [disponibles](https://donneespubliques.meteofrance.fr/?fond=produit&id_produit=265&id_rubrique=50) mais difficiles à traiter pour des ré-utilisations.
 
 Objectifs de réutilisations :
-  - Evaluation du risque de la partie supérieure du manteua neigeux (préparation sorties)
+  - Evaluation du risque de la partie supérieure du manteau neigeux (préparation sorties)
   - Outil pédagogique afin d'étudier les accidents ayant eu lieu
 
 # Autres projets
