@@ -28,7 +28,7 @@ def merge_bera_content(actual_content: str, new_content: [[]]):
     for i, line in enumerate(new_content):
         df.loc[df_length + i] = line
 
-    df = df.sort_values('date')
+    df = df.sort_values('date', ascending=False)
     df = df.drop_duplicates()
 
     # Export content
