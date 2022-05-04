@@ -7,7 +7,7 @@ import xml.etree.ElementTree as ET
 import sys
 
 
-class Bulletin():
+class Bulletin:
     "Défintion d'un bulletin risque avalanche"
     def __init__(self, massif, jour):
         self.massif = massif
