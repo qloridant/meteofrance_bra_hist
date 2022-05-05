@@ -1,700 +1,700 @@
 date, massif, risque1, evolurisque1, loc1, altitude, risque2, evolurisque2, loc2, risque_maxi, commentaire
-2018-12-17,ASPE-OSSAU,1,,<2300,2300,2,,>2300,2,Au-dessus de 2300 m : Risque limité. En-dessous : Risque faible.
-2018-12-18,ASPE-OSSAU,1,,<2000,2000,2,,>2000,2,Au-dessus de 2000 m : Risque limité. En-dessous : Risque faible.
-2018-12-19,ASPE-OSSAU,1,,<2000,2000,2,,>2000,2,Au-dessus de 2000 m : Risque limité. En-dessous : Risque faible.
-2018-12-20,ASPE-OSSAU,1,,<2100,2100,2,,>2100,2,Au-dessus de 2100 m : Risque limité. En-dessous : Risque faible.
-2018-12-21,ASPE-OSSAU,1,,<2300,2300,2,,>2300,2,Au-dessus de 2300 m : Risque limité. En-dessous : Risque faible.
-2018-12-22,ASPE-OSSAU,1,,<2600,2600,2,,>2600,2,Au-dessus de 2600 m : Risque limité. En-dessous : Risque faible.
-2018-12-23,ASPE-OSSAU,1,,<2500,2500,2,,>2500,2,Au-dessus de 2500 m : Risque limité. En-dessous : Risque faible.
-2018-12-24,ASPE-OSSAU,1,,<2600,2600,2,,>2600,2,Au-dessus de 2600 m : Risque limité. En-dessous : Risque faible.
-2018-12-25,ASPE-OSSAU,1,,<2700,2700,2,,>2700,2,Au-dessus de 2700 m : Risque limité. En-dessous : Risque faible.
-2018-12-26,ASPE-OSSAU,1,,,,,,,1,Risque faible.
-2018-12-27,ASPE-OSSAU,1,,,,,,,1,Risque faible.
-2018-12-28,ASPE-OSSAU,1,,,,,,,1,Risque faible.
-2018-12-29,ASPE-OSSAU,1,,,,,,,1,Risque faible.
-2018-12-30,ASPE-OSSAU,1,,,,,,,1,Risque faible.
-2018-12-31,ASPE-OSSAU,1,,,,,,,1,Risque faible.
-2019-01-01,ASPE-OSSAU,1,,,,,,,1,Risque faible.
-2019-01-02,ASPE-OSSAU,1,,,,,,,1,Risque faible.
-2019-01-03,ASPE-OSSAU,1,,,,,,,1,Risque faible.
-2019-01-04,ASPE-OSSAU,1,,,,,,,1,Risque faible.
-2019-01-05,ASPE-OSSAU,1,,,,,,,1,Risque faible.
-2019-01-06,ASPE-OSSAU,1,,,,,,,1,Risque faible.
-2019-01-07,ASPE-OSSAU,1,,,,,,,1,Risque faible.
-2019-01-08,ASPE-OSSAU,1,,<2200,2200,2,,>2200,2,Au-dessus de 2200 m : Risque limité. En-dessous : Risque faible.
-2019-01-09,ASPE-OSSAU,1,,<2200,2200,2,,>2200,2,Au-dessus de 2200 m : Risque limité. En-dessous : Risque faible.
-2019-01-10,ASPE-OSSAU,1,,<2400,2400,2,,>2400,2,Au-dessus de 2400 m : Risque limité. En-dessous : Risque faible.
-2019-01-11,ASPE-OSSAU,1,,<2200,2200,2,,>2200,2,Au-dessus de 2200 m : Risque limité. En-dessous : Risque faible.
-2019-01-12,ASPE-OSSAU,1,,<2200,2200,2,,>2200,2,Au-dessus de 2200 m : Risque limité. En-dessous : Risque faible.
-2019-01-13,ASPE-OSSAU,1,,<2200,2200,2,,>2200,2,Au-dessus de 2200 m : Risque limité. En-dessous : Risque faible.
-2019-01-14,ASPE-OSSAU,1,,<2400,2400,2,,>2400,2,Au-dessus de 2400 m : Risque limité. En-dessous : Risque faible.
-2019-01-15,ASPE-OSSAU,1,,<2400,2400,2,,>2400,2,Au-dessus de 2400 m : Risque limité. En-dessous : Risque faible.
-2019-01-16,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2019-01-17,ASPE-OSSAU,1,,<2200,2200,2,,>2200,2,Au-dessus de 2200 m : Risque limité. En-dessous : Risque faible.
-2019-01-18,ASPE-OSSAU,1,,<2300,2300,2,,>2300,2,Au-dessus de 2300 m : Risque limité. En-dessous : Risque faible.
-2019-01-19,ASPE-OSSAU,1,2,,,,,,2,Risque faible évoluant en Risque limité.
-2019-01-20,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2019-01-21,ASPE-OSSAU,2,3,,,,,,3,Risque limité évoluant en Risque marqué.
-2019-01-22,ASPE-OSSAU,4,,,,,,,4,Risque fort.
-2019-01-23,ASPE-OSSAU,4,,<1700,1700,5,4,>1700,5,Au-dessus de 1700 m : Risque très fort évoluant en Risque fort. En-dessous : Risque fort.
-2019-01-24,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
-2019-01-25,ASPE-OSSAU,2,,<2000,2000,3,,>2000,3,Au-dessus de 2000 m : Risque marqué. En-dessous : Risque limité.
-2019-01-26,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
-2019-01-27,ASPE-OSSAU,4,,,,,,,4,Risque fort.
-2019-01-28,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
-2019-01-29,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
-2019-01-30,ASPE-OSSAU,4,,,,,,,4,Risque fort.
-2019-01-31,ASPE-OSSAU,4,,S,,3,,N,4,"""""""""""""""""""""""""""""""Risque marqué au Nord"""""""""""""""
-2019-02-01,ASPE-OSSAU,2,3,<2000,2000,3,,>2000,3,Au-dessus de 2000 m : Risque marqué. En-dessous : Risque limité évoluant en Risque marqué.
-2019-02-02,ASPE-OSSAU,3,,<2100,2100,4,,>2100,4,Au-dessus de 2100 m : Risque fort. En-dessous : Risque marqué.
-2019-02-03,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
-2019-02-04,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
-2019-02-05,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2019-02-06,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2019-02-07,ASPE-OSSAU,2,3,,,,,,3,Risque limité évoluant en Risque marqué.
-2019-02-08,ASPE-OSSAU,2,,<2100,2100,3,,>2100,3,Au-dessus de 2100 m : Risque marqué. En-dessous : Risque limité.
-2019-02-09,ASPE-OSSAU,2,,<2500,2500,3,,>2500,3,Au-dessus de 2500 m : Risque marqué. En-dessous : Risque limité.
-2019-02-10,ASPE-OSSAU,2,,<2500,2500,3,,>2500,3,Au-dessus de 2500 m : Risque marqué. En-dessous : Risque limité.
-2019-02-11,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2019-02-12,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2019-02-13,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2019-02-14,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2019-02-15,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2019-02-16,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2019-02-17,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2019-02-18,ASPE-OSSAU,1,2,<2200,2200,2,,>2200,2,Au-dessus de 2200 m : Risque limité. En-dessous : Risque faible évoluant en Risque limité.
-2019-02-19,ASPE-OSSAU,1,2,<2200,2200,2,,>2200,2,Au-dessus de 2200 m : Risque limité. En-dessous : Risque faible évoluant en Risque limité.
-2019-02-20,ASPE-OSSAU,1,2,<2200,2200,2,,>2200,2,Au-dessus de 2200 m : Risque limité. En-dessous : Risque faible évoluant en Risque limité.
-2019-02-21,ASPE-OSSAU,1,2,<2300,2300,2,,>2300,2,Au-dessus de 2300 m : Risque limité. En-dessous : Risque faible évoluant en Risque limité.
-2019-02-22,ASPE-OSSAU,1,2,<2300,2300,2,,>2300,2,Au-dessus de 2300 m : Risque limité. En-dessous : Risque faible évoluant en Risque limité.
-2019-02-23,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2019-02-24,ASPE-OSSAU,1,2,,,,,,2,Risque faible évoluant en Risque limité.
-2019-02-25,ASPE-OSSAU,1,2,,,,,,2,Risque faible évoluant en Risque limité.
-2019-02-26,ASPE-OSSAU,1,2,,,,,,2,Risque faible évoluant en Risque limité.
-2019-02-27,ASPE-OSSAU,1,,,,,,,1,Risque faible.
-2019-02-28,ASPE-OSSAU,1,,,,,,,1,Risque faible.
-2019-03-01,ASPE-OSSAU,1,,,,,,,1,Risque faible.
-2019-03-02,ASPE-OSSAU,1,3,,,,,,3,Risque faible évoluant en Risque marqué.
-2019-03-03,ASPE-OSSAU,3,2,,,,,,3,Risque marqué évoluant en Risque limité.
-2019-03-04,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2019-03-05,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
-2019-03-06,ASPE-OSSAU,3,,S,,2,,N,3,"""""""""""""""""""""""""""""""Risque limité au Nord"""""""""""""""
-2019-03-07,ASPE-OSSAU,2,,<2000,2000,3,,>2000,3,Au-dessus de 2000 m : Risque marqué. En-dessous : Risque limité.
-2019-03-08,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2019-03-09,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2019-03-10,ASPE-OSSAU,1,,<2400,2400,2,,>2400,2,Au-dessus de 2400 m : Risque limité. En-dessous : Risque faible.
-2019-03-11,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2019-03-12,ASPE-OSSAU,2,,<2200,2200,2,3,>2200,3,Au-dessus de 2200 m : Risque limité évoluant en Risque marqué. En-dessous : Risque limité.
-2019-03-13,ASPE-OSSAU,2,,S,,3,,N,3,"""""""""""""""""""""""""""""""Risque marqué au Nord"""""""""""""""
-2019-03-14,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2019-03-16,ASPE-OSSAU,1,,<2400,2400,2,,>2400,2,Au-dessus de 2400 m : Risque limité. En-dessous : Risque faible.
-2019-03-20,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2019-03-22,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2019-03-23,ASPE-OSSAU,1,2,<2200,2200,2,,>2200,2,Au-dessus de 2200 m : Risque limité. En-dessous : Risque faible évoluant en Risque limité.
-2019-03-24,ASPE-OSSAU,1,,<2200,2200,2,,>2200,2,Au-dessus de 2200 m : Risque limité. En-dessous : Risque faible.
-2019-03-25,ASPE-OSSAU,1,,,,,,,1,Risque faible.
-2019-03-26,ASPE-OSSAU,1,,<2200,2200,2,,>2200,2,Au-dessus de 2200 m : Risque limité. En-dessous : Risque faible.
-2019-03-27,ASPE-OSSAU,1,,<2200,2200,2,,>2200,2,Au-dessus de 2200 m : Risque limité. En-dessous : Risque faible.
-2019-03-28,ASPE-OSSAU,1,,<2200,2200,2,,>2200,2,Au-dessus de 2200 m : Risque limité. En-dessous : Risque faible.
-2019-03-29,ASPE-OSSAU,1,,,,,,,1,Risque faible.
-2019-03-30,ASPE-OSSAU,1,,,,,,,1,Risque faible.
-2019-03-31,ASPE-OSSAU,1,,<2200,2200,2,,>2200,2,Au-dessus de 2200 m : Risque limité. En-dessous : Risque faible.
-2019-04-01,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2019-04-02,ASPE-OSSAU,2,,<2300,2300,2,3,>2300,3,Au-dessus de 2300 m : Risque limité évoluant en Risque marqué. En-dessous : Risque limité.
-2019-04-03,ASPE-OSSAU,2,,<2300,2300,3,,>2300,3,Au-dessus de 2300 m : Risque marqué. En-dessous : Risque limité.
-2019-04-04,ASPE-OSSAU,2,,<2000,2000,3,,>2000,3,Au-dessus de 2000 m : Risque marqué. En-dessous : Risque limité.
-2019-04-05,ASPE-OSSAU,2,,<2000,2000,3,,>2000,3,Au-dessus de 2000 m : Risque marqué. En-dessous : Risque limité.
-2019-04-06,ASPE-OSSAU,2,,<1900,1900,3,,>1900,3,Au-dessus de 1900 m : Risque marqué. En-dessous : Risque limité.
-2019-04-07,ASPE-OSSAU,2,,<2000,2000,3,,>2000,3,Au-dessus de 2000 m : Risque marqué. En-dessous : Risque limité.
-2019-04-08,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2019-04-09,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
-2019-04-10,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2019-04-11,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2019-04-12,ASPE-OSSAU,2,3,,,,,,3,Risque limité évoluant en Risque marqué.
-2019-04-13,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2019-04-14,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2019-04-15,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
-2019-04-16,ASPE-OSSAU,1,2,,,,,,2,Risque faible évoluant en Risque limité.
-2019-04-17,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2019-04-18,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2019-04-19,ASPE-OSSAU,1,2,,,,,,2,Risque faible évoluant en Risque limité.
-2019-04-20,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2019-04-21,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2019-04-22,ASPE-OSSAU,2,3,,,,,,3,Risque limité évoluant en Risque marqué.
-2019-04-23,ASPE-OSSAU,2,,<2100,2100,2,3,>2100,3,Au-dessus de 2100 m : Risque limité évoluant en Risque marqué. En-dessous : Risque limité.
-2019-04-24,ASPE-OSSAU,4,,S,,3,,N,4,"""""""""""""""""""""""""""""""Risque marqué au Nord"""""""""""""""
-2019-04-25,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
-2019-04-26,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
-2019-04-27,ASPE-OSSAU,1,3,,,,,,3,Risque faible évoluant en Risque marqué.
-2019-04-29,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-04-30,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-05-01,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-05-02,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-05-03,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-05-04,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-05-05,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-05-06,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-05-07,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-05-08,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-05-09,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-05-10,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-05-11,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-05-12,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-05-13,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-05-14,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-05-15,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-05-16,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-05-17,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-05-18,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-05-19,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-05-20,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-05-21,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-05-22,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-05-23,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-05-24,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-05-25,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-05-26,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-05-27,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-05-28,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-05-29,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-05-30,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-05-31,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-06-01,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-06-02,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-06-03,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-06-04,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-06-05,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-06-06,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-06-07,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-06-08,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-06-09,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-06-10,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-06-11,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-06-12,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-10-30,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-10-31,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-11-01,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-11-02,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-11-03,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-11-04,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-11-05,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-11-06,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-11-07,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-11-08,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-11-09,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-11-10,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-11-11,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-11-12,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-11-13,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-11-14,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-11-15,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-11-16,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-11-17,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-11-18,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-11-19,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-11-20,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-11-21,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-11-22,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-11-23,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-11-24,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-11-25,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-11-26,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-11-27,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-11-28,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-11-29,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-11-30,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-12-01,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-12-02,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-12-03,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-12-04,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-12-06,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-12-07,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-12-08,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-12-09,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-12-11,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-12-12,ASPE-OSSAU,4,,,,,,,4,Risque fort.
-2019-12-13,ASPE-OSSAU,3,2,<2200,2200,4,3,>2200,4,Au-dessus de 2200 m : Risque fort évoluant en Risque marqué. En-dessous : Risque marqué évoluant en Risque limité.
-2019-12-14,ASPE-OSSAU,2,,<2500,2500,3,,>2500,3,Au-dessus de 2500 m : Risque marqué. En-dessous : Risque limité.
-2019-12-15,ASPE-OSSAU,2,,<2600,2600,3,,>2600,3,Au-dessus de 2600 m : Risque marqué. En-dessous : Risque limité.
-2019-12-16,ASPE-OSSAU,2,,<2400,2400,3,,>2400,3,Au-dessus de 2400 m : Risque marqué. En-dessous : Risque limité.
-2019-12-18,ASPE-OSSAU,1,2,<2300,2300,3,,>2300,3,Au-dessus de 2300 m : Risque marqué. En-dessous : Risque faible évoluant en Risque limité.
-2019-12-19,ASPE-OSSAU,4,,S,,3,,N,4,"""""""""""""""""""""""""""""""Risque marqué au Nord"""""""""""""""
-2019-12-20,ASPE-OSSAU,2,,<2400,2400,3,,>2400,3,Au-dessus de 2400 m : Risque marqué. En-dessous : Risque limité.
-2019-12-21,ASPE-OSSAU,2,,<2300,2300,3,,>2300,3,Au-dessus de 2300 m : Risque marqué. En-dessous : Risque limité.
-2019-12-22,ASPE-OSSAU,2,,<2000,2000,3,,>2000,3,Au-dessus de 2000 m : Risque marqué. En-dessous : Risque limité.
-2019-12-23,ASPE-OSSAU,2,,<2300,2300,3,,>2300,3,Au-dessus de 2300 m : Risque marqué. En-dessous : Risque limité.
-2019-12-24,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2019-12-25,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2019-12-26,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2019-12-27,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2019-12-28,ASPE-OSSAU,1,2,<2500,2500,2,,>2500,2,Au-dessus de 2500 m : Risque limité. En-dessous : Risque faible évoluant en Risque limité.
-2019-12-29,ASPE-OSSAU,1,2,<2600,2600,2,,>2600,2,Au-dessus de 2600 m : Risque limité. En-dessous : Risque faible évoluant en Risque limité.
-2019-12-30,ASPE-OSSAU,1,,<2600,2600,2,,>2600,2,Au-dessus de 2600 m : Risque limité. En-dessous : Risque faible.
-2019-12-31,ASPE-OSSAU,1,,<2500,2500,2,,>2500,2,Au-dessus de 2500 m : Risque limité. En-dessous : Risque faible.
-2020-01-01,ASPE-OSSAU,1,,<2500,2500,2,,>2500,2,Au-dessus de 2500 m : Risque limité. En-dessous : Risque faible.
-2020-01-02,ASPE-OSSAU,1,,<2600,2600,2,,>2600,2,Au-dessus de 2600 m : Risque limité. En-dessous : Risque faible.
-2020-01-03,ASPE-OSSAU,1,,<2700,2700,2,,>2700,2,Au-dessus de 2700 m : Risque limité. En-dessous : Risque faible.
-2020-01-04,ASPE-OSSAU,1,,<2700,2700,2,,>2700,2,Au-dessus de 2700 m : Risque limité. En-dessous : Risque faible.
-2020-01-05,ASPE-OSSAU,1,,,,,,,1,Risque faible.
-2020-01-06,ASPE-OSSAU,1,,,,,,,1,Risque faible.
-2020-01-07,ASPE-OSSAU,1,,,,,,,1,Risque faible.
-2020-01-08,ASPE-OSSAU,1,,,,,,,1,Risque faible.
-2020-01-10,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2020-01-11,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2020-01-12,ASPE-OSSAU,1,,,,,,,1,Risque faible.
-2020-01-13,ASPE-OSSAU,1,,<2300,2300,2,,>2300,2,Au-dessus de 2300 m : Risque limité. En-dessous : Risque faible.
-2020-01-14,ASPE-OSSAU,1,,<2200,2200,2,,>2200,2,Au-dessus de 2200 m : Risque limité. En-dessous : Risque faible.
-2020-01-15,ASPE-OSSAU,1,,<2200,2200,2,,>2200,2,Au-dessus de 2200 m : Risque limité. En-dessous : Risque faible.
-2020-01-16,ASPE-OSSAU,1,2,<2000,2000,2,3,>2000,3,Au-dessus de 2000 m : Risque limité évoluant en Risque marqué. En-dessous : Risque faible évoluant en Risque limité.
-2020-01-17,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
-2020-01-18,ASPE-OSSAU,2,,<2100,2100,3,,>2100,3,Au-dessus de 2100 m : Risque marqué. En-dessous : Risque limité.
-2020-01-19,ASPE-OSSAU,2,,<2000,2000,3,,>2000,3,Au-dessus de 2000 m : Risque marqué. En-dessous : Risque limité.
-2020-01-20,ASPE-OSSAU,2,,<2000,2000,3,,>2000,3,Au-dessus de 2000 m : Risque marqué. En-dessous : Risque limité.
-2020-01-21,ASPE-OSSAU,2,,<2000,2000,3,,>2000,3,Au-dessus de 2000 m : Risque marqué. En-dessous : Risque limité.
-2020-01-22,ASPE-OSSAU,2,,<2000,2000,3,,>2000,3,Au-dessus de 2000 m : Risque marqué. En-dessous : Risque limité.
-2020-01-23,ASPE-OSSAU,2,,<2000,2000,4,,>2000,4,Au-dessus de 2000 m : Risque fort. En-dessous : Risque limité.
-2020-01-24,ASPE-OSSAU,2,,<2000,2000,3,,>2000,3,Au-dessus de 2000 m : Risque marqué. En-dessous : Risque limité.
-2020-01-25,ASPE-OSSAU,2,,<2000,2000,3,,>2000,3,Au-dessus de 2000 m : Risque marqué. En-dessous : Risque limité.
-2020-01-26,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2020-01-27,ASPE-OSSAU,2,,<1800,1800,3,,>1800,3,Au-dessus de 1800 m : Risque marqué. En-dessous : Risque limité.
-2020-01-28,ASPE-OSSAU,2,,<2000,2000,3,,>2000,3,Au-dessus de 2000 m : Risque marqué. En-dessous : Risque limité.
-2020-01-29,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2020-01-30,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2020-01-31,ASPE-OSSAU,3,,S,,2,,N,3,"""""""""""""""""""""""""""""""Risque limité au Nord"""""""""""""""
-2020-02-01,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2020-02-02,ASPE-OSSAU,1,2,,,,,,2,Risque faible évoluant en Risque limité.
-2020-02-03,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2020-02-04,ASPE-OSSAU,1,2,<2700,2700,2,,>2700,2,Au-dessus de 2700 m : Risque limité. En-dessous : Risque faible évoluant en Risque limité.
-2020-02-05,ASPE-OSSAU,1,2,<2700,2700,2,,>2700,2,Au-dessus de 2700 m : Risque limité. En-dessous : Risque faible évoluant en Risque limité.
-2020-02-06,ASPE-OSSAU,1,2,<2800,2800,2,,>2800,2,Au-dessus de 2800 m : Risque limité. En-dessous : Risque faible évoluant en Risque limité.
-2020-02-07,ASPE-OSSAU,1,,,,,,,1,Risque faible.
-2020-02-08,ASPE-OSSAU,1,,,,,,,1,Risque faible.
-2020-02-09,ASPE-OSSAU,1,2,,,,,,2,Risque faible évoluant en Risque limité.
-2020-02-10,ASPE-OSSAU,1,,,,,,,1,Risque faible.
-2020-02-11,ASPE-OSSAU,1,,,,,,,1,Risque faible.
-2020-02-12,ASPE-OSSAU,1,,,,,,,1,Risque faible.
-2020-02-13,ASPE-OSSAU,1,,,,,,,1,Risque faible.
-2020-02-15,ASPE-OSSAU,1,2,,,,,,2,Risque faible évoluant en Risque limité.
-2020-02-16,ASPE-OSSAU,1,,<2800,2800,2,,>2800,2,Au-dessus de 2800 m : Risque limité. En-dessous : Risque faible.
-2020-02-17,ASPE-OSSAU,1,,,,,,,1,Risque faible.
-2020-02-18,ASPE-OSSAU,1,,,,,,,1,Risque faible.
-2020-02-19,ASPE-OSSAU,1,,,,,,,1,Risque faible.
-2020-02-20,ASPE-OSSAU,1,,,,,,,1,Risque faible.
-2020-02-21,ASPE-OSSAU,1,,,,,,,1,Risque faible.
-2020-02-22,ASPE-OSSAU,1,,,,,,,1,Risque faible.
-2020-02-23,ASPE-OSSAU,1,,,,,,,1,Risque faible.
-2020-02-24,ASPE-OSSAU,1,,<2000,2000,1,2,>2000,2,Au-dessus de 2000 m : Risque faible évoluant en Risque limité. En-dessous : Risque faible.
-2020-02-25,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2020-02-26,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2020-02-27,ASPE-OSSAU,1,,<2200,2200,2,,>2200,2,Au-dessus de 2200 m : Risque limité. En-dessous : Risque faible.
-2020-02-28,ASPE-OSSAU,1,2,<2400,2400,3,,>2400,3,Au-dessus de 2400 m : Risque marqué. En-dessous : Risque faible évoluant en Risque limité.
-2020-02-29,ASPE-OSSAU,2,,<2700,2700,3,,>2700,3,Au-dessus de 2700 m : Risque marqué. En-dessous : Risque limité.
-2020-03-01,ASPE-OSSAU,2,,<2000,2000,3,,>2000,3,Au-dessus de 2000 m : Risque marqué. En-dessous : Risque limité.
-2020-03-02,ASPE-OSSAU,2,3,<1800,1800,3,,>1800,3,Au-dessus de 1800 m : Risque marqué. En-dessous : Risque limité évoluant en Risque marqué.
-2020-03-03,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
-2020-03-04,ASPE-OSSAU,2,,<2700,2700,3,2,>2700,3,Au-dessus de 2700 m : Risque marqué évoluant en Risque limité. En-dessous : Risque limité.
-2020-03-05,ASPE-OSSAU,2,3,,,,,,3,Risque limité évoluant en Risque marqué.
-2020-03-06,ASPE-OSSAU,4,,,,,,,4,Risque fort.
-2020-03-07,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
-2020-03-08,ASPE-OSSAU,2,,<2000,2000,3,,>2000,3,Au-dessus de 2000 m : Risque marqué. En-dessous : Risque limité.
-2020-03-09,ASPE-OSSAU,3,2,,,,,,3,Risque marqué évoluant en Risque limité.
-2020-03-10,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2020-03-11,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2020-03-12,ASPE-OSSAU,2,,<2000,2000,3,,>2000,3,Au-dessus de 2000 m : Risque marqué. En-dessous : Risque limité.
-2020-03-13,ASPE-OSSAU,1,2,,,,,,2,Risque faible évoluant en Risque limité.
-2020-03-14,ASPE-OSSAU,1,2,,,,,,2,Risque faible évoluant en Risque limité.
-2020-03-15,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
-2020-03-16,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
-2020-03-17,ASPE-OSSAU,2,,<2100,2100,3,,>2100,3,Au-dessus de 2100 m : Risque marqué. En-dessous : Risque limité.
-2020-03-18,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
-2020-03-19,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2020-03-20,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2020-03-21,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2020-03-22,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2020-03-23,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2020-03-24,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2020-03-25,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2020-11-02,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2020-11-03,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2020-11-04,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2020-11-05,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2020-11-06,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2020-11-07,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2020-11-08,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2020-11-09,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2020-11-10,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2020-11-11,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2020-11-12,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2020-11-13,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2020-11-14,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2020-11-15,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2020-11-16,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2020-11-17,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2020-11-18,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2020-11-19,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2020-11-20,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2020-11-21,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2020-11-22,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2020-11-23,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2020-11-24,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2020-11-25,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2020-11-26,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2020-11-27,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2020-11-28,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2020-11-29,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2020-11-30,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2020-12-01,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2020-12-02,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2020-12-03,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2020-12-04,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2020-12-05,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2020-12-06,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2020-12-07,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2020-12-08,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2020-12-09,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2020-12-10,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2020-12-14,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2020-12-15,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2020-12-17,ASPE-OSSAU,1,,<2400,2400,2,,>2400,2,Au-dessus de 2400 m : Risque limité. En-dessous : Risque faible.
-2020-12-18,ASPE-OSSAU,1,,<2500,2500,2,,>2500,2,Au-dessus de 2500 m : Risque limité. En-dessous : Risque faible.
-2020-12-19,ASPE-OSSAU,1,,<2500,2500,2,,>2500,2,Au-dessus de 2500 m : Risque limité. En-dessous : Risque faible.
-2020-12-20,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2020-12-21,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2020-12-22,ASPE-OSSAU,1,,,,,,,1,Risque faible.
-2020-12-23,ASPE-OSSAU,1,,,,,,,1,Risque faible.
-2020-12-24,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2020-12-25,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
-2020-12-26,ASPE-OSSAU,2,,<1800,1800,3,,>1800,3,Au-dessus de 1800 m : Risque marqué. En-dessous : Risque limité.
-2020-12-27,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
-2020-12-28,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
-2020-12-29,ASPE-OSSAU,4,,,,,,,4,Risque fort.
-2020-12-30,ASPE-OSSAU,4,,,,,,,4,Risque fort.
-2020-12-31,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
-2021-01-01,ASPE-OSSAU,3,,,,,,,3,Risque marqué
-2021-01-02,ASPE-OSSAU,2,,<1800,1800,3,,>1800,3,Au-dessus de 1800 m : Risque marqué. En-dessous : Risque limité.
-2021-01-03,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2021-01-04,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2021-01-05,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2021-01-06,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2021-01-07,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2021-01-08,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2021-01-09,ASPE-OSSAU,2,3,,,,,,3,Risque limité évoluant en Risque marqué.
-2021-01-10,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
-2021-01-11,ASPE-OSSAU,2,,<1800,1800,3,,>1800,3,Au-dessus de 1800 m : Risque marqué. En-dessous : Risque limité.
-2021-01-12,ASPE-OSSAU,2,,<1800,1800,3,,>1800,3,Au-dessus de 1800 m : Risque marqué. En-dessous : Risque limité.
-2021-01-15,ASPE-OSSAU,2,,<2000,2000,3,,>2000,3,Au-dessus de 2000 m : Risque marqué. En-dessous : Risque limité.
-2021-01-16,ASPE-OSSAU,2,,<1800,1800,3,,>1800,3,Au-dessus de 1800 m : Risque marqué. En-dessous : Risque limité.
-2021-01-17,ASPE-OSSAU,2,,<2000,2000,3,,>2000,3,Au-dessus de 2000 m : Risque marqué. En-dessous : Risque limité.
-2021-01-18,ASPE-OSSAU,2,,<2100,2100,3,,>2100,3,Au-dessus de 2100 m : Risque marqué. En-dessous : Risque limité.
-2021-01-19,ASPE-OSSAU,2,,<2100,2100,3,,>2100,3,Au-dessus de 2100 m : Risque marqué. En-dessous : Risque limité.
-2021-01-20,ASPE-OSSAU,2,,<2100,2100,3,,>2100,3,Au-dessus de 2100 m : Risque marqué. En-dessous : Risque limité.
-2021-01-21,ASPE-OSSAU,2,,<1800,1800,3,,>1800,3,Au-dessus de 1800 m : Risque marqué. En-dessous : Risque limité.
-2021-01-22,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
-2021-01-23,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
-2021-01-24,ASPE-OSSAU,2,,<2100,2100,3,,>2100,3,Au-dessus de 2100 m : Risque marqué. En-dessous : Risque limité.
-2021-01-25,ASPE-OSSAU,2,,<2100,2100,3,,>2100,3,Au-dessus de 2100 m : Risque marqué. En-dessous : Risque limité.
-2021-01-26,ASPE-OSSAU,2,3,<2000,2000,3,4,>2000,4,Au-dessus de 2000 m : Risque marqué évoluant en Risque fort. En-dessous : Risque limité évoluant en Risque marqué.
-2021-01-27,ASPE-OSSAU,3,2,,,,,,3,Risque marqué évoluant en Risque limité.
-2021-01-28,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2021-01-29,ASPE-OSSAU,2,3,,,,,,3,Risque limité évoluant en Risque marqué.
-2021-01-30,ASPE-OSSAU,3,,<2200,2200,3,4,>2200,4,Au-dessus de 2200 m : Risque marqué évoluant en Risque fort. En-dessous : Risque marqué.
-2021-01-31,ASPE-OSSAU,3,,<2200,2200,4,,>2200,4,Au-dessus de 2200 m : Risque fort. En-dessous : Risque marqué.
-2021-02-01,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
-2021-02-02,ASPE-OSSAU,2,,<2100,2100,3,,>2100,3,Au-dessus de 2100 m : Risque marqué. En-dessous : Risque limité.
-2021-02-03,ASPE-OSSAU,2,,<2200,2200,3,,>2200,3,Au-dessus de 2200 m : Risque marqué. En-dessous : Risque limité.
-2021-02-04,ASPE-OSSAU,2,,<2200,2200,3,,>2200,3,Au-dessus de 2200 m : Risque marqué. En-dessous : Risque limité.
-2021-02-05,ASPE-OSSAU,2,3,,,,,,3,Risque limité évoluant en Risque marqué.
-2021-02-06,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2021-02-07,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2021-02-08,ASPE-OSSAU,2,3,,,,,,3,Risque limité évoluant en Risque marqué.
-2021-02-09,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
-2021-02-10,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2021-02-11,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2021-02-12,ASPE-OSSAU,2,,<2100,2100,3,,>2100,3,Au-dessus de 2100 m : Risque marqué. En-dessous : Risque limité.
-2021-02-13,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2021-02-14,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2021-02-15,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2021-02-16,ASPE-OSSAU,1,2,<2200,2200,2,,>2200,2,Au-dessus de 2200 m : Risque limité. En-dessous : Risque faible évoluant en Risque limité.
-2021-02-17,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2021-02-18,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2021-02-19,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2021-02-20,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2021-02-21,ASPE-OSSAU,3,,S,,2,,N,3,"""""""""""""""""""""""""""""""Risque limité au Nord"""""""""""""""
-2021-02-22,ASPE-OSSAU,3,,S,,2,,N,3,"""""""""""""""""""""""""""""""Risque limité au Nord"""""""""""""""
-2021-02-23,ASPE-OSSAU,2,,<2000,2000,3,,>2000,3,Au-dessus de 2000 m : Risque marqué. En-dessous : Risque limité.
-2021-02-24,ASPE-OSSAU,2,,<2200,2200,3,,>2200,3,Au-dessus de 2200 m : Risque marqué. En-dessous : Risque limité.
-2021-02-26,ASPE-OSSAU,1,,<2100,2100,2,,>2100,2,Au-dessus de 2100 m : Risque limité. En-dessous : Risque faible.
-2021-02-27,ASPE-OSSAU,1,,<2200,2200,2,,>2200,2,Au-dessus de 2200 m : Risque limité. En-dessous : Risque faible.
-2021-02-28,ASPE-OSSAU,1,,<2200,2200,2,,>2200,2,Au-dessus de 2200 m : Risque limité. En-dessous : Risque faible.
-2021-03-01,ASPE-OSSAU,1,,,,,,,1,Risque faible.
-2021-03-02,ASPE-OSSAU,1,,,,,,,1,Risque faible.
-2021-03-03,ASPE-OSSAU,1,,,,,,,1,Risque faible.
-2021-03-04,ASPE-OSSAU,1,,,,,,,1,Risque faible.
-2021-03-05,ASPE-OSSAU,1,,,,,,,1,Risque faible.
-2021-03-06,ASPE-OSSAU,1,,<2200,2200,2,,>2200,2,Au-dessus de 2200 m : Risque limité. En-dessous : Risque faible.
-2021-03-07,ASPE-OSSAU,1,,<2200,2200,2,,>2200,2,Au-dessus de 2200 m : Risque limité. En-dessous : Risque faible.
-2021-03-08,ASPE-OSSAU,1,,<2000,2000,2,,>2000,2,Au-dessus de 2000 m : Risque limité. En-dessous : Risque faible.
-2021-03-09,ASPE-OSSAU,1,,<2200,2200,2,,>2200,2,Au-dessus de 2200 m : Risque limité. En-dessous : Risque faible.
-2021-03-10,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2021-03-16,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2021-03-17,ASPE-OSSAU,1,,<2000,2000,2,,>2000,2,Au-dessus de 2000 m : Risque limité. En-dessous : Risque faible.
-2021-03-18,ASPE-OSSAU,2,,<2000,2000,3,,>2000,3,Au-dessus de 2000 m : Risque marqué. En-dessous : Risque limité.
-2021-03-19,ASPE-OSSAU,3,,<2000,2000,4,,>2000,4,Au-dessus de 2000 m : Risque fort. En-dessous : Risque marqué.
-2021-03-20,ASPE-OSSAU,2,,<2000,2000,3,,>2000,3,Au-dessus de 2000 m : Risque marqué. En-dessous : Risque limité.
-2021-03-21,ASPE-OSSAU,2,,<2000,2000,3,,>2000,3,Au-dessus de 2000 m : Risque marqué. En-dessous : Risque limité.
-2021-03-22,ASPE-OSSAU,2,,<2200,2200,3,,>2200,3,Au-dessus de 2200 m : Risque marqué. En-dessous : Risque limité.
-2021-03-23,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2021-03-24,ASPE-OSSAU,1,,<2200,2200,2,,>2200,2,Au-dessus de 2200 m : Risque limité. En-dessous : Risque faible.
-2021-03-25,ASPE-OSSAU,1,,<2400,2400,2,,>2400,2,Au-dessus de 2400 m : Risque limité. En-dessous : Risque faible.
-2021-03-26,ASPE-OSSAU,1,,<2300,2300,2,,>2300,2,Au-dessus de 2300 m : Risque limité. En-dessous : Risque faible.
-2021-03-27,ASPE-OSSAU,1,,<2300,2300,2,,>2300,2,Au-dessus de 2300 m : Risque limité. En-dessous : Risque faible.
-2021-03-28,ASPE-OSSAU,1,,<2300,2300,2,,>2300,2,Au-dessus de 2300 m : Risque limité. En-dessous : Risque faible.
-2021-03-29,ASPE-OSSAU,1,,<2500,2500,2,,>2500,2,Au-dessus de 2500 m : Risque limité. En-dessous : Risque faible.
-2021-03-30,ASPE-OSSAU,1,,<2400,2400,2,,>2400,2,Au-dessus de 2400 m : Risque limité. En-dessous : Risque faible.
-2021-03-31,ASPE-OSSAU,1,,<2500,2500,2,,>2500,2,Au-dessus de 2500 m : Risque limité. En-dessous : Risque faible.
-2021-04-10,ASPE-OSSAU,1,,<2200,2200,1,2,>2200,2,Au-dessus de 2200 m : Risque faible évoluant en Risque limité. En-dessous : Risque faible.
-2021-04-11,ASPE-OSSAU,1,,<2400,2400,2,,>2400,2,Au-dessus de 2400 m : Risque limité. En-dessous : Risque faible.
-2021-04-12,ASPE-OSSAU,1,,<2400,2400,2,,>2400,2,Au-dessus de 2400 m : Risque limité. En-dessous : Risque faible.
-2021-04-13,ASPE-OSSAU,1,,<2400,2400,2,,>2400,2,Au-dessus de 2400 m : Risque limité. En-dessous : Risque faible.
-2021-04-14,ASPE-OSSAU,1,,<2400,2400,2,,>2400,2,Au-dessus de 2400 m : Risque limité. En-dessous : Risque faible.
-2021-04-15,ASPE-OSSAU,1,,<2400,2400,2,,>2400,2,Au-dessus de 2400 m : Risque limité. En-dessous : Risque faible.
-2021-04-16,ASPE-OSSAU,1,,<2400,2400,2,,>2400,2,Au-dessus de 2400 m : Risque limité. En-dessous : Risque faible.
-2021-04-17,ASPE-OSSAU,1,,<2400,2400,2,,>2400,2,Au-dessus de 2400 m : Risque limité. En-dessous : Risque faible.
-2021-04-18,ASPE-OSSAU,1,,<2400,2400,2,,>2400,2,Au-dessus de 2400 m : Risque limité. En-dessous : Risque faible.
-2021-04-19,ASPE-OSSAU,1,,<2400,2400,2,,>2400,2,Au-dessus de 2400 m : Risque limité. En-dessous : Risque faible.
-2021-04-20,ASPE-OSSAU,1,,<2400,2400,2,,>2400,2,Au-dessus de 2400 m : Risque limité. En-dessous : Risque faible.
-2021-04-21,ASPE-OSSAU,1,,<2400,2400,2,,>2400,2,Au-dessus de 2400 m : Risque limité. En-dessous : Risque faible.
-2021-04-22,ASPE-OSSAU,1,,<2400,2400,2,,>2400,2,Au-dessus de 2400 m : Risque limité. En-dessous : Risque faible.
-2021-04-23,ASPE-OSSAU,1,,<2500,2500,2,,>2500,2,Au-dessus de 2500 m : Risque limité. En-dessous : Risque faible.
-2021-04-24,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2021-04-25,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2021-04-26,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2021-04-27,ASPE-OSSAU,1,,<2500,2500,2,,>2500,2,Au-dessus de 2500 m : Risque limité. En-dessous : Risque faible.
-2021-04-28,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2021-04-29,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2021-04-30,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2021-05-01,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2021-05-02,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2021-05-03,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2021-05-04,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2021-05-05,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2021-05-06,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2021-05-07,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2021-05-08,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2021-05-09,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2021-05-10,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2021-05-11,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2021-05-12,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2021-05-13,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2021-05-14,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2021-05-15,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2021-05-16,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2021-05-17,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2021-05-18,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2021-05-19,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2021-05-20,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2021-05-21,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2021-05-22,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2021-05-23,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2021-05-24,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2021-05-25,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2021-05-26,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2021-05-27,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2021-05-28,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2021-05-29,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2021-05-30,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2021-05-31,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2021-06-01,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2021-06-02,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2021-06-03,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2021-06-04,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2021-06-05,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2021-06-06,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2021-06-07,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2021-06-08,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2021-06-09,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2021-06-10,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2021-10-20,ASPE-OSSAU,1,,<2700,2700,2,,>2700,2,Au-dessus de 2700 m : Risque limité. En-dessous : Risque faible.
-2021-10-22,ASPE-OSSAU,1,,,,,,,1,Risque faible.
-2021-11-02,ASPE-OSSAU,1,,,,,,,1,Risque faible.
-2021-11-03,ASPE-OSSAU,1,,,,,,,1,Risque faible.
-2021-11-04,ASPE-OSSAU,1,,,,,,,1,Risque faible.
-2021-11-05,ASPE-OSSAU,1,,<1800,1800,2,,>1800,2,Au-dessus de 1800 m : Risque limité. En-dessous : Risque faible.
-2021-11-06,ASPE-OSSAU,1,,<2400,2400,2,,>2400,2,Au-dessus de 2400 m : Risque limité. En-dessous : Risque faible.
-2021-11-07,ASPE-OSSAU,1,,<2500,2500,2,,>2500,2,Au-dessus de 2500 m : Risque limité. En-dessous : Risque faible.
-2021-11-08,ASPE-OSSAU,1,,,,,,,1,Risque faible.
-2021-11-09,ASPE-OSSAU,1,,,,,,,1,Risque faible.
-2021-11-10,ASPE-OSSAU,1,,,,,,,1,Risque faible.
-2021-11-11,ASPE-OSSAU,1,,,,,,,1,Risque faible.
-2021-11-12,ASPE-OSSAU,1,,,,,,,1,Risque faible.
-2021-11-13,ASPE-OSSAU,1,,,,,,,1,Risque faible.
-2021-11-14,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2021-11-15,ASPE-OSSAU,1,,<2100,2100,2,,>2100,2,Au-dessus de 2100 m : Risque limité. En-dessous : Risque faible.
-2021-11-16,ASPE-OSSAU,1,,<2200,2200,2,,>2200,2,Au-dessus de 2200 m : Risque limité. En-dessous : Risque faible.
-2021-11-17,ASPE-OSSAU,1,,<2400,2400,2,,>2400,2,Au-dessus de 2400 m : Risque limité. En-dessous : Risque faible.
-2021-11-18,ASPE-OSSAU,1,,<2400,2400,2,,>2400,2,Au-dessus de 2400 m : Risque limité. En-dessous : Risque faible.
-2021-11-19,ASPE-OSSAU,1,,,,,,,1,Risque faible.
-2021-11-20,ASPE-OSSAU,1,,,,,,,1,Risque faible.
-2021-11-21,ASPE-OSSAU,1,,,,,,,1,Risque faible.
-2021-11-22,ASPE-OSSAU,1,,,,,,,1,Risque faible.
-2021-11-23,ASPE-OSSAU,1,,,,,,,1,Risque faible.
-2021-11-24,ASPE-OSSAU,1,,,,,,,1,Risque faible.
-2021-11-25,ASPE-OSSAU,1,,<2000,2000,2,,>2000,2,Au-dessus de 2000 m : Risque limité. En-dessous : Risque faible.
-2021-11-26,ASPE-OSSAU,2,3,,,,,,3,Risque limité évoluant l'après-midi en Risque marqué.
-2021-11-27,ASPE-OSSAU,3,4,,,,,,4,Risque marqué évoluant en Risque fort.
-2021-11-28,ASPE-OSSAU,4,,,,,,,4,Risque fort.
-2021-11-29,ASPE-OSSAU,4,,,,,,,4,Risque fort.
-2021-11-30,ASPE-OSSAU,2,,<1800,1800,3,,>1800,3,Au-dessus de 1800 m : Risque marqué. En-dessous : Risque limité.
-2021-12-01,ASPE-OSSAU,2,,<1800,1800,3,,>1800,3,Au-dessus de 1800 m : Risque marqué. En-dessous : Risque limité.
-2021-12-02,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
-2021-12-03,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
-2021-12-04,ASPE-OSSAU,4,,,,,,,4,Risque fort.
-2021-12-05,ASPE-OSSAU,5,4,,,,,,5,Risque très fort évoluant lundi matin Risque fort.
-2021-12-06,ASPE-OSSAU,4,3,,,,,,4,Risque fort évoluant en Risque marqué.
-2021-12-07,ASPE-OSSAU,2,,<2200,2200,3,,>2200,3,Au-dessus de 2200 m : Risque marqué. En-dessous : Risque limité.
-2021-12-08,ASPE-OSSAU,3,4,,,,,,4,Risque marqué évoluant en Risque fort.
-2021-12-09,ASPE-OSSAU,5,4,,,,,,5,Risque très fort soirée et nuit évoluant en Risque fort.
-2021-12-10,ASPE-OSSAU,4,3,,,,,,4,Risque fort évoluant en samedi matin en Risque marqué.
-2021-12-11,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
-2021-12-12,ASPE-OSSAU,2,,<2400,2400,3,,>2400,3,Au-dessus de 2400 m : Risque marqué. En-dessous : Risque limité.
-2021-12-13,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
-2021-12-14,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2021-12-15,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2021-12-16,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2021-12-17,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2021-12-18,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2021-12-19,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2021-12-20,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2021-12-21,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2021-12-22,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2021-12-23,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2021-12-24,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2021-12-25,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2021-12-26,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2021-12-27,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
-2021-12-28,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
-2021-12-29,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2021-12-30,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2021-12-31,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2022-01-01,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2022-01-02,ASPE-OSSAU,1,2,,,,,,2,Risque faible évoluant en Risque limité.
-2022-01-03,ASPE-OSSAU,1,2,,,,,,2,Risque faible évoluant en Risque limité.
-2022-01-04,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
-2022-01-05,ASPE-OSSAU,2,,S,,3,,N,3,"""""""""""""""""""""""""""""""Risque marqué au Nord"""""""""""""""
-2022-01-06,ASPE-OSSAU,2,3,,,,,,3,Risque limité évoluant en Risque marqué.
-2022-01-07,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
-2022-01-08,ASPE-OSSAU,3,4,,,,,,4,Risque marqué évoluant en Risque fort dimanche soir.
-2022-01-09,ASPE-OSSAU,4,,,,,,,4,Risque fort.
-2022-01-10,ASPE-OSSAU,3,2,<2000,2000,4,3,>2000,4,Au-dessus de 2000 m : Risque fort évoluant en Risque marqué. En-dessous : Risque marqué évoluant en Risque limité.
-2022-01-11,ASPE-OSSAU,1,2,<2300,2300,3,,>2300,3,Au-dessus de 2300 m : Risque marqué. En-dessous : Risque faible évoluant en Risque limité.
-2022-01-12,ASPE-OSSAU,1,2,<2200,2200,3,,>2200,3,Au-dessus de 2200 m : Risque marqué. En-dessous : Risque faible évoluant en Risque limité.
-2022-01-13,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2022-01-14,ASPE-OSSAU,1,,<2200,2200,2,,>2200,2,Au-dessus de 2200 m : Risque limité. En-dessous : Risque faible.
-2022-01-15,ASPE-OSSAU,1,,<2200,2200,2,,>2200,2,Au-dessus de 2200 m : Risque limité. En-dessous : Risque faible.
-2022-01-16,ASPE-OSSAU,1,,<2200,2200,2,,>2200,2,Au-dessus de 2200 m : Risque limité. En-dessous : Risque faible.
-2022-01-17,ASPE-OSSAU,1,,<2300,2300,2,,>2300,2,Au-dessus de 2300 m : Risque limité. En-dessous : Risque faible.
-2022-01-18,ASPE-OSSAU,1,,<2300,2300,2,,>2300,2,Au-dessus de 2300 m : Risque limité. En-dessous : Risque faible.
-2022-01-19,ASPE-OSSAU,1,,<2300,2300,2,,>2300,2,Au-dessus de 2300 m : Risque limité. En-dessous : Risque faible.
-2022-01-20,ASPE-OSSAU,1,,<2300,2300,2,,>2300,2,Au-dessus de 2300 m : Risque limité. En-dessous : Risque faible.
-2022-01-21,ASPE-OSSAU,1,,<2300,2300,2,,>2300,2,Au-dessus de 2300 m : Risque limité. En-dessous : Risque faible.
-2022-01-22,ASPE-OSSAU,1,,<2300,2300,2,,>2300,2,Au-dessus de 2300 m : Risque limité. En-dessous : Risque faible.
-2022-01-23,ASPE-OSSAU,1,,<2300,2300,2,,>2300,2,Au-dessus de 2300 m : Risque limité. En-dessous : Risque faible.
-2022-01-24,ASPE-OSSAU,1,,<2300,2300,2,,>2300,2,Au-dessus de 2300 m : Risque limité. En-dessous : Risque faible.
-2022-01-25,ASPE-OSSAU,1,,<2300,2300,2,,>2300,2,Au-dessus de 2300 m : Risque limité. En-dessous : Risque faible.
-2022-01-26,ASPE-OSSAU,1,,,,,,,1,Risque faible.
-2022-01-27,ASPE-OSSAU,1,,,,,,,1,Risque faible.
-2022-01-28,ASPE-OSSAU,1,,,,,,,1,Risque faible.
-2022-01-29,ASPE-OSSAU,1,,,,,,,1,Risque faible.
-2022-01-30,ASPE-OSSAU,1,2,,,,,,2,Risque faible évoluant en Risque limité.
-2022-01-31,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2022-02-01,ASPE-OSSAU,1,,<2200,2200,2,,>2200,2,Au-dessus de 2200 m : Risque limité. En-dessous : Risque faible.
-2022-02-02,ASPE-OSSAU,1,,<2400,2400,2,,>2400,2,Au-dessus de 2400 m : Risque limité. En-dessous : Risque faible.
-2022-02-03,ASPE-OSSAU,1,,<2400,2400,2,,>2400,2,Au-dessus de 2400 m : Risque limité. En-dessous : Risque faible.
-2022-02-04,ASPE-OSSAU,1,,<2400,2400,2,,>2400,2,Au-dessus de 2400 m : Risque limité. En-dessous : Risque faible.
-2022-02-05,ASPE-OSSAU,1,,<2400,2400,2,,>2400,2,Au-dessus de 2400 m : Risque limité. En-dessous : Risque faible.
-2022-02-06,ASPE-OSSAU,1,,<2500,2500,2,,>2500,2,Au-dessus de 2500 m : Risque limité. En-dessous : Risque faible.
-2022-02-07,ASPE-OSSAU,1,,<2500,2500,2,,>2500,2,Au-dessus de 2500 m : Risque limité. En-dessous : Risque faible.
-2022-02-08,ASPE-OSSAU,1,,,,,,,1,Risque faible.
-2022-02-09,ASPE-OSSAU,1,,,,,,,1,Risque faible.
-2022-02-10,ASPE-OSSAU,1,,,,,,,1,Risque faible.
-2022-02-11,ASPE-OSSAU,1,,,,,,,1,Risque faible.
-2022-02-12,ASPE-OSSAU,1,2,,,,,,2,Risque faible évoluant en Risque limité.
-2022-02-13,ASPE-OSSAU,3,,S,,2,,N,3,"""""""""""""""""""""""""""""""Risque limité au Nord des massifs"""""""""""""""
-2022-02-14,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
-2022-02-15,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
-2022-02-16,ASPE-OSSAU,2,,<2400,2400,3,,>2400,3,Au-dessus de 2400 m : Risque marqué. En-dessous : Risque limité.
-2022-02-17,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2022-02-18,ASPE-OSSAU,2,,<2500,2500,3,,>2500,3,Au-dessus de 2500 m : Risque marqué. En-dessous : Risque limité.
-2022-02-19,ASPE-OSSAU,1,,<2500,2500,2,,>2500,2,Au-dessus de 2500 m : Risque limité. En-dessous : Risque faible.
-2022-02-20,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2022-02-21,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2022-02-22,ASPE-OSSAU,1,,<2100,2100,2,,>2100,2,Au-dessus de 2100 m : Risque limité. En-dessous : Risque faible.
-2022-02-23,ASPE-OSSAU,1,,<2100,2100,2,,>2100,2,Au-dessus de 2100 m : Risque limité. En-dessous : Risque faible.
-2022-02-24,ASPE-OSSAU,1,,,,,,,1,Risque faible.
-2022-02-25,ASPE-OSSAU,1,,,,,,,1,Risque faible.
-2022-02-26,ASPE-OSSAU,1,,,,,,,1,Risque faible.
-2022-02-27,ASPE-OSSAU,1,,,,,,,1,Risque faible.
-2022-02-28,ASPE-OSSAU,1,,,,,,,1,Risque faible.
-2022-03-01,ASPE-OSSAU,1,,,,,,,1,Risque faible.
-2022-03-02,ASPE-OSSAU,1,,,,,,,1,Risque faible.
-2022-03-03,ASPE-OSSAU,2,3,,,,,,3,Risque limité évoluant en Risque marqué.
-2022-03-04,ASPE-OSSAU,2,,<2000,2000,3,,>2000,3,Au-dessus de 2000 m : Risque marqué. En-dessous : Risque limité.
-2022-03-05,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2022-03-06,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2022-03-07,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2022-03-08,ASPE-OSSAU,3,,S,,2,,N,3,"""""""""""""""""""""""""""""""Risque limité au Nord"""""""""""""""
-2022-03-09,ASPE-OSSAU,2,,<2200,2200,3,,>2200,3,Au-dessus de 2200 m : Risque marqué. En-dessous : Risque limité.
-2022-03-10,ASPE-OSSAU,2,,<2200,2200,3,,>2200,3,Au-dessus de 2200 m : Risque marqué. En-dessous : Risque limité.
-2022-03-11,ASPE-OSSAU,2,,<2000,2000,3,,>2000,3,Au-dessus de 2000 m : Risque marqué. En-dessous : Risque limité.
-2022-03-12,ASPE-OSSAU,2,,<2000,2000,3,,>2000,3,Au-dessus de 2000 m : Risque marqué. En-dessous : Risque limité.
-2022-03-13,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
-2022-03-14,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
-2022-03-15,ASPE-OSSAU,3,,S,,2,,N,3,"""""""""""""""""""""""""""""""Risque limité au Nord"""""""""""""""
-2022-03-16,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
-2022-03-17,ASPE-OSSAU,2,,<2400,2400,3,,>2400,3,Au-dessus de 2400 m : Risque marqué. En-dessous : Risque limité.
-2022-03-18,ASPE-OSSAU,2,3,,,,,,3,Risque limité évoluant en Risque marqué.
-2022-03-19,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2022-03-20,ASPE-OSSAU,3,,S,,2,,N,3,"""""""""""""""""""""""""""""""Risque limité au Nord"""""""""""""""
-2022-03-21,ASPE-OSSAU,3,,S,,2,,N,3,"""""""""""""""""""""""""""""""Risque limité au Nord"""""""""""""""
-2022-03-22,ASPE-OSSAU,3,,S,,2,,N,3,"""""""""""""""""""""""""""""""Risque limité au Nord"""""""""""""""
-2022-03-23,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2022-03-24,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2022-03-25,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2022-03-26,ASPE-OSSAU,1,,<2200,2200,2,,>2200,2,Au-dessus de 2200 m : Risque limité. En-dessous : Risque faible.
-2022-03-27,ASPE-OSSAU,1,,<2400,2400,2,,>2400,2,Au-dessus de 2400 m : Risque limité. En-dessous : Risque faible.
-2022-03-28,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2022-03-29,ASPE-OSSAU,1,2,,,,,,2,Risque faible évoluant en Risque limité.
-2022-03-30,ASPE-OSSAU,2,,<2100,2100,3,,>2100,3,Au-dessus de 2100 m : Risque marqué. En-dessous : Risque limité.
-2022-03-31,ASPE-OSSAU,4,,,,,,,4,Risque fort.
-2022-04-01,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
-2022-04-02,ASPE-OSSAU,4,,,,,,,4,Risque fort.
-2022-04-03,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
-2022-04-04,ASPE-OSSAU,2,,<1900,1900,3,,>1900,3,Au-dessus de 1900 m : Risque marqué. En-dessous : Risque limité.
-2022-04-05,ASPE-OSSAU,2,,<2000,2000,3,,>2000,3,Au-dessus de 2000 m : Risque marqué. En-dessous : Risque limité.
-2022-04-06,ASPE-OSSAU,2,3,,,,,,3,Risque limité évoluant en Risque marqué.
-2022-04-07,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2022-04-08,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2022-04-09,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2022-04-10,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
-2022-04-11,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
-2022-04-12,ASPE-OSSAU,2,,<2000,2000,3,,>2000,3,Au-dessus de 2000 m : Risque marqué. En-dessous : Risque limité.
-2022-04-13,ASPE-OSSAU,2,,<2000,2000,3,,>2000,3,Au-dessus de 2000 m : Risque marqué. En-dessous : Risque limité.
-2022-04-14,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2022-04-15,ASPE-OSSAU,1,2,,,,,,2,Risque faible évoluant en Risque limité.
-2022-04-16,ASPE-OSSAU,1,2,,,,,,2,Risque faible évoluant en Risque limité.
-2022-04-17,ASPE-OSSAU,1,2,,,,,,2,Risque faible évoluant en Risque limité.
-2022-04-18,ASPE-OSSAU,1,2,,,,,,2,Risque faible évoluant en Risque limité.
-2022-04-19,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
-2022-04-20,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
-2022-04-21,ASPE-OSSAU,2,3,,,,,,3,Risque limité évoluant en Risque marqué.
-2022-04-22,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
-2022-04-23,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
-2022-04-24,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
-2022-04-25,ASPE-OSSAU,1,2,,,,,,2,Risque faible évoluant en Risque limité.
-2022-04-26,ASPE-OSSAU,1,2,,,,,,2,Risque faible évoluant en Risque limité.
-2022-04-27,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2022-04-28,ASPE-OSSAU,1,2,,,,,,2,Risque faible évoluant en Risque limité.
-2022-04-29,ASPE-OSSAU,2,,,,,,,2,Risque limité.
-2022-04-30,ASPE-OSSAU,1,2,,,,,,2,Risque faible évoluant en Risque limité.
-2022-05-01,ASPE-OSSAU,2,,,,,,,2,Risque limité.
 2022-05-02,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2022-05-01,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2022-04-30,ASPE-OSSAU,1,2,,,,,,2,Risque faible évoluant en Risque limité.
+2022-04-29,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2022-04-28,ASPE-OSSAU,1,2,,,,,,2,Risque faible évoluant en Risque limité.
+2022-04-27,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2022-04-26,ASPE-OSSAU,1,2,,,,,,2,Risque faible évoluant en Risque limité.
+2022-04-25,ASPE-OSSAU,1,2,,,,,,2,Risque faible évoluant en Risque limité.
+2022-04-24,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
+2022-04-23,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
+2022-04-22,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
+2022-04-21,ASPE-OSSAU,2,3,,,,,,3,Risque limité évoluant en Risque marqué.
+2022-04-20,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
+2022-04-19,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
+2022-04-18,ASPE-OSSAU,1,2,,,,,,2,Risque faible évoluant en Risque limité.
+2022-04-17,ASPE-OSSAU,1,2,,,,,,2,Risque faible évoluant en Risque limité.
+2022-04-16,ASPE-OSSAU,1,2,,,,,,2,Risque faible évoluant en Risque limité.
+2022-04-15,ASPE-OSSAU,1,2,,,,,,2,Risque faible évoluant en Risque limité.
+2022-04-14,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2022-04-13,ASPE-OSSAU,2,,<2000,2000,3,,>2000,3,Au-dessus de 2000 m : Risque marqué. En-dessous : Risque limité.
+2022-04-12,ASPE-OSSAU,2,,<2000,2000,3,,>2000,3,Au-dessus de 2000 m : Risque marqué. En-dessous : Risque limité.
+2022-04-11,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
+2022-04-10,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
+2022-04-09,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2022-04-08,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2022-04-07,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2022-04-06,ASPE-OSSAU,2,3,,,,,,3,Risque limité évoluant en Risque marqué.
+2022-04-05,ASPE-OSSAU,2,,<2000,2000,3,,>2000,3,Au-dessus de 2000 m : Risque marqué. En-dessous : Risque limité.
+2022-04-04,ASPE-OSSAU,2,,<1900,1900,3,,>1900,3,Au-dessus de 1900 m : Risque marqué. En-dessous : Risque limité.
+2022-04-03,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
+2022-04-02,ASPE-OSSAU,4,,,,,,,4,Risque fort.
+2022-04-01,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
+2022-03-31,ASPE-OSSAU,4,,,,,,,4,Risque fort.
+2022-03-30,ASPE-OSSAU,2,,<2100,2100,3,,>2100,3,Au-dessus de 2100 m : Risque marqué. En-dessous : Risque limité.
+2022-03-29,ASPE-OSSAU,1,2,,,,,,2,Risque faible évoluant en Risque limité.
+2022-03-28,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2022-03-27,ASPE-OSSAU,1,,<2400,2400,2,,>2400,2,Au-dessus de 2400 m : Risque limité. En-dessous : Risque faible.
+2022-03-26,ASPE-OSSAU,1,,<2200,2200,2,,>2200,2,Au-dessus de 2200 m : Risque limité. En-dessous : Risque faible.
+2022-03-25,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2022-03-24,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2022-03-23,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2022-03-22,ASPE-OSSAU,3,,S,,2,,N,3,"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""Risque limité au Nord"""""""""""""""""""""""""""""""
+2022-03-21,ASPE-OSSAU,3,,S,,2,,N,3,"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""Risque limité au Nord"""""""""""""""""""""""""""""""
+2022-03-20,ASPE-OSSAU,3,,S,,2,,N,3,"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""Risque limité au Nord"""""""""""""""""""""""""""""""
+2022-03-19,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2022-03-18,ASPE-OSSAU,2,3,,,,,,3,Risque limité évoluant en Risque marqué.
+2022-03-17,ASPE-OSSAU,2,,<2400,2400,3,,>2400,3,Au-dessus de 2400 m : Risque marqué. En-dessous : Risque limité.
+2022-03-16,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
+2022-03-15,ASPE-OSSAU,3,,S,,2,,N,3,"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""Risque limité au Nord"""""""""""""""""""""""""""""""
+2022-03-14,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
+2022-03-13,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
+2022-03-12,ASPE-OSSAU,2,,<2000,2000,3,,>2000,3,Au-dessus de 2000 m : Risque marqué. En-dessous : Risque limité.
+2022-03-11,ASPE-OSSAU,2,,<2000,2000,3,,>2000,3,Au-dessus de 2000 m : Risque marqué. En-dessous : Risque limité.
+2022-03-10,ASPE-OSSAU,2,,<2200,2200,3,,>2200,3,Au-dessus de 2200 m : Risque marqué. En-dessous : Risque limité.
+2022-03-09,ASPE-OSSAU,2,,<2200,2200,3,,>2200,3,Au-dessus de 2200 m : Risque marqué. En-dessous : Risque limité.
+2022-03-08,ASPE-OSSAU,3,,S,,2,,N,3,"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""Risque limité au Nord"""""""""""""""""""""""""""""""
+2022-03-07,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2022-03-06,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2022-03-05,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2022-03-04,ASPE-OSSAU,2,,<2000,2000,3,,>2000,3,Au-dessus de 2000 m : Risque marqué. En-dessous : Risque limité.
+2022-03-03,ASPE-OSSAU,2,3,,,,,,3,Risque limité évoluant en Risque marqué.
+2022-03-02,ASPE-OSSAU,1,,,,,,,1,Risque faible.
+2022-03-01,ASPE-OSSAU,1,,,,,,,1,Risque faible.
+2022-02-28,ASPE-OSSAU,1,,,,,,,1,Risque faible.
+2022-02-27,ASPE-OSSAU,1,,,,,,,1,Risque faible.
+2022-02-26,ASPE-OSSAU,1,,,,,,,1,Risque faible.
+2022-02-25,ASPE-OSSAU,1,,,,,,,1,Risque faible.
+2022-02-24,ASPE-OSSAU,1,,,,,,,1,Risque faible.
+2022-02-23,ASPE-OSSAU,1,,<2100,2100,2,,>2100,2,Au-dessus de 2100 m : Risque limité. En-dessous : Risque faible.
+2022-02-22,ASPE-OSSAU,1,,<2100,2100,2,,>2100,2,Au-dessus de 2100 m : Risque limité. En-dessous : Risque faible.
+2022-02-21,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2022-02-20,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2022-02-19,ASPE-OSSAU,1,,<2500,2500,2,,>2500,2,Au-dessus de 2500 m : Risque limité. En-dessous : Risque faible.
+2022-02-18,ASPE-OSSAU,2,,<2500,2500,3,,>2500,3,Au-dessus de 2500 m : Risque marqué. En-dessous : Risque limité.
+2022-02-17,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2022-02-16,ASPE-OSSAU,2,,<2400,2400,3,,>2400,3,Au-dessus de 2400 m : Risque marqué. En-dessous : Risque limité.
+2022-02-15,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
+2022-02-14,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
+2022-02-13,ASPE-OSSAU,3,,S,,2,,N,3,"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""Risque limité au Nord des massifs"""""""""""""""""""""""""""""""
+2022-02-12,ASPE-OSSAU,1,2,,,,,,2,Risque faible évoluant en Risque limité.
+2022-02-11,ASPE-OSSAU,1,,,,,,,1,Risque faible.
+2022-02-10,ASPE-OSSAU,1,,,,,,,1,Risque faible.
+2022-02-09,ASPE-OSSAU,1,,,,,,,1,Risque faible.
+2022-02-08,ASPE-OSSAU,1,,,,,,,1,Risque faible.
+2022-02-07,ASPE-OSSAU,1,,<2500,2500,2,,>2500,2,Au-dessus de 2500 m : Risque limité. En-dessous : Risque faible.
+2022-02-06,ASPE-OSSAU,1,,<2500,2500,2,,>2500,2,Au-dessus de 2500 m : Risque limité. En-dessous : Risque faible.
+2022-02-05,ASPE-OSSAU,1,,<2400,2400,2,,>2400,2,Au-dessus de 2400 m : Risque limité. En-dessous : Risque faible.
+2022-02-04,ASPE-OSSAU,1,,<2400,2400,2,,>2400,2,Au-dessus de 2400 m : Risque limité. En-dessous : Risque faible.
+2022-02-03,ASPE-OSSAU,1,,<2400,2400,2,,>2400,2,Au-dessus de 2400 m : Risque limité. En-dessous : Risque faible.
+2022-02-02,ASPE-OSSAU,1,,<2400,2400,2,,>2400,2,Au-dessus de 2400 m : Risque limité. En-dessous : Risque faible.
+2022-02-01,ASPE-OSSAU,1,,<2200,2200,2,,>2200,2,Au-dessus de 2200 m : Risque limité. En-dessous : Risque faible.
+2022-01-31,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2022-01-30,ASPE-OSSAU,1,2,,,,,,2,Risque faible évoluant en Risque limité.
+2022-01-29,ASPE-OSSAU,1,,,,,,,1,Risque faible.
+2022-01-28,ASPE-OSSAU,1,,,,,,,1,Risque faible.
+2022-01-27,ASPE-OSSAU,1,,,,,,,1,Risque faible.
+2022-01-26,ASPE-OSSAU,1,,,,,,,1,Risque faible.
+2022-01-25,ASPE-OSSAU,1,,<2300,2300,2,,>2300,2,Au-dessus de 2300 m : Risque limité. En-dessous : Risque faible.
+2022-01-24,ASPE-OSSAU,1,,<2300,2300,2,,>2300,2,Au-dessus de 2300 m : Risque limité. En-dessous : Risque faible.
+2022-01-23,ASPE-OSSAU,1,,<2300,2300,2,,>2300,2,Au-dessus de 2300 m : Risque limité. En-dessous : Risque faible.
+2022-01-22,ASPE-OSSAU,1,,<2300,2300,2,,>2300,2,Au-dessus de 2300 m : Risque limité. En-dessous : Risque faible.
+2022-01-21,ASPE-OSSAU,1,,<2300,2300,2,,>2300,2,Au-dessus de 2300 m : Risque limité. En-dessous : Risque faible.
+2022-01-20,ASPE-OSSAU,1,,<2300,2300,2,,>2300,2,Au-dessus de 2300 m : Risque limité. En-dessous : Risque faible.
+2022-01-19,ASPE-OSSAU,1,,<2300,2300,2,,>2300,2,Au-dessus de 2300 m : Risque limité. En-dessous : Risque faible.
+2022-01-18,ASPE-OSSAU,1,,<2300,2300,2,,>2300,2,Au-dessus de 2300 m : Risque limité. En-dessous : Risque faible.
+2022-01-17,ASPE-OSSAU,1,,<2300,2300,2,,>2300,2,Au-dessus de 2300 m : Risque limité. En-dessous : Risque faible.
+2022-01-16,ASPE-OSSAU,1,,<2200,2200,2,,>2200,2,Au-dessus de 2200 m : Risque limité. En-dessous : Risque faible.
+2022-01-15,ASPE-OSSAU,1,,<2200,2200,2,,>2200,2,Au-dessus de 2200 m : Risque limité. En-dessous : Risque faible.
+2022-01-14,ASPE-OSSAU,1,,<2200,2200,2,,>2200,2,Au-dessus de 2200 m : Risque limité. En-dessous : Risque faible.
+2022-01-13,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2022-01-12,ASPE-OSSAU,1,2,<2200,2200,3,,>2200,3,Au-dessus de 2200 m : Risque marqué. En-dessous : Risque faible évoluant en Risque limité.
+2022-01-11,ASPE-OSSAU,1,2,<2300,2300,3,,>2300,3,Au-dessus de 2300 m : Risque marqué. En-dessous : Risque faible évoluant en Risque limité.
+2022-01-10,ASPE-OSSAU,3,2,<2000,2000,4,3,>2000,4,Au-dessus de 2000 m : Risque fort évoluant en Risque marqué. En-dessous : Risque marqué évoluant en Risque limité.
+2022-01-09,ASPE-OSSAU,4,,,,,,,4,Risque fort.
+2022-01-08,ASPE-OSSAU,3,4,,,,,,4,Risque marqué évoluant en Risque fort dimanche soir.
+2022-01-07,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
+2022-01-06,ASPE-OSSAU,2,3,,,,,,3,Risque limité évoluant en Risque marqué.
+2022-01-05,ASPE-OSSAU,2,,S,,3,,N,3,"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""Risque marqué au Nord"""""""""""""""""""""""""""""""
+2022-01-04,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
+2022-01-03,ASPE-OSSAU,1,2,,,,,,2,Risque faible évoluant en Risque limité.
+2022-01-02,ASPE-OSSAU,1,2,,,,,,2,Risque faible évoluant en Risque limité.
+2022-01-01,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2021-12-31,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2021-12-30,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2021-12-29,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2021-12-28,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
+2021-12-27,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
+2021-12-26,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2021-12-25,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2021-12-24,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2021-12-23,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2021-12-22,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2021-12-21,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2021-12-20,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2021-12-19,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2021-12-18,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2021-12-17,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2021-12-16,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2021-12-15,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2021-12-14,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2021-12-13,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
+2021-12-12,ASPE-OSSAU,2,,<2400,2400,3,,>2400,3,Au-dessus de 2400 m : Risque marqué. En-dessous : Risque limité.
+2021-12-11,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
+2021-12-10,ASPE-OSSAU,4,3,,,,,,4,Risque fort évoluant en samedi matin en Risque marqué.
+2021-12-09,ASPE-OSSAU,5,4,,,,,,5,Risque très fort soirée et nuit évoluant en Risque fort.
+2021-12-08,ASPE-OSSAU,3,4,,,,,,4,Risque marqué évoluant en Risque fort.
+2021-12-07,ASPE-OSSAU,2,,<2200,2200,3,,>2200,3,Au-dessus de 2200 m : Risque marqué. En-dessous : Risque limité.
+2021-12-06,ASPE-OSSAU,4,3,,,,,,4,Risque fort évoluant en Risque marqué.
+2021-12-05,ASPE-OSSAU,5,4,,,,,,5,Risque très fort évoluant lundi matin Risque fort.
+2021-12-04,ASPE-OSSAU,4,,,,,,,4,Risque fort.
+2021-12-03,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
+2021-12-02,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
+2021-12-01,ASPE-OSSAU,2,,<1800,1800,3,,>1800,3,Au-dessus de 1800 m : Risque marqué. En-dessous : Risque limité.
+2021-11-30,ASPE-OSSAU,2,,<1800,1800,3,,>1800,3,Au-dessus de 1800 m : Risque marqué. En-dessous : Risque limité.
+2021-11-29,ASPE-OSSAU,4,,,,,,,4,Risque fort.
+2021-11-28,ASPE-OSSAU,4,,,,,,,4,Risque fort.
+2021-11-27,ASPE-OSSAU,3,4,,,,,,4,Risque marqué évoluant en Risque fort.
+2021-11-26,ASPE-OSSAU,2,3,,,,,,3,Risque limité évoluant l'après-midi en Risque marqué.
+2021-11-25,ASPE-OSSAU,1,,<2000,2000,2,,>2000,2,Au-dessus de 2000 m : Risque limité. En-dessous : Risque faible.
+2021-11-24,ASPE-OSSAU,1,,,,,,,1,Risque faible.
+2021-11-23,ASPE-OSSAU,1,,,,,,,1,Risque faible.
+2021-11-22,ASPE-OSSAU,1,,,,,,,1,Risque faible.
+2021-11-21,ASPE-OSSAU,1,,,,,,,1,Risque faible.
+2021-11-20,ASPE-OSSAU,1,,,,,,,1,Risque faible.
+2021-11-19,ASPE-OSSAU,1,,,,,,,1,Risque faible.
+2021-11-18,ASPE-OSSAU,1,,<2400,2400,2,,>2400,2,Au-dessus de 2400 m : Risque limité. En-dessous : Risque faible.
+2021-11-17,ASPE-OSSAU,1,,<2400,2400,2,,>2400,2,Au-dessus de 2400 m : Risque limité. En-dessous : Risque faible.
+2021-11-16,ASPE-OSSAU,1,,<2200,2200,2,,>2200,2,Au-dessus de 2200 m : Risque limité. En-dessous : Risque faible.
+2021-11-15,ASPE-OSSAU,1,,<2100,2100,2,,>2100,2,Au-dessus de 2100 m : Risque limité. En-dessous : Risque faible.
+2021-11-14,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2021-11-13,ASPE-OSSAU,1,,,,,,,1,Risque faible.
+2021-11-12,ASPE-OSSAU,1,,,,,,,1,Risque faible.
+2021-11-11,ASPE-OSSAU,1,,,,,,,1,Risque faible.
+2021-11-10,ASPE-OSSAU,1,,,,,,,1,Risque faible.
+2021-11-09,ASPE-OSSAU,1,,,,,,,1,Risque faible.
+2021-11-08,ASPE-OSSAU,1,,,,,,,1,Risque faible.
+2021-11-07,ASPE-OSSAU,1,,<2500,2500,2,,>2500,2,Au-dessus de 2500 m : Risque limité. En-dessous : Risque faible.
+2021-11-06,ASPE-OSSAU,1,,<2400,2400,2,,>2400,2,Au-dessus de 2400 m : Risque limité. En-dessous : Risque faible.
+2021-11-05,ASPE-OSSAU,1,,<1800,1800,2,,>1800,2,Au-dessus de 1800 m : Risque limité. En-dessous : Risque faible.
+2021-11-04,ASPE-OSSAU,1,,,,,,,1,Risque faible.
+2021-11-03,ASPE-OSSAU,1,,,,,,,1,Risque faible.
+2021-11-02,ASPE-OSSAU,1,,,,,,,1,Risque faible.
+2021-10-22,ASPE-OSSAU,1,,,,,,,1,Risque faible.
+2021-10-20,ASPE-OSSAU,1,,<2700,2700,2,,>2700,2,Au-dessus de 2700 m : Risque limité. En-dessous : Risque faible.
+2021-06-10,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2021-06-09,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2021-06-08,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2021-06-07,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2021-06-06,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2021-06-05,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2021-06-04,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2021-06-03,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2021-06-02,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2021-06-01,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2021-05-31,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2021-05-30,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2021-05-29,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2021-05-28,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2021-05-27,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2021-05-26,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2021-05-25,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2021-05-24,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2021-05-23,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2021-05-22,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2021-05-21,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2021-05-20,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2021-05-19,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2021-05-18,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2021-05-17,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2021-05-16,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2021-05-15,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2021-05-14,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2021-05-13,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2021-05-12,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2021-05-11,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2021-05-10,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2021-05-09,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2021-05-08,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2021-05-07,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2021-05-06,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2021-05-05,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2021-05-04,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2021-05-03,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2021-05-02,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2021-05-01,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2021-04-30,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2021-04-29,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2021-04-28,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2021-04-27,ASPE-OSSAU,1,,<2500,2500,2,,>2500,2,Au-dessus de 2500 m : Risque limité. En-dessous : Risque faible.
+2021-04-26,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2021-04-25,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2021-04-24,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2021-04-23,ASPE-OSSAU,1,,<2500,2500,2,,>2500,2,Au-dessus de 2500 m : Risque limité. En-dessous : Risque faible.
+2021-04-22,ASPE-OSSAU,1,,<2400,2400,2,,>2400,2,Au-dessus de 2400 m : Risque limité. En-dessous : Risque faible.
+2021-04-21,ASPE-OSSAU,1,,<2400,2400,2,,>2400,2,Au-dessus de 2400 m : Risque limité. En-dessous : Risque faible.
+2021-04-20,ASPE-OSSAU,1,,<2400,2400,2,,>2400,2,Au-dessus de 2400 m : Risque limité. En-dessous : Risque faible.
+2021-04-19,ASPE-OSSAU,1,,<2400,2400,2,,>2400,2,Au-dessus de 2400 m : Risque limité. En-dessous : Risque faible.
+2021-04-18,ASPE-OSSAU,1,,<2400,2400,2,,>2400,2,Au-dessus de 2400 m : Risque limité. En-dessous : Risque faible.
+2021-04-17,ASPE-OSSAU,1,,<2400,2400,2,,>2400,2,Au-dessus de 2400 m : Risque limité. En-dessous : Risque faible.
+2021-04-16,ASPE-OSSAU,1,,<2400,2400,2,,>2400,2,Au-dessus de 2400 m : Risque limité. En-dessous : Risque faible.
+2021-04-15,ASPE-OSSAU,1,,<2400,2400,2,,>2400,2,Au-dessus de 2400 m : Risque limité. En-dessous : Risque faible.
+2021-04-14,ASPE-OSSAU,1,,<2400,2400,2,,>2400,2,Au-dessus de 2400 m : Risque limité. En-dessous : Risque faible.
+2021-04-13,ASPE-OSSAU,1,,<2400,2400,2,,>2400,2,Au-dessus de 2400 m : Risque limité. En-dessous : Risque faible.
+2021-04-12,ASPE-OSSAU,1,,<2400,2400,2,,>2400,2,Au-dessus de 2400 m : Risque limité. En-dessous : Risque faible.
+2021-04-11,ASPE-OSSAU,1,,<2400,2400,2,,>2400,2,Au-dessus de 2400 m : Risque limité. En-dessous : Risque faible.
+2021-04-10,ASPE-OSSAU,1,,<2200,2200,1,2,>2200,2,Au-dessus de 2200 m : Risque faible évoluant en Risque limité. En-dessous : Risque faible.
+2021-03-31,ASPE-OSSAU,1,,<2500,2500,2,,>2500,2,Au-dessus de 2500 m : Risque limité. En-dessous : Risque faible.
+2021-03-30,ASPE-OSSAU,1,,<2400,2400,2,,>2400,2,Au-dessus de 2400 m : Risque limité. En-dessous : Risque faible.
+2021-03-29,ASPE-OSSAU,1,,<2500,2500,2,,>2500,2,Au-dessus de 2500 m : Risque limité. En-dessous : Risque faible.
+2021-03-28,ASPE-OSSAU,1,,<2300,2300,2,,>2300,2,Au-dessus de 2300 m : Risque limité. En-dessous : Risque faible.
+2021-03-27,ASPE-OSSAU,1,,<2300,2300,2,,>2300,2,Au-dessus de 2300 m : Risque limité. En-dessous : Risque faible.
+2021-03-26,ASPE-OSSAU,1,,<2300,2300,2,,>2300,2,Au-dessus de 2300 m : Risque limité. En-dessous : Risque faible.
+2021-03-25,ASPE-OSSAU,1,,<2400,2400,2,,>2400,2,Au-dessus de 2400 m : Risque limité. En-dessous : Risque faible.
+2021-03-24,ASPE-OSSAU,1,,<2200,2200,2,,>2200,2,Au-dessus de 2200 m : Risque limité. En-dessous : Risque faible.
+2021-03-23,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2021-03-22,ASPE-OSSAU,2,,<2200,2200,3,,>2200,3,Au-dessus de 2200 m : Risque marqué. En-dessous : Risque limité.
+2021-03-21,ASPE-OSSAU,2,,<2000,2000,3,,>2000,3,Au-dessus de 2000 m : Risque marqué. En-dessous : Risque limité.
+2021-03-20,ASPE-OSSAU,2,,<2000,2000,3,,>2000,3,Au-dessus de 2000 m : Risque marqué. En-dessous : Risque limité.
+2021-03-19,ASPE-OSSAU,3,,<2000,2000,4,,>2000,4,Au-dessus de 2000 m : Risque fort. En-dessous : Risque marqué.
+2021-03-18,ASPE-OSSAU,2,,<2000,2000,3,,>2000,3,Au-dessus de 2000 m : Risque marqué. En-dessous : Risque limité.
+2021-03-17,ASPE-OSSAU,1,,<2000,2000,2,,>2000,2,Au-dessus de 2000 m : Risque limité. En-dessous : Risque faible.
+2021-03-16,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2021-03-10,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2021-03-09,ASPE-OSSAU,1,,<2200,2200,2,,>2200,2,Au-dessus de 2200 m : Risque limité. En-dessous : Risque faible.
+2021-03-08,ASPE-OSSAU,1,,<2000,2000,2,,>2000,2,Au-dessus de 2000 m : Risque limité. En-dessous : Risque faible.
+2021-03-07,ASPE-OSSAU,1,,<2200,2200,2,,>2200,2,Au-dessus de 2200 m : Risque limité. En-dessous : Risque faible.
+2021-03-06,ASPE-OSSAU,1,,<2200,2200,2,,>2200,2,Au-dessus de 2200 m : Risque limité. En-dessous : Risque faible.
+2021-03-05,ASPE-OSSAU,1,,,,,,,1,Risque faible.
+2021-03-04,ASPE-OSSAU,1,,,,,,,1,Risque faible.
+2021-03-03,ASPE-OSSAU,1,,,,,,,1,Risque faible.
+2021-03-02,ASPE-OSSAU,1,,,,,,,1,Risque faible.
+2021-03-01,ASPE-OSSAU,1,,,,,,,1,Risque faible.
+2021-02-28,ASPE-OSSAU,1,,<2200,2200,2,,>2200,2,Au-dessus de 2200 m : Risque limité. En-dessous : Risque faible.
+2021-02-27,ASPE-OSSAU,1,,<2200,2200,2,,>2200,2,Au-dessus de 2200 m : Risque limité. En-dessous : Risque faible.
+2021-02-26,ASPE-OSSAU,1,,<2100,2100,2,,>2100,2,Au-dessus de 2100 m : Risque limité. En-dessous : Risque faible.
+2021-02-24,ASPE-OSSAU,2,,<2200,2200,3,,>2200,3,Au-dessus de 2200 m : Risque marqué. En-dessous : Risque limité.
+2021-02-23,ASPE-OSSAU,2,,<2000,2000,3,,>2000,3,Au-dessus de 2000 m : Risque marqué. En-dessous : Risque limité.
+2021-02-22,ASPE-OSSAU,3,,S,,2,,N,3,"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""Risque limité au Nord"""""""""""""""""""""""""""""""
+2021-02-21,ASPE-OSSAU,3,,S,,2,,N,3,"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""Risque limité au Nord"""""""""""""""""""""""""""""""
+2021-02-20,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2021-02-19,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2021-02-18,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2021-02-17,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2021-02-16,ASPE-OSSAU,1,2,<2200,2200,2,,>2200,2,Au-dessus de 2200 m : Risque limité. En-dessous : Risque faible évoluant en Risque limité.
+2021-02-15,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2021-02-14,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2021-02-13,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2021-02-12,ASPE-OSSAU,2,,<2100,2100,3,,>2100,3,Au-dessus de 2100 m : Risque marqué. En-dessous : Risque limité.
+2021-02-11,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2021-02-10,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2021-02-09,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
+2021-02-08,ASPE-OSSAU,2,3,,,,,,3,Risque limité évoluant en Risque marqué.
+2021-02-07,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2021-02-06,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2021-02-05,ASPE-OSSAU,2,3,,,,,,3,Risque limité évoluant en Risque marqué.
+2021-02-04,ASPE-OSSAU,2,,<2200,2200,3,,>2200,3,Au-dessus de 2200 m : Risque marqué. En-dessous : Risque limité.
+2021-02-03,ASPE-OSSAU,2,,<2200,2200,3,,>2200,3,Au-dessus de 2200 m : Risque marqué. En-dessous : Risque limité.
+2021-02-02,ASPE-OSSAU,2,,<2100,2100,3,,>2100,3,Au-dessus de 2100 m : Risque marqué. En-dessous : Risque limité.
+2021-02-01,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
+2021-01-31,ASPE-OSSAU,3,,<2200,2200,4,,>2200,4,Au-dessus de 2200 m : Risque fort. En-dessous : Risque marqué.
+2021-01-30,ASPE-OSSAU,3,,<2200,2200,3,4,>2200,4,Au-dessus de 2200 m : Risque marqué évoluant en Risque fort. En-dessous : Risque marqué.
+2021-01-29,ASPE-OSSAU,2,3,,,,,,3,Risque limité évoluant en Risque marqué.
+2021-01-28,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2021-01-27,ASPE-OSSAU,3,2,,,,,,3,Risque marqué évoluant en Risque limité.
+2021-01-26,ASPE-OSSAU,2,3,<2000,2000,3,4,>2000,4,Au-dessus de 2000 m : Risque marqué évoluant en Risque fort. En-dessous : Risque limité évoluant en Risque marqué.
+2021-01-25,ASPE-OSSAU,2,,<2100,2100,3,,>2100,3,Au-dessus de 2100 m : Risque marqué. En-dessous : Risque limité.
+2021-01-24,ASPE-OSSAU,2,,<2100,2100,3,,>2100,3,Au-dessus de 2100 m : Risque marqué. En-dessous : Risque limité.
+2021-01-23,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
+2021-01-22,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
+2021-01-21,ASPE-OSSAU,2,,<1800,1800,3,,>1800,3,Au-dessus de 1800 m : Risque marqué. En-dessous : Risque limité.
+2021-01-20,ASPE-OSSAU,2,,<2100,2100,3,,>2100,3,Au-dessus de 2100 m : Risque marqué. En-dessous : Risque limité.
+2021-01-19,ASPE-OSSAU,2,,<2100,2100,3,,>2100,3,Au-dessus de 2100 m : Risque marqué. En-dessous : Risque limité.
+2021-01-18,ASPE-OSSAU,2,,<2100,2100,3,,>2100,3,Au-dessus de 2100 m : Risque marqué. En-dessous : Risque limité.
+2021-01-17,ASPE-OSSAU,2,,<2000,2000,3,,>2000,3,Au-dessus de 2000 m : Risque marqué. En-dessous : Risque limité.
+2021-01-16,ASPE-OSSAU,2,,<1800,1800,3,,>1800,3,Au-dessus de 1800 m : Risque marqué. En-dessous : Risque limité.
+2021-01-15,ASPE-OSSAU,2,,<2000,2000,3,,>2000,3,Au-dessus de 2000 m : Risque marqué. En-dessous : Risque limité.
+2021-01-12,ASPE-OSSAU,2,,<1800,1800,3,,>1800,3,Au-dessus de 1800 m : Risque marqué. En-dessous : Risque limité.
+2021-01-11,ASPE-OSSAU,2,,<1800,1800,3,,>1800,3,Au-dessus de 1800 m : Risque marqué. En-dessous : Risque limité.
+2021-01-10,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
+2021-01-09,ASPE-OSSAU,2,3,,,,,,3,Risque limité évoluant en Risque marqué.
+2021-01-08,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2021-01-07,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2021-01-06,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2021-01-05,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2021-01-04,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2021-01-03,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2021-01-02,ASPE-OSSAU,2,,<1800,1800,3,,>1800,3,Au-dessus de 1800 m : Risque marqué. En-dessous : Risque limité.
+2021-01-01,ASPE-OSSAU,3,,,,,,,3,Risque marqué
+2020-12-31,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
+2020-12-30,ASPE-OSSAU,4,,,,,,,4,Risque fort.
+2020-12-29,ASPE-OSSAU,4,,,,,,,4,Risque fort.
+2020-12-28,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
+2020-12-27,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
+2020-12-26,ASPE-OSSAU,2,,<1800,1800,3,,>1800,3,Au-dessus de 1800 m : Risque marqué. En-dessous : Risque limité.
+2020-12-25,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
+2020-12-24,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2020-12-23,ASPE-OSSAU,1,,,,,,,1,Risque faible.
+2020-12-22,ASPE-OSSAU,1,,,,,,,1,Risque faible.
+2020-12-21,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2020-12-20,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2020-12-19,ASPE-OSSAU,1,,<2500,2500,2,,>2500,2,Au-dessus de 2500 m : Risque limité. En-dessous : Risque faible.
+2020-12-18,ASPE-OSSAU,1,,<2500,2500,2,,>2500,2,Au-dessus de 2500 m : Risque limité. En-dessous : Risque faible.
+2020-12-17,ASPE-OSSAU,1,,<2400,2400,2,,>2400,2,Au-dessus de 2400 m : Risque limité. En-dessous : Risque faible.
+2020-12-15,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2020-12-14,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2020-12-10,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2020-12-09,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2020-12-08,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2020-12-07,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2020-12-06,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2020-12-05,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2020-12-04,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2020-12-03,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2020-12-02,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2020-12-01,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2020-11-30,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2020-11-29,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2020-11-28,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2020-11-27,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2020-11-26,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2020-11-25,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2020-11-24,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2020-11-23,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2020-11-22,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2020-11-21,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2020-11-20,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2020-11-19,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2020-11-18,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2020-11-17,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2020-11-16,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2020-11-15,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2020-11-14,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2020-11-13,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2020-11-12,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2020-11-11,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2020-11-10,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2020-11-09,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2020-11-08,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2020-11-07,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2020-11-06,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2020-11-05,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2020-11-04,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2020-11-03,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2020-11-02,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2020-03-25,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2020-03-24,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2020-03-23,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2020-03-22,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2020-03-21,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2020-03-20,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2020-03-19,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2020-03-18,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
+2020-03-17,ASPE-OSSAU,2,,<2100,2100,3,,>2100,3,Au-dessus de 2100 m : Risque marqué. En-dessous : Risque limité.
+2020-03-16,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
+2020-03-15,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
+2020-03-14,ASPE-OSSAU,1,2,,,,,,2,Risque faible évoluant en Risque limité.
+2020-03-13,ASPE-OSSAU,1,2,,,,,,2,Risque faible évoluant en Risque limité.
+2020-03-12,ASPE-OSSAU,2,,<2000,2000,3,,>2000,3,Au-dessus de 2000 m : Risque marqué. En-dessous : Risque limité.
+2020-03-11,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2020-03-10,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2020-03-09,ASPE-OSSAU,3,2,,,,,,3,Risque marqué évoluant en Risque limité.
+2020-03-08,ASPE-OSSAU,2,,<2000,2000,3,,>2000,3,Au-dessus de 2000 m : Risque marqué. En-dessous : Risque limité.
+2020-03-07,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
+2020-03-06,ASPE-OSSAU,4,,,,,,,4,Risque fort.
+2020-03-05,ASPE-OSSAU,2,3,,,,,,3,Risque limité évoluant en Risque marqué.
+2020-03-04,ASPE-OSSAU,2,,<2700,2700,3,2,>2700,3,Au-dessus de 2700 m : Risque marqué évoluant en Risque limité. En-dessous : Risque limité.
+2020-03-03,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
+2020-03-02,ASPE-OSSAU,2,3,<1800,1800,3,,>1800,3,Au-dessus de 1800 m : Risque marqué. En-dessous : Risque limité évoluant en Risque marqué.
+2020-03-01,ASPE-OSSAU,2,,<2000,2000,3,,>2000,3,Au-dessus de 2000 m : Risque marqué. En-dessous : Risque limité.
+2020-02-29,ASPE-OSSAU,2,,<2700,2700,3,,>2700,3,Au-dessus de 2700 m : Risque marqué. En-dessous : Risque limité.
+2020-02-28,ASPE-OSSAU,1,2,<2400,2400,3,,>2400,3,Au-dessus de 2400 m : Risque marqué. En-dessous : Risque faible évoluant en Risque limité.
+2020-02-27,ASPE-OSSAU,1,,<2200,2200,2,,>2200,2,Au-dessus de 2200 m : Risque limité. En-dessous : Risque faible.
+2020-02-26,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2020-02-25,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2020-02-24,ASPE-OSSAU,1,,<2000,2000,1,2,>2000,2,Au-dessus de 2000 m : Risque faible évoluant en Risque limité. En-dessous : Risque faible.
+2020-02-23,ASPE-OSSAU,1,,,,,,,1,Risque faible.
+2020-02-22,ASPE-OSSAU,1,,,,,,,1,Risque faible.
+2020-02-21,ASPE-OSSAU,1,,,,,,,1,Risque faible.
+2020-02-20,ASPE-OSSAU,1,,,,,,,1,Risque faible.
+2020-02-19,ASPE-OSSAU,1,,,,,,,1,Risque faible.
+2020-02-18,ASPE-OSSAU,1,,,,,,,1,Risque faible.
+2020-02-17,ASPE-OSSAU,1,,,,,,,1,Risque faible.
+2020-02-16,ASPE-OSSAU,1,,<2800,2800,2,,>2800,2,Au-dessus de 2800 m : Risque limité. En-dessous : Risque faible.
+2020-02-15,ASPE-OSSAU,1,2,,,,,,2,Risque faible évoluant en Risque limité.
+2020-02-13,ASPE-OSSAU,1,,,,,,,1,Risque faible.
+2020-02-12,ASPE-OSSAU,1,,,,,,,1,Risque faible.
+2020-02-11,ASPE-OSSAU,1,,,,,,,1,Risque faible.
+2020-02-10,ASPE-OSSAU,1,,,,,,,1,Risque faible.
+2020-02-09,ASPE-OSSAU,1,2,,,,,,2,Risque faible évoluant en Risque limité.
+2020-02-08,ASPE-OSSAU,1,,,,,,,1,Risque faible.
+2020-02-07,ASPE-OSSAU,1,,,,,,,1,Risque faible.
+2020-02-06,ASPE-OSSAU,1,2,<2800,2800,2,,>2800,2,Au-dessus de 2800 m : Risque limité. En-dessous : Risque faible évoluant en Risque limité.
+2020-02-05,ASPE-OSSAU,1,2,<2700,2700,2,,>2700,2,Au-dessus de 2700 m : Risque limité. En-dessous : Risque faible évoluant en Risque limité.
+2020-02-04,ASPE-OSSAU,1,2,<2700,2700,2,,>2700,2,Au-dessus de 2700 m : Risque limité. En-dessous : Risque faible évoluant en Risque limité.
+2020-02-03,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2020-02-02,ASPE-OSSAU,1,2,,,,,,2,Risque faible évoluant en Risque limité.
+2020-02-01,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2020-01-31,ASPE-OSSAU,3,,S,,2,,N,3,"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""Risque limité au Nord"""""""""""""""""""""""""""""""
+2020-01-30,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2020-01-29,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2020-01-28,ASPE-OSSAU,2,,<2000,2000,3,,>2000,3,Au-dessus de 2000 m : Risque marqué. En-dessous : Risque limité.
+2020-01-27,ASPE-OSSAU,2,,<1800,1800,3,,>1800,3,Au-dessus de 1800 m : Risque marqué. En-dessous : Risque limité.
+2020-01-26,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2020-01-25,ASPE-OSSAU,2,,<2000,2000,3,,>2000,3,Au-dessus de 2000 m : Risque marqué. En-dessous : Risque limité.
+2020-01-24,ASPE-OSSAU,2,,<2000,2000,3,,>2000,3,Au-dessus de 2000 m : Risque marqué. En-dessous : Risque limité.
+2020-01-23,ASPE-OSSAU,2,,<2000,2000,4,,>2000,4,Au-dessus de 2000 m : Risque fort. En-dessous : Risque limité.
+2020-01-22,ASPE-OSSAU,2,,<2000,2000,3,,>2000,3,Au-dessus de 2000 m : Risque marqué. En-dessous : Risque limité.
+2020-01-21,ASPE-OSSAU,2,,<2000,2000,3,,>2000,3,Au-dessus de 2000 m : Risque marqué. En-dessous : Risque limité.
+2020-01-20,ASPE-OSSAU,2,,<2000,2000,3,,>2000,3,Au-dessus de 2000 m : Risque marqué. En-dessous : Risque limité.
+2020-01-19,ASPE-OSSAU,2,,<2000,2000,3,,>2000,3,Au-dessus de 2000 m : Risque marqué. En-dessous : Risque limité.
+2020-01-18,ASPE-OSSAU,2,,<2100,2100,3,,>2100,3,Au-dessus de 2100 m : Risque marqué. En-dessous : Risque limité.
+2020-01-17,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
+2020-01-16,ASPE-OSSAU,1,2,<2000,2000,2,3,>2000,3,Au-dessus de 2000 m : Risque limité évoluant en Risque marqué. En-dessous : Risque faible évoluant en Risque limité.
+2020-01-15,ASPE-OSSAU,1,,<2200,2200,2,,>2200,2,Au-dessus de 2200 m : Risque limité. En-dessous : Risque faible.
+2020-01-14,ASPE-OSSAU,1,,<2200,2200,2,,>2200,2,Au-dessus de 2200 m : Risque limité. En-dessous : Risque faible.
+2020-01-13,ASPE-OSSAU,1,,<2300,2300,2,,>2300,2,Au-dessus de 2300 m : Risque limité. En-dessous : Risque faible.
+2020-01-12,ASPE-OSSAU,1,,,,,,,1,Risque faible.
+2020-01-11,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2020-01-10,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2020-01-08,ASPE-OSSAU,1,,,,,,,1,Risque faible.
+2020-01-07,ASPE-OSSAU,1,,,,,,,1,Risque faible.
+2020-01-06,ASPE-OSSAU,1,,,,,,,1,Risque faible.
+2020-01-05,ASPE-OSSAU,1,,,,,,,1,Risque faible.
+2020-01-04,ASPE-OSSAU,1,,<2700,2700,2,,>2700,2,Au-dessus de 2700 m : Risque limité. En-dessous : Risque faible.
+2020-01-03,ASPE-OSSAU,1,,<2700,2700,2,,>2700,2,Au-dessus de 2700 m : Risque limité. En-dessous : Risque faible.
+2020-01-02,ASPE-OSSAU,1,,<2600,2600,2,,>2600,2,Au-dessus de 2600 m : Risque limité. En-dessous : Risque faible.
+2020-01-01,ASPE-OSSAU,1,,<2500,2500,2,,>2500,2,Au-dessus de 2500 m : Risque limité. En-dessous : Risque faible.
+2019-12-31,ASPE-OSSAU,1,,<2500,2500,2,,>2500,2,Au-dessus de 2500 m : Risque limité. En-dessous : Risque faible.
+2019-12-30,ASPE-OSSAU,1,,<2600,2600,2,,>2600,2,Au-dessus de 2600 m : Risque limité. En-dessous : Risque faible.
+2019-12-29,ASPE-OSSAU,1,2,<2600,2600,2,,>2600,2,Au-dessus de 2600 m : Risque limité. En-dessous : Risque faible évoluant en Risque limité.
+2019-12-28,ASPE-OSSAU,1,2,<2500,2500,2,,>2500,2,Au-dessus de 2500 m : Risque limité. En-dessous : Risque faible évoluant en Risque limité.
+2019-12-27,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2019-12-26,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2019-12-25,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2019-12-24,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2019-12-23,ASPE-OSSAU,2,,<2300,2300,3,,>2300,3,Au-dessus de 2300 m : Risque marqué. En-dessous : Risque limité.
+2019-12-22,ASPE-OSSAU,2,,<2000,2000,3,,>2000,3,Au-dessus de 2000 m : Risque marqué. En-dessous : Risque limité.
+2019-12-21,ASPE-OSSAU,2,,<2300,2300,3,,>2300,3,Au-dessus de 2300 m : Risque marqué. En-dessous : Risque limité.
+2019-12-20,ASPE-OSSAU,2,,<2400,2400,3,,>2400,3,Au-dessus de 2400 m : Risque marqué. En-dessous : Risque limité.
+2019-12-19,ASPE-OSSAU,4,,S,,3,,N,4,"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""Risque marqué au Nord"""""""""""""""""""""""""""""""
+2019-12-18,ASPE-OSSAU,1,2,<2300,2300,3,,>2300,3,Au-dessus de 2300 m : Risque marqué. En-dessous : Risque faible évoluant en Risque limité.
+2019-12-16,ASPE-OSSAU,2,,<2400,2400,3,,>2400,3,Au-dessus de 2400 m : Risque marqué. En-dessous : Risque limité.
+2019-12-15,ASPE-OSSAU,2,,<2600,2600,3,,>2600,3,Au-dessus de 2600 m : Risque marqué. En-dessous : Risque limité.
+2019-12-14,ASPE-OSSAU,2,,<2500,2500,3,,>2500,3,Au-dessus de 2500 m : Risque marqué. En-dessous : Risque limité.
+2019-12-13,ASPE-OSSAU,3,2,<2200,2200,4,3,>2200,4,Au-dessus de 2200 m : Risque fort évoluant en Risque marqué. En-dessous : Risque marqué évoluant en Risque limité.
+2019-12-12,ASPE-OSSAU,4,,,,,,,4,Risque fort.
+2019-12-11,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-12-09,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-12-08,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-12-07,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-12-06,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-12-04,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-12-03,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-12-02,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-12-01,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-11-30,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-11-29,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-11-28,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-11-27,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-11-26,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-11-25,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-11-24,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-11-23,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-11-22,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-11-21,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-11-20,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-11-19,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-11-18,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-11-17,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-11-16,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-11-15,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-11-14,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-11-13,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-11-12,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-11-11,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-11-10,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-11-09,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-11-08,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-11-07,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-11-06,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-11-05,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-11-04,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-11-03,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-11-02,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-11-01,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-10-31,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-10-30,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-06-12,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-06-11,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-06-10,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-06-09,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-06-08,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-06-07,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-06-06,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-06-05,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-06-04,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-06-03,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-06-02,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-06-01,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-05-31,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-05-30,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-05-29,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-05-28,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-05-27,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-05-26,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-05-25,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-05-24,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-05-23,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-05-22,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-05-21,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-05-20,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-05-19,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-05-18,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-05-17,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-05-16,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-05-15,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-05-14,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-05-13,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-05-12,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-05-11,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-05-10,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-05-09,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-05-08,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-05-07,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-05-06,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-05-05,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-05-04,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-05-03,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-05-02,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-05-01,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-04-30,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-04-29,ASPE-OSSAU,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
+2019-04-27,ASPE-OSSAU,1,3,,,,,,3,Risque faible évoluant en Risque marqué.
+2019-04-26,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
+2019-04-25,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
+2019-04-24,ASPE-OSSAU,4,,S,,3,,N,4,"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""Risque marqué au Nord"""""""""""""""""""""""""""""""
+2019-04-23,ASPE-OSSAU,2,,<2100,2100,2,3,>2100,3,Au-dessus de 2100 m : Risque limité évoluant en Risque marqué. En-dessous : Risque limité.
+2019-04-22,ASPE-OSSAU,2,3,,,,,,3,Risque limité évoluant en Risque marqué.
+2019-04-21,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2019-04-20,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2019-04-19,ASPE-OSSAU,1,2,,,,,,2,Risque faible évoluant en Risque limité.
+2019-04-18,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2019-04-17,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2019-04-16,ASPE-OSSAU,1,2,,,,,,2,Risque faible évoluant en Risque limité.
+2019-04-15,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
+2019-04-14,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2019-04-13,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2019-04-12,ASPE-OSSAU,2,3,,,,,,3,Risque limité évoluant en Risque marqué.
+2019-04-11,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2019-04-10,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2019-04-09,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
+2019-04-08,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2019-04-07,ASPE-OSSAU,2,,<2000,2000,3,,>2000,3,Au-dessus de 2000 m : Risque marqué. En-dessous : Risque limité.
+2019-04-06,ASPE-OSSAU,2,,<1900,1900,3,,>1900,3,Au-dessus de 1900 m : Risque marqué. En-dessous : Risque limité.
+2019-04-05,ASPE-OSSAU,2,,<2000,2000,3,,>2000,3,Au-dessus de 2000 m : Risque marqué. En-dessous : Risque limité.
+2019-04-04,ASPE-OSSAU,2,,<2000,2000,3,,>2000,3,Au-dessus de 2000 m : Risque marqué. En-dessous : Risque limité.
+2019-04-03,ASPE-OSSAU,2,,<2300,2300,3,,>2300,3,Au-dessus de 2300 m : Risque marqué. En-dessous : Risque limité.
+2019-04-02,ASPE-OSSAU,2,,<2300,2300,2,3,>2300,3,Au-dessus de 2300 m : Risque limité évoluant en Risque marqué. En-dessous : Risque limité.
+2019-04-01,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2019-03-31,ASPE-OSSAU,1,,<2200,2200,2,,>2200,2,Au-dessus de 2200 m : Risque limité. En-dessous : Risque faible.
+2019-03-30,ASPE-OSSAU,1,,,,,,,1,Risque faible.
+2019-03-29,ASPE-OSSAU,1,,,,,,,1,Risque faible.
+2019-03-28,ASPE-OSSAU,1,,<2200,2200,2,,>2200,2,Au-dessus de 2200 m : Risque limité. En-dessous : Risque faible.
+2019-03-27,ASPE-OSSAU,1,,<2200,2200,2,,>2200,2,Au-dessus de 2200 m : Risque limité. En-dessous : Risque faible.
+2019-03-26,ASPE-OSSAU,1,,<2200,2200,2,,>2200,2,Au-dessus de 2200 m : Risque limité. En-dessous : Risque faible.
+2019-03-25,ASPE-OSSAU,1,,,,,,,1,Risque faible.
+2019-03-24,ASPE-OSSAU,1,,<2200,2200,2,,>2200,2,Au-dessus de 2200 m : Risque limité. En-dessous : Risque faible.
+2019-03-23,ASPE-OSSAU,1,2,<2200,2200,2,,>2200,2,Au-dessus de 2200 m : Risque limité. En-dessous : Risque faible évoluant en Risque limité.
+2019-03-22,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2019-03-20,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2019-03-16,ASPE-OSSAU,1,,<2400,2400,2,,>2400,2,Au-dessus de 2400 m : Risque limité. En-dessous : Risque faible.
+2019-03-14,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2019-03-13,ASPE-OSSAU,2,,S,,3,,N,3,"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""Risque marqué au Nord"""""""""""""""""""""""""""""""
+2019-03-12,ASPE-OSSAU,2,,<2200,2200,2,3,>2200,3,Au-dessus de 2200 m : Risque limité évoluant en Risque marqué. En-dessous : Risque limité.
+2019-03-11,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2019-03-10,ASPE-OSSAU,1,,<2400,2400,2,,>2400,2,Au-dessus de 2400 m : Risque limité. En-dessous : Risque faible.
+2019-03-09,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2019-03-08,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2019-03-07,ASPE-OSSAU,2,,<2000,2000,3,,>2000,3,Au-dessus de 2000 m : Risque marqué. En-dessous : Risque limité.
+2019-03-06,ASPE-OSSAU,3,,S,,2,,N,3,"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""Risque limité au Nord"""""""""""""""""""""""""""""""
+2019-03-05,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
+2019-03-04,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2019-03-03,ASPE-OSSAU,3,2,,,,,,3,Risque marqué évoluant en Risque limité.
+2019-03-02,ASPE-OSSAU,1,3,,,,,,3,Risque faible évoluant en Risque marqué.
+2019-03-01,ASPE-OSSAU,1,,,,,,,1,Risque faible.
+2019-02-28,ASPE-OSSAU,1,,,,,,,1,Risque faible.
+2019-02-27,ASPE-OSSAU,1,,,,,,,1,Risque faible.
+2019-02-26,ASPE-OSSAU,1,2,,,,,,2,Risque faible évoluant en Risque limité.
+2019-02-25,ASPE-OSSAU,1,2,,,,,,2,Risque faible évoluant en Risque limité.
+2019-02-24,ASPE-OSSAU,1,2,,,,,,2,Risque faible évoluant en Risque limité.
+2019-02-23,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2019-02-22,ASPE-OSSAU,1,2,<2300,2300,2,,>2300,2,Au-dessus de 2300 m : Risque limité. En-dessous : Risque faible évoluant en Risque limité.
+2019-02-21,ASPE-OSSAU,1,2,<2300,2300,2,,>2300,2,Au-dessus de 2300 m : Risque limité. En-dessous : Risque faible évoluant en Risque limité.
+2019-02-20,ASPE-OSSAU,1,2,<2200,2200,2,,>2200,2,Au-dessus de 2200 m : Risque limité. En-dessous : Risque faible évoluant en Risque limité.
+2019-02-19,ASPE-OSSAU,1,2,<2200,2200,2,,>2200,2,Au-dessus de 2200 m : Risque limité. En-dessous : Risque faible évoluant en Risque limité.
+2019-02-18,ASPE-OSSAU,1,2,<2200,2200,2,,>2200,2,Au-dessus de 2200 m : Risque limité. En-dessous : Risque faible évoluant en Risque limité.
+2019-02-17,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2019-02-16,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2019-02-15,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2019-02-14,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2019-02-13,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2019-02-12,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2019-02-11,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2019-02-10,ASPE-OSSAU,2,,<2500,2500,3,,>2500,3,Au-dessus de 2500 m : Risque marqué. En-dessous : Risque limité.
+2019-02-09,ASPE-OSSAU,2,,<2500,2500,3,,>2500,3,Au-dessus de 2500 m : Risque marqué. En-dessous : Risque limité.
+2019-02-08,ASPE-OSSAU,2,,<2100,2100,3,,>2100,3,Au-dessus de 2100 m : Risque marqué. En-dessous : Risque limité.
+2019-02-07,ASPE-OSSAU,2,3,,,,,,3,Risque limité évoluant en Risque marqué.
+2019-02-06,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2019-02-05,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2019-02-04,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
+2019-02-03,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
+2019-02-02,ASPE-OSSAU,3,,<2100,2100,4,,>2100,4,Au-dessus de 2100 m : Risque fort. En-dessous : Risque marqué.
+2019-02-01,ASPE-OSSAU,2,3,<2000,2000,3,,>2000,3,Au-dessus de 2000 m : Risque marqué. En-dessous : Risque limité évoluant en Risque marqué.
+2019-01-31,ASPE-OSSAU,4,,S,,3,,N,4,"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""Risque marqué au Nord"""""""""""""""""""""""""""""""
+2019-01-30,ASPE-OSSAU,4,,,,,,,4,Risque fort.
+2019-01-29,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
+2019-01-28,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
+2019-01-27,ASPE-OSSAU,4,,,,,,,4,Risque fort.
+2019-01-26,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
+2019-01-25,ASPE-OSSAU,2,,<2000,2000,3,,>2000,3,Au-dessus de 2000 m : Risque marqué. En-dessous : Risque limité.
+2019-01-24,ASPE-OSSAU,3,,,,,,,3,Risque marqué.
+2019-01-23,ASPE-OSSAU,4,,<1700,1700,5,4,>1700,5,Au-dessus de 1700 m : Risque très fort évoluant en Risque fort. En-dessous : Risque fort.
+2019-01-22,ASPE-OSSAU,4,,,,,,,4,Risque fort.
+2019-01-21,ASPE-OSSAU,2,3,,,,,,3,Risque limité évoluant en Risque marqué.
+2019-01-20,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2019-01-19,ASPE-OSSAU,1,2,,,,,,2,Risque faible évoluant en Risque limité.
+2019-01-18,ASPE-OSSAU,1,,<2300,2300,2,,>2300,2,Au-dessus de 2300 m : Risque limité. En-dessous : Risque faible.
+2019-01-17,ASPE-OSSAU,1,,<2200,2200,2,,>2200,2,Au-dessus de 2200 m : Risque limité. En-dessous : Risque faible.
+2019-01-16,ASPE-OSSAU,2,,,,,,,2,Risque limité.
+2019-01-15,ASPE-OSSAU,1,,<2400,2400,2,,>2400,2,Au-dessus de 2400 m : Risque limité. En-dessous : Risque faible.
+2019-01-14,ASPE-OSSAU,1,,<2400,2400,2,,>2400,2,Au-dessus de 2400 m : Risque limité. En-dessous : Risque faible.
+2019-01-13,ASPE-OSSAU,1,,<2200,2200,2,,>2200,2,Au-dessus de 2200 m : Risque limité. En-dessous : Risque faible.
+2019-01-12,ASPE-OSSAU,1,,<2200,2200,2,,>2200,2,Au-dessus de 2200 m : Risque limité. En-dessous : Risque faible.
+2019-01-11,ASPE-OSSAU,1,,<2200,2200,2,,>2200,2,Au-dessus de 2200 m : Risque limité. En-dessous : Risque faible.
+2019-01-10,ASPE-OSSAU,1,,<2400,2400,2,,>2400,2,Au-dessus de 2400 m : Risque limité. En-dessous : Risque faible.
+2019-01-09,ASPE-OSSAU,1,,<2200,2200,2,,>2200,2,Au-dessus de 2200 m : Risque limité. En-dessous : Risque faible.
+2019-01-08,ASPE-OSSAU,1,,<2200,2200,2,,>2200,2,Au-dessus de 2200 m : Risque limité. En-dessous : Risque faible.
+2019-01-07,ASPE-OSSAU,1,,,,,,,1,Risque faible.
+2019-01-06,ASPE-OSSAU,1,,,,,,,1,Risque faible.
+2019-01-05,ASPE-OSSAU,1,,,,,,,1,Risque faible.
+2019-01-04,ASPE-OSSAU,1,,,,,,,1,Risque faible.
+2019-01-03,ASPE-OSSAU,1,,,,,,,1,Risque faible.
+2019-01-02,ASPE-OSSAU,1,,,,,,,1,Risque faible.
+2019-01-01,ASPE-OSSAU,1,,,,,,,1,Risque faible.
+2018-12-31,ASPE-OSSAU,1,,,,,,,1,Risque faible.
+2018-12-30,ASPE-OSSAU,1,,,,,,,1,Risque faible.
+2018-12-29,ASPE-OSSAU,1,,,,,,,1,Risque faible.
+2018-12-28,ASPE-OSSAU,1,,,,,,,1,Risque faible.
+2018-12-27,ASPE-OSSAU,1,,,,,,,1,Risque faible.
+2018-12-26,ASPE-OSSAU,1,,,,,,,1,Risque faible.
+2018-12-25,ASPE-OSSAU,1,,<2700,2700,2,,>2700,2,Au-dessus de 2700 m : Risque limité. En-dessous : Risque faible.
+2018-12-24,ASPE-OSSAU,1,,<2600,2600,2,,>2600,2,Au-dessus de 2600 m : Risque limité. En-dessous : Risque faible.
+2018-12-23,ASPE-OSSAU,1,,<2500,2500,2,,>2500,2,Au-dessus de 2500 m : Risque limité. En-dessous : Risque faible.
+2018-12-22,ASPE-OSSAU,1,,<2600,2600,2,,>2600,2,Au-dessus de 2600 m : Risque limité. En-dessous : Risque faible.
+2018-12-21,ASPE-OSSAU,1,,<2300,2300,2,,>2300,2,Au-dessus de 2300 m : Risque limité. En-dessous : Risque faible.
+2018-12-20,ASPE-OSSAU,1,,<2100,2100,2,,>2100,2,Au-dessus de 2100 m : Risque limité. En-dessous : Risque faible.
+2018-12-19,ASPE-OSSAU,1,,<2000,2000,2,,>2000,2,Au-dessus de 2000 m : Risque limité. En-dessous : Risque faible.
+2018-12-18,ASPE-OSSAU,1,,<2000,2000,2,,>2000,2,Au-dessus de 2000 m : Risque limité. En-dessous : Risque faible.
+2018-12-17,ASPE-OSSAU,1,,<2300,2300,2,,>2300,2,Au-dessus de 2300 m : Risque limité. En-dessous : Risque faible.
