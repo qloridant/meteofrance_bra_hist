@@ -1,4 +1,5 @@
 date, massif, risque1, evolurisque1, loc1, altitude, risque2, evolurisque2, loc2, risque_maxi, commentaire
+2022-05-04,COUSERANS,2,3,,,,,,3,Risque limité évoluant en Risque marqué.
 2022-05-02,COUSERANS,2,,,,,,,2,Risque limité.
 2022-05-01,COUSERANS,2,,,,,,,2,Risque limité.
 2022-04-30,COUSERANS,2,,,,,,,2,Risque limité.
@@ -40,7 +41,7 @@ date, massif, risque1, evolurisque1, loc1, altitude, risque2, evolurisque2, loc2
 2022-03-25,COUSERANS,2,,,,,,,2,Risque limité.
 2022-03-24,COUSERANS,2,,,,,,,2,Risque limité.
 2022-03-23,COUSERANS,2,,,,,,,2,Risque limité.
-2022-03-22,COUSERANS,3,,S,,2,,N,3,"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""Risque limité au Nord"""""""""""""""""""""""""""""""
+2022-03-22,COUSERANS,3,,S,,2,,N,3,"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""Risque limité au Nord"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 2022-03-21,COUSERANS,2,,<2200,2200,3,,>2200,3,Au-dessus de 2200 m : Risque marqué. En-dessous : Risque limité.
 2022-03-20,COUSERANS,2,,,,,,,2,Risque limité.
 2022-03-19,COUSERANS,2,,<2300,2300,3,,>2300,3,Au-dessus de 2300 m : Risque marqué. En-dessous : Risque limité.
@@ -274,7 +275,7 @@ date, massif, risque1, evolurisque1, loc1, altitude, risque2, evolurisque2, loc2
 2021-02-24,COUSERANS,1,,<2200,2200,2,,>2200,2,Au-dessus de 2200 m : Risque limité. En-dessous : Risque faible.
 2021-02-23,COUSERANS,1,,<2200,2200,2,,>2200,2,Au-dessus de 2200 m : Risque limité. En-dessous : Risque faible.
 2021-02-22,COUSERANS,2,,<2200,2200,3,,>2200,3,Au-dessus de 2200 m : Risque marqué. En-dessous : Risque limité.
-2021-02-21,COUSERANS,3,,S,,2,,N,3,"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""Risque limité au Nord"""""""""""""""""""""""""""""""
+2021-02-21,COUSERANS,3,,S,,2,,N,3,"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""Risque limité au Nord"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 2021-02-20,COUSERANS,1,2,<2300,2300,2,,>2300,2,Au-dessus de 2300 m : Risque limité. En-dessous : Risque faible évoluant en Risque limité.
 2021-02-19,COUSERANS,1,2,<2200,2200,2,,>2200,2,Au-dessus de 2200 m : Risque limité. En-dessous : Risque faible évoluant en Risque limité.
 2021-02-18,COUSERANS,2,,,,,,,2,Risque limité.
@@ -433,7 +434,7 @@ date, massif, risque1, evolurisque1, loc1, altitude, risque2, evolurisque2, loc2
 2020-02-03,COUSERANS,1,,,,,,,1,Risque faible.
 2020-02-02,COUSERANS,1,2,<2200,2200,2,3,>2200,3,Au-dessus de 2200 m : Risque limité évoluant en Risque marqué. En-dessous : Risque faible évoluant en Risque limité.
 2020-02-01,COUSERANS,2,3,,,,,,3,Risque limité évoluant en Risque marqué.
-2020-01-31,COUSERANS,3,,S,,2,,N,3,"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""Risque limité au Nord"""""""""""""""""""""""""""""""
+2020-01-31,COUSERANS,3,,S,,2,,N,3,"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""Risque limité au Nord"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 2020-01-30,COUSERANS,2,,,,,,,2,Risque limité.
 2020-01-29,COUSERANS,2,,,,,,,2,Risque limité.
 2020-01-28,COUSERANS,1,2,<2100,2100,3,,>2100,3,Au-dessus de 2100 m : Risque marqué. En-dessous : Risque faible évoluant en Risque limité.
@@ -441,8 +442,8 @@ date, massif, risque1, evolurisque1, loc1, altitude, risque2, evolurisque2, loc2
 2020-01-26,COUSERANS,2,,,,,,,2,Risque limité.
 2020-01-25,COUSERANS,2,,<2000,2000,3,,>2000,3,Au-dessus de 2000 m : Risque marqué. En-dessous : Risque limité.
 2020-01-24,COUSERANS,2,,<2000,2000,3,,>2000,3,Au-dessus de 2000 m : Risque marqué. En-dessous : Risque limité.
-2020-01-23,COUSERANS,4,,S,,3,,N,4,"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""Risque marqué au Nord"""""""""""""""""""""""""""""""
-2020-01-22,COUSERANS,3,,S,,2,,N,3,"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""Risque limité au Nord"""""""""""""""""""""""""""""""
+2020-01-23,COUSERANS,4,,S,,3,,N,4,"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""Risque marqué au Nord"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+2020-01-22,COUSERANS,3,,S,,2,,N,3,"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""Risque limité au Nord"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 2020-01-21,COUSERANS,2,,,,,,,2,Risque limité.
 2020-01-20,COUSERANS,2,,,,,,,2,Risque limité.
 2020-01-19,COUSERANS,2,,,,,,,2,Risque limité.
@@ -568,8 +569,8 @@ date, massif, risque1, evolurisque1, loc1, altitude, risque2, evolurisque2, loc2
 2019-05-01,COUSERANS,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
 2019-04-30,COUSERANS,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
 2019-04-29,COUSERANS,-1,,,,,,,/,Information neige et avalanche rédigée à partir d'informations réduites
-2019-04-26,COUSERANS,3,,S,,1,,N,3,"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""Risque faible au Nord"""""""""""""""""""""""""""""""
-2019-04-25,COUSERANS,3,,S,,2,,N,3,"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""Risque limité au Nord"""""""""""""""""""""""""""""""
+2019-04-26,COUSERANS,3,,S,,1,,N,3,"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""Risque faible au Nord"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+2019-04-25,COUSERANS,3,,S,,2,,N,3,"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""Risque limité au Nord"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 2019-04-24,COUSERANS,3,,,,,,,3,Risque marqué.
 2019-04-23,COUSERANS,2,3,,,,,,3,Risque limité évoluant en Risque marqué.
 2019-04-22,COUSERANS,2,3,,,,,,3,Risque limité évoluant en Risque marqué.
