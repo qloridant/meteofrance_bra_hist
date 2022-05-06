@@ -2,6 +2,7 @@ import os
 import pandas as pd
 from github import Github, NamedUser
 
+
 def merge_url_content(actual_content: str, new_content: []):
     # Merge the text from the github file and the newly generated one
     # Sort and veriify constraint unicity
@@ -12,6 +13,7 @@ def merge_url_content(actual_content: str, new_content: []):
     full_content = '\n'.join(map(lambda x:str(x), full_content))
 
     return full_content
+
 
 def merge_bera_content(actual_content: str, new_content: [[]]):
     # Merge the text from the github file and the newly generated one
