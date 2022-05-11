@@ -1,6 +1,9 @@
 import os
 import pandas as pd
+import logging
 from github import Github, NamedUser
+
+logger = logging.getLogger(__name__)
 
 
 def merge_url_content(actual_content: str, new_content: []):
