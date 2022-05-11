@@ -1,10 +1,13 @@
 from datetime import datetime, timedelta
 import pandas as pd
 import requests
+import logging
 from csv import writer
 import json
 import xml.etree.ElementTree as ET
 import sys
+
+logger = logging.getLogger(__name__)
 
 
 class Bulletin:
@@ -20,7 +23,7 @@ class Bulletin:
 
     def download(self):
         r = requests.get(f'{self.url}.{self.massif}.{self.jour}.xml')
-        # print(f'{self.url}.{self.massif}.{self.jour}.xml')
+        logger.debug(f'{self.url}.{self.massif}.{self.jour}.xml')
         with open('app/tmp_bera.xml', 'bw+') as f:
             f.write(r.content)
 
@@ -28,6 +31,7 @@ class Bulletin:
         root = ET.parse('app/tmp_bera.xml').getroot()
         self.cartouche_risque = root[0].find('CARTOUCHERISQUE')
         self.risques = self.cartouche_risque[0].attrib
+        logger.debug(self.risques)
 
     def append_csv(self):
         # Removing comma as we will save the file as a csv
