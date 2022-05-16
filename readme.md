@@ -1,6 +1,6 @@
 # General
 
-Ce projet a pour but d'ouvrir les données de météo france sur les Bulletins Estimations Risque Avalance (BERA).
+Ce projet a pour but d'ouvrir les données de Météo-France sur les Bulletins Estimations Risque Avalance (BERA).
 Ces données sont déjà [disponibles](https://donneespubliques.meteofrance.fr/?fond=produit&id_produit=265&id_rubrique=50) mais difficiles à traiter pour des ré-utilisations.
 
 Objectifs de réutilisations :
@@ -14,6 +14,9 @@ Objectifs de réutilisations :
 - [Anena :](https://www.anena.org/)  Association Nationale pour l’Étude de la Neige et des Avalanches
 
 # Modèle de données
+Source :
+  Météo-France 
+  
 Clé Primaires :
 - date
 - massif
