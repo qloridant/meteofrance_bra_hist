@@ -37,8 +37,8 @@ def merge_bera_content(actual_content: str, new_content: [[]]):
     df = df.drop_duplicates()
 
     # Export content
-    df.to_csv('app/tmp_dataframe.csv', sep=',', index=False)
-    with open('app/tmp_dataframe.csv', 'r') as f:
+    df.to_csv('src/tmp_dataframe.csv', sep=',', index=False)
+    with open('src/tmp_dataframe.csv', 'r') as f:
         full_content = f.read()
     return full_content
 
