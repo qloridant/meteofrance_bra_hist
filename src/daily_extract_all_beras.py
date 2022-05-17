@@ -20,7 +20,7 @@ for massif in MASSIFS:
     bulletin.parse()
     new_data = bulletin.append_csv()
 
-    file_path = f'app/data/{massif}/hist.csv'
+    file_path = f'src/data/{massif}/hist.csv'
     logger.info(f'Exporting the BERA to Github for massif : {massif}   ...')
     push(repo, file_path, "Daily automatic file update", [new_data], branch, update=True, type_data='bera')
 

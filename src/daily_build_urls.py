@@ -1,4 +1,4 @@
-# Ce script doit etre executé a partir de 16h.
+# Ce script doit etre executé a partir de 16h (heure de publication)
 import sys
 import logging
 from utils.extract import extract_url_dl
@@ -17,6 +17,6 @@ if __name__ == '__main__':
     repo = init_repo()
 
     for massif in MASSIFS:
-        file_path = f'app/data/{massif}/urls_list.txt'
+        file_path = f'src/data/{massif}/urls_list.txt'
         logger.info(f'Exporting the URL to Github for massif : {massif}   ...')
         push(repo, file_path, "Daily automatic file update", new_urls[massif], branch, update=True)
