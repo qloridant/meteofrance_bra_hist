@@ -13,7 +13,7 @@ logger.info('Starting the daily extract...')
 
 for massif in MASSIFS:
     # Lecture de la date de publication de notre fichier
-    jour = subprocess.run(["tail", "-n", "1", f"app/data/{massif}/urls_list.txt"], capture_output=True).stdout.decode('utf-8')
+    jour = subprocess.run(["tail", "-n", "1", f"src/data/{massif}/urls_list.txt"], capture_output=True).stdout.decode('utf-8')
     # Traitement du fichier
     bulletin = Bulletin(massif, jour)
     bulletin.download()
