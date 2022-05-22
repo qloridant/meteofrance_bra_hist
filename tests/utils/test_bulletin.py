@@ -2,7 +2,7 @@ import pytest
 from mock import patch, PropertyMock
 import xml.etree.ElementTree as ET
 
-from utils.bulletin import Bulletin, MassifInexistantException, FormatDateException
+from utils.bulletin import Bulletin, MassifInexistantException
 
 
 def test_init():
@@ -13,8 +13,6 @@ def test_init():
     with pytest.raises(MassifInexistantException) as e_info:
         invalid_massif = Bulletin('CHARTREUX', '20160417132702')
 
-    with pytest.raises(FormatDateException) as e_info:
-        invalid_massif = Bulletin('CHARTREUSE', '2016')
 
 def test_jour_key():
     bu = Bulletin('CHARTREUSE', '20160417132702')
@@ -26,7 +24,7 @@ def test_jour_key():
     assert bu.jour_key != '20160417132702'
 
 def test():
-    return ET.parse('tests/tmp_bera.xml')
+    return ET.parse('tests/valid_bera.xml')
 
 def mock_et_parse():
     return test

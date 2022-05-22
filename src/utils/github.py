@@ -1,7 +1,7 @@
 import os
 import pandas as pd
 import logging
-from github import Github, NamedUser
+from github import Github
 
 logger = logging.getLogger(__name__)
 
@@ -64,4 +64,4 @@ def push(repo, path, message, new_content, branch, update=False, type_data='url'
             full_content = merge_bera_content(actual_content, new_content)
         repo.update_file(contents.path, message, full_content, contents.sha, branch=branch)  # Add, commit and push branch
     else:  # If file doesn't exist, create it
-        repo.create_file(path, message, new_content, branch=branch, author=author)  # Add, commit and push branch
+        repo.create_file(path, message, new_content, branch=branch)  # Add, commit and push branch

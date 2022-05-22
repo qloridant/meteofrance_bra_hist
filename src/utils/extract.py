@@ -35,6 +35,8 @@ def extract_url_dl(no_browser=True, start_date=datetime(2016, 3, 30), end_date=d
     url_dls = defaultdict(list)
     if start_date > end_date:
         raise DateAttributeError
+    # if not start_date.isinstance(datetime):
+    #     raise DateAttributeError
 
     firefox_options = Options()
     if no_browser:

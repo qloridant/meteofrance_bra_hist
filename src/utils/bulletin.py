@@ -12,10 +12,8 @@ from utils.common import MASSIFS
 logger = logging.getLogger(__name__)
 
 RISQUE_ATTRIBUTES = ['ALTITUDE', 'COMMENTAIRE', 'EVOLURISQUE1', 'EVOLURISQUE2', 'LOC1', 'LOC2', 'RISQUE1', 'RISQUE2', 'RISQUEMAXI']
-class MassifInexistantException(Exception):
-    pass
 
-class FormatDateException(Exception):
+class MassifInexistantException(Exception):
     pass
 
 
@@ -27,10 +25,7 @@ class Bulletin:
         else:
             raise MassifInexistantException
 
-        if len(jour) >= 8:
-            self.jour = jour
-        else:
-            raise FormatDateException
+        self.jour = jour
 
     @property
     def url(self):
@@ -55,7 +50,7 @@ class Bulletin:
         self.cartouche_risque = root[0].find('CARTOUCHERISQUE')
         self.risques = self.cartouche_risque[0].attrib
         logger.debug(self.risques)
-        
+
         risques_attr = list(self.risques.keys())
         risques_attr.sort()
         if len(self.risques) !=  9 or (risques_attr != RISQUE_ATTRIBUTES):

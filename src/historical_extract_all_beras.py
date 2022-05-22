@@ -4,7 +4,7 @@ from utils.bulletin import Bulletin
 from utils.github import push, init_repo, get_remote_file
 from utils.common import init_logger, MASSIFS
 
-logger = init_logger()
+logger = init_logger(logging.DEBUG)
 
 branch = 'master'
 repo = init_repo()
@@ -12,17 +12,18 @@ repo = init_repo()
 for massif in MASSIFS:
     # Lecture de la date de publication de notre fichier
     dates_ = subprocess.run(["cat", f"src/data/{massif}/urls_list.txt"], capture_output=True).stdout.decode('utf-8').split('\n')
-
+    logger.debug(massif)
     new_data = []
     for date_ in dates_:
-        if int(date_) >= 20181217143136:
-            # Traitement du fichier
+        if int(date_) >= 20220401134757: ## Début des fichiers XML
+        # if int(date_) >= 20181217143136: ## Début des fichiers XML
+            logger.debug(date_)
             bulletin = Bulletin(massif, date_)
             bulletin.download()
+
             try:
                 bulletin.parse()
                 new_data.append(bulletin.append_csv())
-                logging.debug(date_)
             except Exception as e:
                 pass
 
