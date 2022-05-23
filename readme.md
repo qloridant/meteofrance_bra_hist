@@ -33,7 +33,7 @@ Clé Primaires :
 |evolurisque2|Evolution Risque 2|int| Evolution du rique au cours de la journée pour le risque 2 |2|Valeur optionnelle (sauf si le champ altitude n'est pas vide)|
 |loc2|Localisation 2|string|Localisation 2| Altitude à laquelle nous passons du rique 1 au risque 2 | Valeur optionnelle (sauf si le champ altitude n'est pas vide)|
 |risque_maxi|Risque Maximum|string|Risque estimé maximum pour le massif| 2 | Valeur obligatoire|
-|commentaire|Commentaire|string|Commentaire fourni par météo france (déclanchements spontanés, déclanchements par skieur)| - | Valeur optionnelle|
+|commentaire|Commentaire|string|Commentaire fourni par météo france (déclanchements spontanés, déclanchements par skieur)| Au dessus de 2200m : Risque faible évoluant en Risque limité. En dessous : Risque faible | Valeur optionnelle|
 
 Illustration de l'exemple :
 
