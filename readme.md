@@ -1,6 +1,6 @@
 # General
 
-Ce projet a pour but d'ouvrir les données de Météo-France sur les Bulletins Estimations Risque Avalance (BERA).
+Ce projet ouvre les données de Météo-France sur les Bulletins Estimations Risque Avalance (BERA).
 Ces données sont déjà [disponibles](https://donneespubliques.meteofrance.fr/?fond=produit&id_produit=265&id_rubrique=50) mais difficiles à traiter pour des ré-utilisations.
 
 Objectifs de réutilisations :
@@ -23,14 +23,22 @@ Clé Primaires :
 
 |Nom|Titre|Type|Description|Exemple|Propriétés|
 |-|-|-|-|-|-|
-|date|Date d'émission du bulletin|string|Date d'émission. Le bulletin est valable pour le jour suivant. En général, les bulletins sont émis vers 16H|2022-01-31|Valeur obligatoire|
-|massif|Massif|string|Massif concerné par l'estimation. La liste des massifs est connue. Le champ doit faire parti de cette liste|CHARTREUSE|Valeur obligatoire|
-|risque1|Risque 1|string|Risque estimé pour le massif à toutes les altitudes ou éventuellement pour les altitudes les plus basses (précisé par le champ altitude). Le risque peut pendre une valeur de 0 à 5. Plus la valeur est importante, plus le risque est important. |2|Valeur obligatoire|
-|evolurisque1| Evolution Risque 1|string||||
-|loc1|Localisation 1|string|||
-|altitude|Altitude|string|Altitude différenciant 2 niveaux de risques différents (en mètres)|1750|Valeur optionnelle|
-|risque2|Risque 2|string| - |3|Valeur optionnelle (sauf si le champ altitude n'est pas vide)|
-|evolurisque2|Evolution Risque 1|string| -  ||Valeur optionnelle (sauf si le champ altitude n'est pas vide)|
-|loc2|Localisation 2|string|Localisation 2| - | Valeur optionnelle (sauf si le champ altitude n'est pas vide)|
-|risque_maxi|Risque Maximum|string|Risque estimé maximum pour le massif| 3 | Valeur optionnelle (sauf si le champ altitude n'est pas vide)|
+|date|Date d'émission du bulletin|string|Date d'émission. Le bulletin est valable pour le jour suivant. En général, les bulletins sont émis vers 16H|2022-04-17|Valeur obligatoire|
+|massif|Massif|string|Massif concerné par l'estimation. La liste des massifs est connue. Le champ doit faire parti de cette liste|THABOR|Valeur obligatoire|
+|risque1|Risque 1|int|Risque estimé pour le massif à toutes les altitudes ou éventuellement pour les altitudes les plus basses (précisé par le champ altitude). Le risque peut pendre une valeur de 0 à 5. Plus la valeur est importante, plus le risque est important. Une valeur à -1 indique que le risque n'a pas pu être évalué. |1|Valeur obligatoire|
+|evolurisque1| Evolution Risque 1|string|Evolution du risque pour  au cours de la journée pour le risque 1||Valeur optionnelle|
+|loc1|Localisation 1|int|Altitude à laquelle nous passons du rique 1 au risque 2|2200 |
+|altitude|Altitude|string|Altitude à laquelle nous passons du rique 1 au risque 2|2200|Valeur optionnelle|
+|risque2|Risque 2|int| Risque estimé pour le massif pour les altitudes les plus hautes (précisé par le champ altitude). Le risque peut pendre une valeur de 0 à 5. Plus la valeur est importante, plus le risque est important. Une valeur à -1 indique que le risque n'a pas pu être évalué.|1|Valeur optionnelle (sauf si le champ altitude n'est pas vide)|
+|evolurisque2|Evolution Risque 2|int| Evolution du rique au cours de la journée pour le risque 2 |2|Valeur optionnelle (sauf si le champ altitude n'est pas vide)|
+|loc2|Localisation 2|string|Localisation 2| Altitude à laquelle nous passons du rique 1 au risque 2 | Valeur optionnelle (sauf si le champ altitude n'est pas vide)|
+|risque_maxi|Risque Maximum|string|Risque estimé maximum pour le massif| 2 | Valeur obligatoire|
 |commentaire|Commentaire|string|Commentaire fourni par météo france (déclanchements spontanés, déclanchements par skieur)| - | Valeur optionnelle|
+
+Illustration de l'exemple :
+
+![ex_thabor](https://user-images.githubusercontent.com/14170613/169779005-bae4fa10-16ad-4457-895b-7dbff6494dbe.png)
+
+
+🔴 Cas particulier 🔴
+![cas_particulier_1](https://user-images.githubusercontent.com/14170613/169779307-1ec4ae30-6036-4a2c-8b2a-81bcfdc4e608.png)
