@@ -1,13 +1,16 @@
-from datetime import datetime, timedelta
 import pandas as pd
 import requests
 import logging
+
+from datetime import datetime, timedelta
 from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.select import Select
 from selenium.common.exceptions import ElementNotInteractableException, StaleElementReferenceException, NoSuchElementException
 from webdriver_manager.firefox import GeckoDriverManager
 from collections import defaultdict
+from utils.common import MASSIFS
 
 
 class DateAttributeError(Exception):
@@ -61,20 +64,18 @@ def extract_url_dl(no_browser=True, start_date=datetime(2016, 3, 30), end_date=d
         datepicker.send_keys(i.strftime("%Y%m%d"))
         driver.find_element(By.ID, 'select_massif').click()
 
-        massifs = driver.find_element(By.ID, 'select_massif').find_elements(By.XPATH, '//option')
-        for option in massifs:
-            print(option.text)
+        select_massif = Select(driver.find_element(By.ID,'select_massif'))
+
+        for massif in select_massif.options:
             try:
-                option.click()
+                massif.click()
             except StaleElementReferenceException:
                 break
             except ElementNotInteractableException:
                 break
             datetime_publication = driver.find_elements(By.ID, 'select_heures')[-1].get_attribute('value')
-            url_dls[option.text.replace('/', '_')].append(datetime_publication)
-            if option.text == "CAPCIR-PUYMORENS":
-                # Stopping here. Other elements are unvalid options. How to better filter my list ?
-                break
+            url_dls[massif.text.replace('/', '_')].append(datetime_publication)
+
         i = i + timedelta(days=1)
 
     driver.close()
@@ -82,5 +83,5 @@ def extract_url_dl(no_browser=True, start_date=datetime(2016, 3, 30), end_date=d
 
 
 if __name__ == '__main__':
-    pdfs = extract_url_dl(no_browser=True, start_date=datetime(2018, 4, 1), end_date=datetime(2018, 4, 2))
+    pdfs = extract_url_dl(no_browser=False, start_date=datetime(2018, 4, 1), end_date=datetime(2018, 4, 1))
     print(pdfs)
