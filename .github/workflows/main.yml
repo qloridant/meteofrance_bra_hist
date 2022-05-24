@@ -6,7 +6,7 @@ name: CI
 on:
   # Triggers the workflow everyday at 7pm
   schedule:
-    - cron: "0 19 * * *"
+    - cron: "0 17 * * *"
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -33,4 +33,5 @@ jobs:
         run: |
           pip install -r src/requirements.txt
           python src/daily_build_urls.py
+          git pull origin master
           python src/daily_extract_all_beras.py
