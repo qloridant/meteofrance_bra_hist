@@ -15,8 +15,7 @@ for massif in MASSIFS:
     logger.debug(massif)
     new_data = []
     for date_ in dates_:
-        if int(date_) >= 20220401134757: ## Début des fichiers XML
-        # if int(date_) >= 20181217143136: ## Début des fichiers XML
+        if int(date_) >= 20181217143136: ## Début des fichiers XML
             logger.debug(date_)
             bulletin = Bulletin(massif, date_)
             bulletin.download()
@@ -28,5 +27,5 @@ for massif in MASSIFS:
                 pass
 
     file_path = f'src/data/{massif}/hist.csv'
-    logging.info(f'Exporting the BERA to Github for massif : {massif}   ...')
+    logger.info(f'Exporting the BERA to Github for massif : {massif}   ...')
     push(repo, file_path, "Daily automatic file update", new_data, branch, update=True, type_data='bera')
