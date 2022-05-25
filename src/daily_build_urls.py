@@ -11,7 +11,7 @@ logger = init_logger()
 
 if __name__ == '__main__':
     logger.info('Starting the extraction of urls...')
-    new_urls = extract_url_dl(no_browser=True, start_date=date.today() + timedelta(days=-1), end_date=date.today() + timedelta(days=-1))
+    new_urls = extract_url_dl(no_browser=True, start_date=date.today(), end_date=date.today())
 
     branch = 'master'
     repo = init_repo()
