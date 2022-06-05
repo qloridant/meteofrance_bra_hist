@@ -42,5 +42,13 @@ Illustration de l'exemple :
 ![ex_thabor](https://user-images.githubusercontent.com/14170613/169779005-bae4fa10-16ad-4457-895b-7dbff6494dbe.png)
 
 
-🔴 Cas particulier 🔴
+🔴 Cas particulier 🔴 :
+
 ![cas_particulier_1](https://user-images.githubusercontent.com/14170613/169779307-1ec4ae30-6036-4a2c-8b2a-81bcfdc4e608.png)
+
+## Arborescene originale
+
+Sur le site de météo-france, les massifs sont regroupés par département ou régions. Vous pouvez retrouver ce découpage dans le fichier `zones.json`
+
+Pour les coordonnées de ces zones, vous pouvez retrouvez les travaux de l'ENSG sur leur [API](https://api.ensg.eu/zonesbra).
+
