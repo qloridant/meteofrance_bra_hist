@@ -1,0 +1,31 @@
+[
+  {"nom": "ALPES_DU_NORD",
+    "departements": [
+      {"nom": "HAUTE_SAVOIE", "massifs": ["CHABLAIS", "MONT_BLANC", "ARAVIS"]},
+      {"nom": "ISERE", "massifs": ["CHARTREUSE", "BELLEDONNE", "GRANDES_ROUSSES", "VERCORS", "OISANS"]},
+      {"nom": "SAVOIE", "massifs": ["HAUTE_TARENTAISE", "BEAUFORTAIN", "BAUGES", "VANOISE", "HAUTE_MAURIENNE"]},
+    ]
+  },
+  {"nom": "ALPES_DU_SUD",
+    "departements": [
+      {"nom": "ALPES_DE_HAUTE_PROVENCE", "massifs": ["UBAYE", "HAUT_VAR/HAUT_VERDON"]},
+      {"nom": "HAUTES_ALPES", "massifs": ["THABOR", "PELVOUX", "QUEYRAS", "CHAMPSAUR", "DEVOLUY", "EMBRUNAIS_PARPAILLON"]},
+      {"nom": "ALPES_MARITIMES", "massifs": ["HAUT_VAR/HAUT_VERDON", "MERCANTOUR"]}
+    ]
+  },
+  {
+    "nom": "CORSE",
+    "departements": [
+      {"nom": "CORSE", "massifs": ["CINTO-RONTONDO", "RENOSO-INCUDINE"]}
+    ]
+  },
+  {"nom": "PYRENEES",
+  "departements": [
+    {"nom": "ANDORRE", "massifs": ["ANDORRE"]},
+    {"nom": "ARIEGE", "massifs": ["ORLU__ST_BARTHELEMY", "HAUTE_ARIEGE", "COUSERANS"]},
+    {"nom": "HAUTE_GARONNE", "massifs": ["COUSERANS", "LUCHONNAIS"]},
+    {"nom": "HAUTES_PYRENEES", "massifs": ["AURE_LOURON", "HAUTE_BIGORRE"]},
+    {"nom": "PYRENEES_ATLANTIQUES", "massifs": ["ASPE_OSSAU", "PAYS_BASQUE"]},
+    {"nom": "PYRENEES_ORIENTALES", "massifs": ["CERDAGNE_CANIGOU", "CAPCIR_PUYMORENS"]}
+    ]}
+]
