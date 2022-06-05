@@ -1,5 +1,19 @@
 date, massif, risque1, evolurisque1, loc1, altitude, risque2, evolurisque2, loc2, risque_maxi, commentaire
+2022-06-05,PELVOUX,1,,,,,,,1,Risque faible.
+2022-06-04,PELVOUX,1,,,,,,,1,Risque faible.
+2022-06-03,PELVOUX,1,,,,,,,1,Risque faible.
+2022-06-02,PELVOUX,1,,,,,,,1,Risque faible.
+2022-06-01,PELVOUX,1,,,,,,,1,Risque faible.
+2022-05-31,PELVOUX,1,,,,,,,1,Risque faible.
+2022-05-30,PELVOUX,1,,,,,,,1,Risque faible.
+2022-05-29,PELVOUX,1,,,,,,,1,Risque faible.
+2022-05-28,PELVOUX,1,,,,,,,1,Risque faible.
+2022-05-27,PELVOUX,1,,<3200,3200,1,2,>3200,2,Au-dessus de 3200 m : Risque faible évoluant en Risque limité. En-dessous : Risque faible.
+2022-05-26,PELVOUX,1,,<3000,3000,1,2,>3000,2,Au-dessus de 3000 m : Risque faible évoluant en Risque limité. En-dessous : Risque faible.
+2022-05-25,PELVOUX,1,,<3000,3000,1,2,>3000,2,Au-dessus de 3000 m : Risque faible évoluant en Risque limité. En-dessous : Risque faible.
+2022-05-24,PELVOUX,1,,<3000,3000,2,,>3000,2,Au-dessus de 3000 m : Risque limité. En-dessous : Risque faible.
 2022-05-23,PELVOUX,1,,<3000,3000,1,2,>3000,2,Au-dessus de 3000 m : Risque faible évoluant en Risque limité. En-dessous : Risque faible.
+2022-05-22,PELVOUX,1,,<3100,3100,1,2,>3100,2,Au-dessus de 3100 m : Risque faible évoluant en Risque limité. En-dessous : Risque faible.
 2022-05-21,PELVOUX,1,,<3100,3100,1,2,>3100,2,Au-dessus de 3100 m : Risque faible évoluant en Risque limité. En-dessous : Risque faible.
 2022-05-20,PELVOUX,1,,<3100,3100,1,2,>3100,2,Au-dessus de 3100 m : Risque faible évoluant en Risque limité. En-dessous : Risque faible.
 2022-05-19,PELVOUX,1,,<3000,3000,1,2,>3000,2,Au-dessus de 3000 m : Risque faible évoluant en Risque limité. En-dessous : Risque faible.

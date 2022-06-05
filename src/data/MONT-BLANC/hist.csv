@@ -1,5 +1,19 @@
 date, massif, risque1, evolurisque1, loc1, altitude, risque2, evolurisque2, loc2, risque_maxi, commentaire
+2022-06-05,MONT-BLANC,1,,<3600,3600,2,,>3600,2,Au-dessus de 3600 m : Risque limité. En-dessous : Risque faible.
+2022-06-04,MONT-BLANC,1,,<3500,3500,2,,>3500,2,Au-dessus de 3500 m : Risque limité. En-dessous : Risque faible.
+2022-06-03,MONT-BLANC,1,,<3500,3500,2,,>3500,2,Au-dessus de 3500 m : Risque limité. En-dessous : Risque faible.
+2022-06-02,MONT-BLANC,1,,<3300,3300,2,,>3300,2,Au-dessus de 3300 m : Risque limité. En-dessous : Risque faible.
+2022-06-01,MONT-BLANC,1,,<3300,3300,2,,>3300,2,Au-dessus de 3300 m : Risque limité. En-dessous : Risque faible.
+2022-05-31,MONT-BLANC,1,,<3000,3000,1,2,>3000,2, 
+2022-05-30,MONT-BLANC,1,,<3000,3000,1,2,>3000,2,Au-dessus de 3000 m : Risque faible évoluant en Risque limité. En-dessous : Risque faible.
+2022-05-29,MONT-BLANC,1,,,,,,,1,Risque faible.
+2022-05-28,MONT-BLANC,1,,,,,,,1,Risque faible.
+2022-05-27,MONT-BLANC,1,,<3000,3000,1,2,>3000,2,Au-dessus de 3000 m : Risque faible évoluant en Risque limité. En-dessous : Risque faible.
+2022-05-26,MONT-BLANC,1,,<3000,3000,1,2,>3000,2,Au-dessus de 3000 m : Risque faible évoluant en Risque limité. En-dessous : Risque faible.
+2022-05-25,MONT-BLANC,1,,<3000,3000,1,2,>3000,2,Au-dessus de 3000 m : Risque faible évoluant en Risque limité. En-dessous : Risque faible.
+2022-05-24,MONT-BLANC,1,,<3000,3000,2,,>3000,2,Au-dessus de 3000 m : Risque limité. En-dessous : Risque faible.
 2022-05-23,MONT-BLANC,1,,<3000,3000,2,,>3000,2,Au-dessus de 3000 m : Risque limité. En-dessous : Risque faible.
+2022-05-22,MONT-BLANC,1,,<3000,3000,2,,>3000,2,Elaboré à partir d'informations réduites. Au-dessus de 3000 m : Risque limité. En-dessous : Risque faible.
 2022-05-21,MONT-BLANC,1,,<3000,3000,1,2,>3000,2,Rédigé à partir d'informations réduites.
 2022-05-20,MONT-BLANC,1,,<3000,3000,1,2,>3000,2,Rédigé à partir d'informations réduites.
 2022-05-19,MONT-BLANC,1,,<3000,3000,1,2,>3000,2,Rédigé à partir d'informations réduites.

@@ -1,5 +1,18 @@
 date, massif, risque1, evolurisque1, loc1, altitude, risque2, evolurisque2, loc2, risque_maxi, commentaire
+2022-06-05,HAUTE-MAURIENNE,1,,,,,,,1,Risque faible.
+2022-06-04,HAUTE-MAURIENNE,1,,,,,,,1,Risque faible.
+2022-06-03,HAUTE-MAURIENNE,1,,,,,,,1,Risque faible.
+2022-06-02,HAUTE-MAURIENNE,1,,,,,,,1,Risque faible.
+2022-05-31,HAUTE-MAURIENNE,1,,,,,,,1,Risque faible.
+2022-05-30,HAUTE-MAURIENNE,1,,,,,,,1,Risque faible.
+2022-05-29,HAUTE-MAURIENNE,1,,,,,,,1,Risque faible.
+2022-05-28,HAUTE-MAURIENNE,1,,,,,,,1,Risque faible.
+2022-05-27,HAUTE-MAURIENNE,1,,<3000,3000,1,2,>3000,2,Au-dessus de 3000 m : Risque faible évoluant en Risque limité. En-dessous : Risque faible.
+2022-05-26,HAUTE-MAURIENNE,1,,<3000,3000,1,2,>3000,2,Au-dessus de 3000 m : Risque faible évoluant en Risque limité. En-dessous : Risque faible.
+2022-05-25,HAUTE-MAURIENNE,1,,<3000,3000,1,2,>3000,2,Au-dessus de 3000 m : Risque faible évoluant en Risque limité. En-dessous : Risque faible.
+2022-05-24,HAUTE-MAURIENNE,1,,<3000,3000,2,,>3000,2,Au-dessus de 3000 m : Risque limité. En-dessous : Risque faible.
 2022-05-23,HAUTE-MAURIENNE,1,,<3000,3000,2,,>3000,2,Au-dessus de 3000 m : Risque limité. En-dessous : Risque faible.
+2022-05-22,HAUTE-MAURIENNE,1,,<3000,3000,1,2,>3000,2,Au-dessus de 3000 m : Risque faible évoluant en Risque limité. En-dessous : Risque faible.
 2022-05-21,HAUTE-MAURIENNE,1,,<2900,2900,1,2,>2900,2,Au-dessus de 2900 m : Risque faible évoluant en Risque limité. En-dessous : Risque faible.
 2022-05-20,HAUTE-MAURIENNE,1,,<3000,3000,1,2,>3000,2,Au-dessus de 3000 m : Risque faible évoluant en Risque limité. En-dessous : Risque faible.
 2022-05-19,HAUTE-MAURIENNE,1,,<3000,3000,1,2,>3000,2,Au-dessus de 3000 m : Risque faible évoluant en Risque limité. En-dessous : Risque faible.
