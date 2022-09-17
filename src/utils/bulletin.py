@@ -1,17 +1,15 @@
-import pandas as pd
-import requests
 import logging
-import json
-import xml.etree.ElementTree as ET
 import sys
+import requests
+import xml.etree.ElementTree as ET
 
-from datetime import datetime, timedelta
-from csv import writer
-from utils.common import MASSIFS
+from src.utils.common import MASSIFS
 
 logger = logging.getLogger(__name__)
 
-RISQUE_ATTRIBUTES = ['ALTITUDE', 'COMMENTAIRE', 'EVOLURISQUE1', 'EVOLURISQUE2', 'LOC1', 'LOC2', 'RISQUE1', 'RISQUE2', 'RISQUEMAXI']
+RISQUE_ATTRIBUTES = ['ALTITUDE', 'COMMENTAIRE', 'EVOLURISQUE1', 'EVOLURISQUE2',
+                     'LOC1', 'LOC2', 'RISQUE1', 'RISQUE2', 'RISQUEMAXI']
+
 
 class MassifInexistantException(Exception):
     pass
@@ -19,7 +17,10 @@ class MassifInexistantException(Exception):
 
 class Bulletin:
     "Défintion d'un bulletin risque avalanche"
+
     def __init__(self, massif, jour):
+        self.cartouche_risque = ''
+        self.risques = ''
         if massif in MASSIFS:
             self.massif = massif
         else:
@@ -48,18 +49,18 @@ class Bulletin:
         root = ET.parse(self.path_file).getroot()
         self.cartouche_risque = root[0].find('CARTOUCHERISQUE')
         self.risques = self.cartouche_risque[0].attrib
-        logger.debug(self.risques)
 
         risques_attr = list(self.risques.keys())
         risques_attr.sort()
-        if len(self.risques) !=  9 or (risques_attr != RISQUE_ATTRIBUTES):
+        if len(self.risques) != 9 or (risques_attr != RISQUE_ATTRIBUTES):
             raise ET.ParseError
         else:
             return self.risques
 
     def append_csv(self):
         # Removing comma as we will save the file as a csv
-        risques = list(map(lambda x: x.replace(',', '-'), self.risques.values()))
+        risques = list(
+            map(lambda x: x.replace(',', '-'), self.risques.values()))
         return [self.jour_key, self.massif, *risques]
 
 
