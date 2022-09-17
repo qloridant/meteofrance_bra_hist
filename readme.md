@@ -3,7 +3,7 @@
 Ce projet ouvre les données de Météo-France sur les Bulletins d'estimation du risque d'avalanche (BERA).
 Ces données sont déjà [disponibles](https://donneespubliques.meteofrance.fr/?fond=produit&id_produit=265&id_rubrique=50) mais difficiles à traiter pour des ré-utilisations.
 
-Les données sont disponibles : `src/data/<MASSIF>/hist.csv`
+Les données sont disponibles : `data/<MASSIF>/hist.csv`
 
 Objectifs de réutilisations :
   - Evaluation du risque de la partie supérieure du manteau neigeux (préparation sorties)
