@@ -37,8 +37,8 @@ def merge_bera_content(actual_content: str, new_content: [[]]):
     df = df.drop_duplicates()
 
     # Export content
-    df.to_csv('src/tmp_dataframe.csv', sep=',', index=False)
-    with open('src/tmp_dataframe.csv', 'r') as f:
+    df.to_csv('bera/tmp_dataframe.csv', sep=',', index=False)
+    with open('bera/tmp_dataframe.csv', 'r') as f:
         full_content = f.read()
     return full_content
 
@@ -47,6 +47,7 @@ def init_repo():
     # TODO catch error if no data yet availble
     g = Github(os.getenv('TOKEN'))
     return g.get_user().get_repo('meteofrance_bra_hist')
+
 
 def get_remote_file(repo, file_path, branch):
     file = repo.get_contents(file_path, ref=branch)  # Get file from branch
