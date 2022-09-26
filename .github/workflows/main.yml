@@ -32,6 +32,6 @@ jobs:
       - name: Run a multi-line script
         run: |
           poetry install
-          poetry run python src/daily_build_urls.py
+          poetry run python bera/daily_build_urls.py
           git pull origin master
-          poetry run python src/daily_extract_all_beras.py
+          poetry run python bera/daily_extract_all_beras.py
