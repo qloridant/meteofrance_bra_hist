@@ -14,3 +14,8 @@ RUN set -x \
    && tar -xvzf geckodriver* \
    && chmod +x geckodriver \
    && mv geckodriver /usr/local/bin/
+#ENV POETRY_HOME="~"
+#RUN curl -sSL https://install.python-poetry.org | python3 -
+#ENV PATH="${PATH}:$POETRY_HOME/bin"
+RUN pip install poetry
+ENV PYTHON="."

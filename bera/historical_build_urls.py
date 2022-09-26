@@ -2,8 +2,8 @@
 import sys
 import logging
 from utils.extract import extract_url_dl
-from utils.github import push, init_repo, get_remote_file
-from datetime import date, timedelta, datetime
+from utils.github import push, init_repo
+from datetime import datetime
 from utils.common import init_logger, MASSIFS
 
 logger = init_logger()
