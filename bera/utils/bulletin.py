@@ -33,7 +33,7 @@ class Bulletin:
 
     @property
     def path_file(self):
-        return 'src/tmp_bera.xml'
+        return 'bera/tmp_bera.xml'
 
     @property
     def jour_key(self):
