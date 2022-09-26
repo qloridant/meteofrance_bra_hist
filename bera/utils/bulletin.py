@@ -3,7 +3,7 @@ import sys
 import requests
 import xml.etree.ElementTree as ET
 
-from src.utils.common import MASSIFS
+from bera.utils.common import MASSIFS
 
 logger = logging.getLogger(__name__)
 

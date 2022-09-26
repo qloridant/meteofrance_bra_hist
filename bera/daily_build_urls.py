@@ -1,15 +1,14 @@
 # Ce script doit etre executé a partir de 16h (heure de publication)
-import sys
-import logging
-from utils.extract import extract_url_dl
-from utils.github import push, init_repo, get_remote_file
-from datetime import date, timedelta, datetime
-from utils.common import init_logger, MASSIFS
+from datetime import date
+from bera.utils.extract import extract_url_dl
+from bera.utils.github import push, init_repo
+from bera.utils.common import init_logger, MASSIFS
 
 logger = init_logger()
 
 
 if __name__ == '__main__':
+    print(MASSIFS)
     logger.info('Starting the extraction of urls...')
     new_urls = extract_url_dl(no_browser=True, start_date=date.today(), end_date=date.today())
 

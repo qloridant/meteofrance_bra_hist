@@ -1,8 +1,7 @@
 import subprocess
-import logging
-from utils.bulletin import Bulletin
-from utils.github import push, init_repo, get_remote_file
-from utils.common import init_logger, MASSIFS
+from bera.utils.bulletin import Bulletin
+from bera.utils.github import push, init_repo, get_remote_file
+from bera.utils.common import init_logger, MASSIFS
 
 logger = init_logger()
 

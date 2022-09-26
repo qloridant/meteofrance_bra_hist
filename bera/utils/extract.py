@@ -1,5 +1,3 @@
-import pandas as pd
-import requests
 import logging
 
 from datetime import datetime, timedelta
@@ -10,7 +8,6 @@ from selenium.webdriver.support.select import Select
 from selenium.common.exceptions import ElementNotInteractableException, StaleElementReferenceException, NoSuchElementException
 from webdriver_manager.firefox import GeckoDriverManager
 from collections import defaultdict
-from utils.common import MASSIFS
 
 
 class DateAttributeError(Exception):
