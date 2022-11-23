@@ -1,4 +1,5 @@
 date, massif, risque1, evolurisque1, loc1, altitude, risque2, evolurisque2, loc2, risque_maxi, commentaire
+2022-11-23,HAUTE-ARIEGE,1,,<2400,2400,2,,>2400,2,Au-dessus de 2400 m : Risque limité. En-dessous : Risque faible.
 2022-11-22,HAUTE-ARIEGE,2,,<2100,2100,3,,>2100,3,Au-dessus de 2100 m : Risque marqué. En-dessous : Risque limité.
 2022-11-21,HAUTE-ARIEGE,1,2,<2200,2200,2,3,>2200,3,Au-dessus de 2200 m : Risque limité évoluant en Risque marqué. En-dessous : Risque faible évoluant en Risque limité.
 2022-11-20,HAUTE-ARIEGE,2,,,,,,,2,Risque limité.
