@@ -1,4 +1,5 @@
 date, massif, risque1, evolurisque1, loc1, altitude, risque2, evolurisque2, loc2, risque_maxi, commentaire
+2022-12-06,MONT-BLANC,2,,<2500,2500,3,,>2500,3,Au-dessus de 2500 m : Risque marqué. En-dessous : Risque limité.
 2022-12-04,MONT-BLANC,2,,<2300,2300,3,,>2300,3, 
 2022-12-03,MONT-BLANC,2,,<2200,2200,3,,>2200,3, 
 2022-12-02,MONT-BLANC,2,,<2200,2200,3,,>2200,3,Au-dessus de 2200 m : Risque marqué. En-dessous : Risque limité.
