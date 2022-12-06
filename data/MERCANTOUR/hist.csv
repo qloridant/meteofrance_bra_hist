@@ -1,4 +1,5 @@
 date, massif, risque1, evolurisque1, loc1, altitude, risque2, evolurisque2, loc2, risque_maxi, commentaire
+2022-12-06,MERCANTOUR,2,,,,,,,2,Risque limité.
 2022-12-04,MERCANTOUR,2,,<2200,2200,4,3,>2200,4,Au-dessus de 2200 m : Risque fort évoluant en Risque marqué. En-dessous : Risque limité.
 2022-12-03,MERCANTOUR,1,2,<2400,2400,2,3,>2400,3,Au-dessus de 2400 m : Risque limité évoluant en Risque marqué. En-dessous : Risque faible évoluant en Risque limité.
 2022-12-01,MERCANTOUR,1,,,,,,,1,Risque faible.
