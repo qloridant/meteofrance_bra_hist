@@ -1,4 +1,5 @@
 date, massif, risque1, evolurisque1, loc1, altitude, risque2, evolurisque2, loc2, risque_maxi, commentaire
+2022-12-09,QUEYRAS,3,,<2000,2000,4,,>2000,4,Au-dessus de 2000 m : Risque fort. En-dessous : Risque marqué.
 2022-12-08,QUEYRAS,2,3,<2000,2000,2,4,>2000,4,Au-dessus de 2000 m : Risque limité évoluant en Risque fort. En-dessous : Risque limité évoluant en Risque marqué.
 2022-12-07,QUEYRAS,2,,<2000,2000,2,3,>2000,3,Au-dessus de 2000 m : Risque limité évoluant en Risque marqué. En-dessous : Risque limité.
 2022-12-06,QUEYRAS,2,,<2300,2300,3,,>2300,3,Au-dessus de 2300 m : Risque marqué. En-dessous : Risque limité.
