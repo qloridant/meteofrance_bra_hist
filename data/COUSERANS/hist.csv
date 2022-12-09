@@ -1,4 +1,5 @@
 date, massif, risque1, evolurisque1, loc1, altitude, risque2, evolurisque2, loc2, risque_maxi, commentaire
+2022-12-09,COUSERANS,2,,<2000,2000,3,,>2000,3,Au-dessus de 2000 m : Risque marqué. En-dessous : Risque limité.
 2022-12-08,COUSERANS,1,,<2300,2300,2,,>2300,2,Au-dessus de 2300 m : Risque limité. En-dessous : Risque faible.
 2022-12-07,COUSERANS,1,,<2400,2400,2,,>2400,2,Au-dessus de 2400 m : Risque limité. En-dessous : Risque faible.
 2022-12-06,COUSERANS,2,,,,,,,2,Risque limité.
