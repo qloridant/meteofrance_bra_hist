@@ -1,4 +1,5 @@
 date, massif, risque1, evolurisque1, loc1, altitude, risque2, evolurisque2, loc2, risque_maxi, commentaire
+2023-01-10,CINTO-ROTONDO,1,,<2100,2100,2,,>2100,2,Au-dessus de 2100 m : Risque limité. En-dessous : Risque faible.
 2023-01-09,CINTO-ROTONDO,1,,<2100,2100,2,,>2100,2,Au-dessus de 2100 m : Risque limité. En-dessous : Risque faible.
 2023-01-08,CINTO-ROTONDO,1,,<2100,2100,3,2,>2100,3,Au-dessus de 2100 m : Risque marqué évoluant en Risque limité. En-dessous : Risque faible.
 2023-01-07,CINTO-ROTONDO,1,,<2100,2100,1,3,>2100,3,Au-dessus de 2100 m : Risque faible évoluant en Risque marqué. En-dessous : Risque faible.
