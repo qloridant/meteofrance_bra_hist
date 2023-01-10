@@ -1,4 +1,5 @@
 date, massif, risque1, evolurisque1, loc1, altitude, risque2, evolurisque2, loc2, risque_maxi, commentaire
+2023-01-10,MONT-BLANC,3,,,,,,,3,Risque marqué.
 2023-01-09,MONT-BLANC,3,,,,,,,3,Risque marqué.
 2023-01-08,MONT-BLANC,2,3,,,,,,3,Risque limité évoluant en Risque marqué.
 2023-01-07,MONT-BLANC,1,2,<2700,2700,2,,>2700,2,Au-dessus de 2700 m : Risque limité. En-dessous : Risque faible évoluant en Risque limité.
