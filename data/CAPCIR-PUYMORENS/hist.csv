@@ -1,4 +1,5 @@
 date, massif, risque1, evolurisque1, loc1, altitude, risque2, evolurisque2, loc2, risque_maxi, commentaire
+2023-01-17,CAPCIR-PUYMORENS,3,,,,,,,3,Risque marqué.
 2023-01-15,CAPCIR-PUYMORENS,2,3,,,,,,3,Risque limité évoluant en Risque marqué.
 2023-01-14,CAPCIR-PUYMORENS,2,,,,,,,2,Risque limité.
 2023-01-13,CAPCIR-PUYMORENS,1,,<2200,2200,2,,>2200,2,Au-dessus de 2200 m : Risque limité. En-dessous : Risque faible.
