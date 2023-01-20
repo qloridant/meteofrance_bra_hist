@@ -1,4 +1,5 @@
 date, massif, risque1, evolurisque1, loc1, altitude, risque2, evolurisque2, loc2, risque_maxi, commentaire
+2023-01-20,HAUT-VAR_HAUT-VERDON,2,,<2200,2200,3,,>2200,3,Au-dessus de 2200 m : Risque marqué. En-dessous : Risque limité.
 2023-01-18,HAUT-VAR_HAUT-VERDON,2,,E,,3,,W,3,Risque marqué à l'Ouest- Risque limité à l'Est.
 2023-01-17,HAUT-VAR_HAUT-VERDON,2,,E,,3,,W,3,Risque marqué à l'Ouest- Risque limité à l'Est.
 2023-01-15,HAUT-VAR_HAUT-VERDON,1,2,<1800,1800,2,3,>1800,3,Au-dessus de 1800 m : Risque limité évoluant en Risque marqué. En-dessous : Risque faible évoluant en Risque limité.
