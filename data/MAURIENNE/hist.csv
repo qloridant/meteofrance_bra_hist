@@ -1,4 +1,5 @@
 date, massif, risque1, evolurisque1, loc1, altitude, risque2, evolurisque2, loc2, risque_maxi, commentaire
+2023-01-27,MAURIENNE,2,,,,,,,2,Risque limité.
 2023-01-25,MAURIENNE,2,,<2300,2300,3,,>2300,3,Au-dessus de 2300 m : Risque marqué. En-dessous : Risque limité.
 2023-01-24,MAURIENNE,2,,<2300,2300,3,,>2300,3,Au-dessus de 2300 m : Risque marqué. En-dessous : Risque limité.
 2023-01-23,MAURIENNE,2,,<2400,2400,3,,>2400,3,Au-dessus de 2400 m : Risque marqué. En-dessous : Risque limité.
