@@ -1,4 +1,5 @@
 date, massif, risque1, evolurisque1, loc1, altitude, risque2, evolurisque2, loc2, risque_maxi, commentaire
+2023-02-04,ARAVIS,1,,<2200,2200,2,,>2200,2, 
 2023-02-03,ARAVIS,1,,<2000,2000,2,,>2000,2,Au-dessus de 2000 m : Risque limité. En-dessous : Risque faible.
 2023-02-02,ARAVIS,1,,<2000,2000,2,,>2000,2,Au-dessus de 2000 m : Risque limité. En-dessous : Risque faible.
 2023-02-01,ARAVIS,2,,,,,,,2,Risque limité.
