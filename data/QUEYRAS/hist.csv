@@ -1,4 +1,5 @@
 date, massif, risque1, evolurisque1, loc1, altitude, risque2, evolurisque2, loc2, risque_maxi, commentaire
+2023-02-21,QUEYRAS,1,,,,,,,1,Risque faible.
 2023-02-20,QUEYRAS,1,,,,,,,1,Risque faible.
 2023-02-19,QUEYRAS,1,,<2200,2200,1,2,>2200,2,Au-dessus de 2200 m : Risque faible évoluant en Risque limité. En-dessous : Risque faible.
 2023-02-18,QUEYRAS,1,2,,,,,,2,Risque faible évoluant en Risque limité.
