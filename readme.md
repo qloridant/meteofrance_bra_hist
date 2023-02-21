@@ -14,6 +14,7 @@ Objectifs de réutilisations :
 - [Data Avalanche :](http://www.data-avalanche.org) Recensemement des avalanches
 - [Synthesis :](http://www.data-avalanche.org/synthesis/) Centrale de données nivologiques
 - [Anena :](https://www.anena.org/)  Association Nationale pour l’Étude de la Neige et des Avalanches
+- [YETI par CampToCamp](https://www.camptocamp.org/yeti) Préparation de sorties avec méthode de réduction des risques
 
 # Modèle de données
 Source :
