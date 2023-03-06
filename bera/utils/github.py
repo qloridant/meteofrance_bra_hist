@@ -1,7 +1,7 @@
 import os
 import pandas as pd
 import logging
-from github import Github
+from github import Github, InputGitTreeElement
 
 logger = logging.getLogger(__name__)
 
@@ -13,7 +13,7 @@ def merge_url_content(actual_content: str, new_content: []):
 
     full_content = list(set(full_content))
     full_content = sorted(full_content)
-    full_content = '\n'.join(map(lambda x:str(x), full_content))
+    full_content = '\n'.join(map(lambda x: str(x), full_content))
 
     return full_content
 
@@ -54,6 +54,46 @@ def get_remote_file(repo, file_path, branch):
     return file.decoded_content.decode("utf-8")  # Get raw string data
 
 
+def update_file_content(repo, path, branch, new_content, type_data) -> str:
+    """
+    Update file content with adding new content
+    """
+    actual_content = get_remote_file(repo, path, branch)
+    if type_data == 'url':
+        full_content = merge_url_content(actual_content, new_content)
+    else:  # type_data == "bera"
+        full_content = merge_bera_content(actual_content, new_content)
+    return full_content
+
+
+def commit_many_files_and_push(repo, branch, commit_message, elements):
+    # cf doc : https://github.com/Nautilus-Cyberneering/pygithub/blob/main/docs/how_to_create_a_single_commit_with_multiple_files_using_github_api.md
+    """
+    :params:
+    repo: GitHub repository to push new files
+    branch: GitHub branch concerned
+    commit_message: git commit message
+    elements: list of InputGitTreeElement objects related to the files to commit
+    """
+
+    # Get  parent info
+    branch_sha = repo.get_branch(branch).commit.sha
+    parent = repo.get_git_commit(sha=branch_sha)
+
+    # Create the tree with the two files. Every file is another tree.
+    base_tree = repo.get_git_tree(sha=branch_sha)
+    tree = repo.create_git_tree(elements, base_tree)
+
+    # Create the commit
+    commit = repo.create_git_commit(commit_message, tree, [parent])
+
+    # Get the reference for the branch we are working on
+    branch_refs = repo.get_git_ref(f'heads/{branch}')
+
+    # Update the reference to the new commit
+    branch_refs.edit(sha=commit.sha)
+
+
 def push(repo, path, message, new_content, branch, update=False, type_data='url'):
     source = repo.get_branch(branch)
     if update:  # If file already exists, update it
@@ -63,6 +103,7 @@ def push(repo, path, message, new_content, branch, update=False, type_data='url'
             full_content = merge_url_content(actual_content, new_content)
         else:
             full_content = merge_bera_content(actual_content, new_content)
-        repo.update_file(contents.path, message, full_content, contents.sha, branch=branch)  # Add, commit and push branch
+        # Add, commit and push branch
+        repo.update_file(contents.path, message, full_content, contents.sha, branch=branch)
     else:  # If file doesn't exist, create it
         repo.create_file(path, message, new_content, branch=branch)  # Add, commit and push branch
