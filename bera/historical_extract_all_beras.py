@@ -1,14 +1,17 @@
 import logging
 import subprocess
 
+from github import InputGitTreeElement
+
 from utils.bulletin import Bulletin
 from utils.common import init_logger, MASSIFS
-from utils.github import init_repo, push
+from utils.github import init_repo, push, update_file_content, commit_many_files_and_push
 
 logger = init_logger(logging.DEBUG)
 
 branch = 'master'
 repo = init_repo()
+elements = []
 
 for massif in MASSIFS:
     # Lecture de la date de publication de notre fichier
@@ -31,5 +34,15 @@ for massif in MASSIFS:
 
     file_path = f'data/{massif}/hist.csv'
     logger.info(f'Exporting the BERA to Github for massif : {massif}   ...')
-    push(repo, file_path, "Daily automatic file update", new_data, branch,
-         update=True, type_data='bera')
+
+    # Update file already existing
+    full_content = update_file_content(repo, file_path, branch, new_data, type_data='bera')
+
+    # Add file in the tree to commit
+    blob = repo.create_git_blob(full_content, "utf-8")
+    element = InputGitTreeElement(path=file_path, mode='100644', type='blob', sha=blob.sha)
+    elements.append(element)
+
+logger.info('Compile all modified files in one commit  ...')
+commit_many_files_and_push(repo, branch, "Daily automatic csv files update", elements)
+logger.info('Job succeeded  ...')
