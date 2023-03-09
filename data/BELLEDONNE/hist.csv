@@ -1,4 +1,5 @@
 date, massif, risque1, evolurisque1, loc1, altitude, risque2, evolurisque2, loc2, risque_maxi, commentaire
+2023-03-09,BELLEDONNE,2,,<1800,1800,3,,>1800,3,Au-dessus de 1800 m : Risque marqué. En-dessous : Risque limité.
 2023-03-08,BELLEDONNE,3,,,,,,,3,Risque marqué.
 2023-03-07,BELLEDONNE,2,3,,,,,,3,Risque limité évoluant en Risque marqué en journée de mercredi.
 2023-03-06,BELLEDONNE,1,,<2600,2600,2,,>2600,2,Au-dessus de 2600 m : Risque limité. En-dessous : Risque faible.
