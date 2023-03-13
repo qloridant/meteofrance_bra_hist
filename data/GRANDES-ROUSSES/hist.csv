@@ -1,4 +1,5 @@
 date, massif, risque1, evolurisque1, loc1, altitude, risque2, evolurisque2, loc2, risque_maxi, commentaire
+2023-03-13,GRANDES-ROUSSES,3,,,,,,,3,Risque marqué.
 2023-03-12,GRANDES-ROUSSES,2,,<2500,2500,3,,>2500,3,Au-dessus de 2500 m : Risque marqué. En-dessous : Risque limité.
 2023-03-11,GRANDES-ROUSSES,4,,,,,,,4,Risque fort.
 2023-03-10,GRANDES-ROUSSES,3,,<2000,2000,4,,>2000,4,Au-dessus de 2000 m : Risque fort. En-dessous : Risque marqué.
