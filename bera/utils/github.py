@@ -66,6 +66,22 @@ def update_file_content(repo, path, branch, new_content, type_data) -> str:
     return full_content
 
 
+def add_file_to_commit(repo, full_content, file_path) -> []:
+    """
+    The function aims is to add files to a new git commit
+     :params:
+     repo: GitHub Repository object used
+     full_content: str: content of the file to commit
+     file_path: str: the path of the file to add in the commit
+
+     :return:
+     element: InputGitTreeElement object: element to add in the commit
+    """
+    blob = repo.create_git_blob(full_content, "utf-8")
+    element = InputGitTreeElement(path=file_path, mode='100644', type='blob', sha=blob.sha)
+    return element
+
+
 def commit_many_files_and_push(repo, branch, commit_message, elements):
     # cf doc : https://github.com/Nautilus-Cyberneering/pygithub/blob/main/docs/how_to_create_a_single_commit_with_multiple_files_using_github_api.md
     """

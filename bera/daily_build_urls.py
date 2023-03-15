@@ -1,10 +1,8 @@
 # Ce script doit etre executé a partir de 16h (heure de publication)
 from datetime import date
 
-from github import InputGitTreeElement
-
 from bera.utils.extract import extract_url_dl
-from bera.utils.github import init_repo, update_file_content, commit_many_files_and_push
+from bera.utils.github import init_repo, update_file_content, commit_many_files_and_push, add_file_to_commit
 from bera.utils.common import init_logger, MASSIFS
 
 logger = init_logger()
@@ -27,8 +25,7 @@ if __name__ == '__main__':
         full_content = update_file_content(repo, file_path, branch, new_urls[massif], type_data='url')
 
         # Add file in the tree to commit
-        blob = repo.create_git_blob(full_content, "utf-8")
-        element = InputGitTreeElement(path=file_path, mode='100644', type='blob', sha=blob.sha)
+        element = add_file_to_commit(repo, full_content, file_path)
         elements.append(element)
 
     logger.info('Compile all modified files in one commit  ...')

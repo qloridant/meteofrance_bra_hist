@@ -1,9 +1,7 @@
 import subprocess
 
-from github import InputGitTreeElement
-
 from bera.utils.bulletin import Bulletin
-from bera.utils.github import init_repo, update_file_content, commit_many_files_and_push
+from bera.utils.github import init_repo, update_file_content, commit_many_files_and_push, add_file_to_commit
 from bera.utils.common import init_logger, MASSIFS
 
 logger = init_logger()
@@ -32,8 +30,7 @@ for massif in MASSIFS:
     full_content = update_file_content(repo, file_path, branch, [new_data], type_data='bera')
 
     # Add file in the tree to commit
-    blob = repo.create_git_blob(full_content, "utf-8")
-    element = InputGitTreeElement(path=file_path, mode='100644', type='blob', sha=blob.sha)
+    element = add_file_to_commit(repo, full_content, file_path)
     elements.append(element)
 
 logger.info('Compile all modified files in one commit  ...')
