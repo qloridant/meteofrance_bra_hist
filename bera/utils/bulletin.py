@@ -61,7 +61,7 @@ class Bulletin:
         # Removing comma as we will save the file as a csv
         risques = list(
             map(lambda x: x.replace(',', '-'), self.risques.values()))
-        return [self.jour_key, self.massif, *risques]
+        return [self.jour_key, self.massif, *risques, f'{self.url}.{self.massif}.{self.jour}.pdf']
 
 
 if __name__ == '__main__':
