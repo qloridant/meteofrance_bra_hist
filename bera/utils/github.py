@@ -75,11 +75,11 @@ def add_file_to_commit(repo, full_content, file_path) -> []:
      file_path: str: the path of the file to add in the commit
 
      :return:
-     element: InputGitTreeElement object: element to add in the commit
+     file: InputGitTreeElement object: file to add in the commit
     """
     blob = repo.create_git_blob(full_content, "utf-8")
-    element = InputGitTreeElement(path=file_path, mode='100644', type='blob', sha=blob.sha)
-    return element
+    file = InputGitTreeElement(path=file_path, mode='100644', type='blob', sha=blob.sha)
+    return file
 
 
 def commit_many_files_and_push(repo, branch, commit_message, files):

@@ -8,7 +8,7 @@ logger = init_logger()
 
 branch = 'master'
 repo = init_repo()
-elements = []
+files = []
 
 logger.info('Starting the daily extract...')
 
@@ -30,9 +30,9 @@ for massif in MASSIFS:
     full_content = update_file_content(repo, file_path, branch, [new_data], type_data='bera')
 
     # Add file in the tree to commit
-    element = add_file_to_commit(repo, full_content, file_path)
-    elements.append(element)
+    file = add_file_to_commit(repo, full_content, file_path)
+    files.append(file)
 
 logger.info('Compile all modified files in one commit  ...')
-commit_many_files_and_push(repo, branch, "Daily automatic csv files update", elements)
+commit_many_files_and_push(repo, branch, "Daily automatic csv files update", files)
 logger.info('Job succeeded  ...')
