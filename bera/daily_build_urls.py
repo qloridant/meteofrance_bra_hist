@@ -15,7 +15,7 @@ if __name__ == '__main__':
 
     branch = 'master'
     repo = init_repo()
-    files = []
+    files_to_commit = []
 
     for massif in MASSIFS:
         file_path = f'data/{massif}/urls_list.txt'
@@ -24,10 +24,9 @@ if __name__ == '__main__':
         # Update file already existing
         full_content = update_file_content(repo, file_path, branch, new_urls[massif], type_data='url')
 
-        # Add file in the tree to commit
-        file = add_file_to_commit(repo, full_content, file_path)
-        files.append(file)
+        # Add files to commit
+        files_to_commit = add_file_to_commit(repo, full_content, file_path, files_to_commit)
 
     logger.info('Compile all modified files in one commit  ...')
-    commit_many_files_and_push(repo, branch, "Daily automatic url files update", files)
+    commit_many_files_and_push(repo, branch, "Daily automatic url files update", files_to_commit)
     logger.info('Job succeeded  ...')
