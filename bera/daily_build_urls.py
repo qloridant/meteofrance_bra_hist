@@ -1,17 +1,18 @@
 # Ce script doit etre executé a partir de 16h (heure de publication)
 from datetime import date
 
-from bera.utils.extract import extract_url_dl
-from bera.utils.github import init_repo, update_file_content, commit_many_files_and_push, add_file_to_commit
 from bera.utils.common import init_logger, MASSIFS
+from bera.utils.extract import extract_url_dl
+from bera.utils.github import init_repo, update_file_content, \
+    commit_many_files_and_push, add_file_to_commit
 
 logger = init_logger()
-
 
 if __name__ == '__main__':
     print(MASSIFS)
     logger.info('Starting the extraction of urls...')
-    new_urls = extract_url_dl(no_browser=True, start_date=date.today(), end_date=date.today())
+    new_urls = extract_url_dl(no_browser=True, start_date=date.today(),
+                              end_date=date.today())
 
     branch = 'master'
     repo = init_repo()
@@ -22,11 +23,15 @@ if __name__ == '__main__':
         logger.info(f'Exporting the URL to Github for massif : {massif}   ...')
 
         # Update file already existing
-        full_content = update_file_content(repo, file_path, branch, new_urls[massif], type_data='url')
+        full_content = update_file_content(repo, file_path, branch,
+                                           new_urls[massif], type_data='url')
 
         # Add files to commit
-        files_to_commit = add_file_to_commit(repo, full_content, file_path, files_to_commit)
+        files_to_commit = add_file_to_commit(repo, full_content, file_path,
+                                             files_to_commit)
 
     logger.info('Compile all modified files in one commit  ...')
-    commit_many_files_and_push(repo, branch, "Daily automatic url files update", files_to_commit)
+    commit_many_files_and_push(repo, branch,
+                               "Daily automatic url files update",
+                               files_to_commit)
     logger.info('Job succeeded  ...')
