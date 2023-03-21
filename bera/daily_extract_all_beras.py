@@ -1,3 +1,4 @@
+import os
 import subprocess
 
 from bera.utils.bulletin import Bulletin
@@ -7,7 +8,10 @@ from bera.utils.github import init_repo, commit_many_files_and_push, \
 
 logger = init_logger()
 
-branch = 'master'
+branch = os.getenv('GIT_BRANCH_NAME')
+if not branch:
+    raise Exception('Unknown environment variable GIT_BRANCH_NAME - Stopping here  ...')
+
 repo = init_repo()
 files_to_commit = []
 

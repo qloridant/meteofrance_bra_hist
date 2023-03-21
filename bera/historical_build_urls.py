@@ -1,5 +1,5 @@
 # Ce script doit etre executé a partir de 16h (heure de publication)
-
+import os
 from datetime import datetime
 
 from utils.common import init_logger, MASSIFS
@@ -15,7 +15,10 @@ if __name__ == '__main__':
                               start_date=datetime(2022, 5, 10),
                               end_date=datetime(2022, 5, 25))
 
-    branch = 'master'
+    branch = os.getenv('GIT_BRANCH_NAME')
+    if not branch:
+        raise Exception('Unknown environment variable GIT_BRANCH_NAME - Stopping here  ...')
+
     repo = init_repo()
     files_to_commit = []
 

@@ -1,4 +1,5 @@
 # Ce script doit etre executé a partir de 16h (heure de publication)
+import os
 from datetime import date
 
 from bera.utils.common import init_logger, MASSIFS
@@ -9,12 +10,15 @@ from bera.utils.github import init_repo, commit_many_files_and_push, \
 logger = init_logger()
 
 if __name__ == '__main__':
-    print(MASSIFS)
+
+    branch = os.getenv('GIT_BRANCH_NAME')
+    if not branch:
+        raise Exception('Unknown environment variable GIT_BRANCH_NAME - Stopping here  ...')
+
     logger.info('Starting the extraction of urls...')
     new_urls = extract_url_dl(no_browser=True, start_date=date.today(),
                               end_date=date.today())
 
-    branch = 'master'
     repo = init_repo()
     files_to_commit = []
 

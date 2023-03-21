@@ -1,4 +1,5 @@
 import logging
+import os
 import subprocess
 
 from utils.bulletin import Bulletin
@@ -8,7 +9,10 @@ from utils.github import init_repo, commit_many_files_and_push, \
 
 logger = init_logger(logging.DEBUG)
 
-branch = 'master'
+branch = os.getenv('GIT_BRANCH_NAME')
+if not branch:
+    raise Exception('Unknown environment variable GIT_BRANCH_NAME - Stopping here  ...')
+
 repo = init_repo()
 files_to_commit = []
 
