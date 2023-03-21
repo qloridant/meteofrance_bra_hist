@@ -82,14 +82,15 @@ def add_file_to_commit(repo, full_content, file_path) -> []:
     return element
 
 
-def commit_many_files_and_push(repo, branch, commit_message, elements):
-    # cf doc : https://github.com/Nautilus-Cyberneering/pygithub/blob/main/docs/how_to_create_a_single_commit_with_multiple_files_using_github_api.md
+def commit_many_files_and_push(repo, branch, commit_message, files):
     """
+    The function commits and pushes all the modification related to a list of files on a branch
+    cf doc : https://github.com/Nautilus-Cyberneering/pygithub/blob/main/docs/how_to_create_a_single_commit_with_multiple_files_using_github_api.md
     :params:
     repo: GitHub repository to push new files
     branch: GitHub branch concerned
     commit_message: git commit message
-    elements: list of InputGitTreeElement objects related to the files to commit
+    files: list of InputGitTreeElement objects related to the files to commit
     """
 
     # Get  parent info
@@ -98,7 +99,7 @@ def commit_many_files_and_push(repo, branch, commit_message, elements):
 
     # Create the tree with the two files. Every file is another tree.
     base_tree = repo.get_git_tree(sha=branch_sha)
-    tree = repo.create_git_tree(elements, base_tree)
+    tree = repo.create_git_tree(files, base_tree)
 
     # Create the commit
     commit = repo.create_git_commit(commit_message, tree, [parent])
