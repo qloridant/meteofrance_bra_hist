@@ -134,3 +134,165 @@ install poetry
 ```
 poetry run python <script>
 ```
+
+# API
+Une API de récupération de l'historique des données des bulletins d'estimations des risques des risques d'avalanche est 
+en cours de réalisation sur ce projet.
+
+## Test de l'API en local
+- Installer FastAPI 
+`pip install "fastapi[all]"`
+
+- Lancement du serveur local uvicorn
+`uvicorn api:app --reload`
+
+- Cliquer sur le lien du serveur local http://127.0.0.1:8000
+
+### Les différents points d'API
+- Récupération des données d'un BERA pour un massif donné pour une date précise
+http://127.0.0.1:8000/BERAS/{massif}/{date} 
+  - massif le nom du massif souhaité
+  - date la date du BERA souhaité au format YYYYmmdd
+
+Exemple : http://127.0.0.1:8000/BERAS/QUEYRAS/20230203
+```
+{
+  "massif":"QUEYRAS", 
+  "beras":
+    [
+      {
+        "date":"2023-02-03",
+        "massif":"QUEYRAS",
+        "risque1":"2",
+        "evolurisque1":"",
+        "loc1":"",
+        "altitude":"",
+        "risque2":"",
+        "evolurisque2":"",
+        "loc2":"",
+        "risque_maxi":"2",
+        "commentaire":"Risque limité."
+        "url_telechargement":"https://donneespubliques.meteofrance.fr/donnees_libres/Pdf/BRA/BRA.QUEYRAS.20230203145044.pdf",
+        "00_temps":"Beau temps",
+        "00_mer_de_nuages":"Non",
+        "00_limite_pluie_neige":"Sans objet",
+        "00_isotherme_0":"2400",
+        "00_isotherme_moins_10":"4200",
+        "00_altitude_vent_1":"3000",
+        "00_altitude_vent_2":"Sans objet",
+        "00_direction_vent_altitude_1":"N",
+        "00_vitesse_vent_altitude_1":"40",
+        "00_direction_vent_altitude_2":"Sans objet",
+        "00_vitesse_vent_altitude_2":"Sans objet",
+        "06_temps":"Beau temps",
+        "06_mer_de_nuages":"Non",
+        "06_limite_pluie_neige":"Sans objet",
+        "06_isotherme_0":"2600",
+        "06_isotherme_moins_10":"4300",
+        "06_altitude_vent_1":"3000",
+        "06_altitude_vent_2":"Sans objet",
+        "06_direction_vent_altitude_1":"N",
+        "06_vitesse_vent_altitude_1":"30",
+        "06_direction_vent_altitude_2":"Sans objet",
+        "06_vitesse_vent_altitude_2":"Sans objet",
+        "12_temps":"Beau temps",
+        "12_mer_de_nuages":"Non",
+        "12_limite_pluie_neige":"Sans objet",
+        "12_isotherme_0":"3000",
+        "12_isotherme_moins_10":"4400",
+        "12_altitude_vent_1":"3000",
+        "12_altitude_vent_2":"Sans objet",
+        "12_direction_vent_altitude_1":"N",
+        "12_vitesse_vent_altitude_1":"30",
+        "12_direction_vent_altitude_2":"Sans objet",
+        "12_vitesse_vent_altitude_2":"Sans objet",
+        "precipitation_neige_veille_altitude":"1800",
+        "precipitation_neige_veille_epaisseur":"0"
+      }
+    ]
+}
+```
+- Récupération de l'historique des données des BERAS pour un massif donné pour une période donnée
+http://127.0.0.1:8000/BERAS/{massif}/?start_date={sd}&end_date={ed}
+  - massif le nom du massif souhaité
+  - sd la date de début de la période d'historique souhaitée au format YYYYmmdd
+  - ed la date de fin de la période d'historique souhaitée au format YYYYmmdd
+
+Exemple http://127.0.0.1:8000/BERAS/QUEYRAS/?start_date=20230202&end_date=20230204
+```
+{
+  "massif":"QUEYRAS",
+  "beras":
+    [
+      {
+        "date":"2023-02-04",
+        "massif":"QUEYRAS",
+        "risque1":"1",
+        ...
+        "url_telechargement":	"https://donneespubliques.meteofrance.fr/donnees_libres/Pdf/BRA/BRA.QUEYRAS.20230204143821.pdf",
+        ...
+        "12_vitesse_vent_altitude_2":"Sans objet",
+        "precipitation_neige_veille_altitude":"1800",
+        "precipitation_neige_veille_epaisseur":"0"
+      },
+      {
+        "date":"2023-02-03",
+        "massif":"QUEYRAS",
+        "risque1":"2",
+        ...
+        "url_telechargement":"https://donneespubliques.meteofrance.fr/donnees_libres/Pdf/BRA/BRA.QUEYRAS.20230203145044.pdf",
+        ...
+        "12_vitesse_vent_altitude_2":"Sans objet",
+        "precipitation_neige_veille_altitude":"1800",
+        "precipitation_neige_veille_epaisseur":"0"
+      },
+      {
+        "date":"2023-02-02",
+        "massif":"QUEYRAS",
+        "risque1":"2",
+        ...
+        "url_telechargement":"https://donneespubliques.meteofrance.fr/donnees_libres/Pdf/BRA/BRA.QUEYRAS.20230202145130.pdf",
+        ...
+        "12_vitesse_vent_altitude_2":"Sans objet",
+        "precipitation_neige_veille_altitude":"1800",
+        "precipitation_neige_veille_epaisseur":"0"
+      }
+    ]
+}
+```
+
+- Récupération de tout l'historique des données d'un BERA pour un massif donné
+http://127.0.0.1:8000/BERAS/{massif}
+  - massif le nom du massif souhaité
+
+Exemple http://127.0.0.1:8000/BERAS/QUEYRAS
+```
+{
+  "massif":"QUEYRAS",
+  "beras":
+    [
+      {
+        "date":"2023-04-05",
+        "massif":"QUEYRAS","risque1":"1",
+        ...
+        "url_telechargement":"https://donneespubliques.meteofrance.fr/donnees_libres/Pdf/BRA/BRA.QUEYRAS.20230405130207.pdf",
+        ...
+        "12_vitesse_vent_altitude_2":"Sans objet",
+        "precipitation_neige_veille_altitude":"1800",
+        "precipitation_neige_veille_epaisseur":"0"
+      }
+    ...
+      {
+        "date":"2018-12-17",
+        " massif":"QUEYRAS",
+        " risque1":"2",
+        ...
+        "url_telechargement":"https://donneespubliques.meteofrance.fr/donnees_libres/Pdf/BRA/BRA.QUEYRAS.20181217154143.pdf",
+        ...
+        "12_vitesse_vent_altitude_2":"Sans objet",
+        "precipitation_neige_veille_altitude":"1800",
+        "precipitation_neige_veille_epaisseur":"10"
+      }
+    ]
+}
+```
