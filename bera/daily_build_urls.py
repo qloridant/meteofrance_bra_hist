@@ -31,8 +31,8 @@ if __name__ == '__main__':
                                                         new_urls[massif],
                                                         'url', files_to_commit)
 
-        logger.info('Compile all modified files in one commit  ...')
-        commit_many_files_and_push(repo, branch,
-                                   "Daily automatic url files update",
-                                   files_to_commit)
-        logger.info('Job succeeded  ...')
+    logger.info('Compile all modified files in one commit  ...')
+    commit_many_files_and_push(repo, branch,
+                               "Daily automatic url files update",
+                               files_to_commit)
+    logger.info('Job succeeded  ...')
