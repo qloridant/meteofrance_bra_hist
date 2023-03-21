@@ -1,6 +1,7 @@
-import os
-import pandas as pd
 import logging
+import os
+
+import pandas as pd
 from github import Github, InputGitTreeElement
 
 logger = logging.getLogger(__name__)
@@ -66,20 +67,26 @@ def update_file_content(repo, path, branch, new_content, type_data) -> str:
     return full_content
 
 
-def add_file_to_commit(repo, full_content, file_path, files_to_commit) -> []:
+def update_and_add_file_to_commit(repo, file_path, branch, new_content,
+                                  type_data, files_to_commit) -> []:
     """
-    The function aims is to add files to a new git commit
+    The function aims to update and add files to a new git commit
      :params:
      repo: GitHub Repository object used
-     full_content: str: content of the file to commit
      file_path: str: the path of the file to add in the commit
+     branch: str: Repository branch used to fetch and push updated files
+     new_content: str: content which will be added to the new file
+     type_data: str: {url, bera} Type of files updated
      files_to_commit: list: list of files to commit
 
      :return:
      file: InputGitTreeElement object: file to add in the commit
     """
+    full_content = update_file_content(repo, file_path, branch, new_content,
+                                       type_data)
     blob = repo.create_git_blob(full_content, "utf-8")
-    file = InputGitTreeElement(path=file_path, mode='100644', type='blob', sha=blob.sha)
+    file = InputGitTreeElement(path=file_path, mode='100644', type='blob',
+                               sha=blob.sha)
     files_to_commit.append(file)
     return files_to_commit
 
@@ -113,16 +120,20 @@ def commit_many_files_and_push(repo, branch, commit_message, files):
     branch_refs.edit(sha=commit.sha)
 
 
-def push(repo, path, message, new_content, branch, update=False, type_data='url'):
+def push(repo, path, message, new_content, branch, update=False,
+         type_data='url'):
     source = repo.get_branch(branch)
     if update:  # If file already exists, update it
-        contents = repo.get_contents(path, ref=branch)  # Retrieve old file to get its SHA and path
+        contents = repo.get_contents(path,
+                                     ref=branch)  # Retrieve old file to get its SHA and path
         actual_content = get_remote_file(repo, path, branch)
         if type_data == 'url':
             full_content = merge_url_content(actual_content, new_content)
         else:
             full_content = merge_bera_content(actual_content, new_content)
         # Add, commit and push branch
-        repo.update_file(contents.path, message, full_content, contents.sha, branch=branch)
+        repo.update_file(contents.path, message, full_content, contents.sha,
+                         branch=branch)
     else:  # If file doesn't exist, create it
-        repo.create_file(path, message, new_content, branch=branch)  # Add, commit and push branch
+        repo.create_file(path, message, new_content,
+                         branch=branch)  # Add, commit and push branch

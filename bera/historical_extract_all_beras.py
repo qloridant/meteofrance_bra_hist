@@ -3,8 +3,8 @@ import subprocess
 
 from utils.bulletin import Bulletin
 from utils.common import init_logger, MASSIFS
-from utils.github import init_repo, update_file_content, \
-    commit_many_files_and_push, add_file_to_commit
+from utils.github import init_repo, commit_many_files_and_push, \
+    update_and_add_file_to_commit
 
 logger = init_logger(logging.DEBUG)
 
@@ -34,13 +34,10 @@ for massif in MASSIFS:
     file_path = f'data/{massif}/hist.csv'
     logger.info(f'Exporting the BERA to Github for massif : {massif}   ...')
 
-    # Update file already existing
-    full_content = update_file_content(repo, file_path, branch, new_data,
-                                       type_data='bera')
-
-    # Add file in the tree to commit
-    files_to_commit = add_file_to_commit(repo, full_content, file_path,
-                                         files_to_commit)
+    # Update and add files to commit
+    files_to_commit = update_and_add_file_to_commit(repo, file_path, branch,
+                                                    new_data, 'url',
+                                                    files_to_commit)
 
 logger.info('Compile all modified files in one commit  ...')
 commit_many_files_and_push(repo, branch, "Daily automatic csv files update",

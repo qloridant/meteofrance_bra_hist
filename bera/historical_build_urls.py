@@ -4,8 +4,8 @@ from datetime import datetime
 
 from utils.common import init_logger, MASSIFS
 from utils.extract import extract_url_dl
-from utils.github import init_repo, update_file_content, \
-    commit_many_files_and_push, add_file_to_commit
+from utils.github import init_repo, commit_many_files_and_push, \
+    update_and_add_file_to_commit
 
 logger = init_logger()
 
@@ -23,13 +23,11 @@ if __name__ == '__main__':
         file_path = f'data/{massif}/urls_list.txt'
         logger.info(f'Exporting the URL to Github for massif : {massif}   ...')
 
-        # Update file already existing
-        full_content = update_file_content(repo, file_path, branch,
-                                           new_urls[massif], type_data='url')
-
-        # Add file in the tree to commit
-        files_to_commit = add_file_to_commit(repo, full_content, file_path,
-                                             files_to_commit)
+        # Update and add files to commit
+        files_to_commit = update_and_add_file_to_commit(repo, file_path,
+                                                        branch,
+                                                        new_urls[massif],
+                                                        'url', files_to_commit)
 
     logger.info('Compile all modified files in one commit  ...')
     commit_many_files_and_push(repo, branch,
