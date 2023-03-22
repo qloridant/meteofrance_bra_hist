@@ -25,7 +25,7 @@ for massif in MASSIFS:
     logger.debug(massif)
     new_data = []
     for date_ in dates_:
-        if int(date_) >= 20230110143136:  ## Début des fichiers XML
+        if int(date_) >= 20181217143136:  ## Début des fichiers XML
             logger.debug(date_)
             bulletin = Bulletin(massif, date_)
             bulletin.download()
