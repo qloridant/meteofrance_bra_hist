@@ -28,12 +28,14 @@ for massif in MASSIFS:
         if int(date_) >= 20181217143136:  ## Début des fichiers XML
             logger.debug(date_)
             bulletin = Bulletin(massif, date_)
-            bulletin.download()
-
             try:
+                bulletin.download()
                 bulletin.parse()
                 new_data.append(bulletin.append_csv())
             except Exception as e:
+                logger.error(f"An error occured in downloading BREA, parsing or adding data in csv for massif {massif} "
+                             f"and date {date_} ...",
+                             exc_info=True)
                 pass
 
     file_path = f'data/{massif}/hist.csv'
