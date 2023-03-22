@@ -40,7 +40,7 @@ for massif in MASSIFS:
 
     # Update and add files to commit
     files_to_commit = update_and_add_file_to_commit(repo, file_path, branch,
-                                                    new_data, 'url',
+                                                    new_data, 'bera',
                                                     files_to_commit)
 
 logger.info('Compile all modified files in one commit  ...')
