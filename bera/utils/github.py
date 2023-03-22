@@ -27,6 +27,11 @@ def merge_bera_content(actual_content: str, new_content: [[]]):
 
     # Define header
     df.columns = df.iloc[0]
+
+    # Used to create the column url_telechargement for the first time
+    # Once it is created, the block will be useless
+    if 'url_telechargement' not in df.columns:
+        df['url_telechargement'] = ''
     df = df[1:]
 
     # Add new content

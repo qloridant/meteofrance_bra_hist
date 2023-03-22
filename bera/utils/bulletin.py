@@ -1,7 +1,8 @@
 import logging
 import sys
-import requests
 import xml.etree.ElementTree as ET
+
+import requests
 
 from bera.utils.common import MASSIFS
 
@@ -61,7 +62,8 @@ class Bulletin:
         # Removing comma as we will save the file as a csv
         risques = list(
             map(lambda x: x.replace(',', '-'), self.risques.values()))
-        return [self.jour_key, self.massif, *risques, f'{self.url}.{self.massif}.{self.jour}.pdf']
+        return [self.jour_key, self.massif, *risques,
+                f'{self.url}.{self.massif}.{self.jour}.pdf']
 
 
 if __name__ == '__main__':
