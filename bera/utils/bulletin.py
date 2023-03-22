@@ -46,7 +46,7 @@ class Bulletin:
         with open(self.path_file, 'bw+') as f:
             f.write(r.content)
 
-    def parse(self):
+    def parse_risques(self):
         root = ET.parse(self.path_file).getroot()
         self.cartouche_risque = root[0].find('CARTOUCHERISQUE')
         self.risques = self.cartouche_risque[0].attrib
@@ -72,7 +72,7 @@ if __name__ == '__main__':
         jour = sys.argv[2]
         bul = Bulletin(massif, jour)
         bul.download()
-        bul.parse()
+        bul.parse_risques()
         new_content = bul.append_csv()
     else:
         print("Please enter massif and datetime of publication")

@@ -34,7 +34,7 @@ for massif in MASSIFS:
             bulletin = Bulletin(massif, date_)
             try:
                 bulletin.download()
-                bulletin.parse()
+                bulletin.parse_risques()
                 new_data.append(bulletin.append_csv())
             except Exception as e:
                 logger.error("An error occured in downloading BERA, parsing or adding new data content for massif "
