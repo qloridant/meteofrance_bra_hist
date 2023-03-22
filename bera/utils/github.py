@@ -124,22 +124,3 @@ def commit_many_files_and_push(repo, branch, commit_message, files):
 
     # Update the reference to the new commit
     branch_refs.edit(sha=commit.sha)
-
-
-def push(repo, path, message, new_content, branch, update=False,
-         type_data='url'):
-    source = repo.get_branch(branch)
-    if update:  # If file already exists, update it
-        contents = repo.get_contents(path,
-                                     ref=branch)  # Retrieve old file to get its SHA and path
-        actual_content = get_remote_file(repo, path, branch)
-        if type_data == 'url':
-            full_content = merge_url_content(actual_content, new_content)
-        else:
-            full_content = merge_bera_content(actual_content, new_content)
-        # Add, commit and push branch
-        repo.update_file(contents.path, message, full_content, contents.sha,
-                         branch=branch)
-    else:  # If file doesn't exist, create it
-        repo.create_file(path, message, new_content,
-                         branch=branch)  # Add, commit and push branch
