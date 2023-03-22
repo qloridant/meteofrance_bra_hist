@@ -45,9 +45,15 @@ def merge_bera_content(actual_content: str, new_content: [[]]):
 
 
 def init_repo():
-    # TODO catch error if no data yet availble
     g = Github(os.getenv('TOKEN'))
-    return g.get_user().get_repo('meteofrance_bra_hist')
+
+    # Login is specified when running locally
+    login = os.getenv('GIT_LOGIN')
+    if login:
+        user = g.get_user(login=login)
+    else:
+        user = g.get_user()
+    return user.get_repo('meteofrance_bra_hist')
 
 
 def get_remote_file(repo, file_path, branch):
