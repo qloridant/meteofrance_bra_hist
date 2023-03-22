@@ -10,14 +10,15 @@ from utils.github import init_repo, commit_many_files_and_push, \
 logger = init_logger()
 
 if __name__ == '__main__':
-    logger.info('Starting the extraction of urls...')
-    new_urls = extract_url_dl(no_browser=True,
-                              start_date=datetime(2022, 5, 10),
-                              end_date=datetime(2022, 5, 25))
-
     branch = os.getenv('GIT_BRANCH_NAME')
     if not branch:
-        raise Exception('Unknown environment variable GIT_BRANCH_NAME - Stopping here  ...')
+        raise Exception(
+            'Unknown environment variable GIT_BRANCH_NAME - Stopping here  ...')
+
+    logger.info('Starting the extraction of urls...')
+    new_urls = extract_url_dl(no_browser=True,
+                              start_date=datetime(2023, 1, 10),
+                              end_date=datetime(2023, 1, 25))
 
     repo = init_repo()
     files_to_commit = []
@@ -34,6 +35,6 @@ if __name__ == '__main__':
 
     logger.info('Compile all modified files in one commit  ...')
     commit_many_files_and_push(repo, branch,
-                               "Daily automatic url files update",
+                               "Historical automatic url files update",
                                files_to_commit)
     logger.info('Job succeeded  ...')

@@ -11,7 +11,8 @@ logger = init_logger(logging.DEBUG)
 
 branch = os.getenv('GIT_BRANCH_NAME')
 if not branch:
-    raise Exception('Unknown environment variable GIT_BRANCH_NAME - Stopping here  ...')
+    raise Exception(
+        'Unknown environment variable GIT_BRANCH_NAME - Stopping here  ...')
 
 repo = init_repo()
 files_to_commit = []
@@ -24,7 +25,7 @@ for massif in MASSIFS:
     logger.debug(massif)
     new_data = []
     for date_ in dates_:
-        if int(date_) >= 20181217143136:  ## Début des fichiers XML
+        if int(date_) >= 20230110143136:  ## Début des fichiers XML
             logger.debug(date_)
             bulletin = Bulletin(massif, date_)
             bulletin.download()
@@ -44,6 +45,7 @@ for massif in MASSIFS:
                                                     files_to_commit)
 
 logger.info('Compile all modified files in one commit  ...')
-commit_many_files_and_push(repo, branch, "Daily automatic csv files update",
+commit_many_files_and_push(repo, branch,
+                           "Historical automatic csv files update",
                            files_to_commit)
 logger.info('Job succeeded  ...')
