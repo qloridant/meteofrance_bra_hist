@@ -12,19 +12,25 @@ MASSIFS = ['CHABLAIS', 'MONT-BLANC', 'ARAVIS', 'CHARTREUSE', 'BELLEDONNE',
 
 # http://www.meteo.fr/guide/guide_pictos.html
 # https://meteofrance.com/ > Légende au pied de la page
-# TODO: à compléter
 PICTO_METEO = {
+    "-1": "Absence de données",
     "1": "Beau temps",
     "2": "Brume",
     "3": "Eclaircies",
     "4": "Peu nuageux",
     "5": "Variable",
     "6": "Très nuageux",
-    "8": "Pluies éparses",
+    "7": "Pluies éparses",
+    "8": "Pluie faible / grésille",  # ???
     "9": "Averses de pluie",
     "10": "Neige faible",
     "11": "Averses de neige",
     "12": "Neige modérée",
+    "13": "Risque d'orages",
+    "14": "Orages violents",
+    "15": "Brouillard",
+    "16": "Brouillard givrant",
+    "17": "Pictogramme non identifié",
     "18": "Beau temps avec mer de nuage"
 }
 
