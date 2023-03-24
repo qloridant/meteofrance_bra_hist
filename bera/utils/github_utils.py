@@ -32,9 +32,15 @@ def merge_bera_content(actual_content: str, new_content: [[]]):
     # Once it is created, the block will be useless
     if 'url_telechargement' not in df.columns:
         df['url_telechargement'] = ''
+
+    # Used to create the column meteo for the first time
+    # Once it is created, the block will be useless
+    if 'meteo' not in df.columns:
+        df['meteo'] = ''
+
     df = df[1:]
 
-    # Add new content
+     # Add new content
     df_length = len(df)
     for i, line in enumerate(new_content):
         df.loc[df_length + i] = line
