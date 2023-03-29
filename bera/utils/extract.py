@@ -15,8 +15,16 @@ class DateAttributeError(Exception):
 
 
 def accept_eventual_cookies(driver):
+    """
+    This function aims to accept automatically eventual cookies
+
+    Parameters
+    ----------
+    driver: Webdriver object
+
+    """
     driver.implicitly_wait(3)
-    try: # In case the website asks to valide cookies for the session
+    try:  # In case the website asks to valide cookies for the session
         driver.find_element(By.XPATH, "//input[@type='submit' and @value='Accepter']").click()
     except NoSuchElementException:
         pass
@@ -25,9 +33,19 @@ def accept_eventual_cookies(driver):
 def extract_url_dl(no_browser=True, start_date=datetime(2016, 3, 30), end_date=datetime(2016, 4, 3)) -> {}:
     """
     Extract the last time of the BERA's publication (needed to generate the download url)
-    ---
-    Return
+
+    Parameters
+    ----------
+    no_browser: boolean
+    start_date: datetime object
+    end_date: datetime object
+
+    Returns
+    -------
+    dict: keys correspond to the mountain chains concerned by the extraction and values are the last time of the
+    BERA's publication, for example:
     {
+    'CHABLAIS': '20160330130701',
     'MONT-BLANC': '20160330130701',
     ...
     }
@@ -61,7 +79,7 @@ def extract_url_dl(no_browser=True, start_date=datetime(2016, 3, 30), end_date=d
         datepicker.send_keys(i.strftime("%Y%m%d"))
         driver.find_element(By.ID, 'select_massif').click()
 
-        select_massif = Select(driver.find_element(By.ID,'select_massif'))
+        select_massif = Select(driver.find_element(By.ID, 'select_massif'))
 
         for massif in select_massif.options:
             try:
