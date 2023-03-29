@@ -31,6 +31,7 @@ class Bulletin:
             raise MassifInexistantException
         self.jour = jour
         self.meteo = {}
+        self.neige_fraiche = {}
 
     @property
     def url(self):
@@ -138,6 +139,40 @@ class Bulletin:
         neige_fraiche = format_neige_fraiche(unformatted_neige_fraiche, altitude_neige_fraiche)
         self.meteo.update(neige_fraiche)
         return self.meteo
+
+    def parse_donnees_neige_fraiche(self) -> dict:
+        """
+        Parse last snow precipitations data from the BERA xml content.
+        Historical snow precipitations data for the last 6 days are available in the <BSH><NEIGEFRAICHE><NEIGE24H> xml
+        content balises: for example for the BERA of the 2023-03-17 in BELLEDONNE:
+        <BSH>
+            <NEIGEFRAICHE SECTEURSS1="massif" SECTEURSS2="" ALTITUDESS="1800">
+              <NEIGE24H DATE="2023-02-22T00:00:00" SS241="1" SS242="-1"/>
+              <NEIGE24H DATE="2023-02-23T00:00:00" SS241="0" SS242="-1"/>
+              <NEIGE24H DATE="2023-02-24T00:00:00" SS241="1" SS242="-1"/>
+              <NEIGE24H DATE="2023-02-25T00:00:00" SS241="0" SS242="-1"/>
+              <NEIGE24H DATE="2023-02-26T00:00:00" SS241="1" SS242="-1"/>
+              <NEIGE24H DATE="2023-02-27T00:00:00" SS241="0" SS242="-1"/>
+            ...
+            </NEIGEFRAICHE>
+        </BSH>
+
+        This method uses this xml content to provide a formatted dict of meteo data for the day before the date of the
+        BERA.
+
+        return:
+        self.neige_fraiche: dict
+        """
+
+        root = ET.parse(self.path_file).getroot()
+        hist_neige_fraiche_unformatted = [neige_fraiche.attrib for neige_fraiche in
+                                          root[0].find('BSH').iter(tag="NEIGE24H")]
+        altitude_neige_fraiche = root[0].find('BSH').find('NEIGEFRAICHE').get('ALTITUDESS')
+
+        # Get only the day before the date of the BERA snow falls data
+        unformatted_neige_fraiche = hist_neige_fraiche_unformatted[-1]
+        self.neige_fraiche = format_neige_fraiche(unformatted_neige_fraiche, altitude_neige_fraiche)
+        return self.neige_fraiche
 
     def append_csv(self):
         # Removing comma as we will save the file as a csv
