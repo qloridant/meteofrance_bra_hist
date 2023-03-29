@@ -50,7 +50,7 @@ if __name__ == '__main__':
                     if df.loc[df.date == f"{bulletin.jour_key}", 'url_telechargement'] == '' or \
                             df.loc[df.date == f"{bulletin.jour_key}", 'meteo'] == '':
                         bulletin.download()
-                        bulletin.parse_données_risques()
+                        bulletin.parse_donnees_risques()
                         bulletin.parse_hist_meteo()
                         new_content = bulletin.append_csv()
                         df.loc[df.date == f"{bulletin.jour_key}"] = new_content
