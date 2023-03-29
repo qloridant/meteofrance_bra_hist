@@ -50,7 +50,7 @@ class Bulletin:
         with open(self.path_file, 'bw+') as f:
             f.write(r.content)
 
-    def parse_risques(self) -> []:
+    def parse_données_risques(self) -> []:
         root = ET.parse(self.path_file).getroot()
         self.cartouche_risque = root[0].find('CARTOUCHERISQUE')
         self.risques = self.cartouche_risque[0].attrib
@@ -122,7 +122,7 @@ if __name__ == '__main__':
         jour = sys.argv[2]  # At format YYYYmmddHHMMSS ex: 20230322144948
         bul = Bulletin(massif, jour)
         bul.download()
-        bul.parse_risques()
+        bul.parse_données_risques()
         bul.parse_hist_meteo()
         new_content = bul.append_csv()
 

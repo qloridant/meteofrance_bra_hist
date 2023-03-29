@@ -34,7 +34,7 @@ for massif in MASSIFS:
             bulletin = Bulletin(massif, date_)
             try:
                 bulletin.download()
-                bulletin.parse_risques()
+                bulletin.parse_données_risques()
                 bulletin.parse_hist_meteo()
                 new_data.append(bulletin.append_csv())
             except Exception as e:
