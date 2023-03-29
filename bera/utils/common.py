@@ -54,20 +54,18 @@ def format_hist_meteo(unformatted_meteo: dict, altitude1: str, altitude2: str) -
     'ISO0': '1500', 'ISO-10': '3200', 'DD1': 'W', 'FF1': '20', 'DD2': 'NW', 'FF2': '40'},
 
     create a new dict in this format:
-    {'DATE': '2023-02-01T12:00:00', 'METEO': 'Beau temps', 'MER_DE_NUAGES': 'Non', 'LIMITE_PLUIE_NEIGE': 'Sans objet',
-    'ISO-0': '1500', 'ISO-10': '3200', 'DIRECTION_VENT_ALTITUDE_1': 'W', 'VITESSE_VENT_ALTITUDE_1': '20',
-    'DIRECTION_VENT_ALTITUDE_2': 'NW', 'VITESSE_VENT_ALTITUDE_2': '40'}
+    {'DATE': '2023-02-01T12:00:00', 'METEO': 'Beau temps', 'MER DE NUAGES': 'Non', 'LIMITE PLUIE NEIGE': 'Sans objet',
+    'ISO-0': '1500', 'ISO-10': '3200', 'DIRECTION VENT ALTITUDE 1': 'W', 'VITESSE VENT ALTITUDE 1': '20',
+    'DIRECTION VENT ALTITUDE 2': 'NW', 'VITESSE VENT ALTITUDE 2': '40'}
     and return this new dict
 
     params:
-    unformatted_meteo: dict: unformatted dict representing meteo prevision
-    altitude1: str: altidude 1 used in meteo prevision
-    altitude2: str: altidude 2 used in meteo prevision
+    unformatted_meteo: dict: unformatted dict representing historical wheater data
+    altitude1: str: altidude 1 used in wheater data for wind data
+    altitude2: str: altidude 2 used in wheater data for wind data
 
     return:
-    formatted_meteo: dict: formatted dict representing meteo prevision
-
-
+    formatted_meteo: dict: formatted dict representing meteo historical data
     """
     formatted_meteo = {
         f"METEO A {unformatted_meteo['DATE']}": {
@@ -86,3 +84,31 @@ def format_hist_meteo(unformatted_meteo: dict, altitude1: str, altitude2: str) -
         }
     }
     return formatted_meteo
+
+
+def format_neige_fraiche(unformatted_neige_fraiche: dict, altitude_neige_fraiche: str) -> dict:
+    """
+    From an input dict with this format sample
+    {'DATE': '2023-03-21T00:00:00', 'SS241': '0', 'SS242': '-1'},
+
+    create a new dict in this format:
+    {'DATE': '2023-02-01T12:00:00', 'NEIGE FRAICHE A ALTTITUDE {altitude_neige_fraiche} (EN CM)': '0'}
+    and return this new dict
+
+    params:
+    unformatted_neige_fraiche: dict: unformatted dict representing meteo prevision
+    altitude_neige_fraiche: str: altidude used in historical snow falls data
+
+    return:
+    formatted_neige_frajche: dict: formatted dict representing historical snow falls
+    """
+    formatted_neige_fraiche = {
+        f"NEIGE FRAICHE LE {unformatted_neige_fraiche['DATE']}": {
+            'ALTITUDE': altitude_neige_fraiche,
+            'EPAISSEUR': 'Pluie' if unformatted_neige_fraiche['SS241'] == '-2' else (
+                    ' - ' if unformatted_neige_fraiche['SS241'] == '-1' else unformatted_neige_fraiche['SS241']
+                ),
+        }
+    }
+    return formatted_neige_fraiche
+
