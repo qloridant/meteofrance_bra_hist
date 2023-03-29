@@ -26,7 +26,7 @@ for massif in MASSIFS:
     bulletin = Bulletin(massif, jour)
     bulletin.download()
     bulletin.parse_donnees_risques()
-    bulletin.parse_hist_meteo()
+    bulletin.parse_donnees_meteo()
     new_data = bulletin.append_csv()
 
     file_path = f'data/{massif}/hist.csv'

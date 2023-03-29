@@ -62,7 +62,7 @@ class Bulletin:
         else:
             return self.risques
 
-    def parse_hist_meteo(self) -> dict:
+    def parse_donnees_meteo(self) -> dict:
         """
         Parse historical meteo data from the BERA xml content.
         Historical meteo data for the last 6 days are available in the <BSH><METEO><ECHEANCE> xml content balises:
@@ -123,7 +123,7 @@ if __name__ == '__main__':
         bul = Bulletin(massif, jour)
         bul.download()
         bul.parse_donnees_risques()
-        bul.parse_hist_meteo()
+        bul.parse_donnees_meteo()
         new_content = bul.append_csv()
 
         file_path = f'data/{massif}/hist.csv'

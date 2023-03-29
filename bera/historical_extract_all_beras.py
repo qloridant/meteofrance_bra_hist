@@ -35,7 +35,7 @@ for massif in MASSIFS:
             try:
                 bulletin.download()
                 bulletin.parse_donnees_risques()
-                bulletin.parse_hist_meteo()
+                bulletin.parse_donnees_meteo()
                 new_data.append(bulletin.append_csv())
             except Exception as e:
                 logger.error("An error occured in downloading BERA, parsing or adding new data content for massif "
