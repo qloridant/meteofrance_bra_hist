@@ -1,4 +1,16 @@
-# Ce script doit etre executé a partir de 16h (heure de publication)
+"""
+This script aims to get all the datetime of BERAs' publication for a given period for all mountain chains, and to save
+them into all the data/<massif>/urls_list.txt files in the 'master' branch of the GitHub repository
+https://github.com/qloridant/meteofrance_bra_hist.
+
+This script was useful to get all historical datetime of all BERAs' publications anterior at the beginning of this
+project.
+For now, normally, all datetimes of all BERAs' publications for all mountain chains had been saved in
+data/<massif>/urls_list.txt files and this script is not useful anymore.
+
+This script does the same as the script daily_build_urls.py but for each day of the given period.
+"""
+
 import os
 from datetime import datetime
 

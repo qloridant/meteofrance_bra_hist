@@ -1,3 +1,17 @@
+"""
+This script aims to get all the datetime of BERAs' publication on all the available historic period for all mountain
+chains, and to save them into all the data/<massif>/urls_list.txt files in the 'master' branch of the GitHub repository
+https://github.com/qloridant/meteofrance_bra_hist.
+
+This script was useful to get historical datas from old BERAs published before the beginning of this project.
+
+Now this script could be useful if some other information present in the BERAs (like meteo, weather, snow
+precipitations, ...) are added to the data we want to save in this project, to get all historical new data.
+
+This script does the same as the script daily_build_urls.py but for each day of the available historical period
+(since the first BERAs published are available in xml format, the 17/12/2018)
+"""
+
 import logging
 import os
 import subprocess
@@ -29,7 +43,7 @@ for massif in MASSIFS:
         f"{time.time() - start_time} seconds  - Exporting data from BERA xml into hist.csv data file "
         f"for massif {massif} ...")
     for date_ in dates_:
-        if int(date_) >= 20181217143136:  ## Début des fichiers XML
+        if int(date_) >= 20181217143136:  # Datetime of the first xml files for the bera
             # logger.debug(date_)
             bulletin = Bulletin(massif, date_)
             try:
