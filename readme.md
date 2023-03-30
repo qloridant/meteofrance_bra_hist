@@ -1,9 +1,10 @@
 # General
 
 Ce projet ouvre les données de Météo-France sur les Bulletins d'estimation du risque d'avalanche (BERA).
-Ces données sont déjà [disponibles](https://donneespubliques.meteofrance.fr/?fond=produit&id_produit=265&id_rubrique=50) mais difficiles à traiter pour des ré-utilisations.
+Ces données sont déjà [disponibles](https://donneespubliques.meteofrance.fr/?fond=produit&id_produit=265&id_rubrique=50), 
+mais uniquement au format pdf et difficiles à traiter pour des réutilisations.
 
-Les données sont disponibles : `data/<MASSIF>/hist.csv`
+Les données extraites des BERAs sont enregistrées et disponibles dans les fichiers `data/<MASSIF>/hist.csv` de ce projet.
 
 Objectifs de réutilisations :
   - Evaluation du risque de la partie supérieure du manteau neigeux (préparation sorties)
@@ -11,16 +12,18 @@ Objectifs de réutilisations :
 
 # Autres projets
 - [MetaSkiRando :](https://www.metaskirando.ovh/Nivo.php) Moteur de recherche du ski de rando (et [code source](https://github.com/c2corg/metaskirando))
-- [Data Avalanche :](http://www.data-avalanche.org) Recensemement des avalanches
+- [Data Avalanche :](http://www.data-avalanche.org) Recensement des avalanches
 - [Synthesis :](http://www.data-avalanche.org/synthesis/) Centrale de données nivologiques
 - [Anena :](https://www.anena.org/)  Association Nationale pour l’Étude de la Neige et des Avalanches
 - [YETI par CampToCamp](https://www.camptocamp.org/yeti) Préparation de sorties avec méthode de réduction des risques
+- [Snowmap](https://snowmap.fr/)  Outil de visualisation cartographique de l'enneigement par massif
+- [Aineva : bulletins d'estimation des risques d'avalanahc en Italie](https://bollettini-fr.aineva.it/bulletin/latest) Visualisation des risques d'avalanches sur les massifs montagneux italiens
 
 # Modèle de données
 Source :
-  Météo-France 
+  [Météo-France](https://donneespubliques.meteofrance.fr/?fond=produit&id_produit=265&id_rubrique=50)
   
-Clé Primaires :
+Clé Primaire :
 - date
 - massif
 
@@ -37,7 +40,7 @@ Clé Primaires :
 |loc2|Localisation 2|string|Localisation 2| Altitude à laquelle nous passons du rique 1 au risque 2 | Valeur optionnelle (sauf si le champ altitude n'est pas vide)|
 |risque_maxi|Risque Maximum|string|Risque estimé maximum pour le massif| 2 | Valeur obligatoire|
 |commentaire|Commentaire|string|Commentaire fourni par météo france (déclanchements spontanés, déclanchements par skieur)| Au dessus de 2200m : Risque faible évoluant en Risque limité. En dessous : Risque faible | Valeur optionnelle|
-
+|url_telechargement|Url de téléchargement|string|Url de téléchargement du BERA en pdf|https://donneespubliques.meteofrance.fr/donnees_libres/Pdf/BRA/BRA.ANDORRE.20230327133137.pdf|Valeur optionnelle|
 Illustration de l'exemple :
 
 ![ex_thabor](https://user-images.githubusercontent.com/14170613/169779005-bae4fa10-16ad-4457-895b-7dbff6494dbe.png)
@@ -51,5 +54,39 @@ Illustration de l'exemple :
 
 Sur le site de météo-france, les massifs sont regroupés par département ou régions. Vous pouvez retrouver ce découpage dans le fichier `zones.json`
 
-Pour les coordonnées de ces zones, vous pouvez retrouvez les travaux de l'ENSG sur leur [API](https://api.ensg.eu/zonesbra).
+Pour les coordonnées de ces zones, vous pouvez retrouver les travaux de l'ENSG sur leur [API](https://api.ensg.eu/zonesbra).
 
+
+# Developpement
+
+## Scripts du projet
+Les différents scripts constituant ce projet sont les suivants :
+- bera/daily_build_urls.py
+- bera/daily_extract_all_beras.py
+- bera/historical_build_urls.py
+- bera/historical_extract_all_beras.py
+- bera/utils/bulletin.py
+
+Ces différents scripts sont détaillés dans chacun des fichiers de scripts.
+
+De manière générale, ces scripts n'ont pas vocation à être lancés manuellement.
+
+Toutefois, dans un contexte de développement, il peut être nécessaire des les utiliser.
+
+Pour se faire :
+1. Exporter les variables d'environnement nécessaires  à l'exécution des scripts
+```
+export GIT_BRANCH=<nom_de_la_branche_de_travail_courante_git>
+export GIT_LOGIN=<nom_utilisateur_github>
+export TOKEN=<personnal_access_token_github>
+```
+
+2. Installer poetry
+```
+install poetry
+```
+
+3. Lancer le script avec poetry
+```
+poetry run python <script>
+```
