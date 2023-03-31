@@ -4,6 +4,8 @@ import os
 import pandas as pd
 from github import Github, InputGitTreeElement
 
+from bera.utils.common import PARAMS
+
 logger = logging.getLogger(__name__)
 
 
@@ -27,7 +29,15 @@ def merge_bera_content(actual_content: str, new_content: [[]]):
 
     # Define header
     df.columns = df.iloc[0]
+    # Remove useless spaces in column names that were historically in remote files hist.csv data
+    # TODO: delete this code line when all the column names will be cleaned
+    df.columns = df.columns.str.replace(' ', '')
 
+    # Add nonexistent columns in remote file
+    # Useful for adding new params in hist.csv data files
+    for param in PARAMS:
+        if param not in df.columns:
+            df[param] = ''
 
     df = df[1:]
 
