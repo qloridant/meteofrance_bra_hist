@@ -67,6 +67,7 @@ def format_hist_meteo(unformatted_meteo: dict, altitude1: str, altitude2: str) -
     return:
     formatted_meteo: dict: formatted dict representing meteo historical data
     """
+    hour = unformatted_meteo['DATE'][-8:-6]
     formatted_meteo = {
         f"METEO A {unformatted_meteo['DATE']}": {
             'TEMPS': PICTO_METEO[unformatted_meteo['TEMPSSENSIBLE']],
