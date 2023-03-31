@@ -1,10 +1,33 @@
-import json
+"""
+This script allows the user to see the BERA data exported in a list format for a given mountain chain and a given date.
+It takes two arguments:
+- massif: str representing the chain mountain concerned by the extraction of the BERA expected,
+- datetieme: str at format YYYYmmddHHMMSS representing the datetime of the publication of the BERA. To find it you can
+  consult the file data/{massif}/urls_list.txt listing the datetimes of all BERA publications for one given
+  chain mountain ('massif' in french).
+
+To run this script run this command:
+python bera/utils/bulletin.py CHABLAIS 20230329140534
+or
+poetry run python bera/utils/bulletin.py CHABLAIS 20230329140534
+
+The exececution will show by printing the BERA data exported in a list format, for example for CHABLAIS
+on the 29/03/2023:
+['date', 'massif', 'risque1', 'evolurisque1', 'loc1', 'altitude', 'risque2', 'evolurisque2', 'loc2', 'risque_maxi',
+'commentaire', 'url_telechargement']
+['2023-03-29', 'CHABLAIS', '2', '', '<2500', '2500', '3', '', '>2500', '3',
+'Au-dessus de 2500 m : Risque marqué. En-dessous : Risque limité.',
+'https://donneespubliques.meteofrance.fr/donnees_libres/Pdf/BRA/BRA.CHABLAIS.20230329140534.pdf']
+
+NB: this script is mainly useful in a development context.
+"""
+
 import logging
 import os
 import sys
-import xml.etree.ElementTree as ET
 
 import requests
+import xml.etree.ElementTree as ET
 
 from bera.utils.common import MASSIFS, format_hist_meteo, format_neige_fraiche
 from bera.utils.github_utils import init_repo, update_file_content
@@ -20,18 +43,36 @@ class MassifInexistantException(Exception):
 
 
 class Bulletin:
-    "Défintion d'un bulletin risque avalanche"
+    """
+    This class is used to represent a BERA ("bulletin d'estimation du risque d'avalanche" in french)
 
-    def __init__(self, massif, jour):
-        self.cartouche_risque = ''
-        self.risques = ''
+    Attributes
+    ----------
+    massif: str: the mountain chaine concerned by the BERA object
+    jour: str: the datetime of the BERA's publication in str format YYYYmmddHHMMSS
+    risques: dict: corresponding to the risk data extracted from the BERA published, associating values
+             for these keys:
+             risque1, evolurisque1, loc1, altitude, risque2, evolurisque2, loc2, risque_maxi, commentaire
+    meteo: dict: corresponding to the weather, wind, isothermand snow precipitations data extracted from the BERA
+           published
+    """
+
+    def __init__(self, massif: str, jour: str):
+        """
+        Constructor of the Bulletin class
+
+        Parameters
+        ----------
+        massif: str: the mountain chaine concerned by the BERA object
+        jour: str: the datetime of the BERA's publication in str format YYYYmmddHHMMSS
+        """
         if massif in MASSIFS:
             self.massif = massif
         else:
             raise MassifInexistantException
         self.jour = jour
+        self.risques = {}
         self.meteo = {}
-        self.neige_fraiche = {}
 
     @property
     def url(self):
@@ -46,15 +87,50 @@ class Bulletin:
         return self.jour[0:4] + '-' + self.jour[4:6] + '-' + self.jour[6:8]
 
     def download(self):
+        """
+        This method aims to:
+        - download a BERA in xml format for its massif and its day,
+        - write the content into a temporary file bera/tmp_bera.xml
+        """
         r = requests.get(f'{self.url}.{self.massif}.{self.jour}.xml')
         logger.debug(f'{self.url}.{self.massif}.{self.jour}.xml')
         with open(self.path_file, 'bw+') as f:
             f.write(r.content)
 
     def parse_donnees_risques(self) -> []:
+        """
+        This method aims to extract risk information from the BERA xml content and parse it into a dict which will be
+        integrated at the end in hist.csv files to store risk data.
+        Risk data is available in the <CARTOUCHERISQUE> xml content balise:
+        For example for the BERA of the 2023-02-28 in CHABLAIS:
+        <CARTOUCHERISQUE>
+            <RISQUE RISQUE1="1" EVOLURISQUE1="" LOC1="" ALTITUDE="" RISQUE2="" EVOLURISQUE2="" LOC2="" RISQUEMAXI="1" COMMENTAIRE=" "/>
+            <PENTE NE="false" E="false" SE="false" S="false" SW="false" W="false" NW="false" N="false" COMMENTAIRE=""/>
+            <ACCIDENTEL>rares plaques anciennes ou nouvelles</ACCIDENTEL>
+            <NATUREL>peu probables</NATUREL>
+            <RESUME>Départs spontanés : peu probables
+                    Déclenchements skieurs : rares plaques anciennes ou nouvelles
+            </RESUME>
+            <AVIS/>
+            <VIGILANCE/>
+            <ImageCartoucheRisque Format="png" Width="345" Height="134">
+                <Content>
+                ...
+                </Content>
+            </ImageCartoucheRisque>
+        </CARTOUCHERISQUE>
+
+        This method uses this xml content to provide a formatted dict of risk data for the day of the BERA.
+
+        Returns
+        -------
+        self.risk: dict: corresponding to the risk data extracted from the BERA published, associating values
+             for these keys:
+             risque1, evolurisque1, loc1, altitude, risque2, evolurisque2, loc2, risque_maxi, commentaire
+        """
         root = ET.parse(self.path_file).getroot()
-        self.cartouche_risque = root[0].find('CARTOUCHERISQUE')
-        self.risques = self.cartouche_risque[0].attrib
+        cartouche_risque = root[0].find('CARTOUCHERISQUE')
+        self.risques = cartouche_risque[0].attrib
 
         risques_attr = list(self.risques.keys())
         risques_attr.sort()
@@ -65,7 +141,8 @@ class Bulletin:
 
     def parse_donnees_meteo(self) -> dict:
         """
-        Parse historical weather into a formated dict: wind, temperature, snow precipitations, isotherm from the BERA xml content
+        Parse historical weather into a formated dict: wind, temperature, snow precipitations, isotherm from the BERA
+        xml content.
         
         Historical weather data for the last 6 days are available in the <BSH><METEO><ECHEANCE> xml content balises and
         historical snow precipitations for the last 6 days are available in the <BSH><NEIGEFRAICHE><NEIGE24H> and also
@@ -115,8 +192,20 @@ class Bulletin:
 
         return self.meteo
 
+    def append_csv(self) -> []:
+        """
+        This method aims to construct a list of all formatted data which will be integrated at the end in hist.csv files
+        to store BERA data containing:
+        - The date of the BERA publication in YYYY-mm-dd str format
+        - The massif of the BERA publication,
+        - Risk data declined into 9 columns: (risque1, evolurisque1, loc1, altitude, risque2, evolurisque2, loc2,
+          risque_maxi, commentaire),
+        - The url of downloading the BERA in pdf format
 
-    def append_csv(self):
+        Returns
+        -------
+        list of strings containing all BERA information expected
+        """
         # Removing comma as we will save the file as a csv
         risques = list(
             map(lambda x: x.replace(',', '-'), self.risques.values()))

@@ -1,4 +1,33 @@
-# Ce script doit etre executé a partir de 16h (heure de publication)
+"""
+This script aims to get the last datetime of BERA publication for all mountain chains, and save it into all the
+data/<massif>/urls_list.txt files in the 'master' branch of the GitHub repository
+https://github.com/qloridant/meteofrance_bra_hist.
+
+This script is executed daily at 17h UTC by the GitHub main action defined in the
+.github/workflows/main.yml file of this project.
+
+This scripts:
+
+- gets the last datetime of the BERAs' publication which is normally the same datetime for all chain
+  mountains ("massif" in French).
+
+- for each chain mountain:
+
+    - gets the file data/<massif>/urls_list.txt in the GitHub repository
+      https://github.com/qloridant/meteofrance_bra_hist,
+
+    - updates the data/<massif>/urls_list.txt file content by adding the new datetime of the last BERA publication at
+      the end of the actual content,
+
+- creates a git commit including all updated files,
+
+- pushes the git commit in the 'master' branch of the GitHub repository https://github.com/qloridant/meteofrance_bra_hist
+
+This script could be launched in a development context, independently of the GitHub action, but it should be executed
+after 16h (time of BERAs publication) to get the new BERA datetime publication.
+Cf README.md in section 'Developpement' to launch this script in a development context.
+"""
+
 import os
 from datetime import date
 

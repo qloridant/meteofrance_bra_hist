@@ -1,5 +1,6 @@
 import logging
 
+# List of all french mountains chains concerned by a BERA
 MASSIFS = ['CHABLAIS', 'MONT-BLANC', 'ARAVIS', 'CHARTREUSE', 'BELLEDONNE',
            'GRANDES-ROUSSES', 'VERCORS', 'OISANS', 'HAUTE-TARENTAISE',
            'BEAUFORTAIN', 'BAUGES', 'VANOISE', 'HAUTE-MAURIENNE', 'MAURIENNE',
@@ -47,8 +48,14 @@ PICTO_METEO = {
 }
 
 
-# Create a custom logger
 def init_logger(log_level=logging.INFO):
+    """
+    This function aims to create a custom logger for all this project
+
+    Returns
+    -------
+    logger: logger object
+    """
     logger = logging.getLogger(__name__)
     c_handler = logging.StreamHandler()
     c_format = logging.Formatter('%(name)s - %(levelname)s - %(message)s')
