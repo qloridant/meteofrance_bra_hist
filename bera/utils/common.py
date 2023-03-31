@@ -69,20 +69,18 @@ def format_hist_meteo(unformatted_meteo: dict, altitude1: str, altitude2: str) -
     """
     hour = unformatted_meteo['DATE'][-8:-6]
     formatted_meteo = {
-        f"METEO A {unformatted_meteo['DATE']}": {
-            'TEMPS': PICTO_METEO[unformatted_meteo['TEMPSSENSIBLE']],
-            'MER DE NUAGES': 'Non' if unformatted_meteo['MERNUAGES'] == '-1' else unformatted_meteo['MERNUAGES'],
-            'LIMITE PLUIE NEIGE': 'Sans objet' if unformatted_meteo['PLUIENEIGE'] == '-1' else unformatted_meteo[
+           f'{hour}_temps': PICTO_METEO[unformatted_meteo['TEMPSSENSIBLE']],
+           f'{hour}_mer_de_nuages': 'Non' if unformatted_meteo['MERNUAGES'] == '-1' else unformatted_meteo['MERNUAGES'],
+           f'{hour}_limite_pluie_neige': 'Sans objet' if unformatted_meteo['PLUIENEIGE'] == '-1' else unformatted_meteo[
                 'PLUIENEIGE'],
-            'ISOTHERME 0°C': unformatted_meteo['ISO0'],
-            'ISOTHERME -10°C': unformatted_meteo['ISO-10'],
-            'ALTITUDE VENT 1': altitude1,
-            'ALTITUDE VENT 2': altitude2,
-            'DIRECTION VENT ALTITUDE_1': unformatted_meteo['DD1'],
-            'VITESSE VENT ALTITUDE 1': unformatted_meteo['FF1'],
-            'DIRECTION VENT ALTITUDE 2': unformatted_meteo['DD2'],
-            'VITESSE VENT ALTITUDE 2': unformatted_meteo['FF2']
-        }
+            f'{hour}_isotherme_0': unformatted_meteo['ISO0'],
+            f'{hour}_isotherme_moins_10': unformatted_meteo['ISO-10'],
+            f'{hour}_altitude_vent_1': altitude1,
+            f'{hour}_altitude_vent_2': altitude2,
+            f'{hour}_direction_vent_altitude_1': unformatted_meteo['DD1'],
+            f'{hour}_vitesse_vent_altitude_1': unformatted_meteo['FF1'],
+            f'{hour}_direction_vent_altitude_2': unformatted_meteo['DD2'],
+            f'{hour}_vitesse_vent_altitude_2': unformatted_meteo['FF2']
     }
     return formatted_meteo
 
