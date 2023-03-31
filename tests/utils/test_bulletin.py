@@ -28,7 +28,7 @@ def test_parse():
     with patch('src.utils.bulletin.Bulletin.path_file',
                new_callable=PropertyMock) as a:
         a.return_value = 'tests/valid_bera.xml'
-        risques = bu.parse()
+        risques = bu.parse_donnees_risques()
         assert len(risques) == 9
         assert 'RISQUE1' in risques
         assert 'EVOLURISQUE1' in risques
@@ -43,9 +43,9 @@ def test_parse():
                new_callable=PropertyMock) as a:
         a.return_value = 'tests/invalid_tag_bera.xml'
         with pytest.raises(ET.ParseError):
-            bu.parse()
+            bu.parse_donnees_risques()
     with patch('src.utils.bulletin.Bulletin.path_file',
                new_callable=PropertyMock) as a:
         a.return_value = 'tests/invalid_attribute_bera.xml'
         with pytest.raises(ET.ParseError):
-            bu.parse()
+            bu.parse_donnees_risques()

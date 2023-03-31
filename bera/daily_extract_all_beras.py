@@ -3,7 +3,7 @@ import subprocess
 
 from bera.utils.bulletin import Bulletin
 from bera.utils.common import init_logger, MASSIFS
-from bera.utils.github import init_repo, commit_many_files_and_push, \
+from bera.utils.github_utils import init_repo, commit_many_files_and_push, \
     update_and_add_file_to_commit
 
 logger = init_logger()
@@ -25,7 +25,8 @@ for massif in MASSIFS:
     # Traitement du fichier
     bulletin = Bulletin(massif, jour)
     bulletin.download()
-    bulletin.parse()
+    bulletin.parse_donnees_risques()
+    bulletin.parse_donnees_meteo()
     new_data = bulletin.append_csv()
 
     file_path = f'data/{massif}/hist.csv'

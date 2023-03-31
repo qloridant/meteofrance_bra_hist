@@ -4,7 +4,7 @@ from datetime import datetime
 
 from utils.common import init_logger, MASSIFS
 from utils.extract import extract_url_dl
-from utils.github import init_repo, commit_many_files_and_push, \
+from utils.github_utils import init_repo, commit_many_files_and_push, \
     update_and_add_file_to_commit
 
 logger = init_logger()

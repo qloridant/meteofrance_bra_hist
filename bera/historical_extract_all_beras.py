@@ -5,7 +5,7 @@ import time
 
 from utils.bulletin import Bulletin
 from utils.common import init_logger, MASSIFS
-from utils.github import init_repo, commit_many_files_and_push, \
+from utils.github_utils import init_repo, commit_many_files_and_push, \
     update_and_add_file_to_commit
 
 logger = init_logger(logging.DEBUG)
@@ -34,7 +34,8 @@ for massif in MASSIFS:
             bulletin = Bulletin(massif, date_)
             try:
                 bulletin.download()
-                bulletin.parse()
+                bulletin.parse_donnees_risques()
+                bulletin.parse_donnees_meteo()
                 new_data.append(bulletin.append_csv())
             except Exception as e:
                 logger.error("An error occured in downloading BERA, parsing or adding new data content for massif "
