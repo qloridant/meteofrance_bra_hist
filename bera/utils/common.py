@@ -10,6 +10,8 @@ MASSIFS = ['CHABLAIS', 'MONT-BLANC', 'ARAVIS', 'CHARTREUSE', 'BELLEDONNE',
            'AURE-LOURON', 'HAUTE-BIGORRE', 'ASPE-OSSAU', 'PAYS-BASQUE',
            'CERDAGNE-CANIGOU', 'CAPCIR-PUYMORENS']
 
+PARAMS = ['date', 'massif', 'risque1', 'evolurisque1', 'loc1', 'altitude', 'risque2', 'evolurisque2', 'loc2', 'risque_maxi', 'commentaire','url_telechargement', '00_temps', '00_mer_de_nuages', '00_limite_pluie_neige', '00_isotherme_0', '00_isotherme_moins_10', '00_altitude_vent_1', '00_altitude_vent_2', '00_direction_vent_altitude_1', '00_vitesse_vent_altitude_1', '00_direction_vent_altitude_2', '00_vitesse_vent_altitude_2', '06_temps', '06_mer_de_nuages', '06_limite_pluie_neige', '06_isotherme_0', '06_isotherme_moins_10', '06_altitude_vent_1', '06_altitude_vent_2', '06_direction_vent_altitude_1', '06_vitesse_vent_altitude_1', '06_direction_vent_altitude_2', '06_vitesse_vent_altitude_2', '12_temps', '12_mer_de_nuages', '12_limite_pluie_neige', '12_isotherme_0', '12_isotherme_moins_10', '12_altitude_vent_1', '12_altitude_vent_2', '12_direction_vent_altitude_1', '12_vitesse_vent_altitude_1', '12_direction_vent_altitude_2', '12_vitesse_vent_altitude_2']
+
 # http://www.meteo.fr/guide/guide_pictos.html
 # https://meteofrance.com/ > Légende au pied de la page
 PICTO_METEO = {

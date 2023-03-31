@@ -76,7 +76,8 @@ class Bulletin:
         for unformatted_meteo in hist_meteo_unformatted[-3:]:
             meteo = format_hist_meteo(unformatted_meteo, altitude_vent_1, altitude_vent_2)
             self.meteo.update(meteo)
-        pass
+
+        return self.meteo
 
     # def parse_donnees_meteo(self) -> dict:
     #     """
@@ -194,7 +195,7 @@ class Bulletin:
         risques = list(
             map(lambda x: x.replace(',', '-'), self.risques.values()))
         return [self.jour_key, self.massif, *risques, f'{self.url}.{self.massif}.{self.jour}.pdf',
-                json.dumps(self.meteo)]
+                *self.meteo.values()]
 
 
 if __name__ == '__main__':
@@ -212,7 +213,6 @@ if __name__ == '__main__':
         bul.parse_donnees_risques()
         bul.parse_donnees_meteo()
         new_content = bul.append_csv()
-
         file_path = f'data/{massif}/hist.csv'
 
         full_content = update_file_content(repo, file_path, branch, [new_content], 'bera')
