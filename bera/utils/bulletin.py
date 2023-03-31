@@ -65,130 +65,56 @@ class Bulletin:
 
     def parse_donnees_meteo(self) -> dict:
         """
-        Parse historical weather : wind, temperature, snow precipitations, isotherm from the BERA xml content
+        Parse historical weather into a formated dict: wind, temperature, snow precipitations, isotherm from the BERA xml content
+        
+        Historical weather data for the last 6 days are available in the <BSH><METEO><ECHEANCE> xml content balises and
+        historical snow precipitations for the last 6 days are available in the <BSH><NEIGEFRAICHE><NEIGE24H> and also
+        in <NEIGEFRAICHE><NEIGE24H> xml content balises.
+
+        For example for the BERA of the 2023-02-28 in CHABLAIS:
+
+        <BSH>
+            <METEO ALTITUDEVENT1="2000" ALTITUDEVENT2="2500">
+              ...
+              <ECHEANCE DATE="2023-02-28T00:00:00" TEMPSSENSIBLE="18" TEMPSSENSIBLEJ="-1" MERNUAGES="1200"
+              PLUIENEIGE="-1" ISO0="500" ISO-10="2900" DD1="S" FF1="10" DD2="SW" FF2="20"/>
+              <ECHEANCE DATE="2023-02-28T06:00:00" TEMPSSENSIBLE="2" TEMPSSENSIBLEJ="2" MERNUAGES="-1"
+              PLUIENEIGE="-1" ISO0="1000" ISO-10="2800" DD1="S" FF1="10" DD2="SW" FF2="20"/>
+              <ECHEANCE DATE="2023-02-28T12:00:00" TEMPSSENSIBLE="2" TEMPSSENSIBLEJ="-1" MERNUAGES="-1"
+              PLUIENEIGE="-1" ISO0="1100" ISO-10="2900" DD1="_" FF1="0" DD2="S" FF2="10"/>
+            </METEO>
+            ...
+            <NEIGEFRAICHE SECTEURSS1="massif" SECTEURSS2="" ALTITUDESS="1800">
+                ...
+              <NEIGE24H DATE="2023-02-27T00:00:00" SS241="0" SS242="-1"/>   --- historical data
+            ...
+            </NEIGEFRAICHE>
+        </BSH>
+
+
+        return:
+        self.meteo: dict
         """
         root = ET.parse(self.path_file).getroot()
         hist_meteo_unformatted = [echeance.attrib for echeance in root[0].find('BSH').iter(tag="ECHEANCE")]
         altitude_vent_1 = root[0].find('BSH').find('METEO').get('ALTITUDEVENT1')
         altitude_vent_2 = root[0].find('BSH').find('METEO').get('ALTITUDEVENT2')
 
-        # Get only weather on the day of the BERA publication at 00:00:00, 06:00:00 and 12:00:00 meteo
+        # Get weather measures for the day of the BERA publication at 00:00:00, 06:00:00 and 12:00:00 meteo
         for unformatted_meteo in hist_meteo_unformatted[-3:]:
             meteo = format_hist_meteo(unformatted_meteo, altitude_vent_1, altitude_vent_2)
             self.meteo.update(meteo)
 
-        return self.meteo
-
-    # def parse_donnees_meteo(self) -> dict:
-    #     """
-    #     Parse historical meteo data from the BERA xml content.
-    #     Historical weather data for the last 6 days are available in the <BSH><METEO><ECHEANCE> xml content balises and
-    #     historical snow precipitations for the last 6 days are available in the <BSH><NEIGEFRAICHE><NEIGE24H> and also
-    #     in <NEIGEFRAICHE><NEIGE24H> xml content balises:
-
-    #     For example for the BERA of the 2023-02-28 in CHABLAIS:
-    #     <NEIGEFRAICHE SECTEURSS1="massif" SECTEURSS2="" ALTITUDESS="1800">
-    #         <NEIGE24H DATE="2023-02-24T00:00:00" SS241="1" SS242="-1"/>   --- historical data
-    #         <NEIGE24H DATE="2023-02-25T00:00:00" SS241="0" SS242="-1"/>   --- historical data
-    #         <NEIGE24H DATE="2023-02-26T00:00:00" SS241="1" SS242="-1"/>   --- historical data
-    #         <NEIGE24H DATE="2023-02-27T00:00:00" SS241="0" SS242="-1"/>   --- historical data
-    #         <NEIGE24H DATE="2023-02-28T00:00:00" SS241="0" SS242="-1"/>   --- previsional data
-    #         <NEIGE24H DATE="2023-03-01T00:00:00" SS241="0" SS242="-1"/>   --- previsional data
-    #         ...
-    #     </NEIGEFRAICHE>
-    #     ...
-    #     <BSH>
-    #         <METEO ALTITUDEVENT1="2000" ALTITUDEVENT2="2500">
-    #           <ECHEANCE DATE="2023-02-22T00:00:00" TEMPSSENSIBLE="1" TEMPSSENSIBLEJ="-1" MERNUAGES="-1" PLUIENEIGE="-1"
-    #           ISO0="2700" ISO-10="4100" DD1="SW" FF1="10" DD2="SW" FF2="20"/>
-    #           <ECHEANCE DATE="2023-02-22T06:00:00" TEMPSSENSIBLE="2" TEMPSSENSIBLEJ="8" MERNUAGES="-1" PLUIENEIGE="-1"
-    #           ISO0="2300" ISO-10="3900" DD1="SW" FF1="20" DD2="SW" FF2="30"/>
-    #           <ECHEANCE DATE="2023-02-22T12:00:00" TEMPSSENSIBLE="8" TEMPSSENSIBLEJ="-1" MERNUAGES="-1"
-    #           PLUIENEIGE="2100" ISO0="2300" ISO-10="3800" DD1="SW" FF1="20" DD2="SW" FF2="30"/>
-    #           ...
-    #           <ECHEANCE DATE="2023-02-28T00:00:00" TEMPSSENSIBLE="18" TEMPSSENSIBLEJ="-1" MERNUAGES="1200"
-    #           PLUIENEIGE="-1" ISO0="500" ISO-10="2900" DD1="S" FF1="10" DD2="SW" FF2="20"/>
-    #           <ECHEANCE DATE="2023-02-28T06:00:00" TEMPSSENSIBLE="2" TEMPSSENSIBLEJ="2" MERNUAGES="-1"
-    #           PLUIENEIGE="-1" ISO0="1000" ISO-10="2800" DD1="S" FF1="10" DD2="SW" FF2="20"/>
-    #           <ECHEANCE DATE="2023-02-28T12:00:00" TEMPSSENSIBLE="2" TEMPSSENSIBLEJ="-1" MERNUAGES="-1"
-    #           PLUIENEIGE="-1" ISO0="1100" ISO-10="2900" DD1="_" FF1="0" DD2="S" FF2="10"/>
-    #         </METEO>
-    #         ...
-    #         <NEIGEFRAICHE SECTEURSS1="massif" SECTEURSS2="" ALTITUDESS="1800">
-    #           <NEIGE24H DATE="2023-02-22T00:00:00" SS241="1" SS242="-1"/>   --- historical data
-    #           <NEIGE24H DATE="2023-02-23T00:00:00" SS241="0" SS242="-1"/>   --- historical data
-    #           <NEIGE24H DATE="2023-02-24T00:00:00" SS241="1" SS242="-1"/>   --- historical data
-    #           <NEIGE24H DATE="2023-02-25T00:00:00" SS241="0" SS242="-1"/>   --- historical data
-    #           <NEIGE24H DATE="2023-02-26T00:00:00" SS241="1" SS242="-1"/>   --- historical data
-    #           <NEIGE24H DATE="2023-02-27T00:00:00" SS241="0" SS242="-1"/>   --- historical data
-    #         ...
-    #         </NEIGEFRAICHE>
-    #     </BSH>
-
-    #     This method uses this xml content to provide a formatted dict of meteo data for the day of the BERA.
-
-    #     return:
-    #     self.meteo: dict
-    #     """
-
-    #     root = ET.parse(self.path_file).getroot()
-    #     hist_meteo_unformatted = [echeance.attrib for echeance in root[0].find('BSH').iter(tag="ECHEANCE")]
-    #     altitude_vent_1 = root[0].find('BSH').find('METEO').get('ALTITUDEVENT1')
-    #     altitude_vent_2 = root[0].find('BSH').find('METEO').get('ALTITUDEVENT2')
-    #     # Get only weather on the day of the BERA publication at 00:00:00, 06:00:00 and 12:00:00 meteo
-    #     for unformatted_meteo in hist_meteo_unformatted[-3:]:
-    #         meteo = format_hist_meteo(unformatted_meteo, altitude_vent_1, altitude_vent_2)
-    #         self.meteo.update(meteo)
-
-    #     # Get snow precipitations data for the day of BERA publication
-    #     altitude_neige_fraiche_jour_j = root[0].find('NEIGEFRAICHE').get('ALTITUDESS')
-    #     unformatted_neige_fraiche_jour_j = [neige_fraiche.attrib for neige_fraiche in
-    #                                         root[0].find('NEIGEFRAICHE').iter(tag="NEIGE24H")][-2]
-    #     neige_fraiche_jour_j = format_neige_fraiche(unformatted_neige_fraiche_jour_j, altitude_neige_fraiche_jour_j)
-    #     self.meteo.update(neige_fraiche_jour_j)
-
-    #     # Get historical snow precipitations
-    #     hist_neige_fraiche_unformatted = [neige_fraiche.attrib for neige_fraiche in
-    #                                       root[0].find('BSH').iter(tag="NEIGE24H")]
-    #     altitude_neige_fraiche = root[0].find('BSH').find('NEIGEFRAICHE').get('ALTITUDESS')
-    #     unformatted_neige_fraiche = hist_neige_fraiche_unformatted[-1]
-    #     neige_fraiche = format_neige_fraiche(unformatted_neige_fraiche, altitude_neige_fraiche)
-    #     self.meteo.update(neige_fraiche)
-    #     return self.meteo
-
-    def parse_donnees_neige_fraiche(self) -> dict:
-        """
-        Parse last snow precipitations data from the BERA xml content.
-        Historical snow precipitations data for the last 6 days are available in the <BSH><NEIGEFRAICHE><NEIGE24H> xml
-        content balises: for example for the BERA of the 2023-03-17 in BELLEDONNE:
-        <BSH>
-            <NEIGEFRAICHE SECTEURSS1="massif" SECTEURSS2="" ALTITUDESS="1800">
-              <NEIGE24H DATE="2023-02-22T00:00:00" SS241="1" SS242="-1"/>
-              <NEIGE24H DATE="2023-02-23T00:00:00" SS241="0" SS242="-1"/>
-              <NEIGE24H DATE="2023-02-24T00:00:00" SS241="1" SS242="-1"/>
-              <NEIGE24H DATE="2023-02-25T00:00:00" SS241="0" SS242="-1"/>
-              <NEIGE24H DATE="2023-02-26T00:00:00" SS241="1" SS242="-1"/>
-              <NEIGE24H DATE="2023-02-27T00:00:00" SS241="0" SS242="-1"/>
-            ...
-            </NEIGEFRAICHE>
-        </BSH>
-
-        This method uses this xml content to provide a formatted dict of meteo data for the day before the date of the
-        BERA.
-
-        return:
-        self.neige_fraiche: dict
-        """
-
-        root = ET.parse(self.path_file).getroot()
+        # Get historical snow precipitations measures for the day before publication 
         hist_neige_fraiche_unformatted = [neige_fraiche.attrib for neige_fraiche in
                                           root[0].find('BSH').iter(tag="NEIGE24H")]
         altitude_neige_fraiche = root[0].find('BSH').find('NEIGEFRAICHE').get('ALTITUDESS')
-
-        # Get only the day before the date of the BERA snow falls data
         unformatted_neige_fraiche = hist_neige_fraiche_unformatted[-1]
-        self.neige_fraiche = format_neige_fraiche(unformatted_neige_fraiche, altitude_neige_fraiche)
-        return self.neige_fraiche
+        neige_fraiche = format_neige_fraiche(unformatted_neige_fraiche, altitude_neige_fraiche)
+        self.meteo.update(neige_fraiche)
+
+        return self.meteo
+
 
     def append_csv(self):
         # Removing comma as we will save the file as a csv

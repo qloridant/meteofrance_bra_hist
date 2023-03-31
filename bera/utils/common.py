@@ -19,7 +19,8 @@ PARAMS = ['date', 'massif', 'risque1', 'evolurisque1', 'loc1', 'altitude', 'risq
           '06_vitesse_vent_altitude_1', '06_direction_vent_altitude_2', '06_vitesse_vent_altitude_2', '12_temps',
           '12_mer_de_nuages', '12_limite_pluie_neige', '12_isotherme_0', '12_isotherme_moins_10', '12_altitude_vent_1',
           '12_altitude_vent_2', '12_direction_vent_altitude_1', '12_vitesse_vent_altitude_1',
-          '12_direction_vent_altitude_2', '12_vitesse_vent_altitude_2']
+          '12_direction_vent_altitude_2', '12_vitesse_vent_altitude_2', 'precipitation_neige_veille_altitude', 
+          'precipitation_neige_veille_epaisseur']
 
 # http://www.meteo.fr/guide/guide_pictos.html
 # https://meteofrance.com/ > Légende au pied de la page
@@ -113,11 +114,8 @@ def format_neige_fraiche(unformatted_neige_fraiche: dict, altitude_neige_fraiche
     formatted_neige_frajche: dict: formatted dict representing historical snow falls
     """
     formatted_neige_fraiche = {
-        f"NEIGE FRAICHE LE {unformatted_neige_fraiche['DATE']}": {
-            'ALTITUDE': altitude_neige_fraiche,
-            'EPAISSEUR': 'Pluie' if unformatted_neige_fraiche['SS241'] == '-2' else (
-                ' - ' if unformatted_neige_fraiche['SS241'] == '-1' else unformatted_neige_fraiche['SS241']
-            ),
-        }
+        "precipitation_neige_veille_altitude": altitude_neige_fraiche,
+        "precipitation_neige_veille_epaisseur": 'Pluie' if unformatted_neige_fraiche['SS241'] == '-2' else (
+                ' - ' if unformatted_neige_fraiche['SS241'] == '-1' else unformatted_neige_fraiche['SS241'])
     }
     return formatted_neige_fraiche
