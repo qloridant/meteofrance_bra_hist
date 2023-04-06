@@ -6,6 +6,13 @@ mais uniquement au format pdf et difficiles à traiter pour des réutilisations.
 
 Les données extraites des BERAs sont enregistrées et disponibles dans les fichiers `data/<MASSIF>/hist.csv` de ce projet.
 
+À ce jour les données extraites des BERAs renseignées dans les fichiers `data/<MASSIF>/hist.csv` reprennent par massif 
+et jour de publication du BERA :
+  - le niveau de risque et son évolution en fonction de l'altitude ou éventuellement au cours de la journée
+  - l'url de téléchargement du BERA au format pdf
+  - les données météo enregistrées et mesurées le jour de la publication du BERA
+  - la hauteur de neige fraiche mesurée la veille du jour de la publication du BERA
+
 Objectifs de réutilisations :
   - Evaluation du risque de la partie supérieure du manteau neigeux (préparation sorties)
   - Outil pédagogique afin d'étudier les accidents ayant eu lieu
@@ -29,24 +36,61 @@ Clé Primaire :
 
 |Nom|Titre|Type|Description|Exemple|Propriétés|
 |-|-|-|-|-|-|
-|date|Date d'émission du bulletin|string|Date d'émission. Le bulletin est valable pour le jour suivant. En général, les bulletins sont émis vers 16H|2022-04-17|Valeur obligatoire|
-|massif|Massif|string|Massif concerné par l'estimation. La liste des massifs est connue. Le champ doit faire parti de cette liste|THABOR|Valeur obligatoire|
-|risque1|Risque 1|int|Risque estimé pour le massif à toutes les altitudes ou éventuellement pour les altitudes les plus basses (précisé par le champ altitude). Le risque peut pendre une valeur de 0 à 5. Plus la valeur est importante, plus le risque est important. Une valeur à -1 indique que le risque n'a pas pu être évalué. |1|Valeur obligatoire|
-|evolurisque1| Evolution Risque 1|string|Evolution du risque pour  au cours de la journée pour le risque 1||Valeur optionnelle|
-|loc1|Localisation 1|int|Altitude à laquelle nous passons du rique 1 au risque 2|2200 |
-|altitude|Altitude|string|Altitude à laquelle nous passons du rique 1 au risque 2|2200|Valeur optionnelle|
-|risque2|Risque 2|int| Risque estimé pour le massif pour les altitudes les plus hautes (précisé par le champ altitude). Le risque peut pendre une valeur de 0 à 5. Plus la valeur est importante, plus le risque est important. Une valeur à -1 indique que le risque n'a pas pu être évalué.|1|Valeur optionnelle (sauf si le champ altitude n'est pas vide)|
-|evolurisque2|Evolution Risque 2|int| Evolution du rique au cours de la journée pour le risque 2 |2|Valeur optionnelle (sauf si le champ altitude n'est pas vide)|
-|loc2|Localisation 2|string|Localisation 2| Altitude à laquelle nous passons du rique 1 au risque 2 | Valeur optionnelle (sauf si le champ altitude n'est pas vide)|
+|date|Date d'émission du bulletin|string|Date d'émission. Le bulletin est valable pour le jour suivant. En général, les bulletins sont émis vers 16H|2023-04-05|Valeur obligatoire|
+|massif|Massif|string|Massif concerné par l'estimation. La liste des massifs est connue. Le champ doit faire parti de cette liste|CHABLAIS|Valeur obligatoire|
+|risque1|Risque 1|int|Niveau de risque estimé pour le massif à toutes les altitudes ou éventuellement pour les altitudes les plus basses (précisé par le champ altitude). Le risque peut pendre une valeur de 0 à 5. Plus la valeur est importante, plus le risque est important. Une valeur à -1 indique que le risque n'a pas pu être évalué. |2|Valeur obligatoire|
+|evolurisque1| Evolution Risque 1|string|Evolution du risque au cours de la journée pour toutes les altitudes ou éventuellement pour les altitudes les plus basses (précisé par le champ altitude)||Valeur optionnelle|
+|loc1|Localisation 1|int|Altitudes pour lesquelles le niveau de risque identifié par le champs risque1 pour le champs risque1 est observé|<2400|Valeur optionnelle|
+|altitude|Altitude|string|Altitude à partir de laquelle le niveau de risque évolue (du niveau de risque identifié par le champs risque1 au niveau de risque identifié par le champs risque2)|2400|Valeur optionnelle|
+|risque2|Risque 2|int|Niveau de risque estimé pour le massif pour les altitudes les plus hautes (précisé par le champ altitude). Le risque peut pendre une valeur de 0 à 5. Plus la valeur est importante, plus le risque est important. Une valeur à -1 indique que le risque n'a pas pu être évalué.|2|Valeur optionnelle (sauf si le champ altitude n'est pas vide)|
+|evolurisque2|Evolution Risque 2|int|Evolution du risque au cours de la journée pour les altitudes les plus hautes||Valeur optionnelle|
+|loc2|Localisation 2|string|Altitude à laquelle nous passons du risque 1 au risque 2|>2400|Valeur optionnelle (sauf si le champ altitude n'est pas vide)|
 |risque_maxi|Risque Maximum|string|Risque estimé maximum pour le massif| 2 | Valeur obligatoire|
-|commentaire|Commentaire|string|Commentaire fourni par météo france (déclanchements spontanés, déclanchements par skieur)| Au dessus de 2200m : Risque faible évoluant en Risque limité. En dessous : Risque faible | Valeur optionnelle|
+|commentaire|Commentaire|string|Commentaire fourni par météo france (déclenchements spontanés, déclenchements par skieur)| Au-dessus de 2400m : Risque faible évoluant en Risque limité. En dessous : Risque faible | Valeur optionnelle|
 |url_telechargement|Url de téléchargement|string|Url de téléchargement du BERA en pdf|https://donneespubliques.meteofrance.fr/donnees_libres/Pdf/BRA/BRA.ANDORRE.20230327133137.pdf|Valeur optionnelle|
-Illustration de l'exemple :
+|00_temps|Météo à minuit|string|Météo (temps) enregistrée le jour de la publication du BERA à 00h00|Peu nuageux|Valeur optionnelle|
+|00_mer_de_nuages|Présence d'une mer de nuages à minuit|string ("Oui" ou "Non")|Présence d'une mer de nuages enregistrée le jour de la publication du BERA à 00h00|Non|Valeur optionnelle|
+|00_limite_pluie_neige|Altitude de la limite pluie-neige à minuit|string|Altitude (en mètre) de la limite pluie-neige mesurée le jour de la publication du BERA à 00h00|Sans objet|Valeur optionnelle|
+|00_isotherme_0|Isotherme 0°C à minuit|string|Isotherme 0°C (en mètre) mesuré le jour de la publication du BERA à 00h00|1400|Valeur optionnelle|
+|00_isotherme_moins_10|Isotherme -10°C à minuit|string|Isotherme -10°C (en mètre) mesuré le jour de la publication du BERA à 00h00|3000|Valeur optionnelle|
+|00_altitude_vent_1|Altitude du point bas de mesure de vent à minuit|string|Altitude (en mètre) utilisée pour le point de mesure le plus bas du vent le jour de la publication du BERA à 00h00|2000|Valeur optionnelle|
+|00_altitude_vent_2|Altitude du point haut de mesure de vent à minuit|string|Altitude (en mètre) utilisée pour le point de mesure le plus haut du vent le jour de la publication du BERA à 00h00|2500|Valeur optionnelle|
+|00_direction_vent_altitude_1|Direction du vent au point bas à minuit|string|Direction du vent mesurée au point de mesure bas le jour de la publication du BERA à 00h00|NE|Valeur optionnelle|
+|00_vitesse_vent_altitude_1|Vitesse du vent au point bas à minuit|string|Vitesse du vent (en km/h) mesurée au point de mesure bas le jour de la publication du BERA à 00h00|10|Valeur optionnelle|
+|00_direction_vent_altitude_2|Direction du vent au point haut à minuit|string|Direction du vent mesurée au point de mesure haut le jour de la publication du BERA à 00h00|NE|Valeur optionnelle|
+|00_vitesse_vent_altitude_2|Vitesse du vent au point haut à minuit|string|Vitesse du vent (en km/h) mesurée au point de mesure haut le jour de la publication du BERA à 00h00|20|Valeur optionnelle|
+|06_temps|Météo à 6h|string|Météo (temps) enregistrée le jour de la publication du BERA à 06h00|Beau temps|Valeur optionnelle|
+|06_mer_de_nuages|Présence d'une mer de nuages à 6h|string ("Oui" ou "Non")|Présence d'une mer de nuages enregistrée le jour de la publication du BERA à 06h00|Non|Valeur optionnelle|
+|06_limite_pluie_neige|Altitude de la limite pluie-neige à 6h|string|Altitude (en mètre) de la limite pluie-neige mesurée le jour de la publication du BERA à 06h00|Sans objet|Valeur optionnelle|
+|06_isotherme_0|Isotherme 0°C à 6h|string|Isotherme 0°C (en mètre) mesuré le jour de la publication du BERA à 06h00|1300|Valeur optionnelle|
+|06_isotherme_moins_10|Isotherme -10°C à 6h|string|Isotherme -10°C (en mètre) mesuré le jour de la publication du BERA à 06h00|2900|Valeur optionnelle|
+|06_altitude_vent_1|Altitude du point bas de mesure de vent à 6h|string|Altitude (en mètre) utilisée pour le point de mesure le plus bas du vent le jour de la publication du BERA à 06h00|2000|Valeur optionnelle|
+|06_altitude_vent_2|Altitude du point haut de mesure de vent à 6h|string|Altitude (en mètre) utilisée pour le point de mesure le plus haut du vent le jour de la publication du BERA à 06h00|2500|Valeur optionnelle|
+|06_direction_vent_altitude_1|Direction du vent au point bas à 6h|string|Direction du vent mesurée au point de mesure bas le jour de la publication du BERA à 06h00|NE|Valeur optionnelle|
+|06_vitesse_vent_altitude_1|Vitesse du vent au point bas à 6h|string|Vitesse du vent (en km/h) mesurée au point de mesure bas le jour de la publication du BERA à 06h00|10|Valeur optionnelle|
+|06_direction_vent_altitude_2|Direction du vent au point haut à 6h|string|Direction du vent mesurée au point de mesure haut le jour de la publication du BERA à 06h00|NE|Valeur optionnelle|
+|06_vitesse_vent_altitude_2|Vitesse du vent au point haut à 6h|string|Vitesse du vent (en km/h) mesurée au point de mesure haut le jour de la publication du BERA à 06h00|20|Valeur optionnelle|
+|12_temps|Météo à midi|string|Météo (temps) enregistrée le jour de la publication du BERA à 12h00|Beau temps|Valeur optionnelle|
+|12_mer_de_nuages|Présence d'une mer de nuages à midi|string ("Oui" ou "Non")|Présence d'une mer de nuages enregistrée le jour de la publication du BERA à 12h00|Non|Valeur optionnelle|
+|12_limite_pluie_neige|Altitude de la limite pluie-neige à midi|string|Altitude (en mètre) de la limite pluie-neige mesurée le jour de la publication du BERA à 12h00|Sans objet|Valeur optionnelle|
+|12_isotherme_0|Isotherme 0°C à midi|string|Isotherme 0°C (en mètre) mesuré le jour de la publication du BERA à 12h00|1800|Valeur optionnelle|
+|12_isotherme_moins_10|Isotherme -10°C à midi|string|Isotherme -10°C (en mètre) mesuré le jour de la publication du BERA à 12h00|2800|Valeur optionnelle|
+|12_altitude_vent_1|Altitude du point bas de mesure de vent à midi|string|Altitude (en mètre) utilisée pour le point de mesure le plus bas du vent le jour de la publication du BERA à 12h00|2000|Valeur optionnelle|
+|12_altitude_vent_2|Altitude du point haut de mesure de vent à midi|string|Altitude (en mètre) utilisée pour le point de mesure le plus haut du vent le jour de la publication du BERA à 12h00|2500|Valeur optionnelle|
+|12_direction_vent_altitude_1|Direction du vent au point bas à midi|string|Direction du vent mesurée au point de mesure bas le jour de la publication du BERA à 12h00|N|Valeur optionnelle|
+|12_vitesse_vent_altitude_1|Vitesse du vent au point bas à midi|string|Vitesse du vent (en km/h) mesurée au point de mesure bas le jour de la publication du BERA à 12h00|10|Valeur optionnelle|
+|12_direction_vent_altitude_2|Direction du vent au point haut à midi|string|Direction du vent mesurée au point de mesure haut le jour de la publication du BERA à 12h00|N|Valeur optionnelle|
+|12_vitesse_vent_altitude_2|Vitesse du vent au point haut à midi|string|Vitesse du vent (en km/h) mesurée au point de mesure haut le jour de la publication du BERA à 12h00|10|Valeur optionnelle|
+|precipitation_neige_veille_altitude|Altitude du poit de mesure de neige fraiche la veille|string|Altitude (en m) du point de mesure utilisé pour mesure l'épaisseur de neige fraiche tombée la veille du jour de la publication du BERA|1800|Valeur optionnelle|
+|precipitation_neige_veille_epaisseur|Neige fraiche la veille|string|Epaisseur (en cm) de neige fraiche tombée la veille du jour de la publication du BERA|0|Valeur optionnelle|
 
-![ex_thabor](https://user-images.githubusercontent.com/14170613/169779005-bae4fa10-16ad-4457-895b-7dbff6494dbe.png)
+Illustration de l'[exemple de BERA pour le massif du CHABLAIS publié le 05/04/2023](https://donneespubliques.meteofrance.fr/donnees_libres/Pdf/BRA/BRA.CHABLAIS.20230405135902.pdf):
 
+![example_chablais_risque](examples/Estimation_risque_chablais_20230405.png)
 
-🔴 Cas particulier 🔴 :
+![example_chablais_nivo_meteo](examples/Nivo_meteo_chablais_20230405.png)
+
+🔴 Cas particulier pour l'évolution du risque 🔴 :
 
 ![cas_particulier_1](https://user-images.githubusercontent.com/14170613/169779307-1ec4ae30-6036-4a2c-8b2a-81bcfdc4e608.png)
 
@@ -71,7 +115,7 @@ Ces différents scripts sont détaillés dans chacun des fichiers de scripts.
 
 De manière générale, ces scripts n'ont pas vocation à être lancés manuellement.
 
-Toutefois, dans un contexte de développement, il peut être nécessaire des les utiliser.
+Toutefois, dans un contexte de développement, il peut être nécessaire de les utiliser.
 
 Pour se faire :
 1. Exporter les variables d'environnement nécessaires  à l'exécution des scripts
