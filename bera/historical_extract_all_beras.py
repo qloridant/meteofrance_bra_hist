@@ -1,11 +1,13 @@
 """
-This script aims to get all the datetime of BERAs' publication on all the available historic period for all mountain
-chains, and to save them into all the data/<massif>/urls_list.txt files in the 'master' branch of the GitHub repository
-https://github.com/qloridant/meteofrance_bra_hist.
+This script aims to extract information from BERAs and save these datas into hist.csv files for all mountain chain,
+for a given period, such as:
+- risk and its evolution depending on the altitude
+- weather measures (weather, isotherms, wind, snow precipitation)
+- url of downloading the BERA in pdf format.
 
 This script was useful to get historical datas from old BERAs published before the beginning of this project.
 
-Now this script could be useful if some other information present in the BERAs (like meteo, weather, snow
+Now this script could be useful if some other information present in the BERAs (like weather, snow
 precipitations, ...) are added to the data we want to save in this project, to get all historical new data.
 
 This script:

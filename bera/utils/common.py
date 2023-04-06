@@ -20,7 +20,7 @@ PARAMS = ['date', 'massif', 'risque1', 'evolurisque1', 'loc1', 'altitude', 'risq
           '06_vitesse_vent_altitude_1', '06_direction_vent_altitude_2', '06_vitesse_vent_altitude_2', '12_temps',
           '12_mer_de_nuages', '12_limite_pluie_neige', '12_isotherme_0', '12_isotherme_moins_10', '12_altitude_vent_1',
           '12_altitude_vent_2', '12_direction_vent_altitude_1', '12_vitesse_vent_altitude_1',
-          '12_direction_vent_altitude_2', '12_vitesse_vent_altitude_2', 'precipitation_neige_veille_altitude', 
+          '12_direction_vent_altitude_2', '12_vitesse_vent_altitude_2', 'precipitation_neige_veille_altitude',
           'precipitation_neige_veille_epaisseur']
 
 # http://www.meteo.fr/guide/guide_pictos.html
@@ -79,9 +79,9 @@ def format_hist_meteo(unformatted_meteo: dict, altitude1: str, altitude2: str) -
     and return this new dict
 
     params:
-    unformatted_meteo: dict: unformatted dict representing historical wheater data
-    altitude1: str: altidude 1 used in wheater data for wind data
-    altitude2: str: altidude 2 used in wheater data for wind data
+    unformatted_meteo: dict: unformatted dict representing historical weather data
+    altitude1: str: altidude 1 used in weather data for wind data
+    altitude2: str: altidude 2 used in weather data for wind data
 
     return:
     formatted_meteo: dict: formatted dict representing meteo historical data
@@ -92,14 +92,23 @@ def format_hist_meteo(unformatted_meteo: dict, altitude1: str, altitude2: str) -
         f'{hour}_mer_de_nuages': 'Non' if unformatted_meteo['MERNUAGES'] == '-1' else unformatted_meteo['MERNUAGES'],
         f'{hour}_limite_pluie_neige': 'Sans objet' if unformatted_meteo['PLUIENEIGE'] == '-1' else unformatted_meteo[
             'PLUIENEIGE'],
-        f'{hour}_isotherme_0': unformatted_meteo['ISO0'],
-        f'{hour}_isotherme_moins_10': unformatted_meteo['ISO-10'],
-        f'{hour}_altitude_vent_1': altitude1,
-        f'{hour}_altitude_vent_2': altitude2,
-        f'{hour}_direction_vent_altitude_1': unformatted_meteo['DD1'],
-        f'{hour}_vitesse_vent_altitude_1': unformatted_meteo['FF1'],
-        f'{hour}_direction_vent_altitude_2': unformatted_meteo['DD2'],
+        f'{hour}_isotherme_0': unformatted_meteo['ISO0'] if unformatted_meteo['ISO0'] != '-1'
+        else 'Absence de données',
+        f'{hour}_isotherme_moins_10': unformatted_meteo['ISO-10'] if unformatted_meteo['ISO-10'] != '-1'
+        else 'Absence de données',
+        f'{hour}_altitude_vent_1': altitude1 if altitude1 != '-1' else 'Absence de données',
+        f'{hour}_altitude_vent_2': altitude2 if (altitude2 != '9999' and altitude2 != '-1')
+        else ('Sans objet' if altitude2 == '9999' else 'Absence de données'),
+        f'{hour}_direction_vent_altitude_1': unformatted_meteo['DD1']
+        if (unformatted_meteo['DD1'] != '' and unformatted_meteo['DD1'] != '-1') else 'Absence de données',
+        f'{hour}_vitesse_vent_altitude_1': unformatted_meteo['FF1'] if unformatted_meteo['FF1'] != '-1'
+        else 'Absence de données',
+        f'{hour}_direction_vent_altitude_2': unformatted_meteo['DD2']
+        if (altitude2 != '9999' and unformatted_meteo['DD2'] != '') else ('Sans objet' if altitude2 == '9999'
+                                                                          else 'Absence de données'),
         f'{hour}_vitesse_vent_altitude_2': unformatted_meteo['FF2']
+        if (altitude2 != '9999' and unformatted_meteo['FF2'] != '-1') else ('Sans objet' if altitude2 == '9999'
+                                                                            else 'Absence de données')
     }
     return formatted_meteo
 
@@ -121,8 +130,9 @@ def format_neige_fraiche(unformatted_neige_fraiche: dict, altitude_neige_fraiche
     formatted_neige_frajche: dict: formatted dict representing historical snow falls
     """
     formatted_neige_fraiche = {
-        "precipitation_neige_veille_altitude": altitude_neige_fraiche,
+        "precipitation_neige_veille_altitude": altitude_neige_fraiche if altitude_neige_fraiche != '-1' else
+        'Absence de données',
         "precipitation_neige_veille_epaisseur": 'Pluie' if unformatted_neige_fraiche['SS241'] == '-2' else (
-                ' - ' if unformatted_neige_fraiche['SS241'] == '-1' else unformatted_neige_fraiche['SS241'])
+            'Absence de données' if unformatted_neige_fraiche['SS241'] == '-1' else unformatted_neige_fraiche['SS241'])
     }
     return formatted_neige_fraiche
