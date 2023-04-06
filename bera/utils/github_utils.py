@@ -60,9 +60,6 @@ def merge_bera_content(actual_content: str, new_content: [[]]) -> str:
 
     # Define header
     df.columns = df.iloc[0]
-    # Remove useless spaces in column names that were historically in remote files hist.csv data
-    # TODO: delete this code line when all the column names will be cleaned
-    df.columns = df.columns.str.replace(' ', '')
 
     # Add nonexistent columns in remote file
     # Useful for adding new params in hist.csv data files
