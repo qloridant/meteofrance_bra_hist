@@ -53,8 +53,8 @@ Clé Primaire :
 |00_limite_pluie_neige|Altitude de la limite pluie-neige à minuit|string|Altitude (en mètre) de la limite pluie-neige mesurée le jour de la publication du BERA à 00h00|Sans objet|Valeur optionnelle|
 |00_isotherme_0|Isotherme 0°C à minuit|string|Isotherme 0°C (en mètre) mesuré le jour de la publication du BERA à 00h00|1400|Valeur optionnelle|
 |00_isotherme_moins_10|Isotherme -10°C à minuit|string|Isotherme -10°C (en mètre) mesuré le jour de la publication du BERA à 00h00|3000|Valeur optionnelle|
-|00_altitude_vent_1|Altitude du point bas de mesure de vent à minuit|string|Altitude (en mètre) utilisée pour le point de mesure le plus bas du vent le jour de la publication du BERA à 00h00|2000|Valeur optionnelle|
-|00_altitude_vent_2|Altitude du point haut de mesure de vent à minuit|string|Altitude (en mètre) utilisée pour le point de mesure le plus haut du vent le jour de la publication du BERA à 00h00|2500|Valeur optionnelle|
+|00_altitude_vent_1|Altitude du premier point de mesure de vent à minuit|string|Altitude (en mètre) utilisée pour le premier point de mesure le plus bas du vent le jour de la publication du BERA à 00h00|2000|Valeur optionnelle|
+|00_altitude_vent_2|Altitude de l'éventuel deuxième point haut de mesure de vent à minuit|string|Altitude (en mètre) utilisée pour l'éventuel deuxième point de mesure le plus haut du vent le jour de la publication du BERA à 00h00|2500|Valeur optionnelle|
 |00_direction_vent_altitude_1|Direction du vent au point bas à minuit|string|Direction du vent mesurée au point de mesure bas le jour de la publication du BERA à 00h00|NE|Valeur optionnelle|
 |00_vitesse_vent_altitude_1|Vitesse du vent au point bas à minuit|string|Vitesse du vent (en km/h) mesurée au point de mesure bas le jour de la publication du BERA à 00h00|10|Valeur optionnelle|
 |00_direction_vent_altitude_2|Direction du vent au point haut à minuit|string|Direction du vent mesurée au point de mesure haut le jour de la publication du BERA à 00h00|NE|Valeur optionnelle|
