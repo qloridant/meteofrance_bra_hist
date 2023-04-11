@@ -73,17 +73,20 @@ def format_hist_meteo(unformatted_meteo: dict, altitude1: str, altitude2: str) -
     'ISO0': '1500', 'ISO-10': '3200', 'DD1': 'W', 'FF1': '20', 'DD2': 'NW', 'FF2': '40'},
 
     create a new dict in this format:
-    {'DATE': '2023-02-01T12:00:00', 'METEO': 'Beau temps', 'MER DE NUAGES': 'Non', 'LIMITE PLUIE NEIGE': 'Sans objet',
-    'ISO-0': '1500', 'ISO-10': '3200', 'DIRECTION VENT ALTITUDE 1': 'W', 'VITESSE VENT ALTITUDE 1': '20',
-    'DIRECTION VENT ALTITUDE 2': 'NW', 'VITESSE VENT ALTITUDE 2': '40'}
+    {'12_temps': 'Beau temps', '12_mer_de_nuages': 'Non', '12_limite_pluie_neige': 'Sans objet',
+     '12_isotherme_0': '1500', '12_isotherme_moins_10': '3200', '12_altitude_vent_1': '2000',
+     '12_altitude_vent_2': '2500', '12_direction_vent_altitude_1': 'W', '12_vitesse_vent_altitude_1': '20',
+        '12_direction_vent_altitude_2': 'NW', '12_vitesse_vent_altitude_2': '40'}
     and return this new dict
 
-    params:
+    Parameters
+    ----------
     unformatted_meteo: dict: unformatted dict representing historical weather data
     altitude1: str: altidude 1 used in weather data for wind data
     altitude2: str: altidude 2 used in weather data for wind data
 
-    return:
+    Returns
+    -------
     formatted_meteo: dict: formatted dict representing meteo historical data
     """
     hour = unformatted_meteo['DATE'][-8:-6]
@@ -122,13 +125,16 @@ def format_neige_fraiche(unformatted_neige_fraiche: dict, altitude_neige_fraiche
     {'DATE': '2023-02-01T12:00:00', 'NEIGE FRAICHE A ALTTITUDE {altitude_neige_fraiche} (EN CM)': '0'}
     and return this new dict
 
-    params:
+    Parameters
+    ----------
     unformatted_neige_fraiche: dict: unformatted dict representing meteo prevision
     altitude_neige_fraiche: str: altidude used in historical snow falls data
 
-    return:
-    formatted_neige_frajche: dict: formatted dict representing historical snow falls
+    Returns
+    -------
+    formatted_neige_fraiche: dict: formatted dict representing historical snow falls
     """
+
     formatted_neige_fraiche = {
         "precipitation_neige_veille_altitude": altitude_neige_fraiche if altitude_neige_fraiche != '-1' else
         'Absence de données',
@@ -136,3 +142,43 @@ def format_neige_fraiche(unformatted_neige_fraiche: dict, altitude_neige_fraiche
             'Absence de données' if unformatted_neige_fraiche['SS241'] == '-1' else unformatted_neige_fraiche['SS241'])
     }
     return formatted_neige_fraiche
+
+
+def construct_unavailable_meteo_dict() -> {}:
+    """
+    For some BERA, historial weather information is not available. In that case, the data file hist.csv will be
+    completed with "Absence de données" information for all parameters in hist.csv file data relative to weather:
+    (00_temps, 00_mer_de_nuages, 00_limite_pluie_neige, 00_isotherme_0, 00_isotherme_moins_10, 00_altitude_vent_1,
+    00_altitude_vent_2, 00_direction_vent_altitude_1, 00_vitesse_vent_altitude_1, 00_direction_vent_altitude_2,
+    00_vitesse_vent_altitude_2, 06_temps, 06_mer_de_nuages, 06_limite_pluie_neige, 06_isotherme_0,
+    06_isotherme_moins_10, 06_altitude_vent_1, 06_altitude_vent_2, 06_direction_vent_altitude_1,
+    06_vitesse_vent_altitude_1, 06_direction_vent_altitude_2, 06_vitesse_vent_altitude_2, 12_temps, 12_mer_de_nuages,
+    12_limite_pluie_neige, 12_isotherme_0, 12_isotherme_moins_10, 12_altitude_vent_1, 12_altitude_vent_2,
+    12_direction_vent_altitude_1, 12_vitesse_vent_altitude_1, 12_direction_vent_altitude_2, 12_vitesse_vent_altitude_2)
+
+    Returns
+    -------
+    unavailable_meteo: dict: dict completed with keys corresponding to all parameters relative to weather, and values
+    fixed at "Absence de données"
+    """
+    unavailable_meteo = {}
+    for param in PARAMS[12:-2]:
+        unavailable_meteo[param] = "Absence de données"
+    return unavailable_meteo
+
+
+def construct_unavailable_neige_fraiche_dict() -> {}:
+    """
+    For some BERA, historial snow precipitation information is not available. In that case, the data file hist.csv will
+    be completed with "Absence de données" information for all parameters in hist.csv file data relative to snow
+    precipitation: (precipitation_neige_veille_altitude, precipitation_neige_veille_epaisseur)
+
+    Returns
+    -------
+    unavailable_neige_fraiche: dict: dict completed with keys corresponding to all parameters relative to snow
+    precipitation, and values fixed at "Absence de données"
+    """
+    unavailable_neige_fraiche = {}
+    for param in PARAMS[-2:]:
+        unavailable_neige_fraiche[param] = "Absence de données"
+    return unavailable_neige_fraiche

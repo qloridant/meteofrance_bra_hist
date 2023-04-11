@@ -29,7 +29,8 @@ import sys
 import requests
 import xml.etree.ElementTree as ET
 
-from bera.utils.common import MASSIFS, format_hist_meteo, format_neige_fraiche
+from bera.utils.common import MASSIFS, format_hist_meteo, format_neige_fraiche, construct_unavailable_meteo_dict, \
+    construct_unavailable_neige_fraiche_dict
 from bera.utils.github_utils import init_repo, update_file_content
 
 logger = logging.getLogger(__name__)
@@ -175,22 +176,44 @@ class Bulletin:
         self.meteo: dict
         """
         root = ET.parse(self.path_file).getroot()
-        hist_meteo_unformatted = [echeance.attrib for echeance in root[0].find('BSH').iter(tag="ECHEANCE")]
-        altitude_vent_1 = root[0].find('BSH').find('METEO').get('ALTITUDEVENT1')
-        altitude_vent_2 = root[0].find('BSH').find('METEO').get('ALTITUDEVENT2')
+        try:
+            if not root[0].find('BSH') is None:
+                hist_meteo_unformatted = [echeance.attrib for echeance in root[0].find('BSH').iter(tag="ECHEANCE")]
+                altitude_vent_1 = root[0].find('BSH').find('METEO').get('ALTITUDEVENT1')
+                altitude_vent_2 = root[0].find('BSH').find('METEO').get('ALTITUDEVENT2')
+            else:
+                hist_meteo_unformatted = [echeance.attrib for echeance in root.find('BSH').iter(tag="ECHEANCE")]
+                altitude_vent_1 = root.find('BSH').find('METEO').get('ALTITUDEVENT1')
+                altitude_vent_2 = root.find('BSH').find('METEO').get('ALTITUDEVENT2')
 
-        # Get weather measures for the day of the BERA publication at 00:00:00, 06:00:00 and 12:00:00 meteo
-        for unformatted_meteo in hist_meteo_unformatted[-3:]:
-            meteo = format_hist_meteo(unformatted_meteo, altitude_vent_1, altitude_vent_2)
-            self.meteo.update(meteo)
+            # Get weather measures for the day of the BERA publication at 00:00:00, 06:00:00 and 12:00:00 meteo
+            for unformatted_meteo in hist_meteo_unformatted[-3:]:
+                meteo = format_hist_meteo(unformatted_meteo, altitude_vent_1, altitude_vent_2)
+                self.meteo.update(meteo)
 
-        # Get historical snow precipitations measures for the day before publication 
-        hist_neige_fraiche_unformatted = [neige_fraiche.attrib for neige_fraiche in
-                                          root[0].find('BSH').iter(tag="NEIGE24H")]
-        altitude_neige_fraiche = root[0].find('BSH').find('NEIGEFRAICHE').get('ALTITUDESS')
-        unformatted_neige_fraiche = hist_neige_fraiche_unformatted[-1]
-        neige_fraiche = format_neige_fraiche(unformatted_neige_fraiche, altitude_neige_fraiche)
-        self.meteo.update(neige_fraiche)
+        except Exception as e:
+            # Historical weather data is not available in the BERA xml content
+            unavailable_meteo = construct_unavailable_meteo_dict()
+            self.meteo.update(unavailable_meteo)
+
+        try:
+            # Get historical snow precipitations measures for the day before publication
+            if not root[0].find('BSH') is None:
+                hist_neige_fraiche_unformatted = [neige_fraiche.attrib for neige_fraiche in
+                                              root[0].find('BSH').iter(tag="NEIGE24H")]
+                altitude_neige_fraiche = root[0].find('BSH').find('NEIGEFRAICHE').get('ALTITUDESS')
+            else:
+                hist_neige_fraiche_unformatted = [neige_fraiche.attrib for neige_fraiche in
+                                              root.find('BSH').iter(tag="NEIGE24H")]
+                altitude_neige_fraiche = root.find('BSH').find('NEIGEFRAICHE').get('ALTITUDESS')
+            unformatted_neige_fraiche = hist_neige_fraiche_unformatted[-1]
+            neige_fraiche = format_neige_fraiche(unformatted_neige_fraiche, altitude_neige_fraiche)
+            self.meteo.update(neige_fraiche)
+
+        except Exception as e:
+            # Historical snow precipitations data is not available in the BERA xml content
+            unavailable_neige_fraiche = construct_unavailable_neige_fraiche_dict()
+            self.meteo.update(unavailable_neige_fraiche)
 
         return self.meteo
 
