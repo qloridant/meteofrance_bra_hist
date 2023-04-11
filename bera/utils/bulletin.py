@@ -130,6 +130,8 @@ class Bulletin:
         """
         root = ET.parse(self.path_file).getroot()
         cartouche_risque = root[0].find('CARTOUCHERISQUE')
+        if cartouche_risque is None:
+            cartouche_risque = root.find('CARTOUCHERISQUE')
         self.risques = cartouche_risque[0].attrib
 
         risques_attr = list(self.risques.keys())
