@@ -2,7 +2,7 @@ import pytest
 import xml.etree.ElementTree as ET
 
 from mock import patch, PropertyMock
-from src.utils.bulletin import Bulletin, MassifInexistantException
+from bera.utils.bulletin import Bulletin, MassifInexistantException
 
 
 def test_init():
@@ -25,7 +25,7 @@ def test_jour_key():
 
 def test_parse():
     bu = Bulletin('VERCORS', '20200517132702')
-    with patch('src.utils.bulletin.Bulletin.path_file',
+    with patch('bera.utils.bulletin.Bulletin.path_file',
                new_callable=PropertyMock) as a:
         a.return_value = 'tests/valid_bera.xml'
         risques = bu.parse_donnees_risques()
@@ -39,13 +39,24 @@ def test_parse():
         assert 'LOC2' in risques
         assert 'RISQUEMAXI' in risques
         assert 'COMMENTAIRE' in risques
-    with patch('src.utils.bulletin.Bulletin.path_file',
+    with patch('bera.utils.bulletin.Bulletin.path_file',
                new_callable=PropertyMock) as a:
         a.return_value = 'tests/invalid_tag_bera.xml'
         with pytest.raises(ET.ParseError):
             bu.parse_donnees_risques()
-    with patch('src.utils.bulletin.Bulletin.path_file',
+    with patch('bera.utils.bulletin.Bulletin.path_file',
                new_callable=PropertyMock) as a:
         a.return_value = 'tests/invalid_attribute_bera.xml'
         with pytest.raises(ET.ParseError):
             bu.parse_donnees_risques()
+
+
+def test_parse_situation_avalancheuse():
+    bu = Bulletin('VERCORS', '20200517132702')
+    with patch('bera.utils.bulletin.Bulletin.path_file',
+               new_callable=PropertyMock) as a:
+        a.return_value = 'tests/valid_bera.xml'
+        risques = bu.parse_donnees_risques()
+        situation_avalancheuse = bu.parse_situation_avalancheuse()
+        breakpoint()
+        assert bu.situation_avalancheuse == {'situation_avalancheuse_typique': 'sous couche fragile persistante'}
