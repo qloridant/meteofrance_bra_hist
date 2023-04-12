@@ -56,7 +56,6 @@ def test_parse_situation_avalancheuse():
     with patch('bera.utils.bulletin.Bulletin.path_file',
                new_callable=PropertyMock) as a:
         a.return_value = 'tests/valid_bera.xml'
-        risques = bu.parse_donnees_risques()
-        situation_avalancheuse = bu.parse_situation_avalancheuse()
-        breakpoint()
+        bu.parse_donnees_risques()
+        bu.parse_situation_avalancheuse()
         assert bu.situation_avalancheuse == {'situation_avalancheuse_typique': 'sous couche fragile persistante'}

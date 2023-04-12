@@ -24,6 +24,7 @@ NB: this script is mainly useful in a development context.
 
 import logging
 import os
+import re
 import sys
 
 import requests
@@ -74,6 +75,7 @@ class Bulletin:
         self.jour = jour
         self.risques = {}
         self.meteo = {}
+        self.situation_avalancheuse = {}
 
     @property
     def url(self):
@@ -217,6 +219,35 @@ class Bulletin:
 
         return self.meteo
 
+    def parse_situation_avalancheuse(self) -> dict:
+        """
+        Parse avalanche situations information from the BERA xml content into a formated dict, and return this dict.
+
+        Most of the BERAs described in the "Stablité du manteau neigeux" paragraph the current avalanche situations
+        which can be observed like:
+        "Neige humide", "Sous-couches fragiles persistentes", "Neige fraîche", "Neige ventée", "Avalanche de fond"
+
+        Returns
+        -------
+        situation_avalancheuse: dict : example {situations_avalancheuses_typiques: "Neige fraiche, neige ventée"}
+
+        """
+        root = ET.parse(self.path_file).getroot()
+        try:
+            if not root[0].find('STABILITE') is None:
+                paragraph_stabilite = root[0].find('STABILITE').find('TEXTE')
+                if 'Situation avalancheuse typique' in paragraph_stabilite.text:
+
+                    text = re.search("Situation avalancheuse[^.]*", paragraph_stabilite.text).group()
+                    result = text.replace(', ', ' - ')
+                    self.situation_avalancheuse["situation_avalancheuse_typique"] = \
+                        re.split("Situation avalancheuse typique : ", result)[1]
+
+        except Exception:
+            self.situation_avalancheuse["situation_avalancheuse_typique"] = ''
+
+        return self.situation_avalancheuse
+
     def append_csv(self) -> []:
         """
         This method aims to construct a list of all formatted data which will be integrated at the end in hist.csv files
@@ -235,7 +266,7 @@ class Bulletin:
         risques = list(
             map(lambda x: x.replace(',', '-'), self.risques.values()))
         return [self.jour_key, self.massif, *risques, f'{self.url}.{self.massif}.{self.jour}.pdf',
-                *self.meteo.values()]
+                *self.meteo.values(), *self.situation_avalancheuse.values()]
 
 
 if __name__ == '__main__':
@@ -247,7 +278,7 @@ if __name__ == '__main__':
 
     if len(sys.argv) == 3:
         massif = sys.argv[1]
-        jour = sys.argv[2]  # At format YYYYmmddHHMMSS ex: 20230322144948
+        jour = sys.argv[2]  # At format YYYYmmddHHMMSS ex: 20230119144216  or  20230411135455
         bul = Bulletin(massif, jour)
         bul.download()
         bul.parse_donnees_risques()
@@ -259,4 +290,14 @@ if __name__ == '__main__':
         print('Job succeeded.')
 
     else:
-        print("Please enter massif and datetime of publication")
+        massif = 'CHABLAIS'
+        jour = '20230417140025'  # 20230119144216   20230411135455  20230417140025  20230119144216
+        bul = Bulletin(massif, jour)
+        bul.download()
+        bul.parse_donnees_risques()
+        bul.parse_donnees_meteo()
+        bul.parse_situation_avalancheuse()
+        new_content = bul.append_csv()
+        file_path = f'data/{massif}/hist.csv'
+        full_content = update_file_content(repo, file_path, branch, [new_content], 'bera')
+        print('Job succeeded.')

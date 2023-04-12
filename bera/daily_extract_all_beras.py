@@ -67,6 +67,7 @@ for massif in MASSIFS:
     bulletin.download()
     bulletin.parse_donnees_risques()
     bulletin.parse_donnees_meteo()
+    bulletin.parse_situation_avalancheuse()
     new_data = bulletin.append_csv()
 
     file_path = f'data/{massif}/hist.csv'

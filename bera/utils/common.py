@@ -21,7 +21,7 @@ PARAMS = ['date', 'massif', 'risque1', 'evolurisque1', 'loc1', 'altitude', 'risq
           '12_mer_de_nuages', '12_limite_pluie_neige', '12_isotherme_0', '12_isotherme_moins_10', '12_altitude_vent_1',
           '12_altitude_vent_2', '12_direction_vent_altitude_1', '12_vitesse_vent_altitude_1',
           '12_direction_vent_altitude_2', '12_vitesse_vent_altitude_2', 'precipitation_neige_veille_altitude',
-          'precipitation_neige_veille_epaisseur']
+          'precipitation_neige_veille_epaisseur', 'situation_avalancheuse_typique']
 
 # http://www.meteo.fr/guide/guide_pictos.html
 # https://meteofrance.com/ > Légende au pied de la page
