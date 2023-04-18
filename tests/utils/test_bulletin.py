@@ -23,7 +23,7 @@ def test_jour_key():
     assert bu.jour_key != '20160417132702'
 
 
-def test_parse():
+def test_parse_donnees_risques():
     bu = Bulletin('VERCORS', '20200517132702')
     with patch('bera.utils.bulletin.Bulletin.path_file',
                new_callable=PropertyMock) as a:
