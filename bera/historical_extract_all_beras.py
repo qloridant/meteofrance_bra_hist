@@ -54,7 +54,7 @@ if not branch:
 
 repo = init_repo()
 files_to_commit = []
-for massif in MASSIFS:
+for massif in MASSIFS[0:1]:
     # Lecture de la date de publication de notre fichier
     dates_ = subprocess.run(["cat", f"data/{massif}/urls_list.txt"],
                             capture_output=True).stdout.decode('utf-8').split('\n')
@@ -70,6 +70,12 @@ for massif in MASSIFS:
     # Transform actual content in an exploitable Dataframe
     df = pd.DataFrame([x.split(',') for x in actual_content.split('\n')])
     df.columns = df.iloc[0]
+
+    # Add new columns names
+    for param in PARAMS:
+        if param not in df.columns:
+            df[param] = ''
+
     df = df[1:]
 
     for date_ in dates_:
@@ -97,6 +103,7 @@ for massif in MASSIFS:
                     bulletin.download()
                     bulletin.parse_donnees_risques()
                     bulletin.parse_donnees_meteo()
+                    bulletin.parse_situation_avalancheuse()
                     new_data.append(bulletin.append_csv())
 
                     # Add new content

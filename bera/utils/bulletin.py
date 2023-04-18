@@ -202,11 +202,11 @@ class Bulletin:
             # Get historical snow precipitations measures for the day before publication
             if not root[0].find('BSH') is None:
                 hist_neige_fraiche_unformatted = [neige_fraiche.attrib for neige_fraiche in
-                                              root[0].find('BSH').iter(tag="NEIGE24H")]
+                                                  root[0].find('BSH').iter(tag="NEIGE24H")]
                 altitude_neige_fraiche = root[0].find('BSH').find('NEIGEFRAICHE').get('ALTITUDESS')
             else:
                 hist_neige_fraiche_unformatted = [neige_fraiche.attrib for neige_fraiche in
-                                              root.find('BSH').iter(tag="NEIGE24H")]
+                                                  root.find('BSH').iter(tag="NEIGE24H")]
                 altitude_neige_fraiche = root.find('BSH').find('NEIGEFRAICHE').get('ALTITUDESS')
             unformatted_neige_fraiche = hist_neige_fraiche_unformatted[-1]
             neige_fraiche = format_neige_fraiche(unformatted_neige_fraiche, altitude_neige_fraiche)
@@ -236,12 +236,16 @@ class Bulletin:
         try:
             if not root[0].find('STABILITE') is None:
                 paragraph_stabilite = root[0].find('STABILITE').find('TEXTE')
-                if 'Situation avalancheuse typique' in paragraph_stabilite.text:
-
-                    text = re.search("Situation avalancheuse[^.]*", paragraph_stabilite.text).group()
+                if 'Situation avalancheuse typique' in paragraph_stabilite.text or \
+                        'Situation avalancheuse' in paragraph_stabilite.text:
+                    text = re.search("Situation avalancheuse[^\n]*", paragraph_stabilite.text).group()
                     result = text.replace(', ', ' - ')
                     self.situation_avalancheuse["situation_avalancheuse_typique"] = \
                         re.split("Situation avalancheuse typique : ", result)[1]
+                else:
+                    self.situation_avalancheuse["situation_avalancheuse_typique"] = ''
+            else:
+                self.situation_avalancheuse["situation_avalancheuse_typique"] = ''
 
         except Exception:
             self.situation_avalancheuse["situation_avalancheuse_typique"] = ''
@@ -291,7 +295,7 @@ if __name__ == '__main__':
 
     else:
         massif = 'CHABLAIS'
-        jour = '20230417140025'  # 20230119144216   20230411135455  20230417140025  20230119144216
+        jour = '20220130143352'  # 20230119144216   20230411135455  20230417140025  20230119144216 20220319145301 20220419141041 20220130143352
         bul = Bulletin(massif, jour)
         bul.download()
         bul.parse_donnees_risques()
