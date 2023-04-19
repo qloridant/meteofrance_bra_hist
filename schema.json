@@ -19,7 +19,7 @@
         {
             "name": "risque1",
             "title": "Risque 1",
-            "type": "int",
+            "type": "integer",
             "description": "Niveau de risque estimé pour le massif à toutes les altitudes ou éventuellement pour les altitudes les plus basses (précisé par le champ altitude). Le risque peut pendre une valeur de 0 à 5. Plus la valeur est importante, plus le risque est important. Une valeur à -1 indique que le risque n'a pas pu être évalué.",
             "example": "2",
             "properties": "Valeur obligatoire"
@@ -35,7 +35,7 @@
         {
             "name": "loc1",
             "title": "Localisation 1",
-            "type": "int",
+            "type": "integer",
             "description": "Altitudes pour lesquelles le niveau de risque identifié par le champs risque1 pour le champs risque1 est observé",
             "example": "<2400",
             "properties": "Valeur optionnelle"
@@ -51,7 +51,7 @@
         {
             "name": "risque2",
             "title": "Risque 2",
-            "type": "int",
+            "type": "integer",
             "description": "Niveau de risque estimé pour le massif pour les altitudes les plus hautes (précisé par le champ altitude). Le risque peut pendre une valeur de 0 à 5. Plus la valeur est importante, plus le risque est important. Une valeur à -1 indique que le risque n'a pas pu être évalué.",
             "example": "2",
             "properties": "Valeur optionnelle (sauf si le champ altitude n'est pas vide)"
@@ -59,7 +59,7 @@
         {
             "name": "evolurisque2",
             "title": "Evolution Risque 2",
-            "type": "int",
+            "type": "integer",
             "description": "Evolution du risque au cours de la journée pour les altitudes les plus hautes",
             "example": "",
             "properties": "Valeur optionnelle"
@@ -107,7 +107,7 @@
         {
             "name": "00_mer_de_nuages",
             "title": "Présence d'une mer de nuages à minuit",
-            "type": "string (\"Oui\" ou \"Non\")",
+            "type": "string",
             "description": "Présence d'une mer de nuages enregistrée le jour de la publication du BERA à 00h00",
             "example": "Non",
             "properties": "Valeur optionnelle"
@@ -195,7 +195,7 @@
         {
             "name": "06_mer_de_nuages",
             "title": "Présence d'une mer de nuages à 6h",
-            "type": "string (\"Oui\" ou \"Non\")",
+            "type": "string",
             "description": "Présence d'une mer de nuages enregistrée le jour de la publication du BERA à 06h00",
             "example": "Non",
             "properties": "Valeur optionnelle"
@@ -283,7 +283,7 @@
         {
             "name": "12_mer_de_nuages",
             "title": "Présence d'une mer de nuages à midi",
-            "type": "string (\"Oui\" ou \"Non\")",
+            "type": "string",
             "description": "Présence d'une mer de nuages enregistrée le jour de la publication du BERA à 12h00",
             "example": "Non",
             "properties": "Valeur optionnelle"
