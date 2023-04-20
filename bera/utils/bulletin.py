@@ -219,7 +219,7 @@ class Bulletin:
 
         return self.meteo
 
-    def parse_situation_avalancheuse(self) -> dict:
+    def parse_situation_avalancheuse(self) -> dict[str, set[Label]]:
         """
         Parse avalanche situations information from the BERA xml content into a formated dict, and return this dict.
 
@@ -229,7 +229,8 @@ class Bulletin:
 
         Returns
         -------
-        situation_avalancheuse: dict : example {situations_avalancheuses_typiques: "Neige fraiche, neige ventée"}
+        situation_avalancheuse: dict[str, set[Label]]: for example:
+        {situations_avalancheuses_typiques: {Label.NEIGE_FRAICHE, Label.NEIGE_SOUFFLEE"}}
 
         """
         root = ET.parse(self.path_file).getroot()
@@ -337,6 +338,7 @@ if __name__ == '__main__':
         bul.parse_donnees_risques()
         bul.parse_donnees_meteo()
         bul.parse_situation_avalancheuse()
+        print(bul.parse_situation_avalancheuse())
         new_content = bul.append_csv()
         file_path = f'data/{massif}/hist.csv'
         full_content = update_file_content(repo, file_path, branch, [new_content], 'bera')
