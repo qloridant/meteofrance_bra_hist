@@ -306,8 +306,17 @@ class Bulletin:
         # Removing comma as we will save the file as a csv
         risques = list(
             map(lambda x: x.replace(',', '-'), self.risques.values()))
+
+        situations_avalancheuses_typiques = list(self.situation_avalancheuse.values())
+
+        formatted_situations_avalancheuses_typiques = ''
+        for situation in situations_avalancheuses_typiques[0]:
+            formatted_situations_avalancheuses_typiques = formatted_situations_avalancheuses_typiques + \
+                                                          f"{situation._value_} -"
+        formatted_situations_avalancheuses_typiques = formatted_situations_avalancheuses_typiques[:-2]
+
         return [self.jour_key, self.massif, *risques, f'{self.url}.{self.massif}.{self.jour}.pdf',
-                *self.meteo.values(), *self.situation_avalancheuse.values()]
+                *self.meteo.values(), formatted_situations_avalancheuses_typiques]
 
 
 if __name__ == '__main__':
