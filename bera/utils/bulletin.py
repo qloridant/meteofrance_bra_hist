@@ -282,6 +282,8 @@ class Bulletin:
             labels.append(Label.NEIGE_FRAICHE)
         elif raw_text == 'neige humide, ':
             labels.append(Label.NEIGE_HUMIDE)
+        elif raw_text == 'Plaque de fond.':
+            labels.append(Label.AVALANCHE_GLISSEMENT)
         return labels
 
     def append_csv(self) -> []:
