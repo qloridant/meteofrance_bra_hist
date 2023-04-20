@@ -108,3 +108,26 @@ def test_extract_labels_situation_avalancheuse():
     for raw_text in raw_texts_sous_couche_fragile_persistante:
         labels = Bulletin.extract_labels_situation_avalancheuse(raw_text)
         assert labels == {Label.SOUS_COUCHE_FRAGILE}
+
+
+def test_append_csv():
+    bu = Bulletin('VERCORS', '20200517132702')
+    with patch('bera.utils.bulletin.Bulletin.path_file',
+               new_callable=PropertyMock) as a:
+        a.return_value = 'tests/valid_bera.xml'
+        bu.parse_donnees_risques()
+        bu.parse_donnees_meteo()
+        bu.parse_situation_avalancheuse()
+
+        expected_data_list = [
+            '2020-05-17', 'VERCORS', '1', '', '<2000', '2000', '2', '', '>2000', '2', ' ',
+            'https://donneespubliques.meteofrance.fr/donnees_libres/Pdf/BRA/BRA.VERCORS.20200517132702.pdf',
+            'Eclaircies', 'Non', 'Sans objet', '1800', '3400', '2000', '2500', 'S', '40', 'S', '50',
+            'Eclaircies', 'Non', 'Sans objet', '2000', '3400', '2000', '2500', 'S', '30', 'S', '40',
+            'Peu nuageux', 'Non', 'Sans objet', '2100', '3500', '2000', '2500', 'S', '30', 'S', '40',
+            '1800', '0', {Label.SOUS_COUCHE_FRAGILE}
+        ]
+
+        bu_data_list = bu.append_csv()
+
+        assert bu_data_list == expected_data_list
