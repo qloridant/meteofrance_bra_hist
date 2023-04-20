@@ -3,6 +3,7 @@ import xml.etree.ElementTree as ET
 
 from mock import patch, PropertyMock
 from bera.utils.bulletin import Bulletin, MassifInexistantException
+from bera.utils.common import Label
 
 
 def test_init():
@@ -64,12 +65,12 @@ def test_parse_situation_avalancheuse():
 def test_extract_labels_situation_avalancheuse():
     raw_text = "sous couche fragile persistante."
     labels = Bulletin.extract_labels_situation_avalancheuse(raw_text)
-    assert labels == ['Sous-couche fragile persistante']
+    assert labels == [Label.SOUS_COUCHE_FRAGILE]
 
     raw_text = "neige ventée"
     labels = Bulletin.extract_labels_situation_avalancheuse(raw_text)
-    assert labels == ['Neige soufflée']
+    assert labels == [Label.NEIGE_SOUFFLEE]
 
     raw_text = "neige fraîche."
     labels = Bulletin.extract_labels_situation_avalancheuse(raw_text)
-    assert labels == ['Neige fraîche']
+    assert labels == [Label.NEIGE_FRAICHE]

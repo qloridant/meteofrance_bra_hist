@@ -1,4 +1,5 @@
 import logging
+from enum import Enum
 
 # List of all french mountains chains concerned by a BERA
 MASSIFS = [
@@ -122,6 +123,15 @@ LABELS_SITUATION_AVALANCHEUSE_TYPIQUE = [
     "Neige humide",
     "Avalanche de glissement",
 ]
+
+
+class Label(Enum):
+    SOUS_COUCHE_FRAGILE = "Sous-couche fragile persistante"
+    NEIGE_SOUFFLEE = "Neige soufflée"
+    NEIGE_FRAICHE = "Neige fraîche"
+    NEIGE_HUMIDE = "Neige humide"
+    AVALANCHE_GLISSEMENT = "Avalanche de glissement"
+
 
 def init_logger(log_level=logging.INFO):
     """

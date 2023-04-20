@@ -31,7 +31,7 @@ import requests
 import xml.etree.ElementTree as ET
 
 from bera.utils.common import MASSIFS, format_hist_meteo, format_neige_fraiche, construct_unavailable_meteo_dict, \
-    construct_unavailable_neige_fraiche_dict, LABELS_SITUATION_AVALANCHEUSE_TYPIQUE
+    construct_unavailable_neige_fraiche_dict, Label
 from bera.utils.github_utils import init_repo, update_file_content
 
 logger = logging.getLogger(__name__)
@@ -275,11 +275,11 @@ class Bulletin:
         """
         labels = []
         if raw_text == 'sous couche fragile persistante.':
-            labels.append('Sous-couche fragile persistante')
+            labels.append(Label.SOUS_COUCHE_FRAGILE)
         elif raw_text == 'neige ventée':
-            labels.append('Neige soufflée')
+            labels.append(Label.NEIGE_SOUFFLEE)
         elif raw_text == 'neige fraîche.':
-            labels.append('Neige fraîche')
+            labels.append(Label.NEIGE_FRAICHE)
         return labels
 
     def append_csv(self) -> []:
