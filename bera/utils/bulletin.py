@@ -241,14 +241,15 @@ class Bulletin:
                     text = re.search("Situation avalancheuse[^\n]*", paragraph_stabilite.text).group()
                     result = text.replace(', ', ' - ')
                     self.situation_avalancheuse["situation_avalancheuse_typique"] = \
-                        re.split("Situation avalancheuse typique : ", result)[1]
+                        Bulletin.extract_labels_situation_avalancheuse(
+                            re.split("Situation avalancheuse typique : ", result)[1])
                 else:
-                    self.situation_avalancheuse["situation_avalancheuse_typique"] = ''
+                    self.situation_avalancheuse["situation_avalancheuse_typique"] = set()
             else:
-                self.situation_avalancheuse["situation_avalancheuse_typique"] = ''
+                self.situation_avalancheuse["situation_avalancheuse_typique"] = set()
 
         except Exception:
-            self.situation_avalancheuse["situation_avalancheuse_typique"] = ''
+            self.situation_avalancheuse["situation_avalancheuse_typique"] = set()
 
         return self.situation_avalancheuse
 
