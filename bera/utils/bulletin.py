@@ -148,7 +148,7 @@ class Bulletin:
         """
         Parse historical weather into a formated dict: wind, temperature, snow precipitations, isotherm from the BERA
         xml content.
-        
+
         Historical weather data for the last 6 days are available in the <BSH><METEO><ECHEANCE> xml content balises and
         historical snow precipitations for the last 6 days are available in the <BSH><NEIGEFRAICHE><NEIGE24H> and also
         in <NEIGEFRAICHE><NEIGE24H> xml content balises.
@@ -260,7 +260,10 @@ class Bulletin:
         -------
 
         """
-        return ['Sous-couche fragile persistante']
+        if raw_text == 'sous couche fragile persistante.':
+            return ['Sous-couche fragile persistante']
+        elif raw_text == 'neige ventée':
+            return ['Neige soufflée']
 
     def append_csv(self) -> []:
         """
