@@ -69,3 +69,7 @@ def test_extract_labels_situation_avalancheuse():
     raw_text = "neige ventée"
     labels = Bulletin.extract_labels_situation_avalancheuse(raw_text)
     assert labels == ['Neige soufflée']
+
+    raw_text = "neige fraîche."
+    labels = Bulletin.extract_labels_situation_avalancheuse(raw_text)
+    assert labels == ['Neige fraîche']
