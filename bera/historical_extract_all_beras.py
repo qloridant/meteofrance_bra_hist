@@ -79,7 +79,7 @@ for massif in MASSIFS[0:1]:
     df = df[1:]
 
     for date_ in dates_:
-        if int(date_) >= 20181217143136:  # Datetime of the first xml files for the bera
+        if int(date_) >= 20230101143136:  # Datetime of the first xml files for the bera
             # Check if there are missing data in new params for this date
             date = f"{date_[0:4]}-{date_[4:6]}-{date_[6:8]}"
             missing_data = False
