@@ -1,27 +1,95 @@
 import logging
 
 # List of all french mountains chains concerned by a BERA
-MASSIFS = ['CHABLAIS', 'MONT-BLANC', 'ARAVIS', 'CHARTREUSE', 'BELLEDONNE',
-           'GRANDES-ROUSSES', 'VERCORS', 'OISANS', 'HAUTE-TARENTAISE',
-           'BEAUFORTAIN', 'BAUGES', 'VANOISE', 'HAUTE-MAURIENNE', 'MAURIENNE',
-           'UBAYE', 'HAUT-VAR_HAUT-VERDON', 'THABOR', 'PELVOUX', 'QUEYRAS',
-           'CHAMPSAUR', 'DEVOLUY', 'EMBRUNAIS-PARPAILLON', 'MERCANTOUR',
-           'CINTO-ROTONDO', 'RENOSO-INCUDINE', 'ANDORRE',
-           'ORLU__ST_BARTHELEMY', 'HAUTE-ARIEGE', 'COUSERANS', 'LUCHONNAIS',
-           'AURE-LOURON', 'HAUTE-BIGORRE', 'ASPE-OSSAU', 'PAYS-BASQUE',
-           'CERDAGNE-CANIGOU', 'CAPCIR-PUYMORENS']
+MASSIFS = [
+    "CHABLAIS",
+    "MONT-BLANC",
+    "ARAVIS",
+    "CHARTREUSE",
+    "BELLEDONNE",
+    "GRANDES-ROUSSES",
+    "VERCORS",
+    "OISANS",
+    "HAUTE-TARENTAISE",
+    "BEAUFORTAIN",
+    "BAUGES",
+    "VANOISE",
+    "HAUTE-MAURIENNE",
+    "MAURIENNE",
+    "UBAYE",
+    "HAUT-VAR_HAUT-VERDON",
+    "THABOR",
+    "PELVOUX",
+    "QUEYRAS",
+    "CHAMPSAUR",
+    "DEVOLUY",
+    "EMBRUNAIS-PARPAILLON",
+    "MERCANTOUR",
+    "CINTO-ROTONDO",
+    "RENOSO-INCUDINE",
+    "ANDORRE",
+    "ORLU__ST_BARTHELEMY",
+    "HAUTE-ARIEGE",
+    "COUSERANS",
+    "LUCHONNAIS",
+    "AURE-LOURON",
+    "HAUTE-BIGORRE",
+    "ASPE-OSSAU",
+    "PAYS-BASQUE",
+    "CERDAGNE-CANIGOU",
+    "CAPCIR-PUYMORENS",
+]
 
-PARAMS = ['date', 'massif', 'risque1', 'evolurisque1', 'loc1', 'altitude', 'risque2', 'evolurisque2', 'loc2',
-          'risque_maxi', 'commentaire', 'url_telechargement', '00_temps', '00_mer_de_nuages', '00_limite_pluie_neige',
-          '00_isotherme_0', '00_isotherme_moins_10', '00_altitude_vent_1', '00_altitude_vent_2',
-          '00_direction_vent_altitude_1', '00_vitesse_vent_altitude_1', '00_direction_vent_altitude_2',
-          '00_vitesse_vent_altitude_2', '06_temps', '06_mer_de_nuages', '06_limite_pluie_neige', '06_isotherme_0',
-          '06_isotherme_moins_10', '06_altitude_vent_1', '06_altitude_vent_2', '06_direction_vent_altitude_1',
-          '06_vitesse_vent_altitude_1', '06_direction_vent_altitude_2', '06_vitesse_vent_altitude_2', '12_temps',
-          '12_mer_de_nuages', '12_limite_pluie_neige', '12_isotherme_0', '12_isotherme_moins_10', '12_altitude_vent_1',
-          '12_altitude_vent_2', '12_direction_vent_altitude_1', '12_vitesse_vent_altitude_1',
-          '12_direction_vent_altitude_2', '12_vitesse_vent_altitude_2', 'precipitation_neige_veille_altitude',
-          'precipitation_neige_veille_epaisseur', 'situation_avalancheuse_typique']
+PARAMS = [
+    "date",
+    "massif",
+    "risque1",
+    "evolurisque1",
+    "loc1",
+    "altitude",
+    "risque2",
+    "evolurisque2",
+    "loc2",
+    "risque_maxi",
+    "commentaire",
+    "url_telechargement",
+    "00_temps",
+    "00_mer_de_nuages",
+    "00_limite_pluie_neige",
+    "00_isotherme_0",
+    "00_isotherme_moins_10",
+    "00_altitude_vent_1",
+    "00_altitude_vent_2",
+    "00_direction_vent_altitude_1",
+    "00_vitesse_vent_altitude_1",
+    "00_direction_vent_altitude_2",
+    "00_vitesse_vent_altitude_2",
+    "06_temps",
+    "06_mer_de_nuages",
+    "06_limite_pluie_neige",
+    "06_isotherme_0",
+    "06_isotherme_moins_10",
+    "06_altitude_vent_1",
+    "06_altitude_vent_2",
+    "06_direction_vent_altitude_1",
+    "06_vitesse_vent_altitude_1",
+    "06_direction_vent_altitude_2",
+    "06_vitesse_vent_altitude_2",
+    "12_temps",
+    "12_mer_de_nuages",
+    "12_limite_pluie_neige",
+    "12_isotherme_0",
+    "12_isotherme_moins_10",
+    "12_altitude_vent_1",
+    "12_altitude_vent_2",
+    "12_direction_vent_altitude_1",
+    "12_vitesse_vent_altitude_1",
+    "12_direction_vent_altitude_2",
+    "12_vitesse_vent_altitude_2",
+    "precipitation_neige_veille_altitude",
+    "precipitation_neige_veille_epaisseur",
+    "situation_avalancheuse_typique",
+]
 
 # http://www.meteo.fr/guide/guide_pictos.html
 # https://meteofrance.com/ > Légende au pied de la page
@@ -44,9 +112,16 @@ PICTO_METEO = {
     "15": "Brouillard",
     "16": "Brouillard givrant",
     "17": "Pictogramme non identifié",
-    "18": "Beau temps avec mer de nuage"
+    "18": "Beau temps avec mer de nuage",
 }
 
+LABELS_SITUATION_AVALANCHEUSE_TYPIQUE = [
+    "Sous-couche fragile persistante",
+    "Neige soufflée",
+    "Neige fraîche",
+    "Neige humide",
+    "Avalanche de glissement",
+]
 
 def init_logger(log_level=logging.INFO):
     """
@@ -58,7 +133,7 @@ def init_logger(log_level=logging.INFO):
     """
     logger = logging.getLogger(__name__)
     c_handler = logging.StreamHandler()
-    c_format = logging.Formatter('%(name)s - %(levelname)s - %(message)s')
+    c_format = logging.Formatter("%(name)s - %(levelname)s - %(message)s")
     c_handler.setFormatter(c_format)
     logger.addHandler(c_handler)
     logger.setLevel(log_level)
@@ -89,34 +164,46 @@ def format_hist_meteo(unformatted_meteo: dict, altitude1: str, altitude2: str) -
     -------
     formatted_meteo: dict: formatted dict representing meteo historical data
     """
-    hour = unformatted_meteo['DATE'][-8:-6]
+    hour = unformatted_meteo["DATE"][-8:-6]
     formatted_meteo = {
-        f'{hour}_temps': PICTO_METEO[unformatted_meteo['TEMPSSENSIBLE']],
-        f'{hour}_mer_de_nuages': 'Non' if unformatted_meteo['MERNUAGES'] == '-1' else unformatted_meteo['MERNUAGES'],
-        f'{hour}_limite_pluie_neige': 'Sans objet' if unformatted_meteo['PLUIENEIGE'] == '-1' else unformatted_meteo[
-            'PLUIENEIGE'],
-        f'{hour}_isotherme_0': unformatted_meteo['ISO0'] if unformatted_meteo['ISO0'] != '-1'
-        else 'Absence de données',
-        f'{hour}_isotherme_moins_10': unformatted_meteo['ISO-10'] if unformatted_meteo['ISO-10'] != '-1'
-        else 'Absence de données',
-        f'{hour}_altitude_vent_1': altitude1 if altitude1 != '-1' else 'Absence de données',
-        f'{hour}_altitude_vent_2': altitude2 if (altitude2 != '9999' and altitude2 != '-1')
-        else ('Sans objet' if altitude2 == '9999' else 'Absence de données'),
-        f'{hour}_direction_vent_altitude_1': unformatted_meteo['DD1']
-        if (unformatted_meteo['DD1'] != '' and unformatted_meteo['DD1'] != '-1') else 'Absence de données',
-        f'{hour}_vitesse_vent_altitude_1': unformatted_meteo['FF1'] if unformatted_meteo['FF1'] != '-1'
-        else 'Absence de données',
-        f'{hour}_direction_vent_altitude_2': unformatted_meteo['DD2']
-        if (altitude2 != '9999' and unformatted_meteo['DD2'] != '') else ('Sans objet' if altitude2 == '9999'
-                                                                          else 'Absence de données'),
-        f'{hour}_vitesse_vent_altitude_2': unformatted_meteo['FF2']
-        if (altitude2 != '9999' and unformatted_meteo['FF2'] != '-1') else ('Sans objet' if altitude2 == '9999'
-                                                                            else 'Absence de données')
+        f"{hour}_temps": PICTO_METEO[unformatted_meteo["TEMPSSENSIBLE"]],
+        f"{hour}_mer_de_nuages": "Non"
+        if unformatted_meteo["MERNUAGES"] == "-1"
+        else unformatted_meteo["MERNUAGES"],
+        f"{hour}_limite_pluie_neige": "Sans objet"
+        if unformatted_meteo["PLUIENEIGE"] == "-1"
+        else unformatted_meteo["PLUIENEIGE"],
+        f"{hour}_isotherme_0": unformatted_meteo["ISO0"]
+        if unformatted_meteo["ISO0"] != "-1"
+        else "Absence de données",
+        f"{hour}_isotherme_moins_10": unformatted_meteo["ISO-10"]
+        if unformatted_meteo["ISO-10"] != "-1"
+        else "Absence de données",
+        f"{hour}_altitude_vent_1": altitude1
+        if altitude1 != "-1"
+        else "Absence de données",
+        f"{hour}_altitude_vent_2": altitude2
+        if (altitude2 != "9999" and altitude2 != "-1")
+        else ("Sans objet" if altitude2 == "9999" else "Absence de données"),
+        f"{hour}_direction_vent_altitude_1": unformatted_meteo["DD1"]
+        if (unformatted_meteo["DD1"] != "" and unformatted_meteo["DD1"] != "-1")
+        else "Absence de données",
+        f"{hour}_vitesse_vent_altitude_1": unformatted_meteo["FF1"]
+        if unformatted_meteo["FF1"] != "-1"
+        else "Absence de données",
+        f"{hour}_direction_vent_altitude_2": unformatted_meteo["DD2"]
+        if (altitude2 != "9999" and unformatted_meteo["DD2"] != "")
+        else ("Sans objet" if altitude2 == "9999" else "Absence de données"),
+        f"{hour}_vitesse_vent_altitude_2": unformatted_meteo["FF2"]
+        if (altitude2 != "9999" and unformatted_meteo["FF2"] != "-1")
+        else ("Sans objet" if altitude2 == "9999" else "Absence de données"),
     }
     return formatted_meteo
 
 
-def format_neige_fraiche(unformatted_neige_fraiche: dict, altitude_neige_fraiche: str) -> dict:
+def format_neige_fraiche(
+    unformatted_neige_fraiche: dict, altitude_neige_fraiche: str
+) -> dict:
     """
     From an input dict with this format sample
     {'DATE': '2023-03-21T00:00:00', 'SS241': '0', 'SS242': '-1'},
@@ -136,10 +223,16 @@ def format_neige_fraiche(unformatted_neige_fraiche: dict, altitude_neige_fraiche
     """
 
     formatted_neige_fraiche = {
-        "precipitation_neige_veille_altitude": altitude_neige_fraiche if altitude_neige_fraiche != '-1' else
-        'Absence de données',
-        "precipitation_neige_veille_epaisseur": 'Pluie' if unformatted_neige_fraiche['SS241'] == '-2' else (
-            'Absence de données' if unformatted_neige_fraiche['SS241'] == '-1' else unformatted_neige_fraiche['SS241'])
+        "precipitation_neige_veille_altitude": altitude_neige_fraiche
+        if altitude_neige_fraiche != "-1"
+        else "Absence de données",
+        "precipitation_neige_veille_epaisseur": "Pluie"
+        if unformatted_neige_fraiche["SS241"] == "-2"
+        else (
+            "Absence de données"
+            if unformatted_neige_fraiche["SS241"] == "-1"
+            else unformatted_neige_fraiche["SS241"]
+        ),
     }
     return formatted_neige_fraiche
 
