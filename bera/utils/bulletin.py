@@ -264,6 +264,8 @@ class Bulletin:
             return ['Sous-couche fragile persistante']
         elif raw_text == 'neige ventée':
             return ['Neige soufflée']
+        elif raw_text == 'neige fraîche.':
+            return ['Neige fraîche']
 
     def append_csv(self) -> []:
         """
