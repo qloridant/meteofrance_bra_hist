@@ -84,6 +84,10 @@ def test_extract_labels_situation_avalancheuse():
             "raw_text": "Plaque de fond.",
             "expected_labels": [Label.AVALANCHE_GLISSEMENT]
         },
+        {
+            "raw_text": "neige ventée, neige humide",
+            "expected_labels": [Label.NEIGE_SOUFFLEE, Label.NEIGE_HUMIDE]
+        }
     ]
 
     for tc in test_cases:
