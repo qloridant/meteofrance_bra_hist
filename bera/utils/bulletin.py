@@ -100,7 +100,7 @@ class Bulletin:
         with open(self.path_file, 'bw+') as f:
             f.write(r.content)
 
-    def parse_donnees_risques(self) -> []:
+    def parse_donnees_risques(self) -> dict[str, str]:
         """
         This method aims to extract risk information from the BERA xml content and parse it into a dict which will be
         integrated at the end in hist.csv files to store risk data.
@@ -127,9 +127,9 @@ class Bulletin:
 
         Returns
         -------
-        self.risk: dict: corresponding to the risk data extracted from the BERA published, associating values
-             for these keys:
-             risque1, evolurisque1, loc1, altitude, risque2, evolurisque2, loc2, risque_maxi, commentaire
+        self.risk: dict[str, str]: corresponding to the risk data extracted from the BERA published, associating values
+        for these keys:
+        risque1, evolurisque1, loc1, altitude, risque2, evolurisque2, loc2, risque_maxi, commentaire
         """
         root = ET.parse(self.path_file).getroot()
         cartouche_risque = root[0].find('CARTOUCHERISQUE')
@@ -144,9 +144,9 @@ class Bulletin:
         else:
             return self.risques
 
-    def parse_donnees_meteo(self) -> dict:
+    def parse_donnees_meteo(self) -> dict[str, str]:
         """
-        Parse historical weather into a formated dict: wind, temperature, snow precipitations, isotherm from the BERA
+        Parse historical weather into a formated dict: wind, temperature, isotherm, snow precipitations, from the BERA
         xml content.
 
         Historical weather data for the last 6 days are available in the <BSH><METEO><ECHEANCE> xml content balises and
@@ -173,9 +173,20 @@ class Bulletin:
             </NEIGEFRAICHE>
         </BSH>
 
-
-        return:
-        self.meteo: dict
+        Returns
+        -------
+        self.meteo: dict[str, str] corresponding to the weather data extracted from the BERA published, associating
+        values for these keys:
+        "00_temps", "00_mer_de_nuages", "00_limite_pluie_neige", "00_isotherme_0",
+        "00_isotherme_moins_10", "00_altitude_vent_1", "00_altitude_vent_2", "00_direction_vent_altitude_1",
+        "00_vitesse_vent_altitude_1", "00_direction_vent_altitude_2", "00_vitesse_vent_altitude_2",
+        "06_temps", "06_mer_de_nuages", "06_limite_pluie_neige", "06_isotherme_0", "06_isotherme_moins_10",
+        "06_altitude_vent_1", "06_altitude_vent_2", "06_direction_vent_altitude_1", "06_vitesse_vent_altitude_1",
+        "06_direction_vent_altitude_2", "06_vitesse_vent_altitude_2",
+        "12_temps", "12_mer_de_nuages", "12_limite_pluie_neige", "12_isotherme_0", "12_isotherme_moins_10",
+        "12_altitude_vent_1", "12_altitude_vent_2", "12_direction_vent_altitude_1", "12_vitesse_vent_altitude_1",
+        "12_direction_vent_altitude_2", "12_vitesse_vent_altitude_2",
+        "precipitation_neige_veille_altitude", "precipitation_neige_veille_epaisseur"
         """
         root = ET.parse(self.path_file).getroot()
         try:
@@ -219,7 +230,7 @@ class Bulletin:
 
         return self.meteo
 
-    def parse_situation_avalancheuse(self) -> dict[str, set[Label]]:
+    def parse_situation_avalancheuse(self) -> dict[str, list[Label]]:
         """
         Parse avalanche situations information from the BERA xml content into a formated dict, and return this dict.
 
@@ -245,6 +256,7 @@ class Bulletin:
                         list(Bulletin.extract_labels_situation_avalancheuse(
                             re.split("Situation avalancheuse typique : ", result)[1]))
                 else:
+                    # TODO : appliquer la méthode extract_labels_situation_avalancheuse au paragraphe complet
                     self.situation_avalancheuse["situation_avalancheuse_typique"] = list()
             else:
                 self.situation_avalancheuse["situation_avalancheuse_typique"] = list()
@@ -297,11 +309,34 @@ class Bulletin:
         - The massif of the BERA publication,
         - Risk data declined into 9 columns: (risque1, evolurisque1, loc1, altitude, risque2, evolurisque2, loc2,
           risque_maxi, commentaire),
-        - The url of downloading the BERA in pdf format
+        - The url of downloading the BERA in pdf format,
+        - The historical weather (weather, wind and temperature information) for the day of the BERA publication
+        declined in 33 columns:
+        "00_temps", "00_mer_de_nuages", "00_limite_pluie_neige", "00_isotherme_0",
+        "00_isotherme_moins_10", "00_altitude_vent_1", "00_altitude_vent_2", "00_direction_vent_altitude_1",
+        "00_vitesse_vent_altitude_1", "00_direction_vent_altitude_2", "00_vitesse_vent_altitude_2",
+        "06_temps", "06_mer_de_nuages", "06_limite_pluie_neige", "06_isotherme_0", "06_isotherme_moins_10",
+        "06_altitude_vent_1", "06_altitude_vent_2", "06_direction_vent_altitude_1", "06_vitesse_vent_altitude_1",
+        "06_direction_vent_altitude_2", "06_vitesse_vent_altitude_2",
+        "12_temps", "12_mer_de_nuages", "12_limite_pluie_neige", "12_isotherme_0", "12_isotherme_moins_10",
+        "12_altitude_vent_1", "12_altitude_vent_2", "12_direction_vent_altitude_1", "12_vitesse_vent_altitude_1",
+        "12_direction_vent_altitude_2", "12_vitesse_vent_altitude_2"
+        - The historical snow precipitations information for the day before the BERA publication declined into 2
+        columns: ( "precipitation_neige_veille_altitude" and "precipitation_neige_veille_epaisseur"),
+        - The typical avalanche situations mentioned in the BERA
 
         Returns
         -------
-        list of strings containing all BERA information expected
+        list[str]: list of strings containing all BERA information expected, for example:
+        [
+            '2020-05-17', 'VERCORS', '1', '', '<2000', '2000', '2', '', '>2000', '2', ' ',
+            'https://donneespubliques.meteofrance.fr/donnees_libres/Pdf/BRA/BRA.VERCORS.20200517132702.pdf',
+            'Eclaircies', 'Non', 'Sans objet', '1800', '3400', '2000', '2500', 'S', '40', 'S', '50',
+            'Eclaircies', 'Non', 'Sans objet', '2000', '3400', '2000', '2500', 'S', '30', 'S', '40',
+            'Peu nuageux', 'Non', 'Sans objet', '2100', '3500', '2000', '2500', 'S', '30', 'S', '40',
+            '1800', '0', 'Neige humide - Neige ventée - Sous-couche fragile persistante'
+        ]
+
         """
         # Removing comma as we will save the file as a csv
         risques = list(
