@@ -63,14 +63,21 @@ def test_parse_situation_avalancheuse():
 
 
 def test_extract_labels_situation_avalancheuse():
-    raw_text = "sous couche fragile persistante."
-    labels = Bulletin.extract_labels_situation_avalancheuse(raw_text)
-    assert labels == [Label.SOUS_COUCHE_FRAGILE]
+    test_cases = [
+        {
+            "raw_text": "sous couche fragile persistante.",
+            "expected_labels": [Label.SOUS_COUCHE_FRAGILE]
+        },
+        {
+            "raw_text": "neige ventée",
+            "expected_labels": [Label.NEIGE_SOUFFLEE]
+        },
+        {
+            "raw_text": "neige fraîche.",
+            "expected_labels": [Label.NEIGE_FRAICHE]
+        },
+    ]
 
-    raw_text = "neige ventée"
-    labels = Bulletin.extract_labels_situation_avalancheuse(raw_text)
-    assert labels == [Label.NEIGE_SOUFFLEE]
-
-    raw_text = "neige fraîche."
-    labels = Bulletin.extract_labels_situation_avalancheuse(raw_text)
-    assert labels == [Label.NEIGE_FRAICHE]
+    for tc in test_cases:
+        labels = Bulletin.extract_labels_situation_avalancheuse(tc["raw_text"])
+        assert labels == tc["expected_labels"]
