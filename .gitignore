@@ -5,3 +5,5 @@ tmp_bera.xml
 tmp_dataframe.csv
 .env
 .idea
+
+# .DS_Store
