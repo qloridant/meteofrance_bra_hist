@@ -255,9 +255,22 @@ class Bulletin:
     @staticmethod
     def extract_labels_situation_avalancheuse(raw_text: str) -> []:
         """
+        From a text (as found in BERA raw data), extracts avalanche situation labels, among :
+
+        - "Sous-couche fragile persistante"
+        - "Neige soufflée"
+        - "Neige fraîche"
+        - "Neige humide"
+        - "Avalanche de glissement"
+
+        Params
+        -------
+        raw_text: str: text found in BERA raw data
 
         Returns
         -------
+        labels: []: list of avalanche situation labels, mentionned in the BERA raw
+        data (could not be exhaustive).
 
         """
         if raw_text == 'sous couche fragile persistante.':
