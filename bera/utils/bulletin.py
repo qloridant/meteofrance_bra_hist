@@ -253,7 +253,7 @@ class Bulletin:
         return self.situation_avalancheuse
 
     @staticmethod
-    def extract_labels_situation_avalancheuse(raw_text: str) -> list[Label]:
+    def extract_labels_situation_avalancheuse(raw_text: str) -> set[Label]:
         """
         From a text (as found in BERA raw data), extracts avalanche situation labels, among :
 
@@ -269,21 +269,21 @@ class Bulletin:
 
         Returns
         -------
-        labels: list[Label]: list of avalanche situation labels, mentioned in the BERA raw
+        labels: set[Label]: list of avalanche situation labels, mentioned in the BERA raw
         data (could not be exhaustive).
 
         """
-        labels = []
+        labels = set()
         if raw_text == 'sous couche fragile persistante.':
-            labels.append(Label.SOUS_COUCHE_FRAGILE)
+            labels.add(Label.SOUS_COUCHE_FRAGILE)
         if "neige ventée" in raw_text:
-            labels.append(Label.NEIGE_SOUFFLEE)
+            labels.add(Label.NEIGE_SOUFFLEE)
         if raw_text == 'neige fraîche.':
-            labels.append(Label.NEIGE_FRAICHE)
+            labels.add(Label.NEIGE_FRAICHE)
         if "neige humide" in raw_text:
-            labels.append(Label.NEIGE_HUMIDE)
+            labels.add(Label.NEIGE_HUMIDE)
         if raw_text == 'Plaque de fond.':
-            labels.append(Label.AVALANCHE_GLISSEMENT)
+            labels.add(Label.AVALANCHE_GLISSEMENT)
         return labels
 
     def append_csv(self) -> []:

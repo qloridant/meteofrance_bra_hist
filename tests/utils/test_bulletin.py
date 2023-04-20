@@ -66,34 +66,35 @@ def test_extract_labels_situation_avalancheuse():
     test_cases = [
         {
             "raw_text": "sous couche fragile persistante.",
-            "expected_labels": [Label.SOUS_COUCHE_FRAGILE]
+            "expected_labels": {Label.SOUS_COUCHE_FRAGILE}
         },
         {
             "raw_text": "neige ventée",
-            "expected_labels": [Label.NEIGE_SOUFFLEE]
+            "expected_labels": {Label.NEIGE_SOUFFLEE}
         },
         {
             "raw_text": "neige fraîche.",
-            "expected_labels": [Label.NEIGE_FRAICHE]
+            "expected_labels": {Label.NEIGE_FRAICHE}
         },
         {
             "raw_text": "neige humide, ",
-            "expected_labels": [Label.NEIGE_HUMIDE]
+            "expected_labels": {Label.NEIGE_HUMIDE}
         },
         {
             "raw_text": "Plaque de fond.",
-            "expected_labels": [Label.AVALANCHE_GLISSEMENT]
+            "expected_labels": {Label.AVALANCHE_GLISSEMENT}
         },
         {
             "raw_text": "neige ventée, neige humide",
-            "expected_labels": [Label.NEIGE_SOUFFLEE, Label.NEIGE_HUMIDE]
+            "expected_labels": {Label.NEIGE_SOUFFLEE, Label.NEIGE_HUMIDE}
         },
         {
             "raw_text": "neige ventée, neige humide",
-            "expected_labels": [Label.NEIGE_HUMIDE, Label.NEIGE_SOUFFLEE]
+            "expected_labels": {Label.NEIGE_HUMIDE, Label.NEIGE_SOUFFLEE}
         }
     ]
 
     for tc in test_cases:
         labels = Bulletin.extract_labels_situation_avalancheuse(tc["raw_text"])
         assert labels == tc["expected_labels"]
+
