@@ -6,4 +6,4 @@ tmp_dataframe.csv
 .env
 .idea
 
-# .DS_Store
+.DS_Store
