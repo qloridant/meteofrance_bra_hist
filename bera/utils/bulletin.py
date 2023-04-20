@@ -253,7 +253,7 @@ class Bulletin:
         return self.situation_avalancheuse
 
     @staticmethod
-    def extract_labels_situation_avalancheuse(raw_text: str) -> []:
+    def extract_labels_situation_avalancheuse(raw_text: str) -> list[Label]:
         """
         From a text (as found in BERA raw data), extracts avalanche situation labels, among :
 
@@ -269,7 +269,7 @@ class Bulletin:
 
         Returns
         -------
-        labels: []: list of avalanche situation labels, mentionned in the BERA raw
+        labels: list[Label]: list of avalanche situation labels, mentioned in the BERA raw
         data (could not be exhaustive).
 
         """
