@@ -87,6 +87,10 @@ def test_extract_labels_situation_avalancheuse():
         {
             "raw_text": "neige ventée, neige humide",
             "expected_labels": [Label.NEIGE_SOUFFLEE, Label.NEIGE_HUMIDE]
+        },
+        {
+            "raw_text": "neige ventée, neige humide",
+            "expected_labels": [Label.NEIGE_HUMIDE, Label.NEIGE_SOUFFLEE]
         }
     ]
 
