@@ -63,7 +63,7 @@ def test_parse_situation_avalancheuse():
 
 
 def test_extract_labels_situation_avalancheuse():
-    test_cases = [
+    basic_test_cases = [
         {
             "raw_text": "sous couche fragile persistante.",
             "expected_labels": {Label.SOUS_COUCHE_FRAGILE}
@@ -94,7 +94,17 @@ def test_extract_labels_situation_avalancheuse():
         }
     ]
 
-    for tc in test_cases:
+    for tc in basic_test_cases:
         labels = Bulletin.extract_labels_situation_avalancheuse(tc["raw_text"])
         assert labels == tc["expected_labels"]
 
+    raw_texts_sous_couche_fragile_persistante = [
+        "sous-couche fragile persistante",
+        "sous-couches fragiles persistantes",
+        "Sous-couche fragile persistante",
+        "sous couche fragile persistante"
+        "sous couches fragile persistante"
+    ]
+    for raw_text in raw_texts_sous_couche_fragile_persistante:
+        labels = Bulletin.extract_labels_situation_avalancheuse(raw_text)
+        assert labels == {Label.SOUS_COUCHE_FRAGILE}
