@@ -260,7 +260,7 @@ class Bulletin:
         -------
 
         """
-        return []
+        return ['Sous-couche fragile persistante']
 
     def append_csv(self) -> []:
         """
