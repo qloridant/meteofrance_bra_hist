@@ -276,13 +276,13 @@ class Bulletin:
         labels = []
         if raw_text == 'sous couche fragile persistante.':
             labels.append(Label.SOUS_COUCHE_FRAGILE)
-        elif raw_text == 'neige ventée':
+        if "neige ventée" in raw_text:
             labels.append(Label.NEIGE_SOUFFLEE)
-        elif raw_text == 'neige fraîche.':
+        if raw_text == 'neige fraîche.':
             labels.append(Label.NEIGE_FRAICHE)
-        elif raw_text == 'neige humide, ':
+        if "neige humide" in raw_text:
             labels.append(Label.NEIGE_HUMIDE)
-        elif raw_text == 'Plaque de fond.':
+        if raw_text == 'Plaque de fond.':
             labels.append(Label.AVALANCHE_GLISSEMENT)
         return labels
 
