@@ -312,8 +312,8 @@ class Bulletin:
         formatted_situations_avalancheuses_typiques = ''
         for situation in situations_avalancheuses_typiques[0]:
             formatted_situations_avalancheuses_typiques = formatted_situations_avalancheuses_typiques + \
-                                                          f"{situation._value_} -"
-        formatted_situations_avalancheuses_typiques = formatted_situations_avalancheuses_typiques[:-2]
+                                                          f"{situation._value_} - "
+        formatted_situations_avalancheuses_typiques = formatted_situations_avalancheuses_typiques[:-3]
 
         return [self.jour_key, self.massif, *risques, f'{self.url}.{self.massif}.{self.jour}.pdf',
                 *self.meteo.values(), formatted_situations_avalancheuses_typiques]
