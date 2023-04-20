@@ -125,7 +125,7 @@ def test_append_csv():
             'Eclaircies', 'Non', 'Sans objet', '1800', '3400', '2000', '2500', 'S', '40', 'S', '50',
             'Eclaircies', 'Non', 'Sans objet', '2000', '3400', '2000', '2500', 'S', '30', 'S', '40',
             'Peu nuageux', 'Non', 'Sans objet', '2100', '3500', '2000', '2500', 'S', '30', 'S', '40',
-            '1800', '0', list({Label.SOUS_COUCHE_FRAGILE})
+            '1800', '0', f'{Label.SOUS_COUCHE_FRAGILE._value_}'
         ]
 
         bu_data_list = bu.append_csv()
