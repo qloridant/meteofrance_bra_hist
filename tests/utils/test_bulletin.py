@@ -102,8 +102,8 @@ def test_extract_labels_situation_avalancheuse():
         "sous-couche fragile persistante",
         "sous-couches fragiles persistantes",
         "Sous-couche fragile persistante",
-        "sous couche fragile persistante"
-        "sous couches fragile persistante"
+        "sous couche fragile persistante",
+        "sous couches fragile persistantes",
     ]
     for raw_text in raw_texts_sous_couche_fragile_persistante:
         labels = Bulletin.extract_labels_situation_avalancheuse(raw_text)

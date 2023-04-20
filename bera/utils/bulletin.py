@@ -274,16 +274,16 @@ class Bulletin:
 
         """
         labels = set()
-        if 'sous-couche fragile persistante' in raw_text.lower() or \
-                'sous couche fragile persistante' in raw_text.lower():
+        if re.match("sous[\s-]couche[s]? fragile[s]? persistante[s]?", raw_text.lower()):
             labels.add(Label.SOUS_COUCHE_FRAGILE)
         if "neige ventée" in raw_text.lower() or "neige soufflée" in raw_text.lower():
             labels.add(Label.NEIGE_SOUFFLEE)
         if "neige fraîche" in raw_text.lower():
             labels.add(Label.NEIGE_FRAICHE)
-        if "neige humide" in raw_text.lower():
+        if "neige humide" in raw_text.lower() or "neige de printemps" in raw_text.lower():
             labels.add(Label.NEIGE_HUMIDE)
-        if "plaque de fond" in raw_text.lower() or "avalanche de glissement" in raw_text.lower():
+        if "plaque de fond" in raw_text.lower() or \
+                not re.match("avalanche[\s-] de glissement", raw_text.lower()) is None:
             labels.add(Label.AVALANCHE_GLISSEMENT)
         return labels
 
