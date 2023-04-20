@@ -252,6 +252,16 @@ class Bulletin:
 
         return self.situation_avalancheuse
 
+    @staticmethod
+    def extract_labels_situation_avalancheuse(raw_text: str) -> []:
+        """
+
+        Returns
+        -------
+
+        """
+        return []
+
     def append_csv(self) -> []:
         """
         This method aims to construct a list of all formatted data which will be integrated at the end in hist.csv files

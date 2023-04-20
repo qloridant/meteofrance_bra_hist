@@ -58,4 +58,10 @@ def test_parse_situation_avalancheuse():
         a.return_value = 'tests/valid_bera.xml'
         bu.parse_donnees_risques()
         bu.parse_situation_avalancheuse()
-        assert bu.situation_avalancheuse == {'situation_avalancheuse_typique': 'sous couche fragile persistante'}
+        assert bu.situation_avalancheuse == {'situation_avalancheuse_typique': 'sous couche fragile persistante.'}
+
+
+def test_extract_labels_situation_avalancheuse():
+    raw_text = "sous couche fragile persistante."
+    labels = Bulletin.extract_labels_situation_avalancheuse(raw_text)
+    assert labels == ['Sous-couche fragile persistante']
