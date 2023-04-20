@@ -1,0 +1,380 @@
+{
+    "fields": [
+        {
+            "name": "date",
+            "title": "Date d'émission du bulletin",
+            "type": "string",
+            "description": "Date d'émission. Le bulletin est valable pour le jour suivant. En général, les bulletins sont émis vers 16H",
+            "example": "2023-04-05",
+            "properties": "Valeur obligatoire"
+        },
+        {
+            "name": "massif",
+            "title": "Massif",
+            "type": "string",
+            "description": "Massif concerné par l'estimation. La liste des massifs est connue. Le champ doit faire parti de cette liste",
+            "example": "CHABLAIS",
+            "properties": "Valeur obligatoire"
+        },
+        {
+            "name": "risque1",
+            "title": "Risque 1",
+            "type": "integer",
+            "description": "Niveau de risque estimé pour le massif à toutes les altitudes ou éventuellement pour les altitudes les plus basses (précisé par le champ altitude). Le risque peut pendre une valeur de 0 à 5. Plus la valeur est importante, plus le risque est important. Une valeur à -1 indique que le risque n'a pas pu être évalué.",
+            "example": "2",
+            "properties": "Valeur obligatoire"
+        },
+        {
+            "name": "evolurisque1",
+            "title": "Evolution Risque 1",
+            "type": "string",
+            "description": "Evolution du risque au cours de la journée pour toutes les altitudes ou éventuellement pour les altitudes les plus basses (précisé par le champ altitude)",
+            "example": "",
+            "properties": "Valeur optionnelle"
+        },
+        {
+            "name": "loc1",
+            "title": "Localisation 1",
+            "type": "integer",
+            "description": "Altitudes pour lesquelles le niveau de risque identifié par le champs risque1 pour le champs risque1 est observé",
+            "example": "<2400",
+            "properties": "Valeur optionnelle"
+        },
+        {
+            "name": "altitude",
+            "title": "Altitude",
+            "type": "string",
+            "description": "Altitude à partir de laquelle le niveau de risque évolue (du niveau de risque identifié par le champs risque1 au niveau de risque identifié par le champs risque2)",
+            "example": "2400",
+            "properties": "Valeur optionnelle"
+        },
+        {
+            "name": "risque2",
+            "title": "Risque 2",
+            "type": "integer",
+            "description": "Niveau de risque estimé pour le massif pour les altitudes les plus hautes (précisé par le champ altitude). Le risque peut pendre une valeur de 0 à 5. Plus la valeur est importante, plus le risque est important. Une valeur à -1 indique que le risque n'a pas pu être évalué.",
+            "example": "2",
+            "properties": "Valeur optionnelle (sauf si le champ altitude n'est pas vide)"
+        },
+        {
+            "name": "evolurisque2",
+            "title": "Evolution Risque 2",
+            "type": "integer",
+            "description": "Evolution du risque au cours de la journée pour les altitudes les plus hautes",
+            "example": "",
+            "properties": "Valeur optionnelle"
+        },
+        {
+            "name": "loc2",
+            "title": "Localisation 2",
+            "type": "string",
+            "description": "Altitude à laquelle nous passons du risque 1 au risque 2",
+            "example": ">2400",
+            "properties": "Valeur optionnelle (sauf si le champ altitude n'est pas vide)"
+        },
+        {
+            "name": "risque_maxi",
+            "title": "Risque Maximum",
+            "type": "string",
+            "description": "Risque estimé maximum pour le massif",
+            "example": "2",
+            "properties": "Valeur obligatoire"
+        },
+        {
+            "name": "commentaire",
+            "title": "Commentaire",
+            "type": "string",
+            "description": "Commentaire fourni par météo france (déclenchements spontanés, déclenchements par skieur)",
+            "example": "Au-dessus de 2400m : Risque faible évoluant en Risque limité. En dessous : Risque faible",
+            "properties": "Valeur optionnelle"
+        },
+        {
+            "name": "url_telechargement",
+            "title": "Url de téléchargement",
+            "type": "string",
+            "description": "Url de téléchargement du BERA en pdf",
+            "example": "https://donneespubliques.meteofrance.fr/donnees_libres/Pdf/BRA/BRA.ANDORRE.20230327133137.pdf",
+            "properties": "Valeur optionnelle"
+        },
+        {
+            "name": "00_temps",
+            "title": "Météo à minuit",
+            "type": "string",
+            "description": "Météo (temps) enregistrée le jour de la publication du BERA à 00h00",
+            "example": "Peu nuageux",
+            "properties": "Valeur optionnelle"
+        },
+        {
+            "name": "00_mer_de_nuages",
+            "title": "Présence d'une mer de nuages à minuit",
+            "type": "string",
+            "description": "Présence d'une mer de nuages enregistrée le jour de la publication du BERA à 00h00",
+            "example": "Non",
+            "properties": "Valeur optionnelle"
+        },
+        {
+            "name": "00_limite_pluie_neige",
+            "title": "Altitude de la limite pluie-neige à minuit",
+            "type": "string",
+            "description": "Altitude (en mètre) de la limite pluie-neige mesurée le jour de la publication du BERA à 00h00",
+            "example": "Sans objet",
+            "properties": "Valeur optionnelle"
+        },
+        {
+            "name": "00_isotherme_0",
+            "title": "Isotherme 0°C à minuit",
+            "type": "string",
+            "description": "Isotherme 0°C (en mètre) mesuré le jour de la publication du BERA à 00h00",
+            "example": "1400",
+            "properties": "Valeur optionnelle"
+        },
+        {
+            "name": "00_isotherme_moins_10",
+            "title": "Isotherme -10°C à minuit",
+            "type": "string",
+            "description": "Isotherme -10°C (en mètre) mesuré le jour de la publication du BERA à 00h00",
+            "example": "3000",
+            "properties": "Valeur optionnelle"
+        },
+        {
+            "name": "00_altitude_vent_1",
+            "title": "Altitude du premier point de mesure de vent à minuit",
+            "type": "string",
+            "description": "Altitude (en mètre) utilisée pour le premier point de mesure le plus bas du vent le jour de la publication du BERA à 00h00",
+            "example": "2000",
+            "properties": "Valeur optionnelle"
+        },
+        {
+            "name": "00_altitude_vent_2",
+            "title": "Altitude de l'éventuel deuxième point haut de mesure de vent à minuit",
+            "type": "string",
+            "description": "Altitude (en mètre) utilisée pour l'éventuel deuxième point de mesure le plus haut du vent le jour de la publication du BERA à 00h00",
+            "example": "2500",
+            "properties": "Valeur optionnelle"
+        },
+        {
+            "name": "00_direction_vent_altitude_1",
+            "title": "Direction du vent au point bas à minuit",
+            "type": "string",
+            "description": "Direction du vent mesurée au point de mesure bas le jour de la publication du BERA à 00h00",
+            "example": "NE",
+            "properties": "Valeur optionnelle"
+        },
+        {
+            "name": "00_vitesse_vent_altitude_1",
+            "title": "Vitesse du vent au point bas à minuit",
+            "type": "string",
+            "description": "Vitesse du vent (en km/h) mesurée au point de mesure bas le jour de la publication du BERA à 00h00",
+            "example": "10",
+            "properties": "Valeur optionnelle"
+        },
+        {
+            "name": "00_direction_vent_altitude_2",
+            "title": "Direction du vent au point haut à minuit",
+            "type": "string",
+            "description": "Direction du vent mesurée au point de mesure haut le jour de la publication du BERA à 00h00",
+            "example": "NE",
+            "properties": "Valeur optionnelle"
+        },
+        {
+            "name": "00_vitesse_vent_altitude_2",
+            "title": "Vitesse du vent au point haut à minuit",
+            "type": "string",
+            "description": "Vitesse du vent (en km/h) mesurée au point de mesure haut le jour de la publication du BERA à 00h00",
+            "example": "20",
+            "properties": "Valeur optionnelle"
+        },
+        {
+            "name": "06_temps",
+            "title": "Météo à 6h",
+            "type": "string",
+            "description": "Météo (temps) enregistrée le jour de la publication du BERA à 06h00",
+            "example": "Beau temps",
+            "properties": "Valeur optionnelle"
+        },
+        {
+            "name": "06_mer_de_nuages",
+            "title": "Présence d'une mer de nuages à 6h",
+            "type": "string",
+            "description": "Présence d'une mer de nuages enregistrée le jour de la publication du BERA à 06h00",
+            "example": "Non",
+            "properties": "Valeur optionnelle"
+        },
+        {
+            "name": "06_limite_pluie_neige",
+            "title": "Altitude de la limite pluie-neige à 6h",
+            "type": "string",
+            "description": "Altitude (en mètre) de la limite pluie-neige mesurée le jour de la publication du BERA à 06h00",
+            "example": "Sans objet",
+            "properties": "Valeur optionnelle"
+        },
+        {
+            "name": "06_isotherme_0",
+            "title": "Isotherme 0°C à 6h",
+            "type": "string",
+            "description": "Isotherme 0°C (en mètre) mesuré le jour de la publication du BERA à 06h00",
+            "example": "1300",
+            "properties": "Valeur optionnelle"
+        },
+        {
+            "name": "06_isotherme_moins_10",
+            "title": "Isotherme -10°C à 6h",
+            "type": "string",
+            "description": "Isotherme -10°C (en mètre) mesuré le jour de la publication du BERA à 06h00",
+            "example": "2900",
+            "properties": "Valeur optionnelle"
+        },
+        {
+            "name": "06_altitude_vent_1",
+            "title": "Altitude du point bas de mesure de vent à 6h",
+            "type": "string",
+            "description": "Altitude (en mètre) utilisée pour le point de mesure le plus bas du vent le jour de la publication du BERA à 06h00",
+            "example": "2000",
+            "properties": "Valeur optionnelle"
+        },
+        {
+            "name": "06_altitude_vent_2",
+            "title": "Altitude du point haut de mesure de vent à 6h",
+            "type": "string",
+            "description": "Altitude (en mètre) utilisée pour le point de mesure le plus haut du vent le jour de la publication du BERA à 06h00",
+            "example": "2500",
+            "properties": "Valeur optionnelle"
+        },
+        {
+            "name": "06_direction_vent_altitude_1",
+            "title": "Direction du vent au point bas à 6h",
+            "type": "string",
+            "description": "Direction du vent mesurée au point de mesure bas le jour de la publication du BERA à 06h00",
+            "example": "NE",
+            "properties": "Valeur optionnelle"
+        },
+        {
+            "name": "06_vitesse_vent_altitude_1",
+            "title": "Vitesse du vent au point bas à 6h",
+            "type": "string",
+            "description": "Vitesse du vent (en km/h) mesurée au point de mesure bas le jour de la publication du BERA à 06h00",
+            "example": "10",
+            "properties": "Valeur optionnelle"
+        },
+        {
+            "name": "06_direction_vent_altitude_2",
+            "title": "Direction du vent au point haut à 6h",
+            "type": "string",
+            "description": "Direction du vent mesurée au point de mesure haut le jour de la publication du BERA à 06h00",
+            "example": "NE",
+            "properties": "Valeur optionnelle"
+        },
+        {
+            "name": "06_vitesse_vent_altitude_2",
+            "title": "Vitesse du vent au point haut à 6h",
+            "type": "string",
+            "description": "Vitesse du vent (en km/h) mesurée au point de mesure haut le jour de la publication du BERA à 06h00",
+            "example": "20",
+            "properties": "Valeur optionnelle"
+        },
+        {
+            "name": "12_temps",
+            "title": "Météo à midi",
+            "type": "string",
+            "description": "Météo (temps) enregistrée le jour de la publication du BERA à 12h00",
+            "example": "Beau temps",
+            "properties": "Valeur optionnelle"
+        },
+        {
+            "name": "12_mer_de_nuages",
+            "title": "Présence d'une mer de nuages à midi",
+            "type": "string",
+            "description": "Présence d'une mer de nuages enregistrée le jour de la publication du BERA à 12h00",
+            "example": "Non",
+            "properties": "Valeur optionnelle"
+        },
+        {
+            "name": "12_limite_pluie_neige",
+            "title": "Altitude de la limite pluie-neige à midi",
+            "type": "string",
+            "description": "Altitude (en mètre) de la limite pluie-neige mesurée le jour de la publication du BERA à 12h00",
+            "example": "Sans objet",
+            "properties": "Valeur optionnelle"
+        },
+        {
+            "name": "12_isotherme_0",
+            "title": "Isotherme 0°C à midi",
+            "type": "string",
+            "description": "Isotherme 0°C (en mètre) mesuré le jour de la publication du BERA à 12h00",
+            "example": "1800",
+            "properties": "Valeur optionnelle"
+        },
+        {
+            "name": "12_isotherme_moins_10",
+            "title": "Isotherme -10°C à midi",
+            "type": "string",
+            "description": "Isotherme -10°C (en mètre) mesuré le jour de la publication du BERA à 12h00",
+            "example": "2800",
+            "properties": "Valeur optionnelle"
+        },
+        {
+            "name": "12_altitude_vent_1",
+            "title": "Altitude du point bas de mesure de vent à midi",
+            "type": "string",
+            "description": "Altitude (en mètre) utilisée pour le point de mesure le plus bas du vent le jour de la publication du BERA à 12h00",
+            "example": "2000",
+            "properties": "Valeur optionnelle"
+        },
+        {
+            "name": "12_altitude_vent_2",
+            "title": "Altitude du point haut de mesure de vent à midi",
+            "type": "string",
+            "description": "Altitude (en mètre) utilisée pour le point de mesure le plus haut du vent le jour de la publication du BERA à 12h00",
+            "example": "2500",
+            "properties": "Valeur optionnelle"
+        },
+        {
+            "name": "12_direction_vent_altitude_1",
+            "title": "Direction du vent au point bas à midi",
+            "type": "string",
+            "description": "Direction du vent mesurée au point de mesure bas le jour de la publication du BERA à 12h00",
+            "example": "N",
+            "properties": "Valeur optionnelle"
+        },
+        {
+            "name": "12_vitesse_vent_altitude_1",
+            "title": "Vitesse du vent au point bas à midi",
+            "type": "string",
+            "description": "Vitesse du vent (en km/h) mesurée au point de mesure bas le jour de la publication du BERA à 12h00",
+            "example": "10",
+            "properties": "Valeur optionnelle"
+        },
+        {
+            "name": "12_direction_vent_altitude_2",
+            "title": "Direction du vent au point haut à midi",
+            "type": "string",
+            "description": "Direction du vent mesurée au point de mesure haut le jour de la publication du BERA à 12h00",
+            "example": "N",
+            "properties": "Valeur optionnelle"
+        },
+        {
+            "name": "12_vitesse_vent_altitude_2",
+            "title": "Vitesse du vent au point haut à midi",
+            "type": "string",
+            "description": "Vitesse du vent (en km/h) mesurée au point de mesure haut le jour de la publication du BERA à 12h00",
+            "example": "10",
+            "properties": "Valeur optionnelle"
+        },
+        {
+            "name": "precipitation_neige_veille_altitude",
+            "title": "Altitude du poit de mesure de neige fraiche la veille",
+            "type": "string",
+            "description": "Altitude (en m) du point de mesure utilisé pour mesure l'épaisseur de neige fraiche tombée la veille du jour de la publication du BERA",
+            "example": "1800",
+            "properties": "Valeur optionnelle"
+        },
+        {
+            "name": "precipitation_neige_veille_epaisseur",
+            "title": "Neige fraiche la veille",
+            "type": "string",
+            "description": "Epaisseur (en cm) de neige fraiche tombée la veille du jour de la publication du BERA",
+            "example": "0",
+            "properties": "Valeur optionnelle"
+        }
+    ]
+  }
