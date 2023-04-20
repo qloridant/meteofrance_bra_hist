@@ -59,7 +59,7 @@ def test_parse_situation_avalancheuse():
         a.return_value = 'tests/valid_bera.xml'
         bu.parse_donnees_risques()
         bu.parse_situation_avalancheuse()
-        assert bu.situation_avalancheuse == {'situation_avalancheuse_typique': {Label.SOUS_COUCHE_FRAGILE}}
+        assert bu.situation_avalancheuse == {'situation_avalancheuse_typique': [Label.SOUS_COUCHE_FRAGILE]}
 
 
 def test_extract_labels_situation_avalancheuse():
@@ -125,7 +125,7 @@ def test_append_csv():
             'Eclaircies', 'Non', 'Sans objet', '1800', '3400', '2000', '2500', 'S', '40', 'S', '50',
             'Eclaircies', 'Non', 'Sans objet', '2000', '3400', '2000', '2500', 'S', '30', 'S', '40',
             'Peu nuageux', 'Non', 'Sans objet', '2100', '3500', '2000', '2500', 'S', '30', 'S', '40',
-            '1800', '0', {Label.SOUS_COUCHE_FRAGILE}
+            '1800', '0', list({Label.SOUS_COUCHE_FRAGILE})
         ]
 
         bu_data_list = bu.append_csv()

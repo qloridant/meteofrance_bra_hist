@@ -229,8 +229,8 @@ class Bulletin:
 
         Returns
         -------
-        situation_avalancheuse: dict[str, set[Label]]: for example:
-        {situations_avalancheuses_typiques: {Label.NEIGE_FRAICHE, Label.NEIGE_SOUFFLEE"}}
+        situation_avalancheuse: dict[str, list[Label]]: for example:
+        {situations_avalancheuses_typiques: [Label.NEIGE_FRAICHE, Label.NEIGE_SOUFFLEE"]}
 
         """
         root = ET.parse(self.path_file).getroot()
@@ -242,15 +242,15 @@ class Bulletin:
                     text = re.search("Situation avalancheuse[^\n]*", paragraph_stabilite.text).group()
                     result = text.replace(', ', ' - ')
                     self.situation_avalancheuse["situation_avalancheuse_typique"] = \
-                        Bulletin.extract_labels_situation_avalancheuse(
-                            re.split("Situation avalancheuse typique : ", result)[1])
+                        list(Bulletin.extract_labels_situation_avalancheuse(
+                            re.split("Situation avalancheuse typique : ", result)[1]))
                 else:
-                    self.situation_avalancheuse["situation_avalancheuse_typique"] = set()
+                    self.situation_avalancheuse["situation_avalancheuse_typique"] = list()
             else:
-                self.situation_avalancheuse["situation_avalancheuse_typique"] = set()
+                self.situation_avalancheuse["situation_avalancheuse_typique"] = list()
 
         except Exception:
-            self.situation_avalancheuse["situation_avalancheuse_typique"] = set()
+            self.situation_avalancheuse["situation_avalancheuse_typique"] = list()
 
         return self.situation_avalancheuse
 
