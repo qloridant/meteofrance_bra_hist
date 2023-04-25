@@ -72,6 +72,13 @@ def test_extract_situation_typique_avalancheuse_from_stabilite_paragraph():
     situation_typique_avalancheuse = Bulletin.extract_situation_typique_avalancheuse_from_stabilite_paragraph(raw_text)
     assert situation_typique_avalancheuse == expected_text
 
+    raw_text = "Situation avalancheuse typique : plaque friable, sous-couche fragile persistante.\n\n" \
+               "Déclenchements provoqués : des plaques d'aspect poudreux, de petites dimensions mais faciles à " \
+               "déclencher, sont localement présentes en versants ombragés au-dessus de 2400 m. D'autres " \
+               "pourraient se former mardi avec la petite couche de fraîche prévue, accompagnée d'un vent de sud-ouest."
+    expected_text = "plaque friable, sous-couche fragile persistante."
+    situation_typique_avalancheuse = Bulletin.extract_situation_typique_avalancheuse_from_stabilite_paragraph(raw_text)
+    assert situation_typique_avalancheuse == expected_text
 
 def test_extract_labels_situation_avalancheuse():
     basic_test_cases = [
