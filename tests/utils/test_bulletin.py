@@ -93,7 +93,14 @@ def test_extract_situation_typique_avalancheuse_from_stabilite_paragraph():
             Bulletin.extract_situation_typique_avalancheuse_from_stabilite_paragraph(tc["raw_text"])
         assert situation_typique_avalancheuse == tc["expected_text"]
 
-    raw_text = "Lorem ipsum.\n\nSituations avalancheuses typiques : neige humide.\n\nConsectetur adipiscing elit,."
+    test_cases = [
+        "Situations avalancheuses typiques",
+        "Situation avalancheuse typique",
+        "Situation avalancheuse",
+        "Situations avalancheuses",
+    ]
+    for tc in test_cases:
+        raw_text = f"Lorem ipsum.\n\n{tc} : neige humide.\n\nConsectetur adipiscing elit,."
     expected_text = "neige humide."
     situation_typique_avalancheuse = Bulletin.extract_situation_typique_avalancheuse_from_stabilite_paragraph(raw_text)
     assert situation_typique_avalancheuse == expected_text
