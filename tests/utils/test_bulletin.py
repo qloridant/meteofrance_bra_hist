@@ -62,6 +62,17 @@ def test_parse_situation_avalancheuse():
         assert bu.situation_avalancheuse == {'situation_avalancheuse_typique': [Label.SOUS_COUCHE_FRAGILE]}
 
 
+def test_extract_situation_typique_avalancheuse_from_stabilite_paragraph():
+    raw_text = "Bulletin rédigé à partir d'informations réduites.\n" \
+               "Situation avalancheuse : neige ventée, neige humide.\n\n" \
+               "Départs spontanés : la neige tombée dans les dernières 24 heures (25/30 cm) s'humidifie et se tasse " \
+               "très vite à la faveur des éclaircies de ce lundi après-midi, permettant une stabilisation efficace " \
+               "du manteau neigeux."
+    expected_text = "neige ventée, neige humide."
+    situation_typique_avalacnheuse = Bulletin.extract_situation_typique_avalancheuse_from_stabilite_paragraph(raw_text)
+    assert situation_typique_avalacnheuse == expected_text
+
+
 def test_extract_labels_situation_avalancheuse():
     basic_test_cases = [
         {
