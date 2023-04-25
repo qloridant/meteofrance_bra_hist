@@ -248,16 +248,11 @@ class Bulletin:
         try:
             if not root[0].find('STABILITE') is None:
                 paragraph_stabilite = root[0].find('STABILITE').find('TEXTE')
-                if 'Situation avalancheuse typique' in paragraph_stabilite.text or \
-                        'Situation avalancheuse' in paragraph_stabilite.text:
-                    text = re.search("Situation avalancheuse[^\n]*", paragraph_stabilite.text).group()
-                    result = text.replace(', ', ' - ')
-                    self.situation_avalancheuse["situation_avalancheuse_typique"] = \
-                        list(Bulletin.extract_labels_situation_avalancheuse(
-                            re.split("Situation avalancheuse typique : ", result)[1]))
-                else:
-                    # TODO : appliquer la méthode extract_labels_situation_avalancheuse au paragraphe complet
-                    self.situation_avalancheuse["situation_avalancheuse_typique"] = list()
+                situation_avalancheuse_typique = \
+                    Bulletin.extract_situation_typique_avalancheuse_from_stabilite_paragraph(paragraph_stabilite.text)
+                self.situation_avalancheuse["situation_avalancheuse_typique"] = \
+                        list(Bulletin.extract_labels_situation_avalancheuse(situation_avalancheuse_typique))
+                # TODO : si list(), appliquer la méthode extract_labels_situation_avalancheuse au paragraphe complet
             else:
                 self.situation_avalancheuse["situation_avalancheuse_typique"] = list()
 
