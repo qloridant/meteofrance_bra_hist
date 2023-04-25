@@ -69,8 +69,8 @@ def test_extract_situation_typique_avalancheuse_from_stabilite_paragraph():
                "très vite à la faveur des éclaircies de ce lundi après-midi, permettant une stabilisation efficace " \
                "du manteau neigeux."
     expected_text = "neige ventée, neige humide."
-    situation_typique_avalacnheuse = Bulletin.extract_situation_typique_avalancheuse_from_stabilite_paragraph(raw_text)
-    assert situation_typique_avalacnheuse == expected_text
+    situation_typique_avalancheuse = Bulletin.extract_situation_typique_avalancheuse_from_stabilite_paragraph(raw_text)
+    assert situation_typique_avalancheuse == expected_text
 
 
 def test_extract_labels_situation_avalancheuse():

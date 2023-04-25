@@ -266,10 +266,11 @@ class Bulletin:
 
         return self.situation_avalancheuse
 
-
     @staticmethod
     def extract_situation_typique_avalancheuse_from_stabilite_paragraph(raw_text: str) -> str:
-        pass
+        text = re.search("Situation avalancheuse[^\n]*", raw_text).group()
+        situation_typique_avalancheuse = re.split("Situation avalancheuse : ", text)[1]
+        return situation_typique_avalancheuse
 
     @staticmethod
     def extract_labels_situation_avalancheuse(raw_text: str) -> set[Label]:
