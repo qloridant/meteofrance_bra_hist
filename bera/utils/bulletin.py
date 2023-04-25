@@ -263,13 +263,13 @@ class Bulletin:
 
     @staticmethod
     def extract_situation_typique_avalancheuse_from_stabilite_paragraph(raw_text: str) -> str:
-        if 'Situation avalancheuse typique' in raw_text or \
-                'Situation avalancheuse' in raw_text:
-            text = re.search("Situation avalancheuse[^\n]*", raw_text).group()
+        if re.search("(situations? avalancheuses? typiques? :)", raw_text.lower()) or \
+                re.search("(situations? avalancheuses? :)", raw_text.lower()):
+            text = re.search("(situations? avalancheuses?[^\n]*)", raw_text.lower()).group()
             try:
-                situation_typique_avalancheuse = re.split("Situation avalancheuse : ", text)[1]
+                situation_typique_avalancheuse = re.split("situations? avalancheuses? : ", text.lower())[1]
             except Exception:
-                situation_typique_avalancheuse = re.split("Situation avalancheuse typique : ", text)[1]
+                situation_typique_avalancheuse = re.split("situations? avalancheuses? typiques? : ", text.lower())[1]
             return situation_typique_avalancheuse
         else:
             return ""
