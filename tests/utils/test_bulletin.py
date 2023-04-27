@@ -110,6 +110,13 @@ def test_extract_situation_typique_avalancheuse_from_stabilite_paragraph():
     situation_typique_avalancheuse = Bulletin.extract_situation_typique_avalancheuse_from_stabilite_paragraph(raw_text)
     assert situation_typique_avalancheuse == expected_text
 
+    raw_text = f"Lorem ipsum.\n\n Situations avalancheuses de neige fraîche et neige humide.\n\nConsectetur " \
+               "adipiscing elit,."
+    expected_text = "neige fraîche et neige humide."
+    situation_typique_avalancheuse = Bulletin.extract_situation_typique_avalancheuse_from_stabilite_paragraph(raw_text)
+    assert situation_typique_avalancheuse == expected_text
+
+
 
 def test_extract_labels_situation_avalancheuse():
     basic_test_cases = [
