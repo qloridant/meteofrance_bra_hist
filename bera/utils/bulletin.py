@@ -303,18 +303,18 @@ class Bulletin:
         """
         if re.search("(situations? avalancheuses? typiques? :)", raw_text.lower()) or \
                 re.search("(situations? avalancheuses? :)", raw_text.lower()) or \
-                re.search("(situations? typiques? de)", raw_text.lower()):
+                re.search("(situations? (avalancheuses?|typiques?) de)", raw_text.lower()):
             try:
                 text = re.search("(situations? avalancheuses?[^\n]*)", raw_text.lower()).group()
             except Exception:
-                text = re.search("(situations? typiques?[^\n]*)", raw_text.lower()).group()
+                text = re.search("(situations? (avalancheuses?|typiques?)[^\n]*)", raw_text.lower()).group()
             try:
                 situation_typique_avalancheuse = re.split("situations? avalancheuses? : ", text.lower())[1]
             except Exception:
                 try:
                     situation_typique_avalancheuse = re.split("situations? avalancheuses? typiques? : ", text.lower())[1]
                 except Exception:
-                    situation_typique_avalancheuse = re.split("situations? typiques? de ", text.lower())[1]
+                    situation_typique_avalancheuse = re.split("situations? (avalancheuses?|typiques?) de ", text.lower())[-1]
             return situation_typique_avalancheuse
         else:
             return ""
