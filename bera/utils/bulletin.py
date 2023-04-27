@@ -308,6 +308,9 @@ class Bulletin:
             text = re.search("(situations? (avalancheuses?|typiques?)[^\n]*)", raw_text.lower()).group()
             situation_typique_avalancheuse = re.split("situations? (avalancheuses?|typiques?) (:|de) ",
                                                       text.lower())[-1]
+        elif re.search("(situations? typiques? avalancheuses? :)", raw_text.lower()):
+            text = re.search("(situations? typiques? avalancheuses?[^\n]*)", raw_text.lower()).group()
+            situation_typique_avalancheuse = re.split("situations? typiques? avalancheuses? : ", text.lower())[1]
         else:
             return ""
         return situation_typique_avalancheuse
