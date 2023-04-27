@@ -94,28 +94,18 @@ def test_extract_situation_typique_avalancheuse_from_stabilite_paragraph():
         assert situation_typique_avalancheuse == tc["expected_text"]
 
     test_cases = [
-        "Situations avalancheuses typiques",
-        "Situation avalancheuse typique",
-        "Situation avalancheuse",
-        "Situations avalancheuses",
+        "Situations avalancheuses typiques : ",
+        "Situation avalancheuse typique : ",
+        "Situation avalancheuse : ",
+        "Situations avalancheuses : ",
+        "Situations typiques de ",
+        "Situations avalancheuses de ",
     ]
     for tc in test_cases:
-        raw_text = f"Lorem ipsum.\n\n{tc} : neige humide.\n\nConsectetur adipiscing elit,."
+        raw_text = f"Lorem ipsum.\n\n{tc}neige humide.\n\nConsectetur adipiscing elit,."
     expected_text = "neige humide."
     situation_typique_avalancheuse = Bulletin.extract_situation_typique_avalancheuse_from_stabilite_paragraph(raw_text)
     assert situation_typique_avalancheuse == expected_text
-
-    raw_text = f"Lorem ipsum.\n\n Situations typiques de neige fraîche et neige humide.\n\nConsectetur adipiscing elit,."
-    expected_text = "neige fraîche et neige humide."
-    situation_typique_avalancheuse = Bulletin.extract_situation_typique_avalancheuse_from_stabilite_paragraph(raw_text)
-    assert situation_typique_avalancheuse == expected_text
-
-    raw_text = f"Lorem ipsum.\n\n Situations avalancheuses de neige fraîche et neige humide.\n\nConsectetur " \
-               "adipiscing elit,."
-    expected_text = "neige fraîche et neige humide."
-    situation_typique_avalancheuse = Bulletin.extract_situation_typique_avalancheuse_from_stabilite_paragraph(raw_text)
-    assert situation_typique_avalancheuse == expected_text
-
 
 
 def test_extract_labels_situation_avalancheuse():
