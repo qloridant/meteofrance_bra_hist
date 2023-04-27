@@ -63,35 +63,13 @@ def test_parse_situation_avalancheuse():
 
 
 def test_extract_situation_typique_avalancheuse_from_stabilite_paragraph():
-    basic_test_cases = [
-        {
-            "raw_text": "Bulletin rédigé à partir d'informations réduites.\nSituation avalancheuse : neige ventée, "
-                        "neige humide.\n\nDéparts spontanés : la neige tombée dans les dernières 24 heures "
-                        "(25/30 cm) s'humidifie et se tasse très vite à la faveur des éclaircies de ce lundi "
-                        "après-midi, permettant une stabilisation efficace du manteau neigeux.",
-            "expected_text": "neige ventée, neige humide."
-        },
-        {
-            "raw_text": "Situation avalancheuse typique : plaque friable, sous-couche fragile persistante.\n\n"
-                        "Déclenchements provoqués : des plaques d'aspect poudreux, de petites dimensions mais "
-                        "faciles à déclencher, sont localement présentes en versants ombragés au-dessus de 2400 m. "
-                        "D'autres pourraient se former mardi avec la petite couche de fraîche prévue, accompagnée d'un "
-                        "vent de sud-ouest.",
-            "expected_text": "plaque friable, sous-couche fragile persistante."
-        },
-        {
-            "raw_text": "Vendredi, manteau neigeux dense en profondeur, souvent de type printanier assez humide, "
-                        "avec une couche de neige fraîche en surface plus ou moins soufflée, s'humidifiant peu à "
-                        "peu au soleil jusque vers 2000/2200 m.\n\n-Avalanches spontanées : vendredi risque limité "
-                        "à moins de 2000/2200 m, sous la forme de coulées et avalanches de surface en neige fraîche "
-                        "humide dans les fortes pentes au soleil au fil des heures.",
-            "expected_text": ""
-        },
-    ]
-    for tc in basic_test_cases:
-        situation_typique_avalancheuse = \
-            Bulletin.extract_situation_typique_avalancheuse_from_stabilite_paragraph(tc["raw_text"])
-        assert situation_typique_avalancheuse == tc["expected_text"]
+    raw_text = "Vendredi, manteau neigeux dense en profondeur, souvent de type printanier assez humide, avec une "\
+               "couche de neige fraîche en surface plus ou moins soufflée, s'humidifiant peu à " \
+               "peu au soleil jusque vers 2000/2200 m.\n\n-Avalanches spontanées : vendredi risque limité "\
+               "à moins de 2000/2200 m, sous la forme de coulées et avalanches de surface en neige fraîche "\
+               "humide dans les fortes pentes au soleil au fil des heures."
+    situation_typique_avalancheuse = Bulletin.extract_situation_typique_avalancheuse_from_stabilite_paragraph(raw_text)
+    assert situation_typique_avalancheuse == ""
 
     test_cases = [
         "Situations avalancheuses typiques : ",
@@ -105,8 +83,11 @@ def test_extract_situation_typique_avalancheuse_from_stabilite_paragraph():
         "Situations typique avalancheuses de ",
     ]
     for tc in test_cases:
-        raw_text = f"Lorem ipsum.\n\n{tc}neige humide.\n\nConsectetur adipiscing elit,."
-    expected_text = "neige humide."
+        raw_text = f"Bulletin rédigé à partir d'informations réduites.\n{tc}neige ventée, " \
+                   "neige humide.\n\nDéparts spontanés : la neige tombée dans les dernières 24 heures (25/30 cm) " \
+                   "s'humidifie et se tasse très vite à la faveur des éclaircies de ce lundi après-midi, permettant " \
+                   "une stabilisation efficace du manteau neigeux."
+    expected_text = "neige ventée, neige humide."
     situation_typique_avalancheuse = Bulletin.extract_situation_typique_avalancheuse_from_stabilite_paragraph(raw_text)
     assert situation_typique_avalancheuse == expected_text
 
