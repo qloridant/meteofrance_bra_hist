@@ -107,7 +107,8 @@ class Bulletin:
         Risk data is available in the <CARTOUCHERISQUE> xml content balise:
         For example for the BERA of the 2023-02-28 in CHABLAIS:
         <CARTOUCHERISQUE>
-            <RISQUE RISQUE1="1" EVOLURISQUE1="" LOC1="" ALTITUDE="" RISQUE2="" EVOLURISQUE2="" LOC2="" RISQUEMAXI="1" COMMENTAIRE=" "/>
+            <RISQUE RISQUE1="1" EVOLURISQUE1="" LOC1="" ALTITUDE="" RISQUE2="" EVOLURISQUE2="" LOC2="" RISQUEMAXI="1"
+            COMMENTAIRE=" "/>
             <PENTE NE="false" E="false" SE="false" S="false" SW="false" W="false" NW="false" N="false" COMMENTAIRE=""/>
             <ACCIDENTEL>rares plaques anciennes ou nouvelles</ACCIDENTEL>
             <NATUREL>peu probables</NATUREL>
@@ -301,12 +302,19 @@ class Bulletin:
         For example : "neige ventée, neige humide." or "Sous-couche fragile persistante, neige fraîche"
         """
         if re.search("(situations? avalancheuses? typiques? :)", raw_text.lower()) or \
-                re.search("(situations? avalancheuses? :)", raw_text.lower()):
-            text = re.search("(situations? avalancheuses?[^\n]*)", raw_text.lower()).group()
+                re.search("(situations? avalancheuses? :)", raw_text.lower()) or \
+                re.search("(situations? typiques? de)", raw_text.lower()):
+            try:
+                text = re.search("(situations? avalancheuses?[^\n]*)", raw_text.lower()).group()
+            except Exception:
+                text = re.search("(situations? typiques?[^\n]*)", raw_text.lower()).group()
             try:
                 situation_typique_avalancheuse = re.split("situations? avalancheuses? : ", text.lower())[1]
             except Exception:
-                situation_typique_avalancheuse = re.split("situations? avalancheuses? typiques? : ", text.lower())[1]
+                try:
+                    situation_typique_avalancheuse = re.split("situations? avalancheuses? typiques? : ", text.lower())[1]
+                except Exception:
+                    situation_typique_avalancheuse = re.split("situations? typiques? de ", text.lower())[1]
             return situation_typique_avalancheuse
         else:
             return ""
