@@ -263,6 +263,43 @@ class Bulletin:
 
     @staticmethod
     def extract_situation_typique_avalancheuse_from_stabilite_paragraph(raw_text: str) -> str:
+        """
+        From a text (as found in "STABILITE" xml balise in the BERA at xml format), extract a small text containing
+        information related to typical avalanche situations mentionned in the BERA,
+
+        For example from the following "STABILITE" xml balise
+        <STABILITE>
+            <TEXTE>
+                La nouvelle neige adhère moyennement à l'ancienne, surtout en altitude. Situations
+                avalancheuses typiques : neige fraîche, neige ventée. \n\n Avalanches spontanées : rares départs
+                pendant les averses, ou à force d'accumulation par le vent dans une pente très raide. Taille 1 à 2
+                (petite à moyenne). Ponctuellement encore une plaque de fond sous 2000 m, taille 2 en versant
+                N. \n\n Déclenchements skieurs : quelques plaques friables dans la neige récente, surtout en cas
+                d'accumulation par le vent de SW/W. Possibles toutes orientations, un peu plus épaisses et sensibles
+                en N et E, surtout au-dessus de 2000/2200 m. Très localement, en N/NW/NE plus haut que 2300 m,
+                peut-être une vieille couche fragile persistante enfouie, pouvant favoriser une cassure large
+                (zones peu enneigées et rarement skiées).
+            </TEXTE>
+        </STABILITE>
+        extracts and return the small text "neige fraîche, neige ventée." which is mentioned after "Situations
+        avalancheuses typiques :" in the raw text.
+
+        Parameters
+        ----------
+        raw_text: str: paragraph extracted from "STABILITE" xml balise in the BERA at xml format,
+        For example :
+            "La nouvelle neige adhère moyennement à l'ancienne, surtout en altitude. Situations typiques :
+            neige fraîche, neige ventée. \n\n Avalanches spontanées : rares départs pendant les averses, ou à force
+            d'accumulation par le vent dans une pente très raide. Taille 1 à 2 (petite à moyenne)... \n\n
+            Déclenchements skieurs : quelques plaques friables dans la neige récente, surtout en cas d'accumulation
+            par le vent de SW/W. Possibles toutes orientations, un peu plus épaisses et sensibles en N et E,
+            surtout au-dessus de 2000/2200 m. ..."
+
+        Returns
+        -------
+        situation_typique_avalancheuse: str: small text containing information related to typical avalanche situations,
+        For example : "neige ventée, neige humide." or "Sous-couche fragile persistante, neige fraîche"
+        """
         if re.search("(situations? avalancheuses? typiques? :)", raw_text.lower()) or \
                 re.search("(situations? avalancheuses? :)", raw_text.lower()):
             text = re.search("(situations? avalancheuses?[^\n]*)", raw_text.lower()).group()
@@ -277,8 +314,8 @@ class Bulletin:
     @staticmethod
     def extract_labels_situation_avalancheuse(raw_text: str) -> set[Label]:
         """
-        From a text (as found in BERA raw data), extracts avalanche situation labels, among :
-
+        From a text describing some typical avalanche situations (for examples: "neige ventée, neige humide." or
+        "Sous-couche fragile persistante, neige fraîche"), extracts avalanche situation labels, among :
         - "Sous-couche fragile persistante"
         - "Neige soufflée"
         - "Neige fraîche"
@@ -287,7 +324,8 @@ class Bulletin:
 
         Params
         -------
-        raw_text: str: text found in BERA raw data
+        raw_text: str: small text describing some typical avalanche situations,
+        for example : "neige ventée, neige humide."
 
         Returns
         -------
