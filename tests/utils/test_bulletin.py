@@ -96,11 +96,13 @@ def test_extract_situation_typique_avalancheuse_from_stabilite_paragraph():
     test_cases = [
         "Situations avalancheuses typiques : ",
         "Situation avalancheuse typique : ",
+        "Situation avalancheuse typique de ",
         "Situation avalancheuse : ",
         "Situations avalancheuses : ",
         "Situations typiques de ",
         "Situations avalancheuses de ",
         "Situations typique avalancheuses : ",
+        "Situations typique avalancheuses de ",
     ]
     for tc in test_cases:
         raw_text = f"Lorem ipsum.\n\n{tc}neige humide.\n\nConsectetur adipiscing elit,."
