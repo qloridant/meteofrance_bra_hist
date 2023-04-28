@@ -54,7 +54,7 @@ if not branch:
 
 repo = init_repo()
 files_to_commit = []
-for massif in MASSIFS:
+for massif in MASSIFS[28:]:
     # Lecture de la date de publication de notre fichier
     dates_ = subprocess.run(["cat", f"data/{massif}/urls_list.txt"],
                             capture_output=True).stdout.decode('utf-8').split('\n')
@@ -82,43 +82,26 @@ for massif in MASSIFS:
         if int(date_) >= 20181217143136:  # 20181217143136 = Datetime of the first xml files for the bera
             # Check if there are missing data in new params for this date
             date = f"{date_[0:4]}-{date_[4:6]}-{date_[6:8]}"
-            missing_data = False
-            for param in PARAMS[11:]:
-                try:
-                    if df.loc[df.date == f"{date}", f"{param}"].values[0] == '':
-                        missing_data = True
-                        break
-                except Exception as e:
-                    logger.error(
-                        f'{time.time() - start_time} seconds - Error occurred for massif {massif} at this date: '
-                        f'{date_} in checking missing data: {e}...',
-                        exc_info=True)
-                    break
+            try:
+                # Create new_content for this date
+                new_data = []
+                bulletin = Bulletin(massif, date_)
+                bulletin.download()
+                bulletin.parse_donnees_risques()
+                bulletin.parse_donnees_meteo()
+                bulletin.parse_situation_avalancheuse()
+                new_data.append(bulletin.append_csv())
 
-            if missing_data:
-                try:
-                    # Create new_content for this date
-                    new_data = []
-                    bulletin = Bulletin(massif, date_)
-                    bulletin.download()
-                    bulletin.parse_donnees_risques()
-                    bulletin.parse_donnees_meteo()
-                    bulletin.parse_situation_avalancheuse()
-                    new_data.append(bulletin.append_csv())
+                # Add new content
+                # logger.debug(f"{time.time() - start_time} seconds - Add datas for massif {massif}, "
+                #              f"date = {date_}...")
+                df.loc[df.date == f"{date}"] = new_data
 
-                    # Add new content
-                    # logger.debug(f"{time.time() - start_time} seconds - Add datas for massif {massif}, "
-                    #              f"date = {date_}...")
-                    df.loc[df.date == f"{date}"] = new_data
-
-                except Exception as e:
-                    logger.error(
-                        f'{time.time() - start_time} seconds - Error occurred for massif {massif} at this date: '
-                        f'{date_}: {e}...',
-                        exc_info=True)
-            else:
-                # Do nothing
-                continue
+            except Exception as e:
+                logger.error(
+                    f'{time.time() - start_time} seconds - Error occurred for massif {massif} at this date: '
+                    f'{date_}: {e}...',
+                    exc_info=True)
 
     df = df.sort_values('date', ascending=False)
     df = df.drop_duplicates()
