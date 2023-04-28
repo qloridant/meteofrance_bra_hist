@@ -54,7 +54,7 @@ if not branch:
 
 repo = init_repo()
 files_to_commit = []
-for massif in MASSIFS[0:1]:
+for massif in MASSIFS:
     # Lecture de la date de publication de notre fichier
     dates_ = subprocess.run(["cat", f"data/{massif}/urls_list.txt"],
                             capture_output=True).stdout.decode('utf-8').split('\n')
