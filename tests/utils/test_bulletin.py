@@ -77,6 +77,7 @@ def test_extract_situation_typique_avalancheuse_from_stabilite_paragraph():
         "Situation avalancheuse typique de ",
         "Situation avalancheuse : ",
         "Situations avalancheuses : ",
+        "Situations typiques : ",
         "Situations typiques de ",
         "Situations avalancheuses de ",
         "Situations typique avalancheuses : ",
@@ -116,6 +117,10 @@ def test_extract_labels_situation_avalancheuse():
             "expected_labels": {Label.AVALANCHE_GLISSEMENT}
         },
         {
+            "raw_text": "Plaques de fond.",
+            "expected_labels": {Label.AVALANCHE_GLISSEMENT}
+        },
+        {
             "raw_text": "neige ventée, neige humide",
             "expected_labels": {Label.NEIGE_SOUFFLEE, Label.NEIGE_HUMIDE}
         },
@@ -139,6 +144,16 @@ def test_extract_labels_situation_avalancheuse():
     for raw_text in raw_texts_sous_couche_fragile_persistante:
         labels = Bulletin.extract_labels_situation_avalancheuse(raw_text)
         assert labels == {Label.SOUS_COUCHE_FRAGILE}
+
+    raw_texts_avalanche_de_glissement = [
+        "plaques de fond.",
+        "Plaque de fond.",
+        "avalanche de glissement.",
+        "avalanches de glissement.",
+    ]
+    for raw_text in raw_texts_avalanche_de_glissement:
+        labels = Bulletin.extract_labels_situation_avalancheuse(raw_text)
+        assert labels == {Label.AVALANCHE_GLISSEMENT}
 
 
 def test_append_csv():
