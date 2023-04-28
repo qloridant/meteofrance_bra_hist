@@ -346,8 +346,8 @@ class Bulletin:
             labels.add(Label.NEIGE_FRAICHE)
         if "neige humide" in raw_text.lower() or "neige de printemps" in raw_text.lower():
             labels.add(Label.NEIGE_HUMIDE)
-        if "plaque de fond" in raw_text.lower() or \
-                not re.match("avalanche[\s-] de glissement", raw_text.lower()) is None:
+        if "plaque de fond" in raw_text.lower() or "plaques de fond" in raw_text.lower() or\
+                not re.match("avalanches? de glissement", raw_text.lower()) is None:
             labels.add(Label.AVALANCHE_GLISSEMENT)
         return labels
 
