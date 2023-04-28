@@ -6,12 +6,21 @@ mais uniquement au format pdf et difficiles à traiter pour des réutilisations.
 
 Les données extraites des BERAs sont enregistrées et disponibles dans les fichiers `data/<MASSIF>/hist.csv` de ce projet.
 
+La liste des massifs disponibles est la suivante :
+"CHABLAIS", "MONT-BLANC", "ARAVIS", "CHARTREUSE", "BELLEDONNE", "GRANDES-ROUSSES", "VERCORS", "OISANS", 
+"HAUTE-TARENTAISE", "BEAUFORTAIN", "BAUGES", "VANOISE", "HAUTE-MAURIENNE", "MAURIENNE", "UBAYE", 
+"HAUT-VAR_HAUT-VERDON", "THABOR", "PELVOUX", "QUEYRAS", "CHAMPSAUR", "DEVOLUY", "EMBRUNAIS-PARPAILLON", 
+"MERCANTOUR", "CINTO-ROTONDO", "RENOSO-INCUDINE", "ANDORRE", "ORLU__ST_BARTHELEMY", "HAUTE-ARIEGE", "COUSERANS", 
+"LUCHONNAIS", "AURE-LOURON", "HAUTE-BIGORRE", "ASPE-OSSAU", "PAYS-BASQUE", "CERDAGNE-CANIGOU", "CAPCIR-PUYMORENS".
+
+
 À ce jour les données extraites des BERAs renseignées dans les fichiers `data/<MASSIF>/hist.csv` reprennent par massif 
 et jour de publication du BERA :
   - le niveau de risque et son évolution en fonction de l'altitude ou éventuellement au cours de la journée
   - l'url de téléchargement du BERA au format pdf
   - les données météo enregistrées et mesurées le jour de la publication du BERA
   - la hauteur de neige fraiche mesurée la veille du jour de la publication du BERA
+  - la/les situation.s avalancheuse.s typique.s mentionnées dans le BERA
 
 Objectifs de réutilisations :
   - Evaluation du risque de la partie supérieure du manteau neigeux (préparation sorties)
