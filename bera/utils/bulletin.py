@@ -301,9 +301,9 @@ class Bulletin:
         situation_typique_avalancheuse: str: small text containing information related to typical avalanche situations,
         For example : "neige ventée, neige humide." or "Sous-couche fragile persistante, neige fraîche"
         """
-        if re.search("(situations? avalancheuses? typiques? (:|de))", raw_text.lower()):
-            text = re.search("(situations? avalancheuses? typiques?[^\n]*)", raw_text.lower()).group()
-            situation_typique_avalancheuse = re.split("situations? avalancheuses? typiques? (:|de) ", text.lower())[-1]
+        if re.search("(situations? (avalancheuses?|avalanche) typiques? (:|de))", raw_text.lower()):
+            text = re.search("(situations? (avalancheuses?|avalanche) typiques?[^\n]*)", raw_text.lower()).group()
+            situation_typique_avalancheuse = re.split("situations? (avalancheuses?|avalanche) typiques? (:|de) ", text.lower())[-1]
         elif re.search("(situations? (avalancheuses?|typiques?) (:|de))", raw_text.lower()):
             text = re.search("(situations? (avalancheuses?|typiques?)[^\n]*)", raw_text.lower()).group()
             situation_typique_avalancheuse = re.split("situations? (avalancheuses?|typiques?) (:|de) ",
