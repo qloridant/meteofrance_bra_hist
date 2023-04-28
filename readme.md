@@ -301,6 +301,7 @@ Les différents scripts constituant ce projet sont les suivants :
 - bera/historical_build_urls.py
 - bera/historical_extract_all_beras.py
 - bera/utils/bulletin.py
+- bera/count_missing_situation_avalancheuse_per_massif.py
 
 Ces différents scripts sont détaillés dans chacun des fichiers de scripts.
 
