@@ -17,6 +17,14 @@ Objectifs de réutilisations :
   - Evaluation du risque de la partie supérieure du manteau neigeux (préparation sorties)
   - Outil pédagogique afin d'étudier les accidents ayant eu lieu
 
+
+# ROADMAP
+- Aggréger l'ensemble des données produites dans un unique CSV
+- Extraction de l'information relative aux situations typiques avalancheuses
+- Encodage de l'information relative aux situations typiques avalancheuses selon les
+[standards recensés par l'EAWS (European Avalanche Warning System)](https://www.avalanches.org/standards/avalanche-problems/)
+
+
 # Autres projets
 - [MetaSkiRando :](https://www.metaskirando.ovh/Nivo.php) Moteur de recherche du ski de rando (et [code source](https://github.com/c2corg/metaskirando))
 - [Data Avalanche :](http://www.data-avalanche.org) Recensement des avalanches
