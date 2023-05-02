@@ -32,9 +32,9 @@ if __name__ == '__main__':
     with open('data/tmp_hist_bera.csv', 'r') as f:
         full_content = f.read()
 
-    # logger.info("Add the new file into a commitand push ...")
-    # blob = repo.create_git_blob(full_content, "utf-8")
-    # file = InputGitTreeElement(path='data/hist_bera.csv', mode='100644', type='blob',
-    #                            sha=blob.sha)
-    # commit_many_files_and_push(repo, branch, "Merge all hist.csv files in one single file hist_bera.csv", [file])
-    # logger.info("Job succeeded")
+    logger.info("Add the new file into a commit and push ...")
+    blob = repo.create_git_blob(full_content, "utf-8")
+    file = InputGitTreeElement(path='data/hist_bera.csv', mode='100644', type='blob',
+                               sha=blob.sha)
+    commit_many_files_and_push(repo, branch, "First try: Merge all hist.csv files in one single file hist_bera.csv", [file])
+    logger.info("Job succeeded")
