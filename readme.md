@@ -180,7 +180,8 @@ des massifs  disponibles : "CHABLAIS", "MONT-BLANC", "ARAVIS", "CHARTREUSE", "BE
     "12_direction_vent_altitude_2":"Sans objet",
     "12_vitesse_vent_altitude_2":"Sans objet",
     "precipitation_neige_veille_altitude":1800,
-    "precipitation_neige_veille_epaisseur":0
+    "precipitation_neige_veille_epaisseur":0,
+    "situation_avalancheuse_typique":"Neige ventée"
   },
   ...,
   {
@@ -223,14 +224,15 @@ des massifs  disponibles : "CHABLAIS", "MONT-BLANC", "ARAVIS", "CHARTREUSE", "BE
     "12_limite_pluie_neige":"Sans objet",
     "12_isotherme_0":1400,
     "12_isotherme_moins_10":2800,"
-    12_altitude_vent_1":3000,
+    "12_altitude_vent_1":3000,
     "12_altitude_vent_2":"Sans objet",
     "12_direction_vent_altitude_1":"N",
     "12_vitesse_vent_altitude_1":70,
     "12_direction_vent_altitude_2":"Sans objet",
     "12_vitesse_vent_altitude_2":"Sans objet",
     "precipitation_neige_veille_altitude":1800,
-    "precipitation_neige_veille_epaisseur":10
+    "precipitation_neige_veille_epaisseur":10,
+    "situation_avalancheuse_typique":""
   }
 ]
 ```
@@ -255,7 +257,8 @@ curl -X GET 'https://api.gitrows.com/@github/qloridant/meteofrance_bra_hist/data
     "12_temps":"Neige faible",
     ...,
     "precipitation_neige_veille_altitude":1800,
-    "precipitation_neige_veille_epaisseur":35
+    "precipitation_neige_veille_epaisseur":35,
+    "situation_avalancheuse_typique":"Neige fraîche - Neige ventée"
   }
 ]
 ```
@@ -274,14 +277,16 @@ curl -X GET 'https://api.gitrows.com/@github/qloridant/meteofrance_bra_hist/data
     "massif":"QUEYRAS",
     "risque1":2,
     ...,
-    "precipitation_neige_veille_epaisseur":0
+    "precipitation_neige_veille_epaisseur":0,
+    "situation_avalancheuse_typique":"Neige fraîche - Sous-couche fragile persistante"
   },
   {
     "date":"2023-01-29",
     "massif":"QUEYRAS",
     "risque1":2,
     ...,
-    "precipitation_neige_veille_epaisseur":0
+    "precipitation_neige_veille_epaisseur":0,
+    "situation_avalancheuse_typique":"Neige ventée - Sous-couche fragile persistante"
   },
   ...,
   {
@@ -289,14 +294,16 @@ curl -X GET 'https://api.gitrows.com/@github/qloridant/meteofrance_bra_hist/data
     "massif":"QUEYRAS",
     "risque1":3,
     ...,
-    "precipitation_neige_veille_epaisseur":5
+    "precipitation_neige_veille_epaisseur":5,
+    "situation_avalancheuse_typique":"Neige fraîche - Neige ventée"
   },
   {
     "date":"2023-01-24",
     "massif":"QUEYRAS",
     "risque1":4,
     ...,
-    "precipitation_neige_veille_epaisseur":35
+    "precipitation_neige_veille_epaisseur":35,
+    "situation_avalancheuse_typique":"Neige fraîche - Neige ventée"
   }
 ]
 ```
