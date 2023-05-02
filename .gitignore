@@ -3,6 +3,7 @@
 app/tmp/*
 tmp_bera.xml
 tmp_dataframe.csv
+tmp_hist_bera.csv
 .env
 .idea
 
