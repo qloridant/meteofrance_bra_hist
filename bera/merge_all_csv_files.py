@@ -27,8 +27,9 @@ if __name__ == '__main__':
 
     logger.info("Merging all csv files into a single pandas dataframe ...")
     # Merge files by joining all files
-    dataframe = pd.concat(map(pd.read_csv, list_files), ignore_index=True)
-    dataframe.to_csv('data/tmp_hist_bera.csv', sep=',', index=False)
+    df = pd.concat(map(pd.read_csv, list_files), ignore_index=True)
+    df = df.dropna(subset=['date'])
+    df.to_csv('data/tmp_hist_bera.csv', sep=',', index=False)
     with open('data/tmp_hist_bera.csv', 'r') as f:
         full_content = f.read()
 
@@ -36,5 +37,7 @@ if __name__ == '__main__':
     blob = repo.create_git_blob(full_content, "utf-8")
     file = InputGitTreeElement(path='data/hist_bera.csv', mode='100644', type='blob',
                                sha=blob.sha)
-    commit_many_files_and_push(repo, branch, "First try: Merge all hist.csv files in one single file hist_bera.csv", [file])
+    commit_many_files_and_push(repo, branch, "Second try: Merge all hist.csv files in one single file hist_bera.csv and "
+                                             "remove rows with NaN values in date column",
+                               [file])
     logger.info("Job succeeded")
