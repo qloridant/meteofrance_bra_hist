@@ -2,7 +2,8 @@ import pytest
 import xml.etree.ElementTree as ET
 
 from mock import patch, PropertyMock
-from src.utils.bulletin import Bulletin, MassifInexistantException
+from bera.utils.bulletin import Bulletin, MassifInexistantException
+from bera.utils.common import Label
 
 
 def test_init():
@@ -23,9 +24,9 @@ def test_jour_key():
     assert bu.jour_key != '20160417132702'
 
 
-def test_parse():
+def test_parse_donnees_risques():
     bu = Bulletin('VERCORS', '20200517132702')
-    with patch('src.utils.bulletin.Bulletin.path_file',
+    with patch('bera.utils.bulletin.Bulletin.path_file',
                new_callable=PropertyMock) as a:
         a.return_value = 'tests/valid_bera.xml'
         risques = bu.parse_donnees_risques()
@@ -39,13 +40,140 @@ def test_parse():
         assert 'LOC2' in risques
         assert 'RISQUEMAXI' in risques
         assert 'COMMENTAIRE' in risques
-    with patch('src.utils.bulletin.Bulletin.path_file',
+    with patch('bera.utils.bulletin.Bulletin.path_file',
                new_callable=PropertyMock) as a:
         a.return_value = 'tests/invalid_tag_bera.xml'
         with pytest.raises(ET.ParseError):
             bu.parse_donnees_risques()
-    with patch('src.utils.bulletin.Bulletin.path_file',
+    with patch('bera.utils.bulletin.Bulletin.path_file',
                new_callable=PropertyMock) as a:
         a.return_value = 'tests/invalid_attribute_bera.xml'
         with pytest.raises(ET.ParseError):
             bu.parse_donnees_risques()
+
+
+def test_parse_situation_avalancheuse():
+    bu = Bulletin('VERCORS', '20200517132702')
+    with patch('bera.utils.bulletin.Bulletin.path_file',
+               new_callable=PropertyMock) as a:
+        a.return_value = 'tests/valid_bera.xml'
+        bu.parse_donnees_risques()
+        bu.parse_situation_avalancheuse()
+        assert bu.situation_avalancheuse == {'situation_avalancheuse_typique': [Label.SOUS_COUCHE_FRAGILE]}
+
+
+def test_extract_situation_typique_avalancheuse_from_stabilite_paragraph():
+    raw_text = "Vendredi, manteau neigeux dense en profondeur, souvent de type printanier assez humide, avec une "\
+               "couche de neige fraîche en surface plus ou moins soufflée, s'humidifiant peu à " \
+               "peu au soleil jusque vers 2000/2200 m.\n\n-Avalanches spontanées : vendredi risque limité "\
+               "à moins de 2000/2200 m, sous la forme de coulées et avalanches de surface en neige fraîche "\
+               "humide dans les fortes pentes au soleil au fil des heures."
+    situation_typique_avalancheuse = Bulletin.extract_situation_typique_avalancheuse_from_stabilite_paragraph(raw_text)
+    assert situation_typique_avalancheuse == ""
+
+    test_cases = [
+        "Situations avalancheuses typiques : ",
+        "Situation avalancheuse typique : ",
+        "Situation avalancheuse typique de ",
+        "Situation avalancheuse : ",
+        "Situations avalancheuses : ",
+        "Situations typiques : ",
+        "Situations typiques de ",
+        "Situations avalancheuses de ",
+        "Situations typique avalancheuses : ",
+        "Situations typique avalancheuses de ",
+        "Situation avalanche typique : "
+    ]
+    for tc in test_cases:
+        raw_text = f"Bulletin rédigé à partir d'informations réduites.\n{tc}neige ventée, " \
+                   "neige humide.\n\nDéparts spontanés : la neige tombée dans les dernières 24 heures (25/30 cm) " \
+                   "s'humidifie et se tasse très vite à la faveur des éclaircies de ce lundi après-midi, permettant " \
+                   "une stabilisation efficace du manteau neigeux."
+    expected_text = "neige ventée, neige humide."
+    situation_typique_avalancheuse = Bulletin.extract_situation_typique_avalancheuse_from_stabilite_paragraph(raw_text)
+    assert situation_typique_avalancheuse == expected_text
+
+
+def test_extract_labels_situation_avalancheuse():
+    basic_test_cases = [
+        {
+            "raw_text": "sous couche fragile persistante.",
+            "expected_labels": {Label.SOUS_COUCHE_FRAGILE}
+        },
+        {
+            "raw_text": "neige ventée",
+            "expected_labels": {Label.NEIGE_SOUFFLEE}
+        },
+        {
+            "raw_text": "neige fraîche.",
+            "expected_labels": {Label.NEIGE_FRAICHE}
+        },
+        {
+            "raw_text": "neige humide, ",
+            "expected_labels": {Label.NEIGE_HUMIDE}
+        },
+        {
+            "raw_text": "Plaque de fond.",
+            "expected_labels": {Label.AVALANCHE_GLISSEMENT}
+        },
+        {
+            "raw_text": "Plaques de fond.",
+            "expected_labels": {Label.AVALANCHE_GLISSEMENT}
+        },
+        {
+            "raw_text": "neige ventée, neige humide",
+            "expected_labels": {Label.NEIGE_SOUFFLEE, Label.NEIGE_HUMIDE}
+        },
+        {
+            "raw_text": "neige ventée, neige humide",
+            "expected_labels": {Label.NEIGE_HUMIDE, Label.NEIGE_SOUFFLEE}
+        }
+    ]
+
+    for tc in basic_test_cases:
+        labels = Bulletin.extract_labels_situation_avalancheuse(tc["raw_text"])
+        assert labels == tc["expected_labels"]
+
+    raw_texts_sous_couche_fragile_persistante = [
+        "sous-couche fragile persistante",
+        "sous-couches fragiles persistantes",
+        "Sous-couche fragile persistante",
+        "sous couche fragile persistante",
+        "sous couches fragile persistantes",
+    ]
+    for raw_text in raw_texts_sous_couche_fragile_persistante:
+        labels = Bulletin.extract_labels_situation_avalancheuse(raw_text)
+        assert labels == {Label.SOUS_COUCHE_FRAGILE}
+
+    raw_texts_avalanche_de_glissement = [
+        "plaques de fond.",
+        "Plaque de fond.",
+        "avalanche de glissement.",
+        "avalanches de glissement.",
+    ]
+    for raw_text in raw_texts_avalanche_de_glissement:
+        labels = Bulletin.extract_labels_situation_avalancheuse(raw_text)
+        assert labels == {Label.AVALANCHE_GLISSEMENT}
+
+
+def test_append_csv():
+    bu = Bulletin('VERCORS', '20200517132702')
+    with patch('bera.utils.bulletin.Bulletin.path_file',
+               new_callable=PropertyMock) as a:
+        a.return_value = 'tests/valid_bera.xml'
+        bu.parse_donnees_risques()
+        bu.parse_donnees_meteo()
+        bu.parse_situation_avalancheuse()
+
+        expected_data_list = [
+            '2020-05-17', 'VERCORS', '1', '', '<2000', '2000', '2', '', '>2000', '2', ' ',
+            'https://donneespubliques.meteofrance.fr/donnees_libres/Pdf/BRA/BRA.VERCORS.20200517132702.pdf',
+            'Eclaircies', 'Non', 'Sans objet', '1800', '3400', '2000', '2500', 'S', '40', 'S', '50',
+            'Eclaircies', 'Non', 'Sans objet', '2000', '3400', '2000', '2500', 'S', '30', 'S', '40',
+            'Peu nuageux', 'Non', 'Sans objet', '2100', '3500', '2000', '2500', 'S', '30', 'S', '40',
+            '1800', '0', f'{Label.SOUS_COUCHE_FRAGILE._value_}'
+        ]
+
+        bu_data_list = bu.append_csv()
+
+        assert bu_data_list == expected_data_list

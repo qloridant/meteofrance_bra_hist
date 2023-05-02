@@ -6,12 +6,21 @@ mais uniquement au format pdf et difficiles à traiter pour des réutilisations.
 
 Les données extraites des BERAs sont enregistrées et disponibles dans les fichiers `data/<MASSIF>/hist.csv` de ce projet.
 
+La liste des massifs disponibles est la suivante :
+"CHABLAIS", "MONT-BLANC", "ARAVIS", "CHARTREUSE", "BELLEDONNE", "GRANDES-ROUSSES", "VERCORS", "OISANS", 
+"HAUTE-TARENTAISE", "BEAUFORTAIN", "BAUGES", "VANOISE", "HAUTE-MAURIENNE", "MAURIENNE", "UBAYE", 
+"HAUT-VAR_HAUT-VERDON", "THABOR", "PELVOUX", "QUEYRAS", "CHAMPSAUR", "DEVOLUY", "EMBRUNAIS-PARPAILLON", 
+"MERCANTOUR", "CINTO-ROTONDO", "RENOSO-INCUDINE", "ANDORRE", "ORLU__ST_BARTHELEMY", "HAUTE-ARIEGE", "COUSERANS", 
+"LUCHONNAIS", "AURE-LOURON", "HAUTE-BIGORRE", "ASPE-OSSAU", "PAYS-BASQUE", "CERDAGNE-CANIGOU", "CAPCIR-PUYMORENS".
+
+
 À ce jour les données extraites des BERAs renseignées dans les fichiers `data/<MASSIF>/hist.csv` reprennent par massif 
 et jour de publication du BERA :
   - le niveau de risque et son évolution en fonction de l'altitude ou éventuellement au cours de la journée
   - l'url de téléchargement du BERA au format pdf
   - les données météo enregistrées et mesurées le jour de la publication du BERA
   - la hauteur de neige fraiche mesurée la veille du jour de la publication du BERA
+  - la/les situation.s avalancheuse.s typique.s mentionnées dans le BERA
 
 Objectifs de réutilisations :
   - Evaluation du risque de la partie supérieure du manteau neigeux (préparation sorties)
@@ -81,8 +90,9 @@ Clé Primaire :
 |12_vitesse_vent_altitude_1|Vitesse du vent au point bas à midi|string|Vitesse du vent (en km/h) mesurée au point de mesure bas le jour de la publication du BERA à 12h00|10|Valeur optionnelle|
 |12_direction_vent_altitude_2|Direction du vent au point haut à midi|string|Direction du vent mesurée au point de mesure haut le jour de la publication du BERA à 12h00|N|Valeur optionnelle|
 |12_vitesse_vent_altitude_2|Vitesse du vent au point haut à midi|string|Vitesse du vent (en km/h) mesurée au point de mesure haut le jour de la publication du BERA à 12h00|10|Valeur optionnelle|
-|precipitation_neige_veille_altitude|Altitude du poit de mesure de neige fraiche la veille|string|Altitude (en m) du point de mesure utilisé pour mesure l'épaisseur de neige fraiche tombée la veille du jour de la publication du BERA|1800|Valeur optionnelle|
+|precipitation_neige_veille_altitude|Altitude du point de mesure de neige fraiche la veille|string|Altitude (en m) du point de mesure utilisé pour mesure l'épaisseur de neige fraiche tombée la veille du jour de la publication du BERA|1800|Valeur optionnelle|
 |precipitation_neige_veille_epaisseur|Neige fraiche la veille|string|Epaisseur (en cm) de neige fraiche tombée la veille du jour de la publication du BERA|0|Valeur optionnelle|
+|situation_avalancheuse_typique|Situations avalancheuses typiques mentionnées dans le BERA|string|Situations avalancheuses typiques catégorisées selon l'EAWS mentionnées dans le BERA|Neige soufflée - Neige fraîche - SOus-couche fragile persistante|Valeur optionnelle|
 
 Illustration de l'[exemple de BERA pour le massif du CHABLAIS publié le 05/04/2023](https://donneespubliques.meteofrance.fr/donnees_libres/Pdf/BRA/BRA.CHABLAIS.20230405135902.pdf):
 
@@ -170,7 +180,8 @@ des massifs  disponibles : "CHABLAIS", "MONT-BLANC", "ARAVIS", "CHARTREUSE", "BE
     "12_direction_vent_altitude_2":"Sans objet",
     "12_vitesse_vent_altitude_2":"Sans objet",
     "precipitation_neige_veille_altitude":1800,
-    "precipitation_neige_veille_epaisseur":0
+    "precipitation_neige_veille_epaisseur":0,
+    "situation_avalancheuse_typique":"Neige ventée"
   },
   ...,
   {
@@ -213,14 +224,15 @@ des massifs  disponibles : "CHABLAIS", "MONT-BLANC", "ARAVIS", "CHARTREUSE", "BE
     "12_limite_pluie_neige":"Sans objet",
     "12_isotherme_0":1400,
     "12_isotherme_moins_10":2800,"
-    12_altitude_vent_1":3000,
+    "12_altitude_vent_1":3000,
     "12_altitude_vent_2":"Sans objet",
     "12_direction_vent_altitude_1":"N",
     "12_vitesse_vent_altitude_1":70,
     "12_direction_vent_altitude_2":"Sans objet",
     "12_vitesse_vent_altitude_2":"Sans objet",
     "precipitation_neige_veille_altitude":1800,
-    "precipitation_neige_veille_epaisseur":10
+    "precipitation_neige_veille_epaisseur":10,
+    "situation_avalancheuse_typique":""
   }
 ]
 ```
@@ -245,7 +257,8 @@ curl -X GET 'https://api.gitrows.com/@github/qloridant/meteofrance_bra_hist/data
     "12_temps":"Neige faible",
     ...,
     "precipitation_neige_veille_altitude":1800,
-    "precipitation_neige_veille_epaisseur":35
+    "precipitation_neige_veille_epaisseur":35,
+    "situation_avalancheuse_typique":"Neige fraîche - Neige ventée"
   }
 ]
 ```
@@ -264,14 +277,16 @@ curl -X GET 'https://api.gitrows.com/@github/qloridant/meteofrance_bra_hist/data
     "massif":"QUEYRAS",
     "risque1":2,
     ...,
-    "precipitation_neige_veille_epaisseur":0
+    "precipitation_neige_veille_epaisseur":0,
+    "situation_avalancheuse_typique":"Neige fraîche - Sous-couche fragile persistante"
   },
   {
     "date":"2023-01-29",
     "massif":"QUEYRAS",
     "risque1":2,
     ...,
-    "precipitation_neige_veille_epaisseur":0
+    "precipitation_neige_veille_epaisseur":0,
+    "situation_avalancheuse_typique":"Neige ventée - Sous-couche fragile persistante"
   },
   ...,
   {
@@ -279,14 +294,16 @@ curl -X GET 'https://api.gitrows.com/@github/qloridant/meteofrance_bra_hist/data
     "massif":"QUEYRAS",
     "risque1":3,
     ...,
-    "precipitation_neige_veille_epaisseur":5
+    "precipitation_neige_veille_epaisseur":5,
+    "situation_avalancheuse_typique":"Neige fraîche - Neige ventée"
   },
   {
     "date":"2023-01-24",
     "massif":"QUEYRAS",
     "risque1":4,
     ...,
-    "precipitation_neige_veille_epaisseur":35
+    "precipitation_neige_veille_epaisseur":35,
+    "situation_avalancheuse_typique":"Neige fraîche - Neige ventée"
   }
 ]
 ```
@@ -300,6 +317,7 @@ Les différents scripts constituant ce projet sont les suivants :
 - bera/historical_build_urls.py
 - bera/historical_extract_all_beras.py
 - bera/utils/bulletin.py
+- bera/count_missing_situation_avalancheuse_per_massif.py
 
 Ces différents scripts sont détaillés dans chacun des fichiers de scripts.
 

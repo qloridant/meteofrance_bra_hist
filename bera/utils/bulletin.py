@@ -24,13 +24,14 @@ NB: this script is mainly useful in a development context.
 
 import logging
 import os
+import re
 import sys
 
 import requests
 import xml.etree.ElementTree as ET
 
 from bera.utils.common import MASSIFS, format_hist_meteo, format_neige_fraiche, construct_unavailable_meteo_dict, \
-    construct_unavailable_neige_fraiche_dict
+    construct_unavailable_neige_fraiche_dict, Label
 from bera.utils.github_utils import init_repo, update_file_content
 
 logger = logging.getLogger(__name__)
@@ -74,6 +75,7 @@ class Bulletin:
         self.jour = jour
         self.risques = {}
         self.meteo = {}
+        self.situation_avalancheuse = {}
 
     @property
     def url(self):
@@ -98,14 +100,15 @@ class Bulletin:
         with open(self.path_file, 'bw+') as f:
             f.write(r.content)
 
-    def parse_donnees_risques(self) -> []:
+    def parse_donnees_risques(self) -> dict[str, str]:
         """
         This method aims to extract risk information from the BERA xml content and parse it into a dict which will be
         integrated at the end in hist.csv files to store risk data.
         Risk data is available in the <CARTOUCHERISQUE> xml content balise:
         For example for the BERA of the 2023-02-28 in CHABLAIS:
         <CARTOUCHERISQUE>
-            <RISQUE RISQUE1="1" EVOLURISQUE1="" LOC1="" ALTITUDE="" RISQUE2="" EVOLURISQUE2="" LOC2="" RISQUEMAXI="1" COMMENTAIRE=" "/>
+            <RISQUE RISQUE1="1" EVOLURISQUE1="" LOC1="" ALTITUDE="" RISQUE2="" EVOLURISQUE2="" LOC2="" RISQUEMAXI="1"
+            COMMENTAIRE=" "/>
             <PENTE NE="false" E="false" SE="false" S="false" SW="false" W="false" NW="false" N="false" COMMENTAIRE=""/>
             <ACCIDENTEL>rares plaques anciennes ou nouvelles</ACCIDENTEL>
             <NATUREL>peu probables</NATUREL>
@@ -125,9 +128,9 @@ class Bulletin:
 
         Returns
         -------
-        self.risk: dict: corresponding to the risk data extracted from the BERA published, associating values
-             for these keys:
-             risque1, evolurisque1, loc1, altitude, risque2, evolurisque2, loc2, risque_maxi, commentaire
+        self.risk: dict[str, str]: corresponding to the risk data extracted from the BERA published, associating values
+        for these keys:
+        risque1, evolurisque1, loc1, altitude, risque2, evolurisque2, loc2, risque_maxi, commentaire
         """
         root = ET.parse(self.path_file).getroot()
         cartouche_risque = root[0].find('CARTOUCHERISQUE')
@@ -142,11 +145,11 @@ class Bulletin:
         else:
             return self.risques
 
-    def parse_donnees_meteo(self) -> dict:
+    def parse_donnees_meteo(self) -> dict[str, str]:
         """
-        Parse historical weather into a formated dict: wind, temperature, snow precipitations, isotherm from the BERA
+        Parse historical weather into a formated dict: wind, temperature, isotherm, snow precipitations, from the BERA
         xml content.
-        
+
         Historical weather data for the last 6 days are available in the <BSH><METEO><ECHEANCE> xml content balises and
         historical snow precipitations for the last 6 days are available in the <BSH><NEIGEFRAICHE><NEIGE24H> and also
         in <NEIGEFRAICHE><NEIGE24H> xml content balises.
@@ -171,9 +174,20 @@ class Bulletin:
             </NEIGEFRAICHE>
         </BSH>
 
-
-        return:
-        self.meteo: dict
+        Returns
+        -------
+        self.meteo: dict[str, str] corresponding to the weather data extracted from the BERA published, associating
+        values for these keys:
+        "00_temps", "00_mer_de_nuages", "00_limite_pluie_neige", "00_isotherme_0",
+        "00_isotherme_moins_10", "00_altitude_vent_1", "00_altitude_vent_2", "00_direction_vent_altitude_1",
+        "00_vitesse_vent_altitude_1", "00_direction_vent_altitude_2", "00_vitesse_vent_altitude_2",
+        "06_temps", "06_mer_de_nuages", "06_limite_pluie_neige", "06_isotherme_0", "06_isotherme_moins_10",
+        "06_altitude_vent_1", "06_altitude_vent_2", "06_direction_vent_altitude_1", "06_vitesse_vent_altitude_1",
+        "06_direction_vent_altitude_2", "06_vitesse_vent_altitude_2",
+        "12_temps", "12_mer_de_nuages", "12_limite_pluie_neige", "12_isotherme_0", "12_isotherme_moins_10",
+        "12_altitude_vent_1", "12_altitude_vent_2", "12_direction_vent_altitude_1", "12_vitesse_vent_altitude_1",
+        "12_direction_vent_altitude_2", "12_vitesse_vent_altitude_2",
+        "precipitation_neige_veille_altitude", "precipitation_neige_veille_epaisseur"
         """
         root = ET.parse(self.path_file).getroot()
         try:
@@ -200,11 +214,11 @@ class Bulletin:
             # Get historical snow precipitations measures for the day before publication
             if not root[0].find('BSH') is None:
                 hist_neige_fraiche_unformatted = [neige_fraiche.attrib for neige_fraiche in
-                                              root[0].find('BSH').iter(tag="NEIGE24H")]
+                                                  root[0].find('BSH').iter(tag="NEIGE24H")]
                 altitude_neige_fraiche = root[0].find('BSH').find('NEIGEFRAICHE').get('ALTITUDESS')
             else:
                 hist_neige_fraiche_unformatted = [neige_fraiche.attrib for neige_fraiche in
-                                              root.find('BSH').iter(tag="NEIGE24H")]
+                                                  root.find('BSH').iter(tag="NEIGE24H")]
                 altitude_neige_fraiche = root.find('BSH').find('NEIGEFRAICHE').get('ALTITUDESS')
             unformatted_neige_fraiche = hist_neige_fraiche_unformatted[-1]
             neige_fraiche = format_neige_fraiche(unformatted_neige_fraiche, altitude_neige_fraiche)
@@ -217,6 +231,126 @@ class Bulletin:
 
         return self.meteo
 
+    def parse_situation_avalancheuse(self) -> dict[str, list[Label]]:
+        """
+        Parse avalanche situations information from the BERA xml content into a formated dict, and return this dict.
+
+        Most of the BERAs described in the "Stablité du manteau neigeux" paragraph the current avalanche situations
+        which can be observed like:
+        "Neige humide", "Sous-couches fragiles persistentes", "Neige fraîche", "Neige ventée", "Avalanche de fond"
+
+        Returns
+        -------
+        situation_avalancheuse: dict[str, list[Label]]: for example:
+        {situations_avalancheuses_typiques: [Label.NEIGE_FRAICHE, Label.NEIGE_SOUFFLEE"]}
+
+        """
+        root = ET.parse(self.path_file).getroot()
+        try:
+            if not root[0].find('STABILITE') is None:
+                paragraph_stabilite = root[0].find('STABILITE').find('TEXTE')
+                situation_avalancheuse_typique = \
+                    Bulletin.extract_situation_typique_avalancheuse_from_stabilite_paragraph(paragraph_stabilite.text)
+                self.situation_avalancheuse["situation_avalancheuse_typique"] = \
+                        list(Bulletin.extract_labels_situation_avalancheuse(situation_avalancheuse_typique))
+                # TODO : si list(), appliquer la méthode extract_labels_situation_avalancheuse au paragraphe complet
+            else:
+                self.situation_avalancheuse["situation_avalancheuse_typique"] = list()
+
+        except Exception:
+            self.situation_avalancheuse["situation_avalancheuse_typique"] = list()
+
+        return self.situation_avalancheuse
+
+    @staticmethod
+    def extract_situation_typique_avalancheuse_from_stabilite_paragraph(raw_text: str) -> str:
+        """
+        From a text (as found in "STABILITE" xml balise in the BERA at xml format), extract a small text containing
+        information related to typical avalanche situations mentionned in the BERA,
+
+        For example from the following "STABILITE" xml balise
+        <STABILITE>
+            <TEXTE>
+                La nouvelle neige adhère moyennement à l'ancienne, surtout en altitude. Situations
+                avalancheuses typiques : neige fraîche, neige ventée. \n\n Avalanches spontanées : rares départs
+                pendant les averses, ou à force d'accumulation par le vent dans une pente très raide. Taille 1 à 2
+                (petite à moyenne). Ponctuellement encore une plaque de fond sous 2000 m, taille 2 en versant
+                N. \n\n Déclenchements skieurs : quelques plaques friables dans la neige récente, surtout en cas
+                d'accumulation par le vent de SW/W. Possibles toutes orientations, un peu plus épaisses et sensibles
+                en N et E, surtout au-dessus de 2000/2200 m. Très localement, en N/NW/NE plus haut que 2300 m,
+                peut-être une vieille couche fragile persistante enfouie, pouvant favoriser une cassure large
+                (zones peu enneigées et rarement skiées).
+            </TEXTE>
+        </STABILITE>
+        extracts and return the small text "neige fraîche, neige ventée." which is mentioned after "Situations
+        avalancheuses typiques :" in the raw text.
+
+        Parameters
+        ----------
+        raw_text: str: paragraph extracted from "STABILITE" xml balise in the BERA at xml format,
+        For example :
+            "La nouvelle neige adhère moyennement à l'ancienne, surtout en altitude. Situations typiques :
+            neige fraîche, neige ventée. \n\n Avalanches spontanées : rares départs pendant les averses, ou à force
+            d'accumulation par le vent dans une pente très raide. Taille 1 à 2 (petite à moyenne)... \n\n
+            Déclenchements skieurs : quelques plaques friables dans la neige récente, surtout en cas d'accumulation
+            par le vent de SW/W. Possibles toutes orientations, un peu plus épaisses et sensibles en N et E,
+            surtout au-dessus de 2000/2200 m. ..."
+
+        Returns
+        -------
+        situation_typique_avalancheuse: str: small text containing information related to typical avalanche situations,
+        For example : "neige ventée, neige humide." or "Sous-couche fragile persistante, neige fraîche"
+        """
+        if re.search("(situations? (avalancheuses?|avalanche) typiques? (:|de))", raw_text.lower()):
+            text = re.search("(situations? (avalancheuses?|avalanche) typiques?[^\n]*)", raw_text.lower()).group()
+            situation_typique_avalancheuse = re.split("situations? (avalancheuses?|avalanche) typiques? (:|de) ", text.lower())[-1]
+        elif re.search("(situations? (avalancheuses?|typiques?) (:|de))", raw_text.lower()):
+            text = re.search("(situations? (avalancheuses?|typiques?)[^\n]*)", raw_text.lower()).group()
+            situation_typique_avalancheuse = re.split("situations? (avalancheuses?|typiques?) (:|de) ",
+                                                      text.lower())[-1]
+        elif re.search("(situations? typiques? avalancheuses? (:|de))", raw_text.lower()):
+            text = re.search("(situations? typiques? avalancheuses?[^\n]*)", raw_text.lower()).group()
+            situation_typique_avalancheuse = re.split("situations? typiques? avalancheuses? (:|de) ", text.lower())[-1]
+        else:
+            return ""
+        return situation_typique_avalancheuse
+
+    @staticmethod
+    def extract_labels_situation_avalancheuse(raw_text: str) -> set[Label]:
+        """
+        From a text describing some typical avalanche situations (for examples: "neige ventée, neige humide." or
+        "Sous-couche fragile persistante, neige fraîche"), extracts avalanche situation labels, among :
+        - "Sous-couche fragile persistante"
+        - "Neige soufflée"
+        - "Neige fraîche"
+        - "Neige humide"
+        - "Avalanche de glissement"
+
+        Params
+        -------
+        raw_text: str: small text describing some typical avalanche situations,
+        for example : "neige ventée, neige humide."
+
+        Returns
+        -------
+        labels: set[Label]: list of avalanche situation labels, mentioned in the BERA raw
+        data (could not be exhaustive).
+
+        """
+        labels = set()
+        if re.match("sous[\s-]couche[s]? fragile[s]? persistante[s]?", raw_text.lower()):
+            labels.add(Label.SOUS_COUCHE_FRAGILE)
+        if "neige ventée" in raw_text.lower() or "neige soufflée" in raw_text.lower():
+            labels.add(Label.NEIGE_SOUFFLEE)
+        if "neige fraîche" in raw_text.lower():
+            labels.add(Label.NEIGE_FRAICHE)
+        if "neige humide" in raw_text.lower() or "neige de printemps" in raw_text.lower():
+            labels.add(Label.NEIGE_HUMIDE)
+        if "plaque de fond" in raw_text.lower() or "plaques de fond" in raw_text.lower() or\
+                not re.match("avalanches? de glissement", raw_text.lower()) is None:
+            labels.add(Label.AVALANCHE_GLISSEMENT)
+        return labels
+
     def append_csv(self) -> []:
         """
         This method aims to construct a list of all formatted data which will be integrated at the end in hist.csv files
@@ -225,17 +359,49 @@ class Bulletin:
         - The massif of the BERA publication,
         - Risk data declined into 9 columns: (risque1, evolurisque1, loc1, altitude, risque2, evolurisque2, loc2,
           risque_maxi, commentaire),
-        - The url of downloading the BERA in pdf format
+        - The url of downloading the BERA in pdf format,
+        - The historical weather (weather, wind and temperature information) for the day of the BERA publication
+        declined in 33 columns:
+        "00_temps", "00_mer_de_nuages", "00_limite_pluie_neige", "00_isotherme_0",
+        "00_isotherme_moins_10", "00_altitude_vent_1", "00_altitude_vent_2", "00_direction_vent_altitude_1",
+        "00_vitesse_vent_altitude_1", "00_direction_vent_altitude_2", "00_vitesse_vent_altitude_2",
+        "06_temps", "06_mer_de_nuages", "06_limite_pluie_neige", "06_isotherme_0", "06_isotherme_moins_10",
+        "06_altitude_vent_1", "06_altitude_vent_2", "06_direction_vent_altitude_1", "06_vitesse_vent_altitude_1",
+        "06_direction_vent_altitude_2", "06_vitesse_vent_altitude_2",
+        "12_temps", "12_mer_de_nuages", "12_limite_pluie_neige", "12_isotherme_0", "12_isotherme_moins_10",
+        "12_altitude_vent_1", "12_altitude_vent_2", "12_direction_vent_altitude_1", "12_vitesse_vent_altitude_1",
+        "12_direction_vent_altitude_2", "12_vitesse_vent_altitude_2"
+        - The historical snow precipitations information for the day before the BERA publication declined into 2
+        columns: ( "precipitation_neige_veille_altitude" and "precipitation_neige_veille_epaisseur"),
+        - The typical avalanche situations mentioned in the BERA
 
         Returns
         -------
-        list of strings containing all BERA information expected
+        list[str]: list of strings containing all BERA information expected, for example:
+        [
+            '2020-05-17', 'VERCORS', '1', '', '<2000', '2000', '2', '', '>2000', '2', ' ',
+            'https://donneespubliques.meteofrance.fr/donnees_libres/Pdf/BRA/BRA.VERCORS.20200517132702.pdf',
+            'Eclaircies', 'Non', 'Sans objet', '1800', '3400', '2000', '2500', 'S', '40', 'S', '50',
+            'Eclaircies', 'Non', 'Sans objet', '2000', '3400', '2000', '2500', 'S', '30', 'S', '40',
+            'Peu nuageux', 'Non', 'Sans objet', '2100', '3500', '2000', '2500', 'S', '30', 'S', '40',
+            '1800', '0', 'Neige humide - Neige ventée - Sous-couche fragile persistante'
+        ]
+
         """
         # Removing comma as we will save the file as a csv
         risques = list(
             map(lambda x: x.replace(',', '-'), self.risques.values()))
+
+        situations_avalancheuses_typiques = list(self.situation_avalancheuse.values())
+
+        formatted_situations_avalancheuses_typiques = ''
+        for situation in situations_avalancheuses_typiques[0]:
+            formatted_situations_avalancheuses_typiques = formatted_situations_avalancheuses_typiques + \
+                                                          f"{situation._value_} - "
+        formatted_situations_avalancheuses_typiques = formatted_situations_avalancheuses_typiques[:-3]
+
         return [self.jour_key, self.massif, *risques, f'{self.url}.{self.massif}.{self.jour}.pdf',
-                *self.meteo.values()]
+                *self.meteo.values(), formatted_situations_avalancheuses_typiques]
 
 
 if __name__ == '__main__':
@@ -247,7 +413,7 @@ if __name__ == '__main__':
 
     if len(sys.argv) == 3:
         massif = sys.argv[1]
-        jour = sys.argv[2]  # At format YYYYmmddHHMMSS ex: 20230322144948
+        jour = sys.argv[2]  # At format YYYYmmddHHMMSS ex: 20230119144216  or  20230411135455
         bul = Bulletin(massif, jour)
         bul.download()
         bul.parse_donnees_risques()
@@ -259,4 +425,15 @@ if __name__ == '__main__':
         print('Job succeeded.')
 
     else:
-        print("Please enter massif and datetime of publication")
+        massif = 'CHABLAIS'
+        jour = '20220130143352'  # 20230119144216   20230411135455  20230417140025  20230119144216 20220319145301 20220419141041 20220130143352
+        bul = Bulletin(massif, jour)
+        bul.download()
+        bul.parse_donnees_risques()
+        bul.parse_donnees_meteo()
+        bul.parse_situation_avalancheuse()
+        print(bul.parse_situation_avalancheuse())
+        new_content = bul.append_csv()
+        file_path = f'data/{massif}/hist.csv'
+        full_content = update_file_content(repo, file_path, branch, [new_content], 'bera')
+        print('Job succeeded.')
