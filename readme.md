@@ -1,3 +1,5 @@
+Ce dépôt n'est plus maintenu, il a été remplacé par [ce dépôt](https://gitlab.com/multi-coop/meteofrance_bra_hist), maintenu par [multi](https://www.multi.coop)
+
 # General
 
 Ce projet ouvre les données de Météo-France sur les Bulletins d'estimation du risque d'avalanche (BERA).
